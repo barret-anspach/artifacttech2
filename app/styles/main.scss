@@ -1,0 +1,1290 @@
+@import '/app/bower_components/sass-bootstrap/dist/css/bootstrap.css';
+@import 'mixins';
+
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+$content-width: 1000px;
+$screen-width: 1200px;
+$content-width-sm: 876px;
+$screen-width-sm: 1024px;
+$content-width-ipad: 600px;
+$screen-width-ipad: 768px;
+
+$dkGrey: #4D4D4D;
+$medGrey: #444444;
+$ltGrey: #BAB2AA;
+$artifact-pink: #FFE4D3;
+$artifact-blue: #2470B3;
+
+
+
+@font-face {
+	font-family: 'trump gothic east';
+	src: url('../fonts/ufonts.com_trump_gothic_east.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'corbert condensed';
+	src: url('../fonts/CorbertCondensed-Regular-webfont.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'corbert condensed italic';
+	src: url('../fonts/CorbertCondensed-Italic-webfont.ttf') format('truetype');
+}
+
+.browsehappy {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+}
+
+.fullpage {
+	position: relative;
+	&.horiz {
+		float:left;
+	}
+}
+
+* {
+	text-rendering: optimizeLegibility;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	@media screen and (max-width: $screen-width) {
+		padding: 0 15px;
+	}
+}
+
+.active {
+	color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'trump gothic east', sans-serif;
+	text-transform: uppercase;
+}
+.trade {
+	font-size: .7em;
+	vertical-align: text-top;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+//h4 {
+//	font-size: 24px;
+//	line-height: 24px;
+//	margin: 0;
+//	padding: 0;
+//}
+
+/*--------- NAV --------*/
+
+.at-inline {
+	position: relative;
+	display: inline-block;
+}
+
+.at-navbar {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	.at-navbar-wrapper {
+		width: 100%;
+		height: 40px;
+		position: relative;
+		background-color: rgba(0,0,0,1);
+		&.home {
+			background-color: rgba(0,0,0,.7);
+			height: 104px;
+			border-bottom: 1px solid #E8FFDB;
+		}
+	}
+	.home {
+		.at-navbar-banner {
+			.at-navbar-header {
+				width: $content-width;
+				height: 64px;
+				margin: 0 auto;
+				padding-top: 18px;
+				padding-right: 0;
+				clear: both;
+				text-align: center;
+				@media screen and (max-width: $screen-width) {
+					width: 100%;
+				}
+				a {
+					font-size: 29px;
+					letter-spacing: .2em;
+					.logo {
+						display: inline-block;
+						width: 20px;
+						height: 24px;
+						margin: 0;
+						padding-right: 12px;
+					}
+					.thin {
+						font-weight: 100;
+					}
+				}
+			}
+		}
+	}
+	.at-navbar-banner {
+		position: relative;
+		width: $content-width;
+		height: 40px;
+		margin: 0 auto;
+		@media screen and (max-width: $screen-width) {
+			width: 100%;
+			padding: 0 15px;
+		}
+		.at-navbar-header {
+			display: inline-block;
+			padding-top: 5px;
+			padding-right: 60px;
+			a {
+				font-family: 'trump gothic east', sans-serif;
+				font-size: 20.6px;
+				color: $ltGrey;
+				text-transform: uppercase;
+				text-decoration: none;
+				letter-spacing: .2em;
+				.logo {
+					display: inline-block;
+					width: 14.4px;
+					height: 16.9px;
+					margin: 0;
+					margin-right: 5px;
+				}
+				.thin {
+					font-weight: 100;
+				}
+				.active {
+					color: white;
+				}
+				&:hover {
+					color: white;
+				}
+			}
+		}
+		.at-navbar-main {
+			display: inline-block;
+			padding-top: 7px;
+			a {
+				font-family: 'trump gothic east', sans-serif;
+				font-size: 18px;
+				color: $dkGrey;
+				text-transform: uppercase;
+				text-decoration: none;
+				padding-right: 110px;
+				&.active {
+					color: white;
+				}
+				&:last-child {
+					padding-right: 0;
+				}
+				&:hover {
+					color: white;
+				}
+			}
+			&.home {
+				width: 525px;
+				height: 38px;
+				padding-top: 8px;
+				text-align: center;
+				&.home {
+					display: block;
+					margin: 0 auto;
+					a {
+						color: $dkGrey;
+						font-size: 16px;
+						padding-right: 100px;
+						&:hover {
+							color: white;
+						}
+						&:active {
+							color: white;
+						}
+						&:last-child {
+							padding-right: 0;
+						}
+					}
+				}
+			}
+
+		}
+	}
+	.at-subnav-wrapper {
+		width: 100%;
+		height: 22px;
+		position: relative;
+		background-color: rgba(0,0,0,.7);
+		&.home {
+			height: 0px;
+		}
+		.at-subnav {
+			width: $content-width;
+			margin: 0 auto;
+			@media screen and (max-width: $screen-width) {
+				width: 100%;
+				padding: 0 15px;
+			}
+			.at-navbar-subnav {
+				a {
+					font-family: 'trump gothic east', sans-serif;
+					font-size: 19px;
+					color: rgba(161, 161, 161, 1);
+					text-transform: uppercase;
+					text-decoration: none;
+					padding-top: 4px;
+					padding-right: 110px;
+					padding-bottom: 4px;
+					&.active {
+						color: white;
+					}
+					&:last-child {
+						padding-right: 0;
+					}
+					&:hover {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*-------- NAV BUTTONS --------*/
+
+.at-arrow-left {
+	position: absolute;
+	@include nav-button(left, 62px);
+	@media screen and (max-width: $screen-width) {
+		&.lower {
+			top: 60%;
+		}
+	}
+}
+.at-arrow-right {
+	position: absolute;
+	@include nav-button(right, 62px);
+	@media screen and (max-width: $screen-width) {
+		&.lower {
+			top: 60%;
+		}
+	}
+}
+.at-about-chevron {
+	width: 200px;
+	height: 24px;
+	text-align: right;
+	@include nav-button(right, 24px);
+	h4.at-about-team-link {
+		position: absolute;
+		top: 0;
+		right: 55px;
+		display: inline-block;
+		font-size: 24px;
+		text-decoration: none;
+		padding: 0 10px 0 0;
+		margin: 0;
+		color: black;
+		&:hover {
+			color: $artifact-blue;
+		}
+	}
+	img {
+		display: inline-block;
+	}
+}
+.at-arrow-down {
+	position: absolute;
+	left: 50%;
+	bottom: 0px;
+	padding-bottom: 20px;
+	margin-left: -31px;
+}
+
+/*-------- PAGE --------*/
+
+.at-page {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	//	visibility: hidden;
+	//	backface-visibility: hidden;
+	//	transform: translate3d(0, 0, 0);
+}
+.at-page-current,
+.no-js .at-page {
+	visibility: visible;
+}
+.no-js body {
+	overflow: auto;
+}
+.at-page-ontop {
+	z-index: 999;
+}
+
+.at-content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/*-------- HOME --------*/
+
+.at-main-message {
+	position: absolute;
+	width: $content-width;
+	height: 40px;
+	top: 40%;
+	left: 50%;
+	margin-left: -($content-width / 2);
+	text-align: center;
+	h1 {
+		color: $artifact-pink;
+		font-size: 64px;
+		text-transform: uppercase;
+	}
+}
+
+/*-------- ABOUT.MAIN, ABOUT.TEAM --------*/
+
+.at-about-main-text {
+	position: relative;
+	width: $content-width;
+	height: inherit;
+	padding-top: 96px;
+	padding-right: 675px;
+	margin: 0 auto;
+	hyphens: auto;
+	@media screen and (max-width: $screen-width) {
+		width: 100%;
+		padding: 76px 60px 0;
+	}
+	h1 {
+		font-size: 52px;
+		@media screen and (max-width: $screen-width) {
+			width: 36%;
+			font-size: 45px;
+		}
+	}
+	p {
+		font-family: 'corbert condensed', sans-serif;
+		font-size: 19px;
+		@media screen and (max-width: $screen-width) {
+			width: 36%;
+			font-family: 'corbert condensed', sans-serif;
+			font-size: 16px;
+		}
+	}
+	.at-about-artifact {
+		position: relative;
+		width: $content-width;
+		padding-top: 0px;
+		padding-right: 675px;
+		@media screen and (max-width: $screen-width) {
+			width: 100%;
+			padding-top: 0;
+			padding-right: 0;
+		}
+		.pointer {
+			width: 0px;
+			height: 0px;
+			margin-top: 6px;
+			border-style: solid;
+			border-width: 24px 0 0 14px;
+			border-color: transparent transparent transparent white;
+			@media screen and (max-width: $screen-width) {
+				border-width: 12px 0 0 7px;
+			}
+			&#showA {
+				margin-left: 24px;
+				@media screen and (max-width: $screen-width) {
+					margin-left: 15px;
+				}
+			}
+			&#showR {
+				margin-left: 60px;
+				@media screen and (max-width: $screen-width) {
+					margin-left: 37px;
+				}
+			}
+			&#showT {
+				margin-left: 94px;
+				@media screen and (max-width: $screen-width) {
+					margin-left: 60px;
+				}
+			}
+			&#showI {
+				margin-left: 120px;
+				@media screen and (max-width: $screen-width) {
+					margin-left: 76px;
+				}
+			}
+			&#showF {
+				margin-left: 140px;
+				@media screen and (max-width: $screen-width) {
+					margin-left: 90px;
+				}
+			}
+			&#showA2 {
+				margin-left: 168px;
+				@media screen and (max-width: $screen-width) {
+					margin-left: 106px;
+				}
+			}
+			&#showC {
+				margin-left: 202px;
+				@media screen and (max-width: $screen-width) {
+					margin-left: 127px;
+				}
+			}
+			&#showT2 {
+				margin-left: 238px;
+				@media screen and (max-width: $screen-width) {
+					margin-left: 149px;
+				}
+			}
+		}
+		.at-about-artifact-bubble {
+			width: 450px;
+			background: white;
+			border-radius: 5px;
+			padding: 10px;
+			h2 {
+				margin: 0;
+				padding: 0;
+				font-size: 36px;
+				@media screen and (max-width: $screen-width) {
+					width: 450px;
+				}
+			}
+			p {
+				margin-top: 5px;
+				padding: 0;
+				font-size: 1em;
+				@media screen and (max-width: $screen-width) {
+					width: 450px;
+					padding: 0 5px;
+				}
+			}
+		}
+		h1 {
+			font-size: 72px;
+			margin: 0;
+			@media screen and (max-width: $screen-width) {
+				font-size: 45px;
+			}
+			.underlined {
+				//				padding-bottom: -5px;
+				border-bottom: 4px solid;
+				cursor: pointer;
+			}
+			.letter {
+			}
+		}
+	}
+}
+.at-about-team {
+	position: relative;
+	display: block;
+	width: $content-width;
+	height: inherit;
+	margin: 0 auto;
+	padding-top: 96px;
+	background: transparent;
+	@media screen and (max-width: $screen-width) {
+		width: 80%;
+		margin: 0 auto;
+		padding: 76px 15px 0;
+	}
+	.team-member {
+		width: 446px;
+		float: left;
+		@media screen and (max-width: $screen-width) {
+			width: 45%;
+		}
+		&.at-left {
+			margin-right: 52px;
+			@media screen and (max-width: $screen-width) {
+				margin-right: 5%;
+			}
+		}
+		&.at-right {
+			margin-left: 52px;
+			@media screen and (max-width: $screen-width) {
+				margin-left: 4%;
+			}
+		}
+		.team-photo {
+			width: 446px;
+			height: 168px;
+			margin-top: 5px;
+			background-color: white;
+			@media screen and (max-height: 748px) {
+				visibility: hidden;
+				width: 100%;
+				height: 0;
+				//				width: 100%;
+				//				height: 100px;
+			}
+		}
+		.team-member-banner {
+			position: relative;
+			h1 {
+				font-family: 'corbert condensed', sans-serif;
+				font-size: 24px;
+				text-transform: none;
+				padding: 5px 0;
+				margin-top: 0;
+				margin-bottom: 0;
+				@media screen and (max-width: $screen-width) {
+					font-size: 18px;
+				}
+			}
+			h2 {
+				font-family: 'corbert condensed', sans-serif;
+				font-size: 18px;
+				text-transform: none;
+				padding: 5px 0;
+				margin-top: 0;
+				margin-bottom: 0;
+				@media screen and (max-width: $screen-width) {
+					font-size: 15px;
+				}
+			}
+			.linked-in {
+				position: absolute;
+				width: 24px;
+				height: 24px;
+				top: 5px;
+				right: 29px;
+				background: url(../images/linked-in.png) center center no-repeat;
+				background-size: contain;
+				&:hover {
+					background: url(../images/linked-in-active.png) center center no-repeat;
+					background-size: contain;
+				}
+				&:active {
+					background: url(../images/linked-in-active.png) center center no-repeat;
+					background-size: contain;
+				}
+			}
+			.twitter {
+				position: absolute;
+				width: 24px;
+				height: 24px;
+				top: 5px;
+				right: 0px;
+				background: url(../images/twitter.png) center center no-repeat;
+				background-size: contain;
+				&:hover {
+					background: url(../images/twitter-active.png) center center no-repeat;
+					background-size: contain;
+				}
+				&:active {
+					background: url(../images/twitter-active.png) center center no-repeat;
+					background-size: contain;
+				}
+			}
+		}
+		.team-member-text {
+			font-family: 'corbert condensed', sans-serif;
+			font-size: 1.1em;
+			hyphens: auto;
+			@media screen and (max-width: $screen-width) {
+				font-size: 14px;
+				padding-top: 10px;
+			}
+		}
+		.team-member-hobbies {
+			font-family: 'corbert condensed', sans-serif;
+			color: $medGrey;
+			font-size: 0.9em;
+			font-weight: regular;
+			hyphens: auto;
+			padding: 0 5px 0;
+			p {
+				margin-bottom: 5px;
+			}
+			@media screen and (max-width: $screen-width) {
+				font-size: 12px;
+			}
+			.quiz {
+				font-family: 'corbert condensed italic', sans-serif;
+			}
+			a {
+				color: $medGrey;
+				text-decoration: none;
+				cursor: pointer;
+				&:hover {
+					color: $artifact-blue;
+				}
+			}
+		}
+	}
+	.member-divider {
+		position: relative;
+		float: left;
+		height: 90%;
+		top: 0;
+		border-right:1px solid black;
+	}
+}
+
+/*-------- PLATFORM.MAIN, etc. --------*/
+
+.at-platform{
+	position: relative;
+	padding-top: 96px;
+	width: $content-width;
+	margin: 0 auto;
+	@media screen and (max-width: $screen-width) {
+		width: 80%;
+		margin: 0 auto;
+		padding: 86px 15px 0;
+	}
+	h1 {
+		width: $content-width;
+		margin: 0 auto;
+		text-align: center;
+		font-size: 52px;
+		@media screen and (max-width: $screen-width) {
+			width: 80%;
+			margin: 0 auto;
+			padding: 0 15px;
+			font-size: 45px;
+		}
+	}
+	.at-platform-list {
+		width: $content-width - ($content-width / 4);
+		margin: 0 auto;
+		padding-bottom: 20px;
+		@media screen and (max-width: $screen-width) {
+			padding-top: 20px;
+		}
+		ol li, li {
+			margin: 20px 0;
+			list-style: disc;
+			font-family: 'trump gothic east', sans-serif;
+			font-size: 32px;
+			@media screen and (max-width: $screen-width) {
+				margin: 10px 0;
+				list-style: disc;
+				font-size: 24px;
+			}
+		}
+	}
+	.at-platform-menu {
+		position: relative;
+		width: $content-width;
+		@media screen and (max-width: $screen-width) {
+			width: 100%;
+			padding: 0 15px;
+		}
+		.at-platform-box {
+			display: inline-block;
+			width: 215px;
+			height: 103px;
+			float: left;
+			padding: 12px;
+			background: black;
+			margin-right: (($content-width - (215 * 4)) / 3);
+			@media screen and (max-width: $screen-width) {
+				width: 160px;
+				height: 80px;
+				margin-right: 4%;
+				padding: 10px;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+			.box-icon {
+				display: inline-block;
+				float: left;
+				width: 78px;
+				height: 79px;
+				@media screen and (max-width: $screen-width) {
+					width: 60px;
+					height: 60px;
+				}
+			}
+			.menu-title {
+				display: inline-block;
+				float: left;
+				width: 108px;
+				margin: 0;
+				padding: 12px 0 0 11px;
+				font-family: 'trump gothic east', sans-serif;
+				font-size: 40px;
+				color: $artifact-pink;
+				text-transform: uppercase;
+				@media screen and (max-width: $screen-width) {
+					width: 80px;
+					font-size: 24px;
+					text-align: center;
+				}
+			}
+		}
+	}
+	.at-platform-page {
+		&.on-left {
+			padding-right: ($content-width / 5) * 3;
+		}
+		h1 {
+			text-align: left;
+			font-size: 52px;
+			@media screen and (max-width: $screen-width) {
+				width: 100%;
+				text-align: left;
+				font-size: 45px;
+				margin: 0;
+				padding: 0;
+			}
+		}
+		span {
+			font-family: 'trump gothic east', sans-serif;
+			font-size: 36px;
+			line-height: 36px;
+			text-transform: none;
+			@media screen and (max-width: $screen-width) {
+				font-size: 24px;
+				line-height: 24px;
+				text-transform: none;
+			}
+		}
+	}
+}
+//.at-platform-title {
+//	h1 {
+//		font-size: 52px;
+//	}
+//	font-size: 36px;
+//}
+
+/*-------- WORK.MAIN, etc. --------*/
+
+.at-work{
+	position: relative;
+	padding-top: 96px;
+	width: $content-width;
+	margin: 0 auto;
+	@media screen and (max-width: $screen-width) {
+		width: 80%;
+		margin: 0 auto;
+		padding: 86px 15px 0;
+	}
+	h1 {
+		width: $content-width;
+		margin: 0 auto;
+		text-align: center;
+		font-size: 52px;
+		@media screen and (max-width: $screen-width) {
+			width: 80%;
+			margin: 0 auto;
+			padding: 0 15px;
+			font-size: 45px;
+		}
+	}
+	.at-work-page {
+		position: relative;
+		@media screen and (max-width: $screen-width) {
+			&.on-right {
+				width: 56%;
+				margin-top: 222px;
+				margin-left: 44%;
+			}
+		}
+		h1 {
+			text-align: left;
+			font-size: 52px;
+			@media screen and (max-width: $screen-width) {
+				font-size: 45px;
+			}
+		}
+		.at-app-title {
+			width: ($content-width / 2);
+			margin-top: 300px;
+			margin-left: ($content-width / 2);
+			@media screen and (max-width: $screen-width) {
+				width: 100%;
+				margin-top: 0;
+				margin-left: 0;
+				padding: 0;
+			}
+			.small-caps {
+				font-size: 42px;
+				@media screen and (max-width: $screen-width) {
+					font-size: 36px;
+				}
+			}
+		}
+		p {
+			font-family: 'corbert condensed', sans-serif;
+			font-size: 18px;
+			line-height: 32px;
+			text-transform: none;
+			@media screen and (max-width: $screen-width) {
+				font-family: 'corbert condensed', sans-serif;
+				font-size: 16px;
+				line-height: 27px;
+			}
+			&.at-app-desc {
+				width: ($content-width / 2);
+				margin-left: ($content-width / 2);
+				padding-bottom: 0;
+				line-height: 22px;
+				@media screen and (max-width: $screen-width) {
+					width: 100%;
+					margin-left: 0;
+					padding-bottom: 0;
+					font-size: 14px;
+					line-height: 16px;
+				}
+			}
+		}
+		.at-phones {
+			width: 504px;
+			min-height: 300px;
+			margin: 0 auto;
+			@media screen and (max-width: $screen-width) {
+				width: 346px;
+				min-height: 300px;
+				margin: 0 auto;
+			}
+			.at-phone {
+				position: relative;
+				display: inline-block;
+				width: 222px;
+				height: 450px;
+				float: left;
+				top: -30px;
+				@media screen and (max-width: $screen-width) {
+					width: 148px;
+					height: 300px;
+					top: 0px;
+				}
+				&.at-left {
+					margin-left: 0;
+					//				    margin-left: ($content-width - (252px * 2) - 50px) / 2;
+				}
+				&.at-right {
+					margin-left: 50px;
+				}
+			}
+		}
+		.promo-videos {
+			display: inline-block;
+			width: ($content-width / 2);
+			margin-left: ($content-width / 2);
+			font-size: 26px;
+			color: $medGrey;
+			@media screen and (max-width: $screen-width) {
+				width: 100%;
+				height: 20px;
+				margin-left: 0;
+				font-size: 18px;
+			}
+			a {
+				display: inline-block;
+				height: 20px;
+				float: left;
+				padding-right: 40px;
+				color: $medGrey;
+				cursor: pointer;
+				&:hover {
+					color: $artifact-blue;
+				}
+			}
+		}
+	}
+}
+
+/*-------- CONTACT --------*/
+
+.at-contact {
+	width: $content-width;
+	margin: 0 auto;
+	padding-top: 196px;
+	@media screen and (max-width: $screen-width) {
+		width: 80%;
+		margin: 0 auto;
+		padding: 120px 15px 0;
+	}
+	h1 {
+		width: $content-width;
+		margin: 0 auto;
+		padding-bottom: 20px;
+		text-align: center;
+		font-size: 52px;
+		@media screen and (max-width: $screen-width) {
+			width: 100%;
+			font-size: 45px;
+		}
+	}
+	.contact-info {
+		font-family: 'corbert condensed', sans-serif;
+		width: $content-width;
+		margin: 0 auto;
+		font-size: 22px;
+		text-align: center;
+		line-height: 27px;
+		@media screen and (max-width: $screen-width) {
+			width: 100%;
+		}
+		a {
+			color: #333333;
+			&:hover {
+				color: $artifact-blue;
+			}
+		}
+		.twitter {
+			display: block;
+			width: 35px;
+			height: 35px;
+			margin: 0 auto;
+			background: url(../images/twitter.png) center center no-repeat;
+			background-size: contain;
+			&:hover {
+				background: url(../images/twitter-active.png) center center no-repeat;
+				background-size: contain;
+			}
+		}
+		p {
+			padding-bottom: 20px;
+		}
+	}
+}
+
+.at-footer {
+	display: block;
+	bottom: 0;
+	width: 100%;
+	height: 92px;
+	background: black;
+	padding-top: 24px;
+	border-top: 1px solid #E8FFDB;
+	p {
+		font-family: 'corbert condensed', sans-serif;
+		font-size: 14px;
+		line-height: 17px;
+		text-align: center;
+		color: #80807D;
+	}
+}
+
+/*-------- OTHER STUFF --------*/
+
+.v-centered-right {
+	position: absolute;
+	height: 20px;
+	top: 50%;
+	right: 0;
+	padding-right: 20px;
+	margin-top: -10px;
+}
+.v-centered-left {
+	position: absolute;
+	height: 20px;
+	top: 50%;
+	left: 0;
+	padding-left: 20px;
+	margin-top: -10px;
+}
+.h-centered-bottom {
+	position: absolute;
+	width: 20px;
+	left: 50%;
+	bottom: 0;
+	padding-bottom: 20px;
+	margin-left: -10px;
+}
+.at-perspective {
+	position: relative;
+	width: 100%;
+	@media screen and (max-width: $screen-width) {
+		width: $screen-width;
+	}
+	height: 100%;
+	perspective: 1200px;
+	transform-style: preserve-3d;
+}
+
+/* animation sets */
+/* move from / to  */
+
+.at-page-moveToLeft {
+	-webkit-animation: moveToLeft .6s ease both;
+	-moz-animation: moveToLeft .6s ease both;
+	animation: moveToLeft .6s ease both;
+}
+
+.at-page-moveFromLeft {
+	-webkit-animation: moveFromLeft .6s ease both;
+	-moz-animation: moveFromLeft .6s ease both;
+	animation: moveFromLeft .6s ease both;
+}
+
+.at-page-moveToRight {
+	-webkit-animation: moveToRight .6s ease both;
+	-moz-animation: moveToRight .6s ease both;
+	animation: moveToRight .6s ease both;
+}
+
+.at-page-moveFromRight {
+	-webkit-animation: moveFromRight .6s ease both;
+	-moz-animation: moveFromRight .6s ease both;
+	animation: moveFromRight .6s ease both;
+}
+
+
+.at-page-moveToTop {
+	-webkit-animation: moveToTop .6s ease both;
+	-moz-animation: moveToTop .6s ease both;
+	animation: moveToTop .6s ease both;
+}
+
+.at-page-moveFromTop {
+	-webkit-animation: moveFromTop .6s ease both;
+	-moz-animation: moveFromTop .6s ease both;
+	animation: moveFromTop .6s ease both;
+}
+
+.at-page-moveToBottom {
+	-webkit-animation: moveToBottom .6s ease both;
+	-moz-animation: moveToBottom .6s ease both;
+	animation: moveToBottom .6s ease both;
+}
+
+.at-page-moveFromBottom {
+	-webkit-animation: moveFromBottom .6s ease both;
+	-moz-animation: moveFromBottom .6s ease both;
+	animation: moveFromBottom .6s ease both;
+}
+
+/********************************* keyframes **************************************/
+
+/* move from / to  */
+
+@-webkit-keyframes moveToLeft {
+	to { -webkit-transform: translateX(-100%); }
+}
+@-moz-keyframes moveToLeft {
+	to { -moz-transform: translateX(-100%); }
+}
+@keyframes moveToLeft {
+	to { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes moveFromLeft {
+	from { -webkit-transform: translateX(-100%); }
+}
+@-moz-keyframes moveFromLeft {
+	from { -moz-transform: translateX(-100%); }
+}
+@keyframes moveFromLeft {
+	from { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes moveToRight {
+	to { -webkit-transform: translateX(100%); }
+}
+@-moz-keyframes moveToRight {
+	to { -moz-transform: translateX(100%); }
+}
+@keyframes moveToRight {
+	to { transform: translateX(100%); }
+}
+
+@-webkit-keyframes moveFromRight {
+	from { -webkit-transform: translateX(100%); }
+}
+@-moz-keyframes moveFromRight {
+	from { -moz-transform: translateX(100%); }
+}
+@keyframes moveFromRight {
+	from { transform: translateX(100%); }
+}
+
+@-webkit-keyframes moveToTop {
+	to { -webkit-transform: translateY(-100%); }
+}
+@-moz-keyframes moveToTop {
+	to { -moz-transform: translateY(-100%); }
+}
+@keyframes moveToTop {
+	to { transform: translateY(-100%); }
+}
+
+@-webkit-keyframes moveFromTop {
+	from { -webkit-transform: translateY(-100%); }
+}
+@-moz-keyframes moveFromTop {
+	from { -moz-transform: translateY(-100%); }
+}
+@keyframes moveFromTop {
+	from { transform: translateY(-100%); }
+}
+
+@-webkit-keyframes moveToBottom {
+	to { -webkit-transform: translateY(100%); }
+}
+@-moz-keyframes moveToBottom {
+	to { -moz-transform: translateY(100%); }
+}
+@keyframes moveToBottom {
+	to { transform: translateY(100%); }
+}
+
+@-webkit-keyframes moveFromBottom {
+	from { -webkit-transform: translateY(100%); }
+}
+@-moz-keyframes moveFromBottom {
+	from { -moz-transform: translateY(100%); }
+}
+@keyframes moveFromBottom {
+	from { transform: translateY(100%); }
+}
+
+/* animation delay classes */
+
+.at-page-delay100 {
+	-webkit-animation-delay: .1s;
+	-moz-animation-delay: .1s;
+	animation-delay: .1s;
+}
+.at-page-delay180 {
+	-webkit-animation-delay: .180s;
+	-moz-animation-delay: .180s;
+	animation-delay: .180s;
+}
+.at-page-delay200 {
+	-webkit-animation-delay: .2s;
+	-moz-animation-delay: .2s;
+	animation-delay: .2s;
+}
+.at-page-delay300 {
+	-webkit-animation-delay: .3s;
+	-moz-animation-delay: .3s;
+	animation-delay: .3s;
+}
+.at-page-delay400 {
+	-webkit-animation-delay: .4s;
+	-moz-animation-delay: .4s;
+	animation-delay: .4s;
+}
+.at-page-delay500 {
+	-webkit-animation-delay: .5s;
+	-moz-animation-delay: .5s;
+	animation-delay: .5s;
+}
+.at-page-delay700 {
+	-webkit-animation-delay: .7s;
+	-moz-animation-delay: .7s;
+	animation-delay: .7s;
+}
+.at-page-delay1000 {
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	animation-delay: 1s;
+}
+
+//.big-content {
+//	width: 100%;
+//	height: 100px;
+//	margin-bottom: 50px;
+//	background: rgba(255,255,255,.5);
+//}
+//
+//#header {
+//	.container {
+//		ul {
+//			padding-left: 5px;
+//			background: #fff;
+//		    li {
+//				display: inline-block;
+//				padding-left: 15px;
+//				&:hover {
+//					text-decoration: none;
+//					cursor: pointer;
+//					color: rgba(30,60,90,.5);
+//					font-weight: 400;
+//				}
+//				&:first-of-type {
+//					padding-top: 10px;
+//				}
+//		    }
+//		}
+//	}
+//}
+//
+//#home {
+//	background: #235fd1;
+//}
+//#about {
+//	background: #d43f3a;
+//}
+//#team1,
+//#team2,
+//#team3,
+//#team4,
+//#team5 {
+//	background: #f8c3a2;
+//}
+//#platform {
+//	background: #dea453;
+//}
+//#work {
+//	background: #9cece2;
+//}
+//#contact {
+//	background: #4daf9b;
+//}
+//#footer {
+//	position: relative;
+//	height:80px;
+//	bottom: 0;
+//	width: 100%;
+//	background: #fafe31;
+//	padding-bottom: 50px;
+//}
+
+///* iPads (portrait and landscape) ----------- */
+//@media only screen
+//and (min-device-width : 768px)
+//and (max-device-width : 1024px) {
+//	.container {
+//		max-width: 730px;
+//	}
+//
+//	/* Remove the padding we set earlier */
+//	.header,
+//	.marketing,
+//	.footer {
+//		padding-left: 0;
+//		padding-right: 0;
+//	}
+//	/* Space out the masthead */
+//	.header {
+//		margin-bottom: 30px;
+//	}
+//	/* Remove the bottom border on the jumbotron for visual effect */
+//	.jumbotron {
+//		border-bottom: 0;
+//	}
+//}
