@@ -27,6 +27,23 @@ angular.module('artifactApp')
         }
     })
 
+//    .directive('homeNav', function($window) {
+//        return {
+//            restrict: 'A',
+//            link: function postLink(scope, element, attrs) {
+//                scope.top = document.documentElement.offsetTop;
+//                $($window).on('scroll', function() {
+//                    window.console.log(document.documentElement.offsetTop);
+//                });
+//                if ( scope.top == 0 ) {
+//                    element.addClass('home')
+//                }
+//                else {
+//                    element.removeClass('home')
+//                }
+//            }
+//        }
+//    })
 
     .directive('background', function ($window) {
         return {
@@ -111,7 +128,6 @@ angular.module('artifactApp')
                 console.log(element.height);
 //                TweenMax.fromTo(element, 1, {position:'absolute', top:0}, {top: 0, onComplete:done});
             }
-
         }
     })
 
@@ -134,19 +150,23 @@ angular.module('artifactApp')
         };
     })
 
-    .directive('horizontalBkgdContainer', function () {
+    .directive('horizontalPanel', function () {
         return {
     //            template: '<div></div>',
             restrict: 'A',
             link: function postLink(scope, element, attrs) {
-                attrs.$observe('background', function(value) {
+                attrs.$observe(attrs.horizontalPanel, function(val) {
+                    if(val){
+                        window.console.log(val);
+                        scope.w = window.innerWidth;
+                        scope.h = window.innerHeight;
+                        element.css({
+                            'height': scope.h + 'px',
+                            'width': (scope.w * val) + 'px'
+                        })
+                    }
                     scope.panelsNo = document.getElementsByClassName('fullpage').length;
-                    scope.w = window.innerWidth;
-                    scope.h = window.innerHeight;
-                    element.css({
-                        'height': scope.h + 'px',
-                        'width': (scope.w * scope.panelsNo) + 'px'
-                    })
+
                 })
             }
         }
