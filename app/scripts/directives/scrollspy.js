@@ -8,16 +8,15 @@
                 if (attrs.spyClass == null) {
                     attrs.spyClass = "active";
                 }
-                elem.click(function() {
-                    console.log('hello scroll spy');
-                    return scope.$apply(function() {
-                        return $location.hash(attrs.spy);
-                    });
-                });
+//                elem.click(function() {
+//                    console.log('hello scroll spy');
+//                    return scope.$apply(function() {
+//                        return $location.hash(attrs.spy);
+//                    });
+//                });
                 return scrollSpy.addSpy({
                     id: attrs.spy,
                     in: function() {
-                        $location.hash(attrs.spy);
                         return elem.addClass(attrs.spyClass);
                     },
                     out: function() {
