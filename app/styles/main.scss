@@ -1,34 +1,20 @@
-@import '/bower_components/sass-bootstrap/dist/css/bootstrap.css';
+//@import '../bower_components/sass-bootstrap/lib/bootstrap.scss';
 @import 'mixins';
 
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 $content-width: 1000px;
 $screen-width: 1200px;
-$content-width-sm: 876px;
-$screen-width-sm: 1024px;
-$content-width-ipad: 600px;
-$screen-width-ipad: 768px;
+
+$bp-sm: 40em;
+$bp-md: 46.8em;
+$bp-lg: 50em;
+$bp-xl: 73em;
 
 $dkGrey: #4D4D4D;
 $medGrey: #444444;
 $ltGrey: #BAB2AA;
 $artifact-pink: #FFE4D3;
 $artifact-blue: #2470B3;
-
-
-
-@font-face {
-	font-family: 'trump gothic east';
-	src: url('../fonts/ufonts.com_trump_gothic_east.ttf') format('truetype');
-}
-@font-face {
-	font-family: 'corbert condensed';
-	src: url('../fonts/CorbertCondensed-Regular-webfont.ttf') format('truetype');
-}
-@font-face {
-	font-family: 'corbert condensed italic';
-	src: url('../fonts/CorbertCondensed-Italic-webfont.ttf') format('truetype');
-}
 
 .browsehappy {
 	margin: 0.2em 0;
@@ -57,7 +43,7 @@ body {
 .container {
 	width: 100%;
 	height: 100%;
-	@media screen and (max-width: $screen-width) {
+	@media screen and (max-width: $bp-lg) {
 		padding: 0 15px;
 	}
 }
@@ -67,11 +53,12 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'trump gothic east', sans-serif;
+	font-family: 'Helvetica Neue', sans-serif;
 	text-transform: uppercase;
 }
 .trade {
-	font-size: .7em;
+	font-size: .5em;
+	font-weight: 100;
 	vertical-align: text-top;
 }
 
@@ -100,15 +87,20 @@ a:hover {
 	left: 0;
 	z-index: 999;
 	.at-navbar-wrapper {
+		@media screen and (orientation: landscape) {
+			height: 40px;
+		}
+		@media screen and (orientation: portrait) {
+			height: 60px;
+		}
 		width: 100%;
-		height: 40px;
 		position: relative;
 		background-color: rgba(0,0,0,1);
 		&.home {
           -webkit-transition:0.5s linear all;
           transition:0.5s linear all;
 			background-color: rgba(0,0,0,.7);
-			height: 104px;
+			height: 60px;
 			border-bottom: 1px solid #E8FFDB;
 		}
 	}
@@ -117,25 +109,23 @@ a:hover {
       transition:0.5s linear all;
 		.at-navbar-banner {
 			.at-navbar-header {
-				width: $content-width;
-				height: 64px;
+				width: 100%;
+				height: 60px;
 				margin: 0 auto;
-				padding-top: 18px;
+				padding-top: 0px;
 				padding-right: 0;
-				clear: both;
 				text-align: center;
-				@media screen and (max-width: $screen-width) {
-					width: 100%;
-				}
 				a {
-					font-size: 29px;
+					width: 100%;
+					margin: 0 auto;
+					font-size: 13px;
 					letter-spacing: .2em;
 					.logo {
 						display: inline-block;
-						width: 20px;
-						height: 24px;
+						width: 10px;
+						height: 12px;
 						margin: 0;
-						padding-right: 12px;
+						margin-right: 5px;
 					}
 					.thin {
 						font-weight: 100;
@@ -146,28 +136,43 @@ a:hover {
 	}
 	.at-navbar-banner {
 		position: relative;
-		width: $content-width;
+		width: 100%;
 		height: 40px;
-		margin: 0 auto;
-		@media screen and (max-width: $screen-width) {
-			width: 100%;
-			padding: 0 15px;
-		}
 		.at-navbar-header {
-			display: inline-block;
+			@media screen and (orientation: portrait) {
+				position: relative;
+				display: block;
+				width: 18em;
+				left: 50%;
+				margin-left: -(9em);
+			}
+			@media screen and (orientation: landscape) {
+				position: relative;
+				display: inline-block;
+				float: left;
+				width: 18em;
+				padding-left: .5em;
+				clear: none;
+				margin-right: .5em;
+				a {
+					width: 18em;
+				}
+			}
 			padding-top: 5px;
-			padding-right: 60px;
+			clear: both;
+			text-align: center;
 			a {
-				font-family: 'trump gothic east', sans-serif;
-				font-size: 20.6px;
+				font-family: 'Helvetica Neue', sans-serif;
+				font-size: 13px;
+				font-weight: 700;
 				color: $ltGrey;
 				text-transform: uppercase;
 				text-decoration: none;
 				letter-spacing: .2em;
 				.logo {
 					display: inline-block;
-					width: 14.4px;
-					height: 16.9px;
+					width: 10px;
+					height: 12px;
 					margin: 0;
 					margin-right: 5px;
 				}
@@ -183,15 +188,29 @@ a:hover {
 			}
 		}
 		.at-navbar-main {
-			display: inline-block;
-			padding-top: 7px;
+			@media screen and (orientation: portrait) {
+				display: block;
+				margin: 0 auto;
+				padding-top: 0;
+				clear: both;
+			}
+			@media screen and (orientation: landscape) {
+				display: inline-block;
+				padding-top: 5px;
+			}
+			width: 22em;
 			a {
-				font-family: 'trump gothic east', sans-serif;
-				font-size: 18px;
+				font-family: 'Helvetica Neue', sans-serif;
+				font-size: 11px;
 				color: $dkGrey;
 				text-transform: uppercase;
 				text-decoration: none;
-				padding-right: 110px;
+				@media screen and (orientation: landscape) {
+					padding-right: 5px;
+				}
+				@media screen and (orientation: portrait) {
+					padding-right: 8px;
+				}
 				&.active {
 					color: white;
 				}
@@ -203,16 +222,17 @@ a:hover {
 				}
 			}
 			&.home {
-				width: 525px;
-				height: 38px;
-				padding-top: 8px;
+				// CORRECT THIS WHEN .HOME ASSIGNMENT WORKS!!!!
+				width: 100%;
+				height: 20px;
+				padding-top: 0px;
 				text-align: center;
 				&.home {
 					display: block;
 					margin: 0 auto;
 					a {
 						color: $dkGrey;
-						font-size: 16px;
+						font-size: 10px;
 						padding-right: 100px;
 						&:hover {
 							color: white;
@@ -238,22 +258,19 @@ a:hover {
 			height: 0px;
 		}
 		.at-subnav {
-			width: $content-width;
+			width: 100%;
 			margin: 0 auto;
-			@media screen and (max-width: $screen-width) {
-				width: 100%;
-				padding: 0 15px;
-			}
+			padding: 0 15px;
 			.at-navbar-subnav {
 				a {
-					font-family: 'trump gothic east', sans-serif;
-					font-size: 19px;
+					font-family: 'Helvetica Neue', sans-serif;
+					font-size: 18px;
 					color: rgba(161, 161, 161, 1);
 					text-transform: uppercase;
 					text-decoration: none;
-					padding-top: 4px;
-					padding-right: 110px;
-					padding-bottom: 4px;
+					padding-top: 5px;
+					padding-right: 20px;
+					padding-bottom: 5px;
 					&.active {
 						color: white;
 					}
@@ -274,42 +291,51 @@ a:hover {
 .at-arrow-left {
 	position: absolute;
 	@include nav-button(left, 62px);
-	@media screen and (max-width: $screen-width) {
-		&.lower {
-			top: 60%;
-		}
+	&.lower {
+		top: 60%;
 	}
 }
 .at-arrow-right {
 	position: absolute;
 	@include nav-button(right, 62px);
-	@media screen and (max-width: $screen-width) {
-		&.lower {
-			top: 60%;
-		}
+	&.lower {
+		top: 60%;
 	}
 }
 .at-about-chevron {
-	width: 200px;
-	height: 24px;
+	width: 12em;
+	height: 1em;
 	text-align: right;
-	@include nav-button(right, 24px);
+	@media screen and (max-width: $bp-md) and (orientation: landscape) {
+		float: right;
+		top: 6.4em;
+	}
+	@media screen and (max-width: $bp-md) and (orientation: portrait) {
+		float: right;
+		top: 6.9em;
+	}
+	@include nav-button(right, .5em);
 	h4.at-about-team-link {
 		position: absolute;
-		top: 0;
-		right: 55px;
 		display: inline-block;
-		font-size: 24px;
-		text-decoration: none;
-		padding: 0 10px 0 0;
+		top: 0;
+		right: 42px;
 		margin: 0;
-		color: black;
+		margin-top: 2px;
+		padding-right: 5px;
+		font-size: .9em;
+		font-weight: 300;
+		text-decoration: none;
+		color: #333333;
 		&:hover {
 			color: $artifact-blue;
 		}
 	}
-	img {
+	.at-about-chevron-img {
 		display: inline-block;
+		width: 19px;
+		height: 14px;
+		top: 0;
 	}
 }
 .at-arrow-down {
@@ -317,7 +343,11 @@ a:hover {
 	left: 50%;
 	bottom: 0px;
 	padding-bottom: 20px;
-	margin-left: -31px;
+	margin-left: -20.5px;
+	img {
+		width: 41px;
+		height: 18px;
+	}
 }
 
 /*-------- PAGE --------*/
@@ -353,16 +383,19 @@ a:hover {
 
 .at-main-message {
 	position: absolute;
-	width: $content-width;
+	width: 20em;
 	height: 40px;
-	top: 40%;
+	top: 50%;
 	left: 50%;
-	margin-left: -($content-width / 2);
+	margin-left: -10em;
 	text-align: center;
 	h1 {
 		color: $artifact-pink;
-		font-size: 64px;
-		text-transform: uppercase;
+		font-size: 2em;
+		text-transform: lowercase;
+		font-weight: 100;
+		letter-spacing: .1em;
+		margin: 0;
 	}
 }
 
@@ -370,42 +403,32 @@ a:hover {
 
 .at-about-main-text {
 	position: relative;
-	width: $content-width;
-	height: inherit;
-	padding-top: 96px;
-	padding-right: 675px;
-	margin: 0 auto;
-	hyphens: auto;
-	@media screen and (max-width: $screen-width) {
-		width: 100%;
-		padding: 76px 60px 0;
+	width: 12.5em;
+	height: auto;
+	float: left;
+	margin-top: 5.4em;
+	padding: 0;
+	@media screen and (orientation: portrait) {
+		margin-top: 6.4em;
 	}
 	h1 {
-		font-size: 52px;
-		@media screen and (max-width: $screen-width) {
-			width: 36%;
-			font-size: 45px;
-		}
+		font-size: 1.4em;
+		margin: 0;
+		margin-bottom: .4em;
 	}
 	p {
-		font-family: 'corbert condensed', sans-serif;
-		font-size: 19px;
-		@media screen and (max-width: $screen-width) {
-			width: 36%;
-			font-family: 'corbert condensed', sans-serif;
-			font-size: 16px;
-		}
+		font-family: 'Helvetica Neue', sans-serif;
+		font-size: .9em;
+		line-height: 1.2em;
+		margin-bottom: .1em;
 	}
 	.at-about-artifact {
-		position: relative;
-		width: $content-width;
-		padding-top: 0px;
-		padding-right: 675px;
-		@media screen and (max-width: $screen-width) {
-			width: 100%;
-			padding-top: 0;
-			padding-right: 0;
+		@media screen and (max-width: $bp-sm) {
+			visibility: hidden;
+			height: 0;
 		}
+		position: relative;
+		width: 100%;
 		.pointer {
 			width: 0px;
 			height: 0px;
@@ -413,60 +436,63 @@ a:hover {
 			border-style: solid;
 			border-width: 24px 0 0 14px;
 			border-color: transparent transparent transparent white;
-			@media screen and (max-width: $screen-width) {
+			@media screen and (max-width: $bp-md) {
 				border-width: 12px 0 0 7px;
 			}
 			&#showA {
 				margin-left: 24px;
-				@media screen and (max-width: $screen-width) {
+				@media screen and (max-width: $bp-md) {
 					margin-left: 15px;
 				}
 			}
 			&#showR {
 				margin-left: 60px;
-				@media screen and (max-width: $screen-width) {
+				@media screen and (max-width: $bp-md) {
 					margin-left: 37px;
 				}
 			}
 			&#showT {
 				margin-left: 94px;
-				@media screen and (max-width: $screen-width) {
+				@media screen and (max-width: $bp-md) {
 					margin-left: 60px;
 				}
 			}
 			&#showI {
 				margin-left: 120px;
-				@media screen and (max-width: $screen-width) {
+				@media screen and (max-width: $bp-md) {
 					margin-left: 76px;
 				}
 			}
 			&#showF {
 				margin-left: 140px;
-				@media screen and (max-width: $screen-width) {
+				@media screen and (max-width: $bp-md) {
 					margin-left: 90px;
 				}
 			}
 			&#showA2 {
 				margin-left: 168px;
-				@media screen and (max-width: $screen-width) {
+				@media screen and (max-width: $bp-md) {
 					margin-left: 106px;
 				}
 			}
 			&#showC {
 				margin-left: 202px;
-				@media screen and (max-width: $screen-width) {
+				@media screen and (max-width: $bp-md) {
 					margin-left: 127px;
 				}
 			}
 			&#showT2 {
 				margin-left: 238px;
-				@media screen and (max-width: $screen-width) {
+				@media screen and (max-width: $bp-md) {
 					margin-left: 149px;
 				}
 			}
 		}
 		.at-about-artifact-bubble {
-			width: 450px;
+			@media screen and (orientation: landscape) {
+				width: 470px;
+				margin: 0 auto;
+			}
 			background: white;
 			border-radius: 5px;
 			padding: 10px;
@@ -474,29 +500,19 @@ a:hover {
 				margin: 0;
 				padding: 0;
 				font-size: 36px;
-				@media screen and (max-width: $screen-width) {
-					width: 450px;
-				}
 			}
 			p {
 				margin-top: 5px;
 				padding: 0;
 				font-size: 1em;
-				@media screen and (max-width: $screen-width) {
-					width: 450px;
-					padding: 0 5px;
-				}
 			}
 		}
 		h1 {
-			font-size: 72px;
+			font-size: 3em;
 			margin: 0;
-			@media screen and (max-width: $screen-width) {
-				font-size: 45px;
-			}
 			.underlined {
 				//				padding-bottom: -5px;
-				border-bottom: 4px solid;
+				border-bottom: 3px solid;
 				cursor: pointer;
 			}
 			.letter {
@@ -507,51 +523,36 @@ a:hover {
 .at-about-team {
 	position: relative;
 	display: block;
-	width: $content-width;
+	width: 100%;
 	height: inherit;
 	margin: 0 auto;
-	padding-top: 96px;
+	padding-top: 6em;
 	background: transparent;
-	@media screen and (max-width: $screen-width) {
-		width: 80%;
-		margin: 0 auto;
-		padding: 76px 15px 0;
-	}
 	.team-member {
-		width: 446px;
+		width: 20em;
 		float: left;
-		@media screen and (max-width: $screen-width) {
-			width: 45%;
-		}
 		&.at-left {
-			margin-right: 52px;
+			margin-right: 2em;
 			@media screen and (max-width: $screen-width) {
-				margin-right: 5%;
+				margin-right: 2em;
 			}
 		}
 		&.at-right {
-			margin-left: 52px;
+			margin-left: 2em;
 			@media screen and (max-width: $screen-width) {
-				margin-left: 4%;
+				margin-left: 2em;
 			}
 		}
 		.team-photo {
-			width: 446px;
-			height: 168px;
+			width: 20em;
+			height: 10em;
 			margin-top: 5px;
 			background-color: white;
-			@media screen and (max-height: 748px) {
-				visibility: hidden;
-				width: 100%;
-				height: 0;
-				//				width: 100%;
-				//				height: 100px;
-			}
 		}
 		.team-member-banner {
 			position: relative;
 			h1 {
-				font-family: 'corbert condensed', sans-serif;
+				font-family: 'Helvetica Neue', sans-serif;
 				font-size: 24px;
 				text-transform: none;
 				padding: 5px 0;
@@ -562,7 +563,7 @@ a:hover {
 				}
 			}
 			h2 {
-				font-family: 'corbert condensed', sans-serif;
+				font-family: 'Helvetica Neue', sans-serif;
 				font-size: 18px;
 				text-transform: none;
 				padding: 5px 0;
@@ -608,7 +609,7 @@ a:hover {
 			}
 		}
 		.team-member-text {
-			font-family: 'corbert condensed', sans-serif;
+			font-family: 'Helvetica Neue', sans-serif;
 			font-size: 1.1em;
 			hyphens: auto;
 			@media screen and (max-width: $screen-width) {
@@ -617,7 +618,7 @@ a:hover {
 			}
 		}
 		.team-member-hobbies {
-			font-family: 'corbert condensed', sans-serif;
+			font-family: 'Helvetica Neue', sans-serif;
 			color: $medGrey;
 			font-size: 0.9em;
 			font-weight: regular;
@@ -630,7 +631,7 @@ a:hover {
 				font-size: 12px;
 			}
 			.quiz {
-				font-family: 'corbert condensed italic', sans-serif;
+				font-family: 'Helvetica Neue', sans-serif;
 			}
 			a {
 				color: $medGrey;
@@ -655,122 +656,92 @@ a:hover {
 
 .at-platform{
 	position: relative;
-	padding-top: 96px;
-	width: $content-width;
+	padding-top: 5.4em;
+	width: 100%;
 	margin: 0 auto;
-	@media screen and (max-width: $screen-width) {
-		width: 80%;
-		margin: 0 auto;
-		padding: 86px 15px 0;
+	@media screen and (orientation: portrait) {
+		padding-top: 6.4em;
 	}
 	h1 {
-		width: $content-width;
-		margin: 0 auto;
-		text-align: center;
-		font-size: 52px;
-		@media screen and (max-width: $screen-width) {
-			width: 80%;
-			margin: 0 auto;
-			padding: 0 15px;
-			font-size: 45px;
-		}
+		width: 100%;
+		text-align: left;
+		font-size: 1.4em;
+		margin: 0 0 .4em 0;
+		padding-left: 2em;
 	}
 	.at-platform-list {
-		width: $content-width - ($content-width / 4);
+		width: 100%;
 		margin: 0 auto;
-		padding-bottom: 20px;
-		@media screen and (max-width: $screen-width) {
-			padding-top: 20px;
-		}
+		padding-top: 0;
+		padding-bottom: .5em;
 		ol li, li {
-			margin: 20px 0;
-			list-style: disc;
-			font-family: 'trump gothic east', sans-serif;
-			font-size: 32px;
-			@media screen and (max-width: $screen-width) {
-				margin: 10px 0;
-				list-style: disc;
-				font-size: 24px;
+			&:last-child {
+				margin-bottom: 0;
 			}
+			list-style: disc;
+			font-family: 'Helvetica Neue', sans-serif;
+			font-size: .9em;
+			line-height: 1.2em;
+			margin-bottom: .1em;
 		}
 	}
 	.at-platform-menu {
 		position: relative;
-		width: $content-width;
-		@media screen and (max-width: $screen-width) {
-			width: 100%;
-			padding: 0 15px;
+		margin: 0 auto;
+		@media screen and (orientation: landscape) {
+			width: 36em;
+		}
+		@media screen and (orientation: portrait) {
+			width: 18em;
 		}
 		.at-platform-box {
 			display: inline-block;
-			width: 215px;
-			height: 103px;
+			width: 8.5em;
+			height: 3em;
 			float: left;
-			padding: 12px;
+			padding: .5em;
 			background: black;
-			margin-right: (($content-width - (215 * 4)) / 3);
-			@media screen and (max-width: $screen-width) {
-				width: 160px;
-				height: 80px;
-				margin-right: 4%;
-				padding: 10px;
-			}
+			margin-right: .5em;
+			margin-bottom: .5em;
 			&:last-child {
 				margin-right: 0;
 			}
 			.box-icon {
 				display: inline-block;
 				float: left;
-				width: 78px;
-				height: 79px;
-				@media screen and (max-width: $screen-width) {
-					width: 60px;
-					height: 60px;
-				}
+				width: 2em;
+				height: 2em;
 			}
 			.menu-title {
 				display: inline-block;
 				float: left;
-				width: 108px;
+				width: 3em;
 				margin: 0;
-				padding: 12px 0 0 11px;
-				font-family: 'trump gothic east', sans-serif;
-				font-size: 40px;
+				padding-left: 4px;
+				padding-top: 5px;
+				padding-bottom: 3px;
+				font-family: 'Helvetica Neue', sans-serif;
+				font-size: 13px;
+				font-weight: 200;
 				color: $artifact-pink;
+				text-align: center;
 				text-transform: uppercase;
-				@media screen and (max-width: $screen-width) {
-					width: 80px;
-					font-size: 24px;
-					text-align: center;
-				}
 			}
 		}
 	}
 	.at-platform-page {
 		&.on-left {
-			padding-right: ($content-width / 5) * 3;
+			width: 12em;
 		}
 		h1 {
 			text-align: left;
-			font-size: 52px;
-			@media screen and (max-width: $screen-width) {
-				width: 100%;
-				text-align: left;
-				font-size: 45px;
-				margin: 0;
-				padding: 0;
-			}
+			font-size: 45px;
 		}
 		span {
-			font-family: 'trump gothic east', sans-serif;
-			font-size: 36px;
-			line-height: 36px;
+			font-family: 'Helvetica Neue', sans-serif;
+			font-size: 24px;
+			line-height: 24px;
 			text-transform: none;
-			@media screen and (max-width: $screen-width) {
-				font-size: 24px;
-				line-height: 24px;
-				text-transform: none;
-			}
 		}
 	}
 }
@@ -785,125 +756,79 @@ a:hover {
 
 .at-work{
 	position: relative;
-	padding-top: 96px;
-	width: $content-width;
+	padding-top: 5.4em;
+	width: 100%;
 	margin: 0 auto;
-	@media screen and (max-width: $screen-width) {
-		width: 80%;
-		margin: 0 auto;
-		padding: 86px 15px 0;
+	@media screen and (orientation: portrait) {
+		padding-top: 6.4em;
 	}
 	h1 {
-		width: $content-width;
+		width: 100%;
+		font-size: 1.4em;
 		margin: 0 auto;
+		margin-bottom: .4em;
 		text-align: center;
-		font-size: 52px;
-		@media screen and (max-width: $screen-width) {
-			width: 80%;
-			margin: 0 auto;
-			padding: 0 15px;
-			font-size: 45px;
-		}
 	}
 	.at-work-page {
 		position: relative;
-		@media screen and (max-width: $screen-width) {
-			&.on-right {
-				width: 56%;
-				margin-top: 222px;
-				margin-left: 44%;
-			}
-		}
+//		width: 56%;
+//		margin-top: 222px;
+//		margin-left: 44%;
 		h1 {
 			text-align: left;
-			font-size: 52px;
-			@media screen and (max-width: $screen-width) {
-				font-size: 45px;
-			}
+			font-size: 1.4em;
 		}
 		.at-app-title {
-			width: ($content-width / 2);
-			margin-top: 300px;
-			margin-left: ($content-width / 2);
-			@media screen and (max-width: $screen-width) {
-				width: 100%;
-				margin-top: 0;
-				margin-left: 0;
-				padding: 0;
-			}
+			width: 100%;
+			margin-top: 0;
+			margin-left: 0;
+			padding: 0;
 			.small-caps {
-				font-size: 42px;
-				@media screen and (max-width: $screen-width) {
-					font-size: 36px;
-				}
+				font-size: 1.1em;
 			}
 		}
 		p {
-			font-family: 'corbert condensed', sans-serif;
-			font-size: 18px;
-			line-height: 32px;
+			font-family: 'Helvetica Neue', sans-serif;
+			font-size: .9em;
+			line-height: 1.2em;
+			margin-bottom: .1em;
 			text-transform: none;
-			@media screen and (max-width: $screen-width) {
-				font-family: 'corbert condensed', sans-serif;
-				font-size: 16px;
-				line-height: 27px;
-			}
 			&.at-app-desc {
-				width: ($content-width / 2);
-				margin-left: ($content-width / 2);
+				width: 100%;
+				margin-left: 0;
 				padding-bottom: 0;
-				line-height: 22px;
-				@media screen and (max-width: $screen-width) {
-					width: 100%;
-					margin-left: 0;
-					padding-bottom: 0;
-					font-size: 14px;
-					line-height: 16px;
-				}
+				font-size: .9em;
+				line-height: 1.2em;
 			}
 		}
 		.at-phones {
-			width: 504px;
+			width: 292px;
 			min-height: 300px;
 			margin: 0 auto;
-			@media screen and (max-width: $screen-width) {
-				width: 346px;
-				min-height: 300px;
-				margin: 0 auto;
-			}
+			margin-bottom: 1em;
 			.at-phone {
 				position: relative;
 				display: inline-block;
-				width: 222px;
-				height: 450px;
 				float: left;
-				top: -30px;
-				@media screen and (max-width: $screen-width) {
-					width: 148px;
-					height: 300px;
-					top: 0px;
-				}
+				width: 139px;
+				height: 282px;
+				top: 0px;
 				&.at-left {
 					margin-left: 0;
 					//				    margin-left: ($content-width - (252px * 2) - 50px) / 2;
 				}
 				&.at-right {
-					margin-left: 50px;
+					margin-left: 1em;
 				}
 			}
 		}
 		.promo-videos {
 			display: inline-block;
-			width: ($content-width / 2);
-			margin-left: ($content-width / 2);
-			font-size: 26px;
+			width: 100%;
+			height: 20px;
+			font-size: 18px;
 			color: $medGrey;
-			@media screen and (max-width: $screen-width) {
-				width: 100%;
-				height: 20px;
-				margin-left: 0;
-				font-size: 18px;
-			}
+			margin-left: 0;
 			a {
 				display: inline-block;
 				height: 20px;
@@ -922,35 +847,27 @@ a:hover {
 /*-------- CONTACT --------*/
 
 .at-contact {
-	width: $content-width;
+	width: 100%;
 	margin: 0 auto;
-	padding-top: 196px;
-	@media screen and (max-width: $screen-width) {
-		width: 80%;
-		margin: 0 auto;
-		padding: 120px 15px 0;
+	padding-top: 5.4em;
+	@media screen and (orientation: portrait) {
+		padding-top: 6.4em;
 	}
 	h1 {
-		width: $content-width;
+		width: 100%;
+		font-size: 1.4em;
 		margin: 0 auto;
-		padding-bottom: 20px;
+		margin-bottom: .4em;
 		text-align: center;
-		font-size: 52px;
-		@media screen and (max-width: $screen-width) {
-			width: 100%;
-			font-size: 45px;
-		}
 	}
 	.contact-info {
-		font-family: 'corbert condensed', sans-serif;
-		width: $content-width;
+		font-family: 'Helvetica Neue', sans-serif;
+		width: 100%;
 		margin: 0 auto;
-		font-size: 22px;
+		margin-bottom: 1em;
+		font-size: 16px;
 		text-align: center;
-		line-height: 27px;
-		@media screen and (max-width: $screen-width) {
-			width: 100%;
-		}
+		line-height: 20px;
 		a {
 			color: #333333;
 			&:hover {
@@ -969,24 +886,25 @@ a:hover {
 				background-size: contain;
 			}
 		}
-		p {
-			padding-bottom: 20px;
-		}
 	}
 }
 
 .at-footer {
-	display: block;
+	position: absolute;
+	display: inline-block;
+	vertical-align: bottom;
 	bottom: 0;
 	width: 100%;
-	height: 92px;
+	height: 3em;
+	padding-top: .5em;
 	background: black;
-	padding-top: 24px;
+
 	border-top: 1px solid #E8FFDB;
 	p {
-		font-family: 'corbert condensed', sans-serif;
-		font-size: 14px;
-		line-height: 17px;
+		font-family: 'Helvetica Neue', sans-serif;
+		font-size: .8em;
+		font-weight: 400;
+		line-height: 1em;
 		text-align: center;
 		color: #80807D;
 	}

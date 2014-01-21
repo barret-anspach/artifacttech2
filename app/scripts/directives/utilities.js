@@ -337,107 +337,19 @@ angular.module('artifactApp')
         };
     })
 
-
-        .directive('scrollInViewHoriz', function($window, $timeout, $location) {
-        return {
-            restrict: 'A',
-            scope:{
-                inView:"&"
-            },
-            link: function(scope, element, attrs, container) {
-                var wind = angular.element($window);
-                var elem = $(element);
-                var threshold = scope.$eval(attrs.threshold) ? attrs.threshold : ($($window).width() / 2);
-                var lastLeft = $($window).scrollLeft();
-                var INTERVAL_DELAY = 10;
-                var interval,
-                    handler,
-                    el = element[0],
-                    scrollEvent = 'scroll',
-                    scrollPosition = {
-                        x: 0,
-                        y: 0
-                    };
-
-                function isScrolledIntoView(elem)
-                {
-                    var viewLeft = $($window).scrollLeft();  //vertical position of the scroll bar
-                    var viewRight = viewLeft + $($window).width(); //computed height for the first element in the set of matched elements
-
-                    var leftElem = elem.offset().left; //current coordinates of the first element left, top, bottom, right
-                    var rightElem = leftElem + elem.width(); //computed height of the element
-
-                    var leftDistance = leftElem - viewLeft;
-                    var rightDistance = leftElem - viewRight;
-                    var direction = (viewLeft < lastLeft);
-
-                    lastLeft = viewLeft;
-
-                    return ((Math.abs(leftElem - viewLeft)) < threshold);
-                }
-
-
-
-                var timer;
-
-                $(window).bind('scroll',function () {
-                    clearTimeout(timer);
-                    timer = setTimeout( refresh , 150 );
-                });
-
-
-                var refresh = function () {
-                    // do stuff
-                    var inView = isScrolledIntoView(element);
-                    if(inView){
-                        scope.inView({id: element.attr('id')});
-                        if(attrs.scrollInView === 'lock'){
-                            $('html, body').animate({
-                                scrollLeft: $(element).offset().left
-                            }, 100, 'swing', function(){
-
-                            });
-                        }
-                        else{
-                            $('html, body').animate({
-                                scrollLeft: $(element).offset().left
-                            }, 100, 'swing', function(){
-                                clearTimeout(timer);
-                                return false;
-                            });
-                        }
-
-                    }
-                };
-
-
-                $(document).ready(function(){
-                    $('html, body').animate({
-                        scrollLeft: 0
-                    }, 50, 'swing', function(){
-                        clearTimeout(timer);
-                        return false;
-                    });
-                });
-
-            }
-        };
-    })
-
     .directive('horizontalBkgdContainer', function () {
         return {
     //            template: '<div></div>',
             restrict: 'A',
             link: function postLink(scope, element, attrs) {
-                scope.panelsNo = document.getElementsByClassName('fullpage horiz').length;
-                window.console.log(scope.panelsNo);
-                scope.w = window.innerWidth;
-                window.console.log(scope.w);
-                scope.h = window.innerHeight;
-                element.css({
-                    'height': scope.h + 'px',
-                    'width': (scope.w * scope.panelsNo) + 'px',
-                    'overflow':'auto'
+                attrs.$observe('background', function(value) {
+                    scope.panelsNo = document.getElementsByClassName('fullpage').length;
+                    scope.w = window.innerWidth;
+                    scope.h = window.innerHeight;
+                    element.css({
+                        'height': scope.h + 'px',
+                        'width': (scope.w * scope.panelsNo) + 'px'
+                    })
                 })
             }
         }
