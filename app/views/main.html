@@ -83,7 +83,7 @@
             </div>
         </div>
     </div>
-    <a class="at-about-chevron" ng-click="showAbout = true">
+    <a class="at-about-chevron" ng-click="goto('/about')">
         <h4 class="at-about-team-link">Meet The Team</h4><img src="images/chevrons-right.png">
     </a>
 </section>
@@ -121,7 +121,7 @@
             </div>
         </div>
     </div>
-    <a class="at-arrow-right" ng-click="goTo('platform.creation')">
+    <a class="at-arrow-right" ng-click="goto('platform')">
         <img src="images/arrow-right.png">
     </a>
 </section>
@@ -139,7 +139,7 @@
             </div>
         </div>
     </div>
-    <a class="at-arrow-right" ui-sref="work.fonograf">
+    <a class="at-arrow-right" ng-click="goto('work')">
         <img src="images/arrow-right.png">
     </a>
 </section>
