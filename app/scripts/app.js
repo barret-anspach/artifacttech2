@@ -6,7 +6,7 @@ angular.module('artifactApp', [
   'ngSanitize',
   'ngRoute',
   'ngAnimate',
-  'ngTouch'
+  'angular-inview'
 ])
   .config(function ($routeProvider) {
     $routeProvider
