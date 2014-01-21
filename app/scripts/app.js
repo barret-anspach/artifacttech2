@@ -38,7 +38,7 @@ angular.module('artifactApp', [
         templateUrl: 'views/work.html',
         controller: 'MainCtrl'
       })
-      .when('/about.main', {
+      .when('/about', {
         templateUrl: 'views/about.main.html',
         controller: 'MainCtrl'
       })
