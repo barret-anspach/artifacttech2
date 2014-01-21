@@ -11,7 +11,6 @@ angular.module('artifactApp')
         $(window).on('scroll', function(){
             $scope.$apply(function(){
                 $scope.isHome = ($window.scrollY < 50);
-//                $scope.currentId = 'home';
             });
             window.console.log($scope.isHome);
         });
