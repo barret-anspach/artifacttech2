@@ -14,6 +14,10 @@ angular.module('artifactApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/platform.curation', {
+          templateUrl: 'views/platform.curation.html',
+          controller: 'MainCtrl'
+      })
       .when('/platform.creation', {
         templateUrl: 'views/platform.creation.html',
         controller: 'MainCtrl'
@@ -24,10 +28,6 @@ angular.module('artifactApp', [
       })
       .when('/platform.analysis', {
         templateUrl: 'views/platform.analysis.html',
-        controller: 'MainCtrl'
-      })
-      .when('/platform.curation', {
-        templateUrl: 'views/platform.curation.html',
         controller: 'MainCtrl'
       })
       .when('/platform', {
