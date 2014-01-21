@@ -78,7 +78,7 @@ angular.module('artifactApp')
     })
 
 
-    .directive("scrollTo", ["$window", function($window, $location){
+    .directive("scrollTo", ["$window","$location", function($window, $location){
         return {
             restrict : "AC",
             scope:{
@@ -134,7 +134,7 @@ angular.module('artifactApp')
         };
     }])
 
-    .directive('scrollInView', function($window, $timeout, $location) {
+    .directive('scrollInView',["$window", "$timeout", "$location", function($window, $timeout, $location) {
         return {
             restrict: 'A',
             scope:{
@@ -227,7 +227,7 @@ angular.module('artifactApp')
 
             }
         };
-    })
+    }])
 
     .directive('horizontalBkgdContainer', function () {
         return {

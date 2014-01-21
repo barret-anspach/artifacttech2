@@ -1,7 +1,9 @@
 {
   "name": "artifact",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "jpegtran-bin": "~0.2.3"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "~0.4.0",
@@ -40,7 +42,9 @@
     "karma-requirejs": "~0.2.1",
     "karma-phantomjs-launcher": "~0.1.1",
     "karma": "~0.10.9",
-    "karma-ng-html2js-preprocessor": "~0.1.0"
+    "karma-ng-html2js-preprocessor": "~0.1.0",
+    "pngquant-bin": "~0.1.5",
+    "grunt-ftp-deploy": "~0.1.1"
   },
   "engines": {
     "node": ">=0.8.0"
