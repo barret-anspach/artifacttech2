@@ -5,6 +5,7 @@ angular.module('artifactApp')
 
         $scope.$location = $location;
         $scope.currentId = 'home';
+        $scope.showAbout = false;
 
         $scope.isLoaded = false;
 
@@ -27,4 +28,10 @@ angular.module('artifactApp')
         $scope.isActiveLink = function(id){
             return (id === $scope.currentId);
         };
+        
+        $scope.swipeLeft = function(id){
+            window.console.log('i done swiped to '+ id);
+        };
+
+
     });
