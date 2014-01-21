@@ -77,29 +77,6 @@ angular.module('artifactApp')
         }
     })
 
-    .directive('offsetTop', function($timeout, $window){
-        return {
-            restrict: 'A',
-            link: function(scope, elem, attr) {
-                var offset = parseInt(attr.offsetTop, 10);
-                if(!offset) offset = 10;
-                scope.checked = null;
-                console.log("offset:  " + offset);
-                var windowEl = angular.element($window);
-                var handler = function() {
-                    scope.scroll = windowEl.scrollTop();
-                    clearTimeout($.data(this, 'scrollTimer'));
-                    $.data(this, 'scrollTimer', setTimeout(function() {
-                        // do something
-                        console.log("Haven't scrolled in 250ms!");
-                    }, 250));
-                };
-                windowEl.on('scroll', scope.$apply.bind(scope, handler));
-                handler();
-
-            }
-        }
-    })
 
     .directive("scrollTo", ["$window", function($window, $location){
         return {
@@ -109,9 +86,12 @@ angular.module('artifactApp')
             },
             link: function(scope, element, attr){
 
+                var elementId = attr.scrollTo;
+                window.console.log(elementId);
+                
                 function scroll(scrollObj){
                     $('html, body').animate(scrollObj, 800, 'swing', function(){
-                        window.console.log('scroll call back');
+//                        window.console.log('scroll call back');
                         scope.$apply(function(){
                             scope.inView({id: elementId});
                         })
@@ -122,7 +102,7 @@ angular.module('artifactApp')
                     var horizontal = scope.$eval(attr.horizontal) || false;
                     var home = attr.home ? scope.$eval(attr.home) : true;
                     if(!home){
-                        window.console.log('im not home!!');
+//                        window.console.log('im not home!!');
                         $location.path('/');
                         var el = document.getElementById(elementId);
                         var scrollObj = {scrollTop: $(el).offset().top};
@@ -140,7 +120,7 @@ angular.module('artifactApp')
 
                     if(el) {
                         if(!home){
-                            window.console.log('im not home!!');
+//                            window.console.log('im not home!!');
                         }
                         else{
                             scroll(scrollObj);
@@ -187,7 +167,7 @@ angular.module('artifactApp')
 
                 var getPosition = function(){
                     if(horizontal){
-                        window.console.log('im a horizontal element!!!');
+//                        window.console.log('im a horizontal element!!!');
                         lastScroll = $($window).scrollLeft();
                         threshold = scope.$eval(attrs.threshold) ? attrs.threshold : ($($window).width() / 2);
                         screenStartEdge = $($window).scrollLeft();  //horizontal position of the scroll bar
@@ -199,7 +179,7 @@ angular.module('artifactApp')
                         }
                     }
                     else{
-                        window.console.log('im a vertical scroll guy');
+//                        window.console.log('im a vertical scroll guy');
                         lastScroll = $($window).scrollTop();
                         threshold = scope.$eval(attrs.threshold) ? attrs.threshold : ($($window).height() / 2);
                         screenStartEdge = $($window).scrollTop();  //vertical position of the scroll bar
