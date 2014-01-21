@@ -20,19 +20,19 @@
     <div class="at-subnav-wrapper" ng-class="{ home: isActiveLink('home') && $location.path() == '/'}" ng-hide="isActiveLink('contact') || isActiveLink('about') || $location.path() == '/about.main'">
         <div class="at-subnav">
             <nav class="at-navbar-subnav" ng-show="isActiveLink('about')">
-                <a scroll-to="" horizontal ng-class="{ active: isActiveLink('about-team') }">The Team</a>
+                <a scroll-to="" horizontal="true" ng-class="{ active: isActiveLink('about-team') }">The Team</a>
                 <!--<a scroll-to="" horizontal ng-class="{ active: $state.is('about.investors') }">The Investors</a>-->
                 <!--<a scroll-to="" horizontal ng-class="{ active: $state.is('about.advisory') }">The Advisory Board</a>-->
             </nav>
             <nav class="at-navbar-subnav" ng-show="isActiveLink('platform')">
-                <a scroll-to="" prevent-default="" horizontal ng-class="{ active: isActiveLink('platform-curation') }">Curation</a>
-                <a scroll-to="" prevent-default="" horizontal ng-class="{ active: isActiveLink('platform-creation') }">Creation</a>
-                <a scroll-to="" prevent-default="" horizontal ng-class="{ active: isActiveLink('platform-commerce') }">Commerce</a>
-                <a scroll-to="" prevent-default="" horizontal ng-class="{ active: isActiveLink('platform-analysis') }">Analysis</a>
+                <a scroll-to="platform-curation" prevent-default="" horizontal="true" ng-class="{ active: isActiveLink('platform-curation') }">Curation</a>
+                <a scroll-to="platform-creation" prevent-default="" horizontal="true" ng-class="{ active: isActiveLink('platform-creation') }">Creation</a>
+                <a scroll-to="platform-commerce" prevent-default="" horizontal="true" ng-class="{ active: isActiveLink('platform-commerce') }">Commerce</a>
+                <a scroll-to="platform-analysis" prevent-default="" horizontal="true" ng-class="{ active: isActiveLink('platform-analysis') }">Analysis</a>
             </nav>
             <nav class="at-navbar-subnav" ng-show="isActiveLink('work')">
-                <a scroll-to="" prevent-default="" horizontal ng-class="{ active: isActiveLink('work-fonograf') }">Fonograf</a>
-                <a scroll-to="" prevent-default="" horizontal ng-class="{ active: isActiveLink('work-lens') }">Whidbey LENS</a>
+                <a scroll-to="work-fonograf" prevent-default="" horizontal="true" ng-class="{ active: isActiveLink('work-fonograf') }">Fonograf</a>
+                <a scroll-to="work-lens" prevent-default="" horizontal="true" ng-class="{ active: isActiveLink('work-lens') }">Whidbey LENS</a>
             </nav>
         </div>
     </div>

@@ -5,7 +5,8 @@ angular.module('artifactApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ngAnimate'
+  'ngAnimate',
+  'ngTouch'
 ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -27,6 +28,14 @@ angular.module('artifactApp', [
       })
       .when('/platform.curation', {
         templateUrl: 'views/platform.curation.html',
+        controller: 'MainCtrl'
+      })
+      .when('/platform', {
+        templateUrl: 'views/platform.main.html',
+        controller: 'MainCtrl'
+      })
+      .when('/work', {
+        templateUrl: 'views/work.html',
         controller: 'MainCtrl'
       })
       .when('/about.main', {

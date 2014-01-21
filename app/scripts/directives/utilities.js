@@ -23,10 +23,8 @@ angular.module('artifactApp')
                     'background-repeat': 'no-repeat'
                 })
             });
-
         }
     })
-
 
     .directive('background', function ($window) {
         return {
@@ -70,42 +68,12 @@ angular.module('artifactApp')
         }
     })
 
-    .directive('scroller', function($window) {
-        return function(scope, element, attrs) {
-//            angular.element($window).bind("scroll", function() {
-//                if (this.pageYOffset >= 100) {
-////                    element.addClass('min');
-//                    console.log('Scrolled below header.');
-//                } else {
-////                    element.removeClass('min');
-//                    console.log('Header is in view.');
-//                }
-//            });
-        };
-    })
-    .directive('inView', function($window) {
-       return {
-           restrict: 'A',
-           link: function postLink(scope, element, attrs) {
-
-//               var windowEl = $($window);
-//
-//               var isElementInViewPort = function(){
-//                   return $(element)[0]
-//               };
-//
-//                $($window).on('scroll', function(){
-////                    console.log(isElementInViewPort());
-//                })
-           }
-       };
-    })
-
     .directive('preventDefault', function() {
         return function(scope, element, attrs) {
             jQuery(element).click(function(event) {
                 event.preventDefault();
             });
+
         }
     })
 
@@ -140,114 +108,53 @@ angular.module('artifactApp')
                 inView: '&'
             },
             link: function(scope, element, attr){
+
+                function scroll(scrollObj){
+                    $('html, body').animate(scrollObj, 800, 'swing', function(){
+                        window.console.log('scroll call back');
+                        scope.$apply(function(){
+                            scope.inView({id: elementId});
+                        })
+                    });
+                }
                 function scrollInto(elementId) {
                     if(!elementId) $window.scrollTo(0, 0);
-                    var el = document.getElementById(elementId);
-//                    TODO: if the current path is not '/' we need to navigate there before scrolling
-//                    More specifically, there needs to be another directive to scroll to a horizontal page
-//                    if($location.path() === '/'){
-//                        $location.path('/');
-//                    }
-                    if(attr.horizontal){ var scrollObj = {scrollLeft: $(el).offset().left}}
-                    else{ var scrollObj = {scrollTop: $(el).offset().top}}
-                    window.console.log(scrollObj);
-                    //check if an element can be found with id attribute
+                    var horizontal = scope.$eval(attr.horizontal) || false;
+                    var home = attr.home ? scope.$eval(attr.home) : true;
+                    if(!home){
+                        window.console.log('im not home!!');
+                        $location.path('/');
+                        var el = document.getElementById(elementId);
+                        var scrollObj = {scrollTop: $(el).offset().top};
+                        scroll(scrollObj);
+                    }
+                    else{
+                        var el = document.getElementById(elementId);
+                        if(horizontal){
+                            var scrollObj = {scrollLeft: $(el).offset().left}
+                        }
+                        else{
+                            var scrollObj = {scrollTop: $(el).offset().top}
+                        }
+                    }
+
                     if(el) {
-                        $('html, body').animate(scrollObj, 800, 'swing', function(){
-                            window.console.log('scroll call back');
-                            scope.$apply(function(){
-                                scope.inView({id: elementId});
-                            })
-                        });
+                        if(!home){
+                            window.console.log('im not home!!');
+                        }
+                        else{
+                            scroll(scrollObj);
+                        }
                     }
                 }
                 element.bind("click", function(event){
-                    window.console.log(attr.scrollTo);
                     scrollInto(attr.scrollTo);
                 });
             }
-//            compile : function(scope, elem, attr){
-//                function scrollInto(elementId) {
-//                    if(!elementId) $window.scrollTo(0, 0);
-//                    var el = document.getElementById(elementId);
-//
-//                    if(attr.horizontal){ var scrollObj = {scrollLeft: $(el).offset().left}}
-//                    else{ var scrollObj = {scrollTop: $(el).offset().top}}
-//                    window.console.log(scrollObj);
-//                    //check if an element can be found with id attribute
-//                    if(el) {
-//                        $('html, body').animate(scrollObj, 800, 'swing', function(){
-//                            scope.inView({id: elementId});
-//                        });
-//                    }
-//                }
-//                return function(scope, element, attr) {
-//                    element.bind("click", function(event){
-//                        window.console.log('clicked');
-//                        scrollInto(attr.scrollTo);
-//                    });
-//                };
-//            }
         };
     }])
 
-    .directive("scrollyContainer", ["$window", function($window){
-        return {
-            restrict : "AC",
-            controller: function($scope){
-                $scope.panels = {};
-
-                this.addPanel = function(panel){
-                    $scope.panels[panel.id] = panel;
-                    console.log($scope.panels);
-                };
-
-            },
-            link : function(scope, element, attrs){
-                $($window).bind('scroll', function(){
-
-                })
-            }
-        };
-    }])
-
-    .directive('navSpy', function(){
-        return{
-            restrict: 'A',
-//            require: '',
-            link: function(scope, element, attrs){
-                window.console.log(attrs.navSpy);
-            }
-        }
-    })
-
-
-//    .animation('.home', function($window, $animate){
-//        return {
-//            beforeAddClass : function(element, className, done) {
-////                window.console.log(className);
-////                if(className == 'home') {
-////                    $(element).addClass('home');
-////                }
-////                else {
-////                    done();
-////                }
-//            },
-//
-//            beforeRemoveClass : function(element, className, done) {
-//                window.console.log(className);
-////                if(className == 'home') {
-////                    $(element).removeClass('home');
-////                }
-////                else {
-////                    done();
-////                }
-//            }
-//
-//        }
-//    })
-
-        .directive('scrollInView', function($window, $timeout, $location) {
+    .directive('scrollInView', function($window, $timeout, $location) {
         return {
             restrict: 'A',
             scope:{
@@ -255,82 +162,87 @@ angular.module('artifactApp')
             },
             link: function(scope, element, attrs, container) {
                 var wind = angular.element($window);
-
-                var elem = $(element);
-//                var elData = {top: elem.position().top, height: elem.height(), id: elem.attr('id')};
-//                container.addPanel(elData);
-                var threshold = scope.$eval(attrs.threshold) ? attrs.threshold : ($($window).height() / 2);
+                var horizontal = scope.$eval(attrs.horizontal) || false;
                 var scrolling;
-                var lastTop = $($window).scrollTop();
-                var INTERVAL_DELAY = 10;
-                var interval,
-                    handler,
-                    el = element[0],
-                    scrollEvent = 'scroll',
-                    scrollPosition = {
-                        x: 0,
-                        y: 0
-                    };
+                var elem = $(element);
+                var lastScroll;
+                var threshold;
+                var screenStartEdge;
+                var screenEndEdge;
+                var elemStartEdge;
+                var elemEndEdge;
+                var startEdgeDiff;
+                var endEdgeDiff;
+                var scrollDirection;
+                var scrollObj;
+
+                var scrollToTop = function(){
+                    $('html, body').animate({
+                        scrollTop: 0
+                    }, 10, 'swing', function(){
+                        clearTimeout(timer);
+                        return false;
+                    });
+                };
+
+                var getPosition = function(){
+                    if(horizontal){
+                        window.console.log('im a horizontal element!!!');
+                        lastScroll = $($window).scrollLeft();
+                        threshold = scope.$eval(attrs.threshold) ? attrs.threshold : ($($window).width() / 2);
+                        screenStartEdge = $($window).scrollLeft();  //horizontal position of the scroll bar
+                        screenEndEdge = screenStartEdge + $($window).width();
+                        elemStartEdge = elem.offset().left; //current coordinates of the first element left, top, bottom, right
+                        elemEndEdge = elemStartEdge + elem.width(); //computed height of the element
+                        scrollObj = {
+                            scrollLeft: elemStartEdge
+                        }
+                    }
+                    else{
+                        window.console.log('im a vertical scroll guy');
+                        lastScroll = $($window).scrollTop();
+                        threshold = scope.$eval(attrs.threshold) ? attrs.threshold : ($($window).height() / 2);
+                        screenStartEdge = $($window).scrollTop();  //vertical position of the scroll bar
+                        screenEndEdge = screenStartEdge + $($window).height(); //computed height for the first element in the set of matched elements
+                        elemStartEdge = elem.offset().top; //current coordinates of the first element left, top, bottom, right
+                        elemEndEdge = elemStartEdge + elem.height(); //computed height of the element
+                        scrollObj = {
+                            scrollTop: elemStartEdge
+                        }
+                    }
+                };
 
                 function isScrolledIntoView(elem)
                 {
-                    var viewTop = $($window).scrollTop();  //vertical position of the scroll bar
-                    var viewBottom = viewTop + $($window).height(); //computed height for the first element in the set of matched elements
-
-                    var topElem = elem.offset().top; //current coordinates of the first element left, top, bottom, right
-                    var elemBottom = topElem + elem.height(); //computed height of the element
-
-                    var topDistance = topElem - viewTop;
-                    var downDistance = topElem - viewBottom;
-                    var direction = (viewTop < lastTop);
-
-                    lastTop = viewTop;
-
-                    return ((Math.abs(topElem - viewTop)) < threshold);
+                    getPosition();
+                    startEdgeDiff = elemStartEdge - screenStartEdge;
+                    endEdgeDiff = elemStartEdge - screenStartEdge;
+                    scrollDirection = (screenStartEdge < lastScroll);
+                    lastScroll = screenStartEdge;
+                    return ((Math.abs(elemStartEdge - screenStartEdge)) < threshold);
                 }
-
-
 
                 var timer;
 
                 $(window).bind('scroll',function () {
                     clearTimeout(timer);
-                    timer = setTimeout( refresh , 150 );
+                    timer = setTimeout( refresh , 100 );
                 });
 
 
                 var refresh = function () {
-                    // do stuff
                     var inView = isScrolledIntoView(element);
                     if(inView){
                         scope.inView({id: element.attr('id')});
-                        if(attrs.scrollInView === 'lock'){
-                            $('html, body').animate({
-                                scrollTop: $(element).offset().top
-                            }, 100, 'swing', function(){
-
-                            });
-                        }
-                        else{
-                            $('html, body').animate({
-                                scrollTop: $(element).offset().top
-                            }, 100, 'swing', function(){
-                                clearTimeout(timer);
-                                return false;
-                            });
-                        }
-
+                        $('html, body').animate(scrollObj, 100, 'swing', function(){
+                            clearTimeout(timer);
+                            return false;
+                        });
                     }
                 };
 
-
                 $(document).ready(function(){
-                    $('html, body').animate({
-                        scrollTop: 0
-                    }, 50, 'swing', function(){
-                        clearTimeout(timer);
-                        return false;
-                    });
+                    scrollToTop;
                 });
 
             }
@@ -341,9 +253,15 @@ angular.module('artifactApp')
         return {
     //            template: '<div></div>',
             restrict: 'A',
+            controller: function($scope){
+                $scope.panels = [];
+                this.addPanel = function(panel){
+                    $scope.panels.push(panel);
+                }
+            },
             link: function postLink(scope, element, attrs) {
                 attrs.$observe('background', function(value) {
-                    scope.panelsNo = document.getElementsByClassName('fullpage').length;
+                    scope.panelsNo = document.getElementsByClassName('fullpage horiz').length;
                     scope.w = window.innerWidth;
                     scope.h = window.innerHeight;
                     element.css({
@@ -354,5 +272,6 @@ angular.module('artifactApp')
             }
         }
 }   )
+;
 
 
