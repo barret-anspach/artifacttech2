@@ -11,8 +11,10 @@ module.exports = function (grunt) {
 
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
+    grunt.loadNpmTasks('grunt-contrib-coffee');
 
-  // Time how long tasks take. Can help when optimizing build times
+
+    // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
   // Define the configuration for all the tasks
@@ -33,6 +35,23 @@ module.exports = function (grunt) {
         options: {
           livereload: true
         }
+      },
+      coffee: {
+        files: ['app/**/*.coffee'],
+        tasks: ['coffee'],
+        options: {
+            events: ['changed', 'added'],
+            nospawn: true
+        }
+      }
+    },
+    coffee: {
+      all: {
+          expand: true,
+          cwd: './app',
+          src: ['**/*.coffee'],
+          dest: './public',
+          ext: '.js'
       },
       jsTest: {
         files: ['test/spec/{,*/}*.js'],

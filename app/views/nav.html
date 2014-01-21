@@ -1,38 +1,38 @@
-<div class="at-navbar">
-    <div home-nav class="at-navbar-wrapper">
+<div id='scrollNav' class="at-navbar">
+    <div class="at-navbar-wrapper" ng-class="{ home: isActiveLink('home') && $location.path() == '/' }">
         <div class="at-navbar-banner">
             <header class="at-navbar-header at-inline">
-                <a spy="home" ng-click="scrollTo('home')">
+                <a prevent-default="" scroll-to="home" in-view="isInView(id)" ng-click="currentId = 'home'">
                     <div class="logo" background-img="../images/artifact-logo.png" size="cover"></div>
                     Artifact <span class="thin">Technologies</span><span class="trade">&trade;</span>
                 </a>
             </header>
-            <span home-nav>
-                <nav home-nav class="at-navbar-main at-inline" ng-class="{ home: $location.hash() == 'home' }">
-                    <a spy="about" ng-click="scrollTo('about')" ng-class="{active: $location.hash() == 'about' }">About Us</a>
-                    <a spy="platform" ng-click="scrollTo('platform')" ng-class="{active: $location.hash() == 'platform' }">Our Platform</a>
-                    <a spy="work" ng-click="scrollTo('work')" ng-class="{active: $location.hash() == 'work' }">Our Work</a>
-                    <a spy="contact" ng-click="scrollTo('contact')" ng-class="{active: $location.hash() == 'contact' }">Contact Us</a>
-                </nav>
-            </span>
+                    <span ng-class="{ home: isActiveLink('home') && $location.path() == '/' }">
+                        <nav class="at-navbar-main at-inline" ng-class="{ home: isActiveLink('home') && $location.path() == '/' }">
+                            <a prevent-default="" scroll-to="about" in-view='isInView(id)' ng-class="{active: isActiveLink('about')}">About Us</a>
+                            <a prevent-default="" scroll-to="platform" in-view='isInView(id)' ng-class="{active: isActiveLink('platform')}">Our Platform</a>
+                            <a prevent-default="" scroll-to="work" in-view='isInView(id)' ng-class="{active: isActiveLink('work')}">Our Work</a>
+                            <a prevent-default="" scroll-to="contact" in-view='isInView(id)' ng-class="{active: isActiveLink('contact')}">Contact Us</a>
+                        </nav>
+                    </span>
         </div>
     </div>
-    <div home-nav class="at-subnav-wrapper">
+    <div class="at-subnav-wrapper" ng-class="{ home: isActiveLink('home') && $location.path() == '/'}" ng-hide="isActiveLink('contact') || isActiveLink('about') || $location.path() == '/about.main'">
         <div class="at-subnav">
-            <nav class="at-navbar-subnav" ng-show="$state.includes('about')">
-                <a ui-sref="about.team" ng-class="{ active: $state.is('about.team') }">The Team</a>
-                <a ui-sref="about.investors" ng-class="{ active: $state.is('about.investors') }">The Investors</a>
-                <a ui-sref="about.advisory" ng-class="{ active: $state.is('about.advisory') }">The Advisory Board</a>
+            <nav class="at-navbar-subnav" ng-show="isActiveLink('about')">
+                <a scroll-to="" horizontal ng-class="{ active: isActiveLink('about-team') }">The Team</a>
+                <!--<a scroll-to="" horizontal ng-class="{ active: $state.is('about.investors') }">The Investors</a>-->
+                <!--<a scroll-to="" horizontal ng-class="{ active: $state.is('about.advisory') }">The Advisory Board</a>-->
             </nav>
-            <nav class="at-navbar-subnav" ng-show="$state.includes('about')">
-                <a ui-sref="platform.curation" ng-class="{ active: $state.is('platform.curation') }">Curation</a>
-                <a ui-sref="platform.creation" ng-class="{ active: $state.is('platform.creation') }">Creation</a>
-                <a ui-sref="platform.commerce" ng-class="{ active: $state.is('platform.commerce') }">Commerce</a>
-                <a ui-sref="platform.analysis" ng-class="{ active: $state.is('platform.analysis') }">Analysis</a>
+            <nav class="at-navbar-subnav" ng-show="isActiveLink('platform')">
+                <a scroll-to="" prevent-default="" horizontal ng-class="{ active: isActiveLink('platform-curation') }">Curation</a>
+                <a scroll-to="" prevent-default="" horizontal ng-class="{ active: isActiveLink('platform-creation') }">Creation</a>
+                <a scroll-to="" prevent-default="" horizontal ng-class="{ active: isActiveLink('platform-commerce') }">Commerce</a>
+                <a scroll-to="" prevent-default="" horizontal ng-class="{ active: isActiveLink('platform-analysis') }">Analysis</a>
             </nav>
-            <nav class="at-navbar-subnav" ng-show="$state.includes('work')">
-                <a ui-sref="work.fonograf" ng-class="{ active: $state.is('work.fonograf') }">Fonograf</a>
-                <a ui-sref="work.lens" ng-class="{ active: $state.is('work.lens') }">Whidbey LENS</a>
+            <nav class="at-navbar-subnav" ng-show="isActiveLink('work')">
+                <a scroll-to="" prevent-default="" horizontal ng-class="{ active: isActiveLink('work-fonograf') }">Fonograf</a>
+                <a scroll-to="" prevent-default="" horizontal ng-class="{ active: isActiveLink('work-lens') }">Whidbey LENS</a>
             </nav>
         </div>
     </div>

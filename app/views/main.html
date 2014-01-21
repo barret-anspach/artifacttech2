@@ -1,59 +1,18 @@
-
-<div scroll-spy horizontal-bkgd-container>
-
-<div class="at-navbar">
-    <div home-nav class="at-navbar-wrapper">
-        <div class="at-navbar-banner">
-            <header class="at-navbar-header at-inline">
-                <a spy="home" ng-click="scrollTo('home')">
-                    <div class="logo" background-img="../images/artifact-logo.png" size="cover"></div>
-                    Artifact <span class="thin">Technologies</span><span class="trade">&trade;</span>
-                </a>
-            </header>
-            <span home-nav>
-                <nav home-nav class="at-navbar-main at-inline">
-                    <a spy="about" ng-click="scrollTo('about')" ng-class="{active: $location.hash() == 'about' }">About Us</a>
-                    <a spy="platform" ng-click="scrollTo('platform')" ng-class="{active: $location.hash() == 'platform' }">Our Platform</a>
-                    <a spy="work" ng-click="scrollTo('work')" ng-class="{active: $location.hash() == 'work' }">Our Work</a>
-                    <a spy="contact" ng-click="scrollTo('contact')" ng-class="{active: $location.hash() == 'contact' }">Contact Us</a>
-                </nav>
-            </span>
-        </div>
+<section id="home" class="fullpage" scroll-in-view in-view='isInView(id)' background="h" background-img="../images/bg/AT_home-bg.png" size="cover">
+    <div class="container" background="h">
+        <span class="at-main-message"><h1>You are here</h1></span>
+        <a class="at-arrow-down" ui-sref="about.main">
+            <img src="images/arrow-down.png">
+        </a>
     </div>
-    <div home-nav class="at-subnav-wrapper">
-        <div class="at-subnav">
-            <nav class="at-navbar-subnav" ng-show="$state.includes('about')">
-                <a ui-sref="about.team" ng-class="{ active: $state.is('about.team') }">The Team</a>
-                <a ui-sref="about.investors" ng-class="{ active: $state.is('about.investors') }">The Investors</a>
-                <a ui-sref="about.advisory" ng-class="{ active: $state.is('about.advisory') }">The Advisory Board</a>
-            </nav>
-            <nav class="at-navbar-subnav" ng-show="$state.includes('about')">
-                <a ui-sref="platform.curation" ng-class="{ active: $state.is('platform.curation') }">Curation</a>
-                <a ui-sref="platform.creation" ng-class="{ active: $state.is('platform.creation') }">Creation</a>
-                <a ui-sref="platform.commerce" ng-class="{ active: $state.is('platform.commerce') }">Commerce</a>
-                <a ui-sref="platform.analysis" ng-class="{ active: $state.is('platform.analysis') }">Analysis</a>
-            </nav>
-            <nav class="at-navbar-subnav" ng-show="$state.includes('work')">
-                <a ui-sref="work.fonograf" ng-class="{ active: $state.is('work.fonograf') }">Fonograf</a>
-                <a ui-sref="work.lens" ng-class="{ active: $state.is('work.lens') }">Whidbey LENS</a>
-            </nav>
-        </div>
-    </div>
-</div>
-    <section id="home" class="fullpage" in-view="panelInView('home', $inview, $inviewpart)" background="h" background-img="../images/bg/AT_home-bg.png" size="cover">
-        <div class="container" background="h">
-            <span class="at-main-message"><h1>You are here</h1></span>
-            <a class="at-arrow-down" ui-sref="about.main" background-img="../images/arrow-dowm.png" size="cover"></a>
-        </div>
-    </section>
+</section>
 
-    <!--<button ng-click="viewTime=!viewTime"></button>-->
-    <section id="about" class="fullpage" background="h" background-img="../images/bg/AT_about-us-bg.png" size="cover" position="top center">
-        <div class="container" background="h">
-            <div class="at-about-main-text" background="h">
-                <h1>About Us</h1>
-                <p>Wherever you are, we bring you con&shy;tent that matters.</p>
-                <p>Here at Artifact Technologies we use geolocation and media creation together to deliver relevant, curated content right to your mobile device. Our platform, LENS<span class="trade">&trade;</span> is here to en&shy;hance you experience by delivering content that matters to you.</p>
+<section id="about" scroll-in-view="lock" in-view='isInView(id)' class="fullpage"  background="h" background-img="../images/bg/AT_about-us-bg.png" size="cover">
+    <div class="container" background="h">
+        <div class="at-about-main-text" background="h">
+            <h1>About Us</h1>
+            <p>Wherever you are, we bring you con&shy;tent that matters.</p>
+            <p>Here at Artifact Technologies we use geolocation and media creation together to deliver relevant, curated content right to your mobile device. Our platform, LENS<span class="trade">&trade;</span> is here to en&shy;hance you experience by delivering content that matters to you.</p>
 
                 <div class="at-about-artifact">
                     <h1>[ <span class="underlined">
@@ -65,12 +24,11 @@
                 <span class="letter" ng-mouseover="showA2 = true" ng-mouseleave="showA2 = false">A</span>
                 <span class="letter" ng-mouseover="showC = true" ng-mouseleave="showC = false">C</span>
                 <span class="letter" ng-mouseover="showT2 = true" ng-mouseleave="showT2 = false">T</span></span> ]</h1>
-                    <div ng-show="showA">
-                        <div id="showA" class="pointer"></div>
-                        <div class="at-about-artifact-bubble">
-                            <h2>[A]utonomy</h2>
-                            <p>We like to work without the barriers of "top-down" management, there are no micro-managers at Artifact.</p>
-                        </div>
+                <div ng-show="showA">
+                    <div id="showA" class="pointer"></div>
+                    <div class="at-about-artifact-bubble">
+                        <h2>[A]utonomy</h2>
+                        <p>We like to work without the barriers of "top-down" management, there are no micro-managers at Artifact.</p>
                     </div>
                     <div ng-show="showR">
                         <div id="showR" class="pointer"></div>
@@ -124,82 +82,90 @@
                 </div>
             </div>
         </div>
-        <a class="at-about-chevron" ui-sref="about.team.1">
-            <h4 class="at-about-team-link">Meet The Team</h4><div class="at-about-chevron-img" background-img="../images/chevrons-right.png" size="contain"></div>
-        </a>
-    </section>
+    </div>
+    <a class="at-about-chevron" ng-click="goto('/about.main')">
+        <h4 class="at-about-team-link">Meet The Team</h4><img src="images/chevrons-right.png">
+    </a>
+</section>
 
-    <section id="platform" class="fullpage" background="h" background-img="../images/bg/AT_platform-bg.png" size="cover" in-view>
-        <div class="container" background="h">
-            <div class="at-platform" background="h">
-                <h1>Our Platform</h1>
-                <div class="at-platform-list">
-                    <ol>
-                        <li>Our core technology is the Mosaic<span class="trade">&trade;</span> - a dynamic, proprietary media format optimized for mobile viewing, sharing and seamless purchase.</li>
-                        <li>Our mobile platform, LENS<span class="trade">&trade;</span>, allows businesses to easily aggregate, curate and publish their content - as Mosaics - directly to customers.</li>
-                        <li>LENS<span class="trade">&trade;</span> operates with geo-fenced networks. Once you physically enter a network, you are introduced to activities, offers, exclusive content, information and more within steps of where you are.</li>
-                    </ol>
-                </div>
-                <div class="at-platform-menu">
-                    <a class="at-platform-box" ui-sref="platform.curation">
-                        <div class="box-icon" background-img="../images/thumbs-up.png" size="cover"></div>
-                        <div class="menu-title">Curation</div>
-                    </a>
-                    <a class="at-platform-box" ui-sref="platform.creation">
-                        <div class="box-icon" background-img="../images/paintbrush.png" size="cover"></div>
-                        <div class="menu-title">Creation</div>
-                    </a>
-                    <a class="at-platform-box" ui-sref="platform.commerce">
-                        <div class="box-icon" background-img="../images/present.png" size="cover"></div>
-                        <div class="menu-title">Commerce</div>
-                    </a>
-                    <a class="at-platform-box" ui-sref="platform.analysis">
-                        <div class="box-icon" background-img="../images/bar-graph.png" size="cover"></div>
-                        <div class="menu-title">Analysis</div>
-                    </a>
+<!--<div ng-include="'/views/about.main.html'"></div>-->
+
+<section id="platform" class="fullpage" scroll-in-view in-view='isInView(id)' background="h" background-img="../images/bg/AT_platform-bg.png" size="cover">
+    <div class="container" background="h">
+        <div class="at-platform" background="h">
+            <h1>Platform</h1>
+            <div class="at-platform-list">
+                <ol>
+                    <li>Our core technology is the Mosaic<span class="trade">&trade;</span> - a dynamic, proprietary media format optimized for mobile viewing, sharing and seamless purchase.</li>
+                    <li>Our mobile platform, LENS<span class="trade">&trade;</span>, allows businesses to easily aggregate, curate and publish their content - as Mosaics - directly to customers.</li>
+                    <li>LENS<span class="trade">&trade;</span> operates with geo-fenced networks. Once you physically enter a network, you are introduced to activities, offers, exclusive content, information and more within steps of where you are.</li>
+                </ol>
+            </div>
+            <div class="at-platform-menu">
+                <a class="at-platform-box" ui-sref="platform.curation">
+                    <div class="box-icon" background-img="../images/thumbs-up.png" size="cover"></div>
+                    <div class="menu-title">Curation</div>
+                </a>
+                <a class="at-platform-box" ui-sref="platform.creation">
+                    <div class="box-icon" background-img="../images/paintbrush.png" size="cover"></div>
+                    <div class="menu-title">Creation</div>
+                </a>
+                <a class="at-platform-box" ui-sref="platform.commerce">
+                    <div class="box-icon" background-img="../images/present.png" size="cover"></div>
+                    <div class="menu-title">Commerce</div>
+                </a>
+                <a class="at-platform-box" ui-sref="platform.analysis">
+                    <div class="box-icon" background-img="../images/bar-graph.png" size="cover"></div>
+                    <div class="menu-title">Analysis</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <a class="at-arrow-right" ng-click="goTo('platform.creation')">
+        <img src="images/arrow-right.png">
+    </a>
+</section>
+
+<section id="work" class="fullpage" scroll-in-view in-view='isInView(id)'  background="h" background-img="../images/bg/AT_our-work-bg.png" size="cover">
+    <div class="container" background="h">
+        <div class="at-work" background="h">
+            <h1>Our Work</h1>
+            <div class="at-work-page">
+                <p>Nearly every place in today’s world is paired with a digital counterpart. People interact with museums, neighborhoods, restaurants and more in real life, and virtually online via a multitude of devices. We are here to bridge the distance between those two places, with our LENS™ application. LENS™ creates place identity for locations where they can come alive with digital information, entertainment and commerce.</p>
+                <div class="at-phones">
+                    <a class="at-phone at-left" background-img="../images/phone-lens.png" size="contain" ui-sref="work.lens" title="LENS"></a>
+                    <a class="at-phone at-right" background-img="../images/phone-fonograf.png" size="contain" ui-sref="work.fonograf" title="Fonograf"></a>
                 </div>
             </div>
         </div>
-        <a class="at-arrow-right" ui-sref="platform.curation" background-img="../images/arrow-right.png" size="cover"></a>
-    </section>
+    </div>
+    <a class="at-arrow-right" ui-sref="work.fonograf">
+        <img src="images/arrow-right.png">
+    </a>
+</section>
 
-    <section id="work" class="fullpage" background="h" background-img="../images/bg/AT_our-work-bg.png" size="cover">
-        <div class="container" background="h">
-            <div class="at-work" background="h">
-                <h1>Our Work</h1>
-                <div class="at-work-page">
-                    <p>Nearly every place in today’s world is paired with a digital counterpart. People interact with museums, neighborhoods, restaurants and more in real life, and virtually online via a multitude of devices. We are here to bridge the distance between those two places, with our LENS™ application. LENS™ creates place identity for locations where they can come alive with digital information, entertainment and commerce.</p>
-                    <div class="at-phones">
-                        <a class="at-phone at-left" background-img="../images/phone-lens.png" size="contain" ui-sref="work.lens" title="LENS"></a>
-                        <a class="at-phone at-right" background-img="../images/phone-fonograf.png" size="contain" ui-sref="work.fonograf" title="Fonograf"></a>
-                    </div>
-                </div>
+<section id="contact" class="fullpage" scroll-in-view in-view='isInView(id)' background="h" background-img="../images/bg/AT_contact-us.png" size="cover">
+    <div class="container">
+        <div class="at-contact">
+            <h1>Contact Us</h1>
+
+            <div class="contact-info">
+                <p>Drop us an email<br>
+                    <a ng-href="mailto:sayhey@artifacttech.com">sayhey@artifacttech.com</a></p>
+
+                <p>Visit us in Fremont<br>
+                    3601 Fremont Ave N Suite 315<br>
+                    Seattle WA 98103</p>
+
+                <a class="twitter" ng-href="https://twitter.com/fonografmusic" target="_blank"></a>
             </div>
         </div>
-        <a class="at-arrow-right" ui-sref="work.fonograf">
-            <img src="images/arrow-right.png">
-        </a>
-    </section>
+    </div>
+    <div class="at-footer">
+        <p>Copyright &copy; Artifact Technologies 2012. All rights reserved</p>
+    </div>
+</section>
 
-    <section id="contact" class="fullpage" background="h" background-img="../images/bg/AT_contact-us.png" size="cover">
-        <div class="container">
-            <div class="at-contact">
-                <h1>Contact Us</h1>
 
-                <div class="contact-info">
-                    <p>Drop us an email<br>
-                        <a ng-href="mailto:sayhey@artifacttech.com">sayhey@artifacttech.com</a></p>
 
-                    <p>Visit us in Fremont<br>
-                        3601 Fremont Ave N Suite 315<br>
-                        Seattle WA 98103</p>
 
-                    <a class="twitter" ng-href="https://twitter.com/fonografmusic" target="_blank"></a>
-                </div>
-            </div>
-        </div>
-        <div class="at-footer">
-            <p>Copyright &copy; Artifact Technologies 2012. All rights reserved</p>
-        </div>
-    </section>
-</div>
