@@ -28,53 +28,36 @@ module.exports = function (grunt) {
     },
 
     // Watches files for changes and runs tasks based on the changed files
-    watch: {
-      js: {
-        files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
-        tasks: ['newer:jshint:all'],
-        options: {
-          livereload: true
-        }
+      watch: {
+          js: {
+              files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
+              tasks: ['newer:jshint:all'],
+              options: {
+                  livereload: true
+              }
+          },
+          jsTest: {
+              files: ['test/spec/{,*/}*.js'],
+              tasks: ['newer:jshint:test', 'karma']
+          },
+          compass: {
+              files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+              tasks: ['compass:server', 'autoprefixer']
+          },
+          gruntfile: {
+              files: ['Gruntfile.js']
+          },
+          livereload: {
+              options: {
+                  livereload: '<%= connect.options.livereload %>'
+              },
+              files: [
+                  '<%= yeoman.app %>/{,*/}*.html',
+                  '.tmp/styles/{,*/}*.css',
+                  '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+              ]
+          }
       },
-      coffee: {
-        files: ['app/**/*.coffee'],
-        tasks: ['coffee'],
-        options: {
-            events: ['changed', 'added'],
-            nospawn: true
-        }
-      }
-    },
-    coffee: {
-      all: {
-          expand: true,
-          cwd: './app',
-          src: ['**/*.coffee'],
-          dest: './public',
-          ext: '.js'
-      },
-      jsTest: {
-        files: ['test/spec/{,*/}*.js'],
-        tasks: ['newer:jshint:test', 'karma']
-      },
-      compass: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['compass:server', 'autoprefixer']
-      },
-      gruntfile: {
-        files: ['Gruntfile.js']
-      },
-      livereload: {
-        options: {
-          livereload: '<%= connect.options.livereload %>'
-        },
-        files: [
-          '<%= yeoman.app %>/{,*/}*.html',
-          '.tmp/styles/{,*/}*.css',
-          '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-        ]
-      }
-    },
 
     // The actual grunt server settings
     connect: {

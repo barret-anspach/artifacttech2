@@ -23,66 +23,69 @@
                         <h2>[A]utonomy</h2>
                         <p>We like to work without the barriers of "top-down" management, there are no micro-managers at Artifact.</p>
                     </div>
-                    <div ng-show="showR">
-                        <div id="showR" class="pointer"></div>
-                        <div class="at-about-artifact-bubble">
-                            <h2>[R]espect</h2>
-                            <p>For all those we interact with, for the products we produce and the environment we are building.</p>
-                        </div>
+                </div>
+                <div ng-show="showR">
+                    <div id="showR" class="pointer"></div>
+                    <div class="at-about-artifact-bubble">
+                        <h2>[R]espect</h2>
+                        <p>For all those we interact with, for the products we produce and the environment we are building.</p>
                     </div>
-                    <div ng-show="showT">
-                        <div id="showT" class="pointer"></div>
-                        <div class="at-about-artifact-bubble">
-                            <h2>[T]ransparency</h2>
-                            <p>Our goal is to remain open and honest whether things are good or bad. Show it and say it the way it is.</p>
-                        </div>
+                </div>
+                <div ng-show="showT">
+                    <div id="showT" class="pointer"></div>
+                    <div class="at-about-artifact-bubble">
+                        <h2>[T]ransparency</h2>
+                        <p>Our goal is to remain open and honest whether things are good or bad. Show it and say it the way it is.</p>
                     </div>
-                    <div ng-show="showI">
-                        <div id="showI" class="pointer"></div>
-                        <div class="at-about-artifact-bubble">
-                            <h2>[I]nspired</h2>
-                            <p>We want to inspire those around us by leading by example, not just in the work place but in our personal lives.</p>
-                        </div>
+                </div>
+                <div ng-show="showI">
+                    <div id="showI" class="pointer"></div>
+                    <div class="at-about-artifact-bubble">
+                        <h2>[I]nspired</h2>
+                        <p>We want to inspire those around us by leading by example, not just in the work place but in our personal lives.</p>
                     </div>
-                    <div ng-show="showF">
-                        <div id="showF" class="pointer"></div>
-                        <div class="at-about-artifact-bubble">
-                            <h2>[F]ocus</h2>
-                            <p>A term we remind ourselves of everyday, keeping our eye “on the ball” and staying in tune with our goals and deliverables. Outside distractions need to be kept in check.</p>
-                        </div>
+                </div>
+                <div ng-show="showF">
+                    <div id="showF" class="pointer"></div>
+                    <div class="at-about-artifact-bubble">
+                        <h2>[F]ocus</h2>
+                        <p>A term we remind ourselves of everyday, keeping our eye “on the ball” and staying in tune with our goals and deliverables. Outside distractions need to be kept in check.</p>
                     </div>
-                    <div ng-show="showA2">
-                        <div id="showA2" class="pointer"></div>
-                        <div class="at-about-artifact-bubble">
-                            <h2>[A]ccountability</h2>
-                            <p>Whether to each other as team mates, to our customers or our board members. No hiding under our desks. We demand it of all whom we interact with.</p>
-                        </div>
+                </div>
+                <div ng-show="showA2">
+                    <div id="showA2" class="pointer"></div>
+                    <div class="at-about-artifact-bubble">
+                        <h2>[A]ccountability</h2>
+                        <p>Whether to each other as team mates, to our customers or our board members. No hiding under our desks. We demand it of all whom we interact with.</p>
                     </div>
-                    <div ng-show="showC">
-                        <div id="showC" class="pointer"></div>
-                        <div class="at-about-artifact-bubble">
-                            <h2>[C]ompassionate</h2>
-                            <p>We treat others as we wish to be treated.  There is no room in our work place for politics, rumors, or underhandedness. We show empathy for our customers, placing ourselves in their shoes, we solve problems by thinking of the effects of all involved.</p>
-                        </div>
+                </div>
+                <div ng-show="showC">
+                    <div id="showC" class="pointer"></div>
+                    <div class="at-about-artifact-bubble">
+                        <h2>[C]ompassionate</h2>
+                        <p>We treat others as we wish to be treated.  There is no room in our work place for politics, rumors, or underhandedness. We show empathy for our customers, placing ourselves in their shoes, we solve problems by thinking of the effects of all involved.</p>
                     </div>
-                    <div ng-show="showT2">
-                        <div id="showT2" class="pointer"></div>
-                        <div class="at-about-artifact-bubble">
-                            <h2>[T]rust</h2>
-                            <p>We have zero chance of being successful if we can’t trust one another in our shop and just as important we need to instill trust with our customers.</p>
-                        </div>
+                </div>
+                <div ng-show="showT2">
+                    <div id="showT2" class="pointer"></div>
+                    <div class="at-about-artifact-bubble">
+                        <h2>[T]rust</h2>
+                        <p>We have zero chance of being successful if we can’t trust one another in our shop and just as important we need to instill trust with our customers.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <a class="at-about-chevron" ng-click="goto('/about')">
-        <h4 class="at-about-team-link">Meet The Team</h4><img src="images/chevrons-right.png">
-    </a>
+<<<<<<< HEAD
     <!--<a class="at-about-chevron" ng-click="goto('/about.main')">-->
         <!--<h4 class="at-about-team-link">Meet The Team</h4>-->
         <!--<span class="at-about-chevron-img" background-img="../images/chevrons-right.png" size="cover"></span>-->
     <!--</a>-->
+=======
+    <a class="at-about-chevron" ng-click="showAbout = true">
+        <h4 class="at-about-team-link">Meet The Team</h4><img src="images/chevrons-right.png">
+    </a>
+>>>>>>> 5340e2ce5d8ce307f8efaa8f5d140d62f20e9db5
 </section>
 
 <!--<div ng-include="'/views/about.main.html'" ng-show="showAbout"></div>-->
@@ -138,9 +141,9 @@
             </div>
         </div>
     </div>
-    <a class="at-arrow-right" ng-click="goto('work')">
-        <img src="images/arrow-right.png">
-    </a>
+    <!--<a class="at-arrow-right" ui-sref="work.fonograf">-->
+        <!--<img src="images/arrow-right.png">-->
+    <!--</a>-->
 </section>
 
 <section id="contact" class="fullpage" scroll-in-view in-view='isInView(id)' background="h" background-img="../images/bg/AT_contact-us.png" size="cover">

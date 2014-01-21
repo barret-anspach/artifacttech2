@@ -15,13 +15,17 @@
     "tweenjs": "*",
     "angular-inview": "~1.1.0",
     "lodash": "~2.4.1",
+<<<<<<< HEAD
     "jquery-ui": "~1.10.3"
+=======
+    "angular-touch": "~1.2.9"
+>>>>>>> 5340e2ce5d8ce307f8efaa8f5d140d62f20e9db5
   },
   "devDependencies": {
     "angular-mocks": "1.2.6",
     "angular-scenario": "1.2.6"
   },
   "resolutions": {
-    "angular": "1.2.6"
+    "angular": "1.2.9"
   }
 }
