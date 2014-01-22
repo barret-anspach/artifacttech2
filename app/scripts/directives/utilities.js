@@ -76,6 +76,71 @@ angular.module('artifactApp')
 
         }
     })
+    
+    .animation('.at-subnav-wrapper', function(){
+        return{
+            enter: function(){
+                window.console.log('entering');
+            },
+            leave: function(){
+                window.console.log('leaving');
+            }
+        }
+    })
+
+    .animation('.at-navbar-wrapper', function() {
+        return {
+            beforeAddClass : function(element, className, done) {
+                if(className == 'home') {
+                    window.console.log('before add class');
+
+                    $( element ).toggleClass( className, 100 );
+
+                }
+                else {
+                    done();
+                }
+            },
+
+            beforeRemoveClass : function(element, className, done) {
+                window.console.log('before remove class');
+                if(className == 'home') {
+                    $( element ).toggleClass( className, 100 );
+                }
+                else {
+                    done();
+                }
+            }
+         };
+    })
+
+
+
+//    .animation('.home', function() {
+//        return {
+//            addClass : function(element, className, done) {
+//                $( element ).addClass( className, 1000 );
+//            },
+//            removeClass : function(element, className, done) {
+//                $( element ).removeClass( className, 1000 );
+//            }
+//         };
+//    })
+//
+//    .directive('homeNav', function($animate){
+//        return function(scope, element, attrs){
+//            scope.$eval(attrs.homeNav);
+//            scope.$watch(attrs.homeNav, function(newVal){
+//                if(newVal){
+//                    window.console.log(attrs.homeNav);
+//                    $animate.addClass(element, 'home');
+//                }
+//                else{
+//                    $animate.removeClass(element, 'home');
+//                }
+//            })
+//        }
+//    })
 
 
     .directive("scrollTo", ["$window","$location", function($window, $location){
@@ -90,7 +155,7 @@ angular.module('artifactApp')
                 window.console.log(elementId);
                 
                 function scroll(scrollObj){
-                    $('html, body').animate(scrollObj, 800, 'swing', function(){
+                    $("body").animate(scrollObj, 800, 'swing', function(){
 //                        window.console.log('scroll call back');
                         scope.$apply(function(){
                             scope.inView({id: elementId});
@@ -157,12 +222,13 @@ angular.module('artifactApp')
                 var scrollObj;
 
                 var scrollToTop = function(){
-                    $('html, body').animate({
+                    $("body").animate({
                         scrollTop: 0
                     }, 10, 'swing', function(){
                         clearTimeout(timer);
                         return false;
                     });
+                    scope.inView({id: 'home'});
                 };
 
                 var getPosition = function(){
@@ -206,7 +272,7 @@ angular.module('artifactApp')
 
                 $(window).bind('scroll',function () {
                     clearTimeout(timer);
-                    timer = setTimeout( refresh , 100 );
+                    timer = setTimeout( refresh , 600 );
                 });
 
 
@@ -214,7 +280,7 @@ angular.module('artifactApp')
                     var inView = isScrolledIntoView(element);
                     if(inView){
                         scope.inView({id: element.attr('id')});
-                        $('html, body').animate(scrollObj, 100, 'swing', function(){
+                        $("body").animate(scrollObj, 500, 'swing', function(){
                             clearTimeout(timer);
                             return false;
                         });

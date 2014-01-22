@@ -8,16 +8,21 @@ angular.module('artifactApp')
         $scope.showAbout = false;
 
         $scope.isLoaded = false;
+        $scope.isHome = true;
+        var lastScroll = $window.scrollY;
 
         $(window).on('scroll', function(){
+            var thisScroll = $window.scrollY;
+//            window.console.log(thisScroll > lastScroll);
+//            window.console.log(lastScroll);
+            lastScroll = thisScroll;
             $scope.$apply(function(){
                 $scope.isHome = ($window.scrollY < 50);
             });
-            window.console.log($scope.isHome);
         });
         
         $scope.contentLoaded = function(){
-            window.console.log('include loaded');
+//            window.console.log('include loaded');
             $scope.isLoaded = true;
         };
 
@@ -32,6 +37,10 @@ angular.module('artifactApp')
         $scope.swipeLeft = function(id){
             window.console.log('i done swiped to '+ id);
         };
+        
+        $scope.navChanged = function(top){
+            window.console.log(top);
+        }
 
 
     });

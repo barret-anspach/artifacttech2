@@ -5,8 +5,7 @@ angular.module('artifactApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ngAnimate',
-  'angular-inview'
+  'ngAnimate'
 ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -14,24 +13,8 @@ angular.module('artifactApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/platform.curation', {
-          templateUrl: 'views/platform.curation.html',
-          controller: 'MainCtrl'
-      })
-      .when('/platform.creation', {
-        templateUrl: 'views/platform.creation.html',
-        controller: 'MainCtrl'
-      })
-      .when('/platform.commerce', {
-        templateUrl: 'views/platform.commerce.html',
-        controller: 'MainCtrl'
-      })
-      .when('/platform.analysis', {
-        templateUrl: 'views/platform.analysis.html',
-        controller: 'MainCtrl'
-      })
       .when('/platform', {
-        templateUrl: 'views/platform.main.html',
+        templateUrl: 'views/platform.html',
         controller: 'MainCtrl'
       })
       .when('/work', {
@@ -39,15 +22,7 @@ angular.module('artifactApp', [
         controller: 'MainCtrl'
       })
       .when('/about', {
-        templateUrl: 'views/about.main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about.team.2', {
-        templateUrl: 'views/about.team.2.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about.team.3.html', {
-        templateUrl: 'views/about.team.3.html',
+        templateUrl: 'views/about.html',
         controller: 'MainCtrl'
       })
       .otherwise({
