@@ -1,6 +1,12 @@
 @import '../bower_components/sass-bootstrap/lib/bootstrap.scss';
 @import 'mixins';
 
+@font-face
+{
+	font-family: 'Trump Gothic East';
+	src: url(../fonts/ufonts.com_trump_gothic_east.ttf);
+}
+
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 $content-width: 1000px;
 $screen-width: 1200px;
@@ -38,7 +44,6 @@ html,
 body {
 	width: 100%;
 	height: 100%;
-	font-size: 12px;
 }
 
 .container {
@@ -549,11 +554,12 @@ a:hover {
 		}
 	}
 	h1 {
-		font-size: 1.4em;
+		font-family: "trump gothic east", sans-serif;
+		font-size: 2.4em;
 		margin: 0;
 		margin-bottom: .4em;
 		@media screen and (min-width: $bp-md) {
-			font-size: 36px;
+			font-size: 52px;
 			font-weight: 700;
 		}
 	}
@@ -571,7 +577,8 @@ a:hover {
 	.at-about-artifact {
 		@media screen and (max-width: $bp-sm) {
 			visibility: hidden;
-			height: 0;
+			height: 0!important;
+			width: 0!important;
 		}
 		position: relative;
 		width: 100%;
@@ -647,7 +654,8 @@ a:hover {
 			}
 		}
 		h1 {
-			font-size: 3em;
+			font-family: "trump gothic east", sans-serif;
+			font-size: 4em;
 			margin: 0;
 			.underlined {
 				//				padding-bottom: -5px;
@@ -807,14 +815,15 @@ a:hover {
 		padding-top: 8em;
 	}
 	h1 {
+		font-family: "trump gothic east", sans-serif;
 		width: 100%;
 		text-align: left;
-		font-size: 1.4em;
+		font-size: 2.4em;
 		margin: 0 0 .4em 0;
 		padding-left: 2em;
 		@media screen and (min-width: $bp-md) {
 			padding-left: 1em;
-			font-size: 36px;
+			font-size: 52px;
 			font-weight: 700;
 		}
 	}
@@ -867,17 +876,17 @@ a:hover {
 			background: black;
 			margin-right: .5em;
 			margin-bottom: .5em;
-			@media screen and (min-width: $bp-md) {
+			@media screen and (min-width: $bp-md) and (orientation: landscape) {
 				width: 13.5em;
 				height: 6em;
 				margin-right: 2.5em;
 				padding: 1em;
-				@media screen and (orientation: portrait) {
-					width: 11em;
-					height: 4.7em;
-					margin-right: 1.5em;
-					padding: .5em;
-				}
+			}
+			@media screen and (min-width: $bp-md) and (orientation: portrait) {
+				width: 11em;
+				height: 4.7em;
+				margin-right: 1.5em;
+				padding: .5em;
 			}
 			&:last-child {
 				margin-right: 0;
@@ -1001,8 +1010,9 @@ a:hover {
 				float: left;
 			}
 			h1 {
+				font-family: "trump gothic east", sans-serif;
 				width: 100%;
-				font-size: 1.4em;
+				font-size: 2.4em;
 				margin: 0 auto;
 				margin-bottom: .4em;
 				text-align: center;
@@ -1012,7 +1022,7 @@ a:hover {
 					text-align: left;
 				}
 				@media screen and (min-width: $bp-md) {
-					font-size: 36px;
+					font-size: 52px;
 					font-weight: 700;
 					margin-bottom: .5em;
 				}
@@ -1023,6 +1033,9 @@ a:hover {
 				line-height: 1.2em;
 				margin-bottom: .1em;
 				text-transform: none;
+				@media screen and (orientation: portrait) {
+					padding: 0 1em;
+				}
 				@media screen and (orientation: landscape) and (max-width: $bp-md) {
 					padding-right: .5em;
 				}
@@ -1034,6 +1047,7 @@ a:hover {
 			}
 		}
 		h1 {
+			font-family: "trump gothic east", sans-serif;
 			text-align: left;
 			font-size: 1.4em;
 		}
@@ -1132,7 +1146,7 @@ a:hover {
 			left: -13em;
 			bottom: .3em;
 			&.whidbey {
-				bottom: -3.1em;
+				bottom: 4em;
 			}
 		}
 	}
@@ -1151,13 +1165,15 @@ a:hover {
 		padding-top: 14em;
 	}
 	h1 {
+		font-family: "trump gothic east", sans-serif;
 		width: 100%;
-		font-size: 1.4em;
+		font-size: 2.4em;
 		margin: 0 auto;
 		margin-bottom: .4em;
 		text-align: center;
 		@media screen and (min-width: $bp-md) {
-			font-size: 36px;
+			font-family: "trump gothic east", sans-serif;
+			font-size: 52px;
 			font-weight: 700;
 		}
 	}

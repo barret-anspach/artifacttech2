@@ -44,7 +44,8 @@
     "karma": "~0.10.9",
     "karma-ng-html2js-preprocessor": "~0.1.0",
     "pngquant-bin": "~0.1.5",
-    "grunt-ftp-deploy": "~0.1.1"
+    "grunt-ftp-deploy": "~0.1.1",
+    "connect-livereload": "~0.3.2"
   },
   "engines": {
     "node": ">=0.8.0"

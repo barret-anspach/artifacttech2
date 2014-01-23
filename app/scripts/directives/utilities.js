@@ -77,6 +77,17 @@ angular.module('artifactApp')
         }
     })
 
+    .directive("hideIfPhone", ["$window", function($window) {
+        return {
+            restrict: "A",
+            link: function(scope, element, attr) {
+                window.console.log(window.innerWidth);
+                if(window.innerWidth <= 568) {
+                    $(element).hide();
+                }
+            }
+        }
+    }])
 
     .directive("scrollTo", ["$window","$location", function($window, $location){
         return {
