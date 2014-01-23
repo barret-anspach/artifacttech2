@@ -1,9 +1,5 @@
 {
   "node": true,
-  "regexp": true,
-  "undef": true,
-  "trailing": true,
-  "smarttabs": true,
   "globals": {
     "angular": false
   }

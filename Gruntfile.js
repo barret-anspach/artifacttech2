@@ -11,6 +11,7 @@ module.exports = function (grunt) {
 
     // Load grunt tasks automatically
     require('load-grunt-tasks')(grunt);
+    grunt.loadNpmTasks('grunt-ftp-deploy');
 
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
@@ -144,6 +145,19 @@ module.exports = function (grunt) {
             app: {
                 html: '<%= yeoman.app %>/index.html',
                 ignorePath: '<%= yeoman.app %>/'
+            }
+        },
+
+        'ftp-deploy':{
+            build: {
+                auth: {
+                    host: 'artifacttechnologies.com',
+                    port: 21,
+                    authKey: 'key1'
+                },
+                src: 'parse/public',
+                dest: '/',
+                exclusions: ['dist/**/.DS_Store', 'dist/**/Thumbs.db', 'dist/tmp']
             }
         },
 
@@ -283,8 +297,7 @@ module.exports = function (grunt) {
                         '.htaccess',
                         '*.html',
                         'views/{,*/}*.html',
-//                        'bower_components/**/*',
-                        'images/{,*/}*.{jpg,png}',
+                        'images/{,*/}*.{png,jpg,webp}',
                         'fonts/*'
                     ]
                 }, {
@@ -311,7 +324,10 @@ module.exports = function (grunt) {
                 'compass'
             ],
             dist: [
-                'compass:dist'
+                'compass:dist',
+                'copy',
+                'imagemin',
+                'htmlmin'
             ]
         },
 
@@ -381,19 +397,16 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
-        'bower-install',
         'useminPrepare',
         'concurrent:dist',
         'autoprefixer',
         'concat',
-        'ngmin',
         'copy:dist',
         'cdnify',
+        'ngmin',
         'cssmin',
         'uglify',
-        'rev',
-        'usemin',
-        'htmlmin'
+        'usemin'
     ]);
 
     grunt.registerTask('default', [
@@ -401,4 +414,5 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
+
 };
