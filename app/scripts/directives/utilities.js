@@ -28,18 +28,17 @@ angular.module('artifactApp')
 
     .directive('background', function ($window) {
         return {
-    //            template: '<div></div>',
             restrict: 'A',
-            link: function postLink(scope, element, attrs) {
+            link: function (scope, element, attrs) {
 
                 $( $window ).resize(function() {
-                    if(attrs.background == 'h') {
+                    if(attrs.background === 'h') {
                         scope.h = document.body.clientHeight;
                         element.css({
                             'min-height': scope.h + 'px'
                         })
                     }
-                    else if (attrs.background == 'w') {
+                    else if (attrs.background === 'w') {
                         scope.w = document.body.clientWidth;
                         scope.h = document.body.clientHeight;
                         element.css({
@@ -47,15 +46,28 @@ angular.module('artifactApp')
                             'height': scope.h
                         })
                     }
+                    else if (attrs.background === 'w2') {
+                        if (document.body.clientWidth <= 568) {
+                            scope.w = document.body.clientWidth;
+                        }
+                        else {
+                            scope.w = (document.body.clientWidth / 2);
+                        }
+                    }
+                    scope.h = document.body.clientHeight;
+                    element.css({
+                        'width': scope.w,
+                        'height': scope.h
+                    })
                 });
                 attrs.$observe('background', function(value) {
-                    if(value == 'h') {
+                    if(value === 'h') {
                         scope.h = document.body.clientHeight;
                         element.css({
                             'min-height': scope.h + 'px'
                         })
                     }
-                    else if (value == 'w') {
+                    else if (value === 'w') {
                         scope.w = document.body.clientWidth;
                         scope.h = document.body.clientHeight;
                         element.css({
@@ -63,6 +75,19 @@ angular.module('artifactApp')
                             'height': scope.h
                         })
                     }
+                    else if (attrs.background === 'w2') {
+                        if (document.body.clientWidth <= 568) {
+                            scope.w = document.body.clientWidth;
+                        }
+                        else {
+                            scope.w = (document.body.clientWidth / 2);
+                        }
+                    }
+                    scope.h = document.body.clientHeight;
+                    element.css({
+                        'width': scope.w,
+                        'height': scope.h
+                    })
                 })
             }
         }
@@ -91,7 +116,7 @@ angular.module('artifactApp')
     .animation('.at-navbar-wrapper', function() {
         return {
             beforeAddClass : function(element, className, done) {
-                if(className == 'home') {
+                if(className === 'home') {
                     window.console.log('before add class');
 
                     $( element ).toggleClass( className, 100 );
@@ -104,7 +129,7 @@ angular.module('artifactApp')
 
             beforeRemoveClass : function(element, className, done) {
                 window.console.log('before remove class');
-                if(className == 'home') {
+                if(className === 'home') {
                     $( element ).toggleClass( className, 100 );
                 }
                 else {
@@ -146,7 +171,6 @@ angular.module('artifactApp')
         return {
             restrict: "A",
             link: function(scope, element, attr) {
-                window.console.log(window.innerWidth);
                 if(window.innerWidth <= 568) {
                     $(element).hide();
                 }
@@ -306,9 +330,8 @@ angular.module('artifactApp')
         };
     }])
 
-    .directive('horizontalBkgdContainer', function () {
+    .directive('horizontalBkgdContainer', function ($window) {
         return {
-    //            template: '<div></div>',
             restrict: 'A',
             controller: function($scope){
                 $scope.panels = [];
@@ -316,19 +339,68 @@ angular.module('artifactApp')
                     $scope.panels.push(panel);
                 }
             },
-            link: function postLink(scope, element, attrs) {
-                attrs.$observe('background', function(value) {
+            link: function (scope, element, attrs) {
+                $($window).resize( function(value) {
                     scope.panelsNo = document.getElementsByClassName('fullpage horiz').length;
-                    scope.w = window.innerWidth;
-                    scope.h = window.innerHeight;
+                    if (value === 'about') {
+                        if (document.body.clientWidth <= 768) {
+                            scope.w = document.body.clientWidth;
+                        }
+                        else {
+                            scope.w = (document.body.clientWidth / 2);
+                        }
+                    }
+                    else {
+                        scope.w = document.body.clientWidth;
+                    }
+                    scope.h = document.body.clientHeight;
                     element.css({
-                        'height': scope.h + 'px',
-                        'width': (scope.w * scope.panelsNo) + 'px'
+                        'width': (scope.w * scope.panelsNo) + 'px',
+                        'height': scope.h
+                    })
+                });
+                attrs.$observe('horizontalBkgdContainer', function(value) {
+                    scope.panelsNo = document.getElementsByClassName('fullpage horiz').length;
+                    if (value === 'about') {
+                        if (document.body.clientWidth <= 768) {
+                            scope.w = document.body.clientWidth;
+                            window.console.log('px, width')
+                        }
+                        else {
+                            scope.w = (document.body.clientWidth / 2);
+                            window.console.log(scope.w + 'px, width / 2');
+                        }
+                    }
+                    else {
+                        scope.w = document.body.clientWidth;
+                    }
+                    scope.h = document.body.clientHeight;
+                    window.console.log(scope.w * scope.panelsNo + 'px');
+                    element.css({
+                        'width': (scope.w * scope.panelsNo) + 'px',
+                        'height': scope.h
                     })
                 })
             }
         }
-}   )
+    })
+
+    .directive('hoverClass', function () {
+        return {
+            restrict: 'A',
+            scope: {
+                hoverClass: '@'
+            },
+            link: function (scope, element) {
+                element.on('mouseenter', function() {
+                    element.addClass(scope.hoverClass);
+                });
+                element.on('mouseleave', function() {
+                    element.removeClass(scope.hoverClass);
+                });
+            }
+        };
+    })
 ;
 
 

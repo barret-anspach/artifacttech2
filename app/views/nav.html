@@ -2,7 +2,7 @@
     <div class="at-navbar-wrapper" ng-class="{ home: isHome && $location.path() == '/' }">
         <div class="at-navbar-banner">
             <header class="at-navbar-header at-inline">
-                <a prevent-default="" scroll-to="home" in-view="isInView(id)" ng-click="currentId = 'home'">
+                <a prevent-default="" scroll-to="home" in-view="isInView(id)" ng-click="currentId = 'home'; goto('home')">
                     <div class="logo" background-img="../images/artifact-logo.png" size="cover"></div>
                     Artifact <span class="thin">Technologies</span><span class="trade">&trade;</span>
                 </a>
@@ -17,23 +17,23 @@
                     </span>
         </div>
     </div>
-    <!--<div class="at-subnav-wrapper home" ng-hide="isActiveLink('contact') || isActiveLink('about') || $location.path() == '/about.main'">-->
-        <!--<div class="at-subnav">-->
-            <!--<nav class="at-navbar-subnav" ng-show="isActiveLink('about')">-->
-                <!--<a scroll-to="" horizontal="true" ng-class="{ active: isActiveLink('about-team') }">The Team</a>-->
-                <!--&lt;!&ndash;<a scroll-to="" horizontal ng-class="{ active: $state.is('about.investors') }">The Investors</a>&ndash;&gt;-->
-                <!--&lt;!&ndash;<a scroll-to="" horizontal ng-class="{ active: $state.is('about.advisory') }">The Advisory Board</a>&ndash;&gt;-->
-            <!--</nav>-->
-            <!--<nav class="at-navbar-subnav" ng-show="isActiveLink('platform')">-->
-                <!--<a scroll-to="platform-curation" prevent-default="" horizontal="true" ng-class="{ active: isActiveLink('platform-curation') }">Curation</a>-->
-                <!--<a scroll-to="platform-creation" prevent-default="" horizontal="true" ng-class="{ active: isActiveLink('platform-creation') }">Creation</a>-->
-                <!--<a scroll-to="platform-commerce" prevent-default="" horizontal="true" ng-class="{ active: isActiveLink('platform-commerce') }">Commerce</a>-->
-                <!--<a scroll-to="platform-analysis" prevent-default="" horizontal="true" ng-class="{ active: isActiveLink('platform-analysis') }">Analysis</a>-->
-            <!--</nav>-->
-            <!--<nav class="at-navbar-subnav" ng-show="isActiveLink('work')">-->
-                <!--<a scroll-to="work-fonograf" prevent-default="" horizontal="true" ng-class="{ active: isActiveLink('work-fonograf') }">Fonograf</a>-->
-                <!--<a scroll-to="work-lens" prevent-default="" horizontal="true" ng-class="{ active: isActiveLink('work-lens') }">Whidbey LENS</a>-->
-            <!--</nav>-->
-        <!--</div>-->
-    <!--</div>-->
+    <div class="at-subnav-wrapper" ng-hide="isActiveLink('contact') || isActiveLink('about') || $location.path() == '/about.main'">
+        <div class="at-subnav">
+            <nav class="at-navbar-subnav" ng-show="isActiveLink('about')">
+                <a scroll-to="" horizontal="true" ng-class="{ active: isActiveLink('about-team') }">The Team</a>
+                <!--<a scroll-to="" horizontal ng-class="{ active: $state.is('about.investors') }">The Investors</a>-->
+                <!--<a scroll-to="" horizontal ng-class="{ active: $state.is('about.advisory') }">The Advisory Board</a>-->
+            </nav>
+            <nav class="at-navbar-subnav" ng-show="isActiveLink('platform')">
+                <a scroll-to="platform-curation" prevent-default="" horizontal="true" ng-class="{ active: isActiveLink('platform-curation') }">Curation</a>
+                <a scroll-to="platform-creation" prevent-default="" horizontal="true" ng-class="{ active: isActiveLink('platform-creation') }">Creation</a>
+                <a scroll-to="platform-commerce" prevent-default="" horizontal="true" ng-class="{ active: isActiveLink('platform-commerce') }">Commerce</a>
+                <a scroll-to="platform-analysis" prevent-default="" horizontal="true" ng-class="{ active: isActiveLink('platform-analysis') }">Analysis</a>
+            </nav>
+            <nav class="at-navbar-subnav" ng-show="isActiveLink('work')">
+                <a scroll-to="work-fonograf" prevent-default="" horizontal="true" ng-class="{ active: isActiveLink('work-fonograf') }">Fonograf</a>
+                <a scroll-to="work-lens" prevent-default="" horizontal="true" ng-class="{ active: isActiveLink('work-lens') }">Whidbey LENS</a>
+            </nav>
+        </div>
+    </div>
 </div>
