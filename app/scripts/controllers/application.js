@@ -17,7 +17,7 @@ angular.module('artifactApp')
 //            window.console.log(lastScroll);
             lastScroll = thisScroll;
             $scope.$apply(function(){
-                $scope.isHome = ($window.scrollY < 50);
+                $scope.isHome = ($window.scrollY < 300);
             });
         });
         

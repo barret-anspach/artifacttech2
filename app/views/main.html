@@ -1,4 +1,5 @@
-<section id="home" class="fullpage" scroll-in-view in-view='isInView(id)' background="h" background-img="../images/bg/AT_home-bg.png" size="cover">
+<section id="home" class="fullpage" scroll-in-view in-view='isInView(id)' background="h"
+         background-img="../images/bg/AT_home-bg.png" size="cover">
     <div class="container" background="h">
         <span class="at-main-message"><h1>You are here</h1></span>
         <a class="at-arrow-down animated bounce" scroll-to="about" in-view="isInView(id)">
@@ -7,14 +8,15 @@
     </div>
 </section>
 
-<section id="about" scroll-in-view= in-view='isInView(id)' class="fullpage"  background="h" background-img="../images/bg/AT_about-us-bg.png" size="cover">
+<section id="about" scroll-in-view= in-view='isInView(id)' class="fullpage"  background="h"
+         background-img="../images/bg/AT_about-us-bg.png" size="cover">
     <div class="container" background="h">
         <div class="at-about-main-text" background="h">
             <h1>About Us</h1>
             <p>Wherever you are, we bring you con&shy;tent that matters.</p>
             <p>Here at Artifact Technologies we use geolocation and media creation together to deliver relevant, curated content right to your mobile device. Our platform, LENS<span class="trade">&trade;</span> is here to en&shy;hance you experience by delivering content that matters to you.</p>
 
-            <div class="at-about-artifact">
+            <div class="at-about-artifact" hide-if-phone>
                 <h1>[ <span class="underlined"><span class="letter" ng-mouseover="showA = true" ng-mouseleave="showA = false">A</span><span class="letter" ng-mouseover="showR = true" ng-mouseleave="showR = false">R</span><span class="letter" ng-mouseover="showT = true" ng-mouseleave="showT = false">T</span><span class="letter" ng-mouseover="showI = true" ng-mouseleave="showI = false">I</span><span class="letter" ng-mouseover="showF = true" ng-mouseleave="showF = false">F</span><span class="letter" ng-mouseover="showA2 = true" ng-mouseleave="showA2 = false">A</span><span class="letter" ng-mouseover="showC = true" ng-mouseleave="showC = false">C</span><span class="letter" ng-mouseover="showT2 = true" ng-mouseleave="showT2 = false">T</span></span> ]</h1>
 
                 <div ng-show="showA">
@@ -79,18 +81,19 @@
     <!--<a class="at-about-chevron" ng-click="goto('/about')">-->
         <!--<h4 class="at-about-team-link">Meet The Team</h4><img src="images/chevrons-right.png">-->
     <!--</a>-->
-    <!--<a class="at-about-chevron" ng-click="goto('/about.main')">-->
-        <!--<h4 class="at-about-team-link">Meet The Team</h4>-->
-        <!--<span class="at-about-chevron-img" background-img="../images/chevrons-right.png" size="cover"></span>-->
-    <!--</a>-->
+    <a class="at-about-chevron" ng-click="goto('/about')">
+        <h4 class="at-about-team-link">Meet The Team</h4>
+        <span class="at-about-chevron-img" background-img="../images/chevrons-right.png" size="cover"></span>
+    </a>
 </section>
 
 <!--<div ng-include="'/views/about.main.html'" ng-show="showAbout"></div>-->
 
-<section id="platform" class="fullpage" scroll-in-view in-view='isInView(id)' background="h" background-img="../images/bg/AT_platform-bg.png" size="cover">
+<section id="platform" class="fullpage" scroll-in-view in-view='isInView(id)' background="h"
+         background-img="../images/bg/AT_platform-bg.png" size="cover">
     <div class="container" background="h">
         <div class="at-platform" background="h">
-            <h1>Platform</h1>
+            <h1>Our Platform</h1>
             <div class="at-platform-list">
                 <ol>
                     <li>Our core technology is the Mosaic<span class="trade">&trade;</span> - a dynamic, proprietary media format optimized for mobile viewing, sharing and seamless purchase.</li>
@@ -118,12 +121,17 @@
             </div>
         </div>
     </div>
+    <a class="at-platform-chevron" ng-click="goto('/platform')">
+        <h4 class="at-platform-link">View the Platform</h4>
+        <span class="at-platform-chevron-img" background-img="../images/chevrons-right.png" size="cover"></span>
+    </a>
     <!--<a class="at-arrow-right" ng-click="goTo('platform.creation')">-->
         <!--<img src="images/arrow-right.png">-->
     <!--</a>-->
 </section>
 
-<section id="work" class="fullpage" scroll-in-view in-view='isInView(id)'  background="h" background-img="../images/bg/AT_our-work-bg.png" size="cover">
+<section id="work" class="fullpage" scroll-in-view in-view='isInView(id)'  background="h"
+         background-img="../images/bg/AT_our-work-bg.png" size="cover">
     <div class="container" background="h">
         <div class="at-work" background="h">
             <div class="at-work-page">
@@ -132,8 +140,10 @@
                     <p>Nearly every place in today’s world is paired with a digital counterpart. People interact with museums, neighborhoods, restaurants and more in real life, and virtually online via a multitude of devices. We are here to bridge the distance between those two places, with our LENS™ application. LENS™ creates place identity for locations where they can come alive with digital information, entertainment and commerce.</p>
                 </div>
                 <div class="at-phones">
-                    <a class="at-phone at-left" background-img="../images/phone-lens.png" size="contain" ui-sref="work.lens" title="LENS"></a>
-                    <a class="at-phone at-right" background-img="../images/phone-fonograf.png" size="contain" ui-sref="work.fonograf" title="Fonograf"></a>
+                    <a class="at-phone at-left" hover-class="animated bounce" ng-mouseover="hoverItem(true);"ng-mouseout="hoverItem(false);"
+                       background-img="../images/phone-lens.png" size="contain" ui-sref="work.lens" ng-click="goto('/work')" title="LENS"></a>
+                    <a class="at-phone at-right" hover-class="animated bounce" ng-mouseover="hoverItem(true);" ng-mouseout="hoverItem(false);"
+                       background-img="../images/phone-fonograf.png" size="contain" ui-sref="work.fonograf" ng-click="goto('/work')" title="Fonograf"></a>
                 </div>
             </div>
         </div>
@@ -143,7 +153,8 @@
     <!--</a>-->
 </section>
 
-<section id="contact" class="fullpage" scroll-in-view in-view='isInView(id)' background="h" background-img="../images/bg/AT_contact-us.png" size="cover">
+<section id="contact" class="fullpage" scroll-in-view in-view='isInView(id)' background="h"
+         background-img="../images/bg/AT_contact-us.png" size="cover">
     <div class="container">
         <div class="at-contact">
             <h1>Contact Us</h1>

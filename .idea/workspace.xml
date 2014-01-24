@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5304c7fd-a761-4ed0-acbb-ad0559b807ba" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bower_components/angular-inview/test/angular-inview.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/bower_components/angular-inview/angular-inview.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bower_components/angular-inview/test/angular-inview.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ArtifactSite.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -146,32 +146,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/scripts/jquery.viewport.js" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/application.js" />
-        <option value="$PROJECT_DIR$/app/scripts/directives/scrollspy.coffee" />
-        <option value="$PROJECT_DIR$/app/scripts/directives/scrollspy.js" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
-        <option value="$PROJECT_DIR$/app/views/platform.creation.html" />
-        <option value="$PROJECT_DIR$/app/views/platform.curation.html" />
-        <option value="$PROJECT_DIR$/app/views/work.html" />
-        <option value="$PROJECT_DIR$/app/views/nav.html" />
         <option value="$PROJECT_DIR$/app/views/about.main.html" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/application.js" />
-        <option value="$PROJECT_DIR$/app/views/main.html" />
-        <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/parse/config/global.json" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
-        <option value="$PROJECT_DIR$/app/scripts/directives/utilities.js" />
         <option value="$PROJECT_DIR$/parse/public/views/main.html" />
         <option value="$PROJECT_DIR$/parse/public/index.html" />
+        <option value="$PROJECT_DIR$/parse/config/global.json" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/views/work.fonograf.html" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/application.js" />
+        <option value="$PROJECT_DIR$/app/views/about.html" />
+        <option value="$PROJECT_DIR$/app/views/nav.html" />
+        <option value="$PROJECT_DIR$/app/scripts/directives/utilities.js" />
+        <option value="$PROJECT_DIR$/app/views/main.html" />
+        <option value="$PROJECT_DIR$/app/views/platform.html" />
+        <option value="$PROJECT_DIR$/app/styles/main.scss" />
+        <option value="$PROJECT_DIR$/app/views/work.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1920" />
-    <option name="height" value="1150" />
+    <option name="width" value="1440" />
+    <option name="height" value="874" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -199,31 +196,32 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="artifacttech2" />
+              <option name="myItemId" value="ArtifactSite" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="artifacttech2" />
+              <option name="myItemId" value="ArtifactSite" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="artifacttech2" />
+              <option name="myItemId" value="ArtifactSite" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="artifacttech2" />
+              <option name="myItemId" value="ArtifactSite" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="artifacttech2" />
+              <option name="myItemId" value="ArtifactSite" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -231,9 +229,106 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArtifactSite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArtifactSite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArtifactSite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArtifactSite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArtifactSite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArtifactSite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArtifactSite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArtifactSite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="directives" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArtifactSite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArtifactSite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -242,8 +337,40 @@
     <property name="options.lastSelected" value="preferences.externalResources" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ArtifactBrunch" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="PublishConfig">
+    <servers>
+      <server id="0646ac5c-2827-41e5-ad5b-aadb34fdd7a6">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+      <server id="0b5069d6-4a62-4ec1-82b6-b1e43b6c8f83">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+      <server id="316e4008-4fc1-4d88-85d8-edf7060e3f4f">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+      <server id="92611319-dba1-4c11-a9a0-560478ad5588">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+    </servers>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -391,15 +518,15 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/app/index.html</url>
-          <line>52</line>
+          <line>55</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.jshintrc">
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="180">
           <folding />
@@ -413,30 +540,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/work.html">
+    <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="53" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="900">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/platform.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="48" selection-start="1782" selection-end="1782" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="660">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/directives/utilities.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="22" selection-start="2625" selection-end="2625" vertical-scroll-proportion="0.0" vertical-offset="1065" max-vertical-offset="4935">
+        <state line="23" column="0" selection-start="1091" selection-end="1091" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1380">
           <folding />
         </state>
       </provider>
@@ -568,21 +674,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/directives/scrollspy.js">
+    <entry file="file://$PROJECT_DIR$/parse/config/global.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="13" selection-start="990" selection-end="990" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1380" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/about.main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="76" selection-start="5742" selection-end="5754" vertical-scroll-proportion="-3.125" vertical-offset="1305" max-vertical-offset="2655">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/nav.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="86" selection-start="1359" selection-end="1359" vertical-scroll-proportion="-4.2" vertical-offset="0" max-vertical-offset="660">
+        <state line="4" column="118" selection-start="343" selection-end="343" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/platform.curation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="50" selection-start="193" selection-end="193" vertical-scroll-proportion="0.078947365" vertical-offset="0" max-vertical-offset="570" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/platform.creation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="640" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/platform.analysis.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="450" selection-end="546" vertical-scroll-proportion="0.34210527" vertical-offset="0" max-vertical-offset="570" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/platform.commerce.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="4" selection-start="580" selection-end="776" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/work.main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="71" selection-start="97" selection-end="128" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/work.lens.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="698" selection-end="790" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="285">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/work.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="53" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="900">
+        <state line="11" column="53" selection-start="1106" selection-end="1106" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="900">
           <folding />
         </state>
       </provider>
@@ -646,7 +795,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+    <entry file="file://$PROJECT_DIR$/app/views/work.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="22" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.7447865" vertical-offset="0" max-vertical-offset="1007" />
       </provider>
