@@ -145,6 +145,14 @@ a:hover {
 						font-size: 32px;
 						letter-spacing: 0;
 					}
+//					.artifact-logo {
+//						width: 496px;
+//						height: 46px;
+//						background: url('../images/AT-logo-26.png');
+//						background-size: cover;
+//						background-repeat: no-repeat;
+//						background-position: center center;
+//					}
 					.logo {
 						display: inline-block;
 						width: 10px;
@@ -217,6 +225,14 @@ a:hover {
 				@media screen and (min-width: $bp-md) {
 					font-size: 16px;
 				}
+//				.artifact-logo {
+//					width: 271px;
+//					height: 22px;
+//					background: url('../images/AT-logo-26.png');
+//					background-size: cover;
+//					background-repeat: no-repeat;
+//					background-position: center center;
+//				}
 				.logo {
 					display: inline-block;
 					width: 10px;
@@ -395,12 +411,11 @@ a:hover {
 	width: 12em;
 	height: 1em;
 	text-align: right;
+	float: right;
 	@media screen and (max-width: $bp-md) and (orientation: landscape) {
-		float: right;
 		top: 20.8em;
 	}
 	@media screen and (max-width: $bp-md) and (orientation: portrait) {
-		float: right;
 		top: 6.9em;
 		@media screen and (max-width: 566px) {
 			top: 5.9em;
@@ -408,7 +423,6 @@ a:hover {
 	}
 	@media screen and (min-width: $bp-md) {
 		width: 25em;
-		float: right;
 		top: 7.9em;
 	}
 	@include nav-button(right, .5em);
@@ -447,15 +461,14 @@ a:hover {
 }
 
 .at-platform-chevron {
+	float: right;
 	width: 12em;
 	height: 1em;
 	text-align: right;
 	@media screen and (max-width: $bp-md) and (orientation: landscape) {
-		float: right;
 		top: 6.3em;
 	}
 	@media screen and (max-width: $bp-md) and (orientation: portrait) {
-		float: right;
 		top: 6.9em;
 		@media screen and (max-width: 566px) {
 			top: 5.9em;
@@ -463,8 +476,10 @@ a:hover {
 	}
 	@media screen and (min-width: $bp-md) {
 		width: 25em;
-		float: right;
 		top: 9em;
+	}
+	@media screen and (min-width: $bp-lg) {
+		width: 25em;
 	}
 	@include nav-button(right, .5em);
 	h4.at-platform-link {
@@ -502,15 +517,20 @@ a:hover {
 }
 
 .at-work-chevron {
+	float: right;
 	width: 12em;
 	height: 1em;
 	text-align: right;
+	@media screen and (max-width: $bp-sm) {
+		@media screen and (orientation: landscape) {
+			float: left;
+			left: 6em;
+		}
+	}
 	@media screen and (max-width: $bp-md) and (orientation: landscape) {
-		float: right;
 		top: 6.3em;
 	}
 	@media screen and (max-width: $bp-md) and (orientation: portrait) {
-		float: right;
 		top: 6.9em;
 		@media screen and (max-width: 566px) {
 			top: 5.9em;
@@ -518,7 +538,6 @@ a:hover {
 	}
 	@media screen and (min-width: $bp-md) {
 		width: 25em;
-		float: right;
 	}
 	@include nav-button(right, .5em);
 	h4.at-work-link {
@@ -681,6 +700,13 @@ a:hover {
 			width: 15em;
 		}
 	}
+	@media screen and (min-width: $bp-lg) {
+		top: 6em;
+		float: none;
+		width: $bp-lg;
+		margin: 0 auto;
+		padding-right: 52em;
+	}
 	h1 {
 		font-family: "trump gothic east", sans-serif;
 		font-size: 2.4em;
@@ -766,6 +792,7 @@ a:hover {
 			border-radius: 5px;
 			padding: 10px;
 			h2 {
+				font-family: "trump gothic east", sans-serif;
 				margin: 0;
 				padding: 0;
 				font-size: 36px;
@@ -970,6 +997,9 @@ a:hover {
 	@media screen and (min-width: $bp-md) {
 		padding-top: 8em;
 	}
+	@media screen and (min-width: $bp-lg) {
+		width: $bp-lg;
+	}
 	h1 {
 		font-family: "trump gothic east", sans-serif;
 		width: 100%;
@@ -1015,13 +1045,14 @@ a:hover {
 			width: 18em;
 		}
 		@media screen and (min-width: $bp-md) {
+			width: 50em;
 			padding-top: 2em;
-			@media screen and (orientation: landscape) {
-				width: 62em;
-			}
 			@media screen and (orientation: portrait) {
 				width: 50em;
 			}
+		}
+		@media screen and (min-width: $bp-lg) {
+			width: 62em;
 		}
 		.at-platform-box {
 			display: inline-block;
@@ -1032,17 +1063,23 @@ a:hover {
 			background: black;
 			margin-right: .5em;
 			margin-bottom: .5em;
-			@media screen and (min-width: $bp-md) and (orientation: landscape) {
+			@media screen and (min-width: $bp-md) {
+				width: 11.3em;
+				height: 4.7em;
+				margin-right: 1.5em;
+				padding: .5em;
+				@media screen and (orientation: portrait) {
+					width: 11em;
+					height: 4.7em;
+					margin-right: 1.5em;
+					padding: .5em;
+				}
+			}
+			@media screen and (min-width: $bp-lg) {
 				width: 13.5em;
 				height: 6em;
 				margin-right: 2.5em;
 				padding: 1em;
-			}
-			@media screen and (min-width: $bp-md) and (orientation: portrait) {
-				width: 11em;
-				height: 4.7em;
-				margin-right: 1.5em;
-				padding: .5em;
 			}
 			&:last-child {
 				margin-right: 0;
@@ -1053,12 +1090,16 @@ a:hover {
 				width: 2em;
 				height: 2em;
 				@media screen and (min-width: $bp-md) {
-					width: 4em;
-					height: 4em;
+					width: 3.7em;
+					height: 3.7em;
 					@media screen and (orientation: portrait) {
 						width: 3.7em;
 						height: 3.7em;
 					}
+				}
+				@media screen and (min-width: $bp-lg) {
+					width: 4em;
+					height: 4em;
 				}
 			}
 			.menu-title {
@@ -1078,12 +1119,17 @@ a:hover {
 				@media screen and (min-width: $bp-md) {
 					width: 6.1em;
 					padding-top: 15px;
-					font-size: 17px;
+					font-size: 15px;
 					@media screen and (orientation: portrait) {
 						width: 5.8em;
 						padding-top: 15px;
 						font-size: 15px;
 					}
+				}
+				@media screen and (min-width: $bp-lg) {
+					width: 6.1em;
+					padding-top: 15px;
+					font-size: 17px;
 				}
 			}
 		}
@@ -1165,21 +1211,30 @@ a:hover {
 			text-transform: none;
 			line-height: 12px;
 			margin-bottom: .1em;
+			font-weight: 300;
 			@media screen and (min-width: $bp-md) {
 				font-size: 18px;
-				font-weight: 300;
 				line-height: 1.2em;
 				margin-bottom: 1em;
 			}
 			@media screen and (min-width: $bp-lg) {
 				font-size: 23px;
-				font-weight: 300;
 				line-height: 1.2em;
 				margin-bottom: 1em;
 			}
 			&.curation-text {
 				font-size: 14px;
 				line-height: 17px;
+				@media screen and (min-width: $bp-md) {
+					font-size: 18px;
+					line-height: 1.2em;
+					margin-bottom: 1em;
+				}
+				@media screen and (min-width: $bp-lg) {
+					font-size: 23px;
+					line-height: 1.2em;
+					margin-bottom: 1em;
+				}
 			}
 		}
 	}
@@ -1197,6 +1252,7 @@ a:hover {
 	position: relative;
 	padding-top: 5.4em;
 	width: 100%;
+	height: 100%;
 	margin: 0 auto;
 	@media screen and (orientation: portrait) and (max-width: $bp-sm) {
 		padding-top: 0;
@@ -1205,7 +1261,10 @@ a:hover {
 		padding-top: 0;
 	}
 	@media screen and (min-width: $bp-md) {
-		padding-top: 8em;
+		padding-top: 6em;
+	}
+	@media screen and (min-width: $bp-lg) {
+		width: $bp-lg;
 	}
 	.at-work-page {
 		position: relative;
@@ -1213,14 +1272,18 @@ a:hover {
 			width: auto;
 			padding-top: 15.9em;
 			padding-left: 6em;
+			overflow-y: hidden;
 			@media screen and (orientation: landscape) {
 				padding-top: 12.4em;
 				padding-left: 16em;
+				@media screen and (min-width: $bp-md) {
+					padding-top: 22em;
+				}
 			}
 			@media screen and (min-width: $bp-md) {
 				width: 40em;
 				margin-right: 1em;
-				padding-top: 18em;
+				padding-top: 22em;
 				padding-left: 0;
 				float: right;
 			}
@@ -1232,28 +1295,37 @@ a:hover {
 				padding-left: 0;
 				float: right;
 			}
+			@media screen and (min-width: $bp-lg) {
+				padding-top: 24.8em;
+			}
 		}
 		// 'our work' main page
 		.text-wrapper {
+			width: 100%;
 			padding-top: 5.4em;
-			@media screen and (orientation: landscape) and (min-width: $bp-md) {
-				padding-top: 5.4em;
+			@media screen and (orientation: landscape) {
 				width: 230px;
 				float: left;
+			}
+			@media screen and (orientation: landscape) and (min-width: $bp-md) {
+				width: 100%;
+				padding-top: 0;
 			}
 			h1 {
 				font-family: "trump gothic east", sans-serif;
 				width: 100%;
 				font-size: 2.4em;
-				margin: 0 auto;
-				margin-bottom: .4em;
-				padding: 0;
-				text-align: center;
+				margin: 0 0 .4em 0;
+				padding-right: .5em;
+				@media screen and (orientation: landscape) {
+					text-align: left;
+				}
 				@media screen and (orientation: landscape) and (min-width: $bp-md) {
 					font-size: 2.4em;
-					margin: 0 0 .4em 0;
-					padding-right: .5em;
-					text-align: left;
+					margin: 0 auto;
+					margin-bottom: .4em;
+					padding: 0;
+					text-align: center;
 				}
 				@media screen and (min-width: $bp-md) {
 					font-size: 52px;
@@ -1262,20 +1334,24 @@ a:hover {
 				}
 			}
 			p {
+				width: 100%;
 				font-family: 'Helvetica Neue', sans-serif;
 				font-size: .9em;
 				line-height: 1.2em;
 				margin-bottom: .1em;
 				text-transform: none;
 				@media screen and (orientation: portrait) {
-					padding: 0 1em;
+					width: 100%;
+					text-align: center;
 				}
 				@media screen and (min-width: $bp-md) {
 					font-size: 20px;
 					font-weight: 300;
 					text-align: center;
 					@media screen and (orientation: landscape) {
-						padding-right: .5em;
+						width: 768px;
+						float: none;
+						margin: 0 auto;
 					}
 				}
 			}
@@ -1338,10 +1414,17 @@ a:hover {
 			min-height: 282px;
 			margin: 0 auto;
 			margin-bottom: 1em;
-			@media screen and (orientation: landscape) and (min-width: $bp-md) {
+			@media screen and (orientation: landscape) {
 				float: right;
 				margin: 0;
 				padding-top: 2.3em;
+			}
+			@media screen and (orientation: landscape) and (min-width: $bp-md) {
+				width: 292px;
+				float: none;
+				min-height: 282px;
+				margin: 0 auto;
+				margin-bottom: 1em;
 			}
 			@media screen and (min-width: $bp-md) {
 				width: 456px;
@@ -1359,7 +1442,7 @@ a:hover {
 				}
 				&.at-left {
 					margin-left: 0;
-					//				    margin-left: ($content-width - (252px * 2) - 50px) / 2;
+//				    margin-left: ($content-width - (252px * 2) - 50px) / 2;
 				}
 				&.at-right {
 					margin-left: 1em;
@@ -1391,6 +1474,8 @@ a:hover {
 				}
 				a {
 					display: inline-block;
+					margin: 0;
+					padding: 0;
 					height: 20px;
 					clear: both;
 					color: $medGrey;
