@@ -25,6 +25,10 @@ angular.module('artifactApp', [
         templateUrl: 'views/about.html',
         controller: 'MainCtrl'
       })
+      .when('/panel', {
+        templateUrl: 'views/panel.html',
+        controller: 'MainCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

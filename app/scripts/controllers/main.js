@@ -2,36 +2,42 @@
 
 angular.module('artifactApp')
   .controller('MainCtrl', function ($scope, $location, $window, $anchorScroll) {
-        $scope.goto = function(path){
-            window.console.log(path);
-            if(path.indexOf('#') !== -1){
-                window.console.log(path);
-            }
-            $location.path(path);
-        };
 
 
+        $('.jcarousel').jcarousel();
+
+        $('.jcarousel-control-prev')
+            .on('jcarouselcontrol:active', function() {
+                $(this).removeClass('inactive');
+            })
+            .on('jcarouselcontrol:inactive', function() {
+                $(this).addClass('inactive');
+            })
+            .jcarouselControl({
+                target: '-=1'
+            });
+
+        $('.jcarousel-control-next')
+            .on('jcarouselcontrol:active', function() {
+                $(this).removeClass('inactive');
+            })
+            .on('jcarouselcontrol:inactive', function() {
+                $(this).addClass('inactive');
+            })
+            .jcarouselControl({
+                target: '+=1'
+            });
+
+        $('.jcarousel-pagination')
+            .on('jcarouselpagination:active', 'a', function() {
+                $(this).addClass('active');
+            })
+            .on('jcarouselpagination:inactive', 'a', function() {
+                $(this).removeClass('active');
+            })
+            .jcarouselPagination();
 
 
-
-        $scope.pageTops = {};
-
-        $scope.showAbout = function(){
-            $scope.showAbout = true;
-        };
-
-        $scope.isHome = true;
-//
-        $scope.updateScrollEvent = function(event, isEndEvent){
-            if(isEndEvent){
-//                do something
-            }
-        };
-
-
-//        $scope.isHome = function(){
-//            window.console.log($(window).scrollY);
-//        }
 //
 //        var scroll_snap_t;
 //
