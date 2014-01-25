@@ -7,9 +7,17 @@
     </div>
 </section>
 
-<div ng-include="currentViews.about.url"></div>
-<div ng-include="currentViews.platform.url" background-img="../images/bg/AT_platform-bg.png"></div>
-<div ng-include="currentViews.work.url" background-img="../images/bg/AT_platform-bg.png"></div>
+<div  background-img="../images/bg/AT_team-bg.png" ng-cloak>
+    <div ng-include="currentViews.about.url"></div>
+</div>
+
+<div background-img="../images/bg/AT_team-bg.png" ng-cloak>
+    <div ng-include="currentViews.platform.url" ></div>
+</div>
+
+<div background-image="../images/bg/AT_team-bg.png">
+    <div ng-include="currentViews.work.url" background-img="../images/bg/AT_team-bg.png"></div>
+</div>
 
 <section id="contact" class="fullpage" panel="1" image="../images/bg/AT_contact-us.png" size="cover" in-view="isInView(id)">
     <div class="container">

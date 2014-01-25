@@ -104,7 +104,7 @@ angular.module('artifactApp')
         }
     })
 
-    .directive('panel', function ($window, $location) {
+    .directive('panel', function ($window, $timeout) {
         return {
             restrict: 'EA',
             scope:{
@@ -121,6 +121,10 @@ angular.module('artifactApp')
                 scope.size = scope.size ? scope.size : 'cover';
                 scope.attachment = scope.attachment ? scope.attachment : 'scroll';
                 scope.panel = scope.$eval(attrs.panel);
+                window.console.log(scope.image);
+                attrs.$observe('image', function(newVal){
+                    window.console.log(newVal);
+                });
 
                 var horizontal = scope.$eval(attrs.horizontal) || false;
                 var elem = $(element);
@@ -205,18 +209,26 @@ angular.module('artifactApp')
                     if(inView){
                         $("body").animate(scrollObj, 500, 'swing', function(){
                             clearTimeout(timer);
+                            inView = false;
                             return false;
                         });
                     }
                 };
 
-                element.css({
-                    'background-image': 'url(' + scope.image + ')',
-                    'background-size': scope.size,
-                    'background-position': scope.position,
-                    'background-attachment': scope.attachment,
-                    'background-repeat': 'no-repeat'
+                scope.$on('$includeContentLoaded', function(){
+                    window.console.log('view content loaded');
+                    setImage();
                 });
+
+                var setImage = function(){
+                    element.css({
+                        'background-image': 'url(' + scope.image + ')',
+                        'background-size': scope.size,
+                        'background-position': scope.position,
+                        'background-attachment': scope.attachment,
+                        'background-repeat': 'no-repeat'
+                    });
+                };
 
                 var fillScreen = function(){
                     var panel = scope.$eval(attrs.panel);
@@ -245,25 +257,16 @@ angular.module('artifactApp')
                     fillScreen();
                 });
 
-                scope.$on('$routeChangeSuccess', function() {
-                    window.console.log('route change success');
-                    fillScreen();
-                });
-
                 function scroll(scrollObj){
                     $("body").animate(scrollObj, 400, 'swing', function(){
                         window.console.log('scroll call back');
-
                     });
                 }
 
-
                 fillScreen();
                 getPosition();
+                setImage();
 
-                scope.$on('$destroy', function(){
-                    element.unbind('scroll');
-                })
             }
         }
     })
@@ -284,6 +287,13 @@ angular.module('artifactApp')
                 var elem = $(element);
                 var elementId = elem.attr('id');
 
+                attrs.$observe('image', function(newVal){
+                    window.console.log(newVal);
+                    if(newVal){
+                        setImage(newVal);
+                    }
+                });
+
                 function lockScroll(){
                     var $html = $('html');
                     var $body = $('body');
@@ -303,6 +313,8 @@ angular.module('artifactApp')
                     $("body").animate({scrollTop: elem.offset().top}, 800, 'swing', function(){
 
                     });
+
+
 //                    window.scrollTo(scrollPosition[0], scrollPosition[1]);
 //
 //                    var marginR = $body.outerWidth()-initWidth;
