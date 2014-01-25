@@ -1,5 +1,6 @@
 @import '../bower_components/sass-bootstrap/lib/bootstrap.scss';
 @import 'mixins';
+@import 'animation';
 
 @font-face
 {
@@ -32,9 +33,9 @@ $artifact-blue: #2470B3;
 
 .fullpage {
 	position: relative;
-	&.horiz {
-		float:left;
-	}
+    &.horizontal{
+      float:left;
+    }
 }
 
 * {

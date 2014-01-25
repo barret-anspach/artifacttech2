@@ -1,0 +1,21 @@
+<section id="work" class="fullpage"  panel="1" image="../images/bg/AT_our-work-bg.png" size="cover" in-view="isInView(id)">
+    <div class="container">
+        <div class="at-work">
+            <div class="at-work-page">
+                <div class="text-wrapper">
+                    <h1>Our Work</h1>
+                    <p>Nearly every place in today’s world is paired with a digital counterpart. People interact with museums, neighborhoods, restaurants and more in real life, and virtually online via a multitude of devices. We are here to bridge the distance between those two places, with our LENS™ application. LENS™ creates place identity for locations where they can come alive with digital information, entertainment and commerce.</p>
+                </div>
+                <div class="at-phones">
+                    <a class="at-phone at-left" hover-class="animated bounce" ng-mouseover="hoverItem(true);"ng-mouseout="hoverItem(false);"
+                       background-img="../images/phone-lens.png" size="contain" ng-click="currentViewById('work', 'work-lens')" title="LENS"></a>
+                    <a class="at-phone at-right" hover-class="animated bounce" ng-mouseover="hoverItem(true);" ng-mouseout="hoverItem(false);"
+                       background-img="../images/phone-fonograf.png" size="contain" xui-sref="work.fonograf" ng-click="currentViewById('work', 'work-fonograf')" title="Fonograf"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="at-arrow-right" ng-click="nextView('work')">
+        <img src="images/arrow-right.png">
+    </a>
+</section>
