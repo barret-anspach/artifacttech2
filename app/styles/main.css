@@ -5026,10 +5026,6 @@ body {
   @media screen and (max-width: 1024px) {
     .container {
       padding: 0 15px; } }
-  @media screen and (min-width: 1024px) {
-    .container {
-      width: 1024px;
-      margin: 0 auto; } }
 
 .active {
   color: white; }
@@ -5311,6 +5307,7 @@ a:hover {
   width: 12em;
   height: 1em;
   text-align: right;
+  float: right;
   position: absolute;
   top: 50%;
   right: 0px;
@@ -5318,11 +5315,9 @@ a:hover {
   margin-top: -0.25em; }
   @media screen and (max-width: 768px) and (orientation: landscape) {
     .at-about-chevron {
-      float: right;
       top: 20.8em; } }
   @media screen and (max-width: 768px) and (orientation: portrait) {
     .at-about-chevron {
-      float: right;
       top: 6.9em; } }
     @media screen and (max-width: 768px) and (orientation: portrait) and (max-width: 566px) {
       .at-about-chevron {
@@ -5330,7 +5325,6 @@ a:hover {
   @media screen and (min-width: 768px) {
     .at-about-chevron {
       width: 25em;
-      float: right;
       top: 7.9em; } }
   .at-about-chevron h4.at-about-team-link {
     font-family: 'Trump Gothic East', sans-serif;
@@ -5363,6 +5357,7 @@ a:hover {
         height: 28px; } }
 
 .at-platform-chevron {
+  float: right;
   width: 12em;
   height: 1em;
   text-align: right;
@@ -5373,11 +5368,9 @@ a:hover {
   margin-top: -0.25em; }
   @media screen and (max-width: 768px) and (orientation: landscape) {
     .at-platform-chevron {
-      float: right;
       top: 6.3em; } }
   @media screen and (max-width: 768px) and (orientation: portrait) {
     .at-platform-chevron {
-      float: right;
       top: 6.9em; } }
     @media screen and (max-width: 768px) and (orientation: portrait) and (max-width: 566px) {
       .at-platform-chevron {
@@ -5385,8 +5378,10 @@ a:hover {
   @media screen and (min-width: 768px) {
     .at-platform-chevron {
       width: 25em;
-      float: right;
       top: 9em; } }
+  @media screen and (min-width: 1024px) {
+    .at-platform-chevron {
+      width: 25em; } }
   .at-platform-chevron h4.at-platform-link {
     font-family: 'Trump Gothic East', sans-serif;
     position: absolute;
@@ -5418,6 +5413,7 @@ a:hover {
         height: 28px; } }
 
 .at-work-chevron {
+  float: right;
   width: 12em;
   height: 1em;
   text-align: right;
@@ -5426,21 +5422,22 @@ a:hover {
   right: 0px;
   padding-right: 20px;
   margin-top: -0.25em; }
+  @media screen and (max-width: 568px) and (orientation: landscape) {
+    .at-work-chevron {
+      float: left;
+      left: 6em; } }
   @media screen and (max-width: 768px) and (orientation: landscape) {
     .at-work-chevron {
-      float: right;
       top: 6.3em; } }
   @media screen and (max-width: 768px) and (orientation: portrait) {
     .at-work-chevron {
-      float: right;
       top: 6.9em; } }
     @media screen and (max-width: 768px) and (orientation: portrait) and (max-width: 566px) {
       .at-work-chevron {
         top: 5.9em; } }
   @media screen and (min-width: 768px) {
     .at-work-chevron {
-      width: 25em;
-      float: right; } }
+      width: 25em; } }
   .at-work-chevron h4.at-work-link {
     font-family: 'Trump Gothic East', sans-serif;
     position: absolute;
@@ -5577,6 +5574,13 @@ a:hover {
       .at-about-main-text {
         top: 8em;
         width: 15em; } }
+  @media screen and (min-width: 1024px) {
+    .at-about-main-text {
+      top: 6em;
+      float: none;
+      width: 1024px;
+      margin: 0 auto;
+      padding-right: 52em; } }
   .at-about-main-text h1 {
     font-family: "trump gothic east", sans-serif;
     font-size: 2.4em;
@@ -5651,6 +5655,7 @@ a:hover {
           .at-about-main-text .at-about-artifact .at-about-artifact-bubble {
             width: 30em; } }
       .at-about-main-text .at-about-artifact .at-about-artifact-bubble h2 {
+        font-family: "trump gothic east", sans-serif;
         margin: 0;
         padding: 0;
         font-size: 36px; }
@@ -5821,6 +5826,9 @@ a:hover {
   @media screen and (min-width: 768px) {
     .at-platform {
       padding-top: 8em; } }
+  @media screen and (min-width: 1024px) {
+    .at-platform {
+      width: 1024px; } }
   .at-platform h1 {
     font-family: "trump gothic east", sans-serif;
     width: 100%;
@@ -5863,13 +5871,14 @@ a:hover {
         width: 18em; } }
     @media screen and (min-width: 768px) {
       .at-platform .at-platform-menu {
+        width: 50em;
         padding-top: 2em; } }
-      @media screen and (min-width: 768px) and (orientation: landscape) {
-        .at-platform .at-platform-menu {
-          width: 62em; } }
       @media screen and (min-width: 768px) and (orientation: portrait) {
         .at-platform .at-platform-menu {
           width: 50em; } }
+    @media screen and (min-width: 1024px) {
+      .at-platform .at-platform-menu {
+        width: 62em; } }
     .at-platform .at-platform-menu .at-platform-box {
       display: inline-block;
       width: 8.5em;
@@ -5879,18 +5888,24 @@ a:hover {
       background: black;
       margin-right: .5em;
       margin-bottom: .5em; }
-      @media screen and (min-width: 768px) and (orientation: landscape) {
+      @media screen and (min-width: 768px) {
+        .at-platform .at-platform-menu .at-platform-box {
+          width: 11.3em;
+          height: 4.7em;
+          margin-right: 1.5em;
+          padding: .5em; } }
+        @media screen and (min-width: 768px) and (orientation: portrait) {
+          .at-platform .at-platform-menu .at-platform-box {
+            width: 11em;
+            height: 4.7em;
+            margin-right: 1.5em;
+            padding: .5em; } }
+      @media screen and (min-width: 1024px) {
         .at-platform .at-platform-menu .at-platform-box {
           width: 13.5em;
           height: 6em;
           margin-right: 2.5em;
           padding: 1em; } }
-      @media screen and (min-width: 768px) and (orientation: portrait) {
-        .at-platform .at-platform-menu .at-platform-box {
-          width: 11em;
-          height: 4.7em;
-          margin-right: 1.5em;
-          padding: .5em; } }
       .at-platform .at-platform-menu .at-platform-box:last-child {
         margin-right: 0; }
       .at-platform .at-platform-menu .at-platform-box .box-icon {
@@ -5900,12 +5915,16 @@ a:hover {
         height: 2em; }
         @media screen and (min-width: 768px) {
           .at-platform .at-platform-menu .at-platform-box .box-icon {
-            width: 4em;
-            height: 4em; } }
+            width: 3.7em;
+            height: 3.7em; } }
           @media screen and (min-width: 768px) and (orientation: portrait) {
             .at-platform .at-platform-menu .at-platform-box .box-icon {
               width: 3.7em;
               height: 3.7em; } }
+        @media screen and (min-width: 1024px) {
+          .at-platform .at-platform-menu .at-platform-box .box-icon {
+            width: 4em;
+            height: 4em; } }
       .at-platform .at-platform-menu .at-platform-box .menu-title {
         display: inline-block;
         float: left;
@@ -5924,12 +5943,17 @@ a:hover {
           .at-platform .at-platform-menu .at-platform-box .menu-title {
             width: 6.1em;
             padding-top: 15px;
-            font-size: 17px; } }
+            font-size: 15px; } }
           @media screen and (min-width: 768px) and (orientation: portrait) {
             .at-platform .at-platform-menu .at-platform-box .menu-title {
               width: 5.8em;
               padding-top: 15px;
               font-size: 15px; } }
+        @media screen and (min-width: 1024px) {
+          .at-platform .at-platform-menu .at-platform-box .menu-title {
+            width: 6.1em;
+            padding-top: 15px;
+            font-size: 17px; } }
   .at-platform.at-platform-top {
     padding: 3em 2em 0; }
     @media screen and (orientation: portrait) {
@@ -5998,28 +6022,38 @@ a:hover {
     font-size: 10px;
     text-transform: none;
     line-height: 12px;
-    margin-bottom: .1em; }
+    margin-bottom: .1em;
+    font-weight: 300; }
     @media screen and (min-width: 768px) {
       .at-platform .at-platform-page p {
         font-size: 18px;
-        font-weight: 300;
         line-height: 1.2em;
         margin-bottom: 1em; } }
     @media screen and (min-width: 1024px) {
       .at-platform .at-platform-page p {
         font-size: 23px;
-        font-weight: 300;
         line-height: 1.2em;
         margin-bottom: 1em; } }
     .at-platform .at-platform-page p.curation-text {
       font-size: 14px;
       line-height: 17px; }
+      @media screen and (min-width: 768px) {
+        .at-platform .at-platform-page p.curation-text {
+          font-size: 18px;
+          line-height: 1.2em;
+          margin-bottom: 1em; } }
+      @media screen and (min-width: 1024px) {
+        .at-platform .at-platform-page p.curation-text {
+          font-size: 23px;
+          line-height: 1.2em;
+          margin-bottom: 1em; } }
 
 /*-------- WORK.MAIN, etc. --------*/
 .at-work {
   position: relative;
   padding-top: 5.4em;
   width: 100%;
+  height: 100%;
   margin: 0 auto; }
   @media screen and (orientation: portrait) and (max-width: 568px) {
     .at-work {
@@ -6029,22 +6063,29 @@ a:hover {
       padding-top: 0; } }
   @media screen and (min-width: 768px) {
     .at-work {
-      padding-top: 8em; } }
+      padding-top: 6em; } }
+  @media screen and (min-width: 1024px) {
+    .at-work {
+      width: 1024px; } }
   .at-work .at-work-page {
     position: relative; }
     .at-work .at-work-page.at-work-app {
       width: auto;
       padding-top: 15.9em;
-      padding-left: 6em; }
+      padding-left: 6em;
+      overflow-y: hidden; }
       @media screen and (orientation: landscape) {
         .at-work .at-work-page.at-work-app {
           padding-top: 12.4em;
           padding-left: 16em; } }
+        @media screen and (orientation: landscape) and (min-width: 768px) {
+          .at-work .at-work-page.at-work-app {
+            padding-top: 22em; } }
       @media screen and (min-width: 768px) {
         .at-work .at-work-page.at-work-app {
           width: 40em;
           margin-right: 1em;
-          padding-top: 18em;
+          padding-top: 22em;
           padding-left: 0;
           float: right; } }
       @media screen and (orientation: portrait) and (min-width: 768px) {
@@ -6054,33 +6095,43 @@ a:hover {
           padding-top: 22.5em;
           padding-left: 0;
           float: right; } }
+      @media screen and (min-width: 1024px) {
+        .at-work .at-work-page.at-work-app {
+          padding-top: 24.8em; } }
     .at-work .at-work-page .text-wrapper {
+      width: 100%;
       padding-top: 5.4em; }
-      @media screen and (orientation: landscape) and (min-width: 768px) {
+      @media screen and (orientation: landscape) {
         .at-work .at-work-page .text-wrapper {
-          padding-top: 5.4em;
           width: 230px;
           float: left; } }
+      @media screen and (orientation: landscape) and (min-width: 768px) {
+        .at-work .at-work-page .text-wrapper {
+          width: 100%;
+          padding-top: 0; } }
       .at-work .at-work-page .text-wrapper h1 {
         font-family: "trump gothic east", sans-serif;
         width: 100%;
         font-size: 2.4em;
-        margin: 0 auto;
-        margin-bottom: .4em;
-        padding: 0;
-        text-align: center; }
+        margin: 0 0 .4em 0;
+        padding-right: .5em; }
+        @media screen and (orientation: landscape) {
+          .at-work .at-work-page .text-wrapper h1 {
+            text-align: left; } }
         @media screen and (orientation: landscape) and (min-width: 768px) {
           .at-work .at-work-page .text-wrapper h1 {
             font-size: 2.4em;
-            margin: 0 0 .4em 0;
-            padding-right: .5em;
-            text-align: left; } }
+            margin: 0 auto;
+            margin-bottom: .4em;
+            padding: 0;
+            text-align: center; } }
         @media screen and (min-width: 768px) {
           .at-work .at-work-page .text-wrapper h1 {
             font-size: 52px;
             font-weight: 700;
             margin-bottom: .5em; } }
       .at-work .at-work-page .text-wrapper p {
+        width: 100%;
         font-family: 'Helvetica Neue', sans-serif;
         font-size: .9em;
         line-height: 1.2em;
@@ -6088,7 +6139,8 @@ a:hover {
         text-transform: none; }
         @media screen and (orientation: portrait) {
           .at-work .at-work-page .text-wrapper p {
-            padding: 0 1em; } }
+            width: 100%;
+            text-align: center; } }
         @media screen and (min-width: 768px) {
           .at-work .at-work-page .text-wrapper p {
             font-size: 20px;
@@ -6096,7 +6148,9 @@ a:hover {
             text-align: center; } }
           @media screen and (min-width: 768px) and (orientation: landscape) {
             .at-work .at-work-page .text-wrapper p {
-              padding-right: .5em; } }
+              width: 768px;
+              float: none;
+              margin: 0 auto; } }
     .at-work .at-work-page h1 {
       font-family: "trump gothic east", sans-serif;
       text-align: left;
@@ -6150,11 +6204,18 @@ a:hover {
       min-height: 282px;
       margin: 0 auto;
       margin-bottom: 1em; }
-      @media screen and (orientation: landscape) and (min-width: 768px) {
+      @media screen and (orientation: landscape) {
         .at-work .at-work-page .at-phones {
           float: right;
           margin: 0;
           padding-top: 2.3em; } }
+      @media screen and (orientation: landscape) and (min-width: 768px) {
+        .at-work .at-work-page .at-phones {
+          width: 292px;
+          float: none;
+          min-height: 282px;
+          margin: 0 auto;
+          margin-bottom: 1em; } }
       @media screen and (min-width: 768px) {
         .at-work .at-work-page .at-phones {
           width: 456px; } }
@@ -6198,6 +6259,8 @@ a:hover {
             font-weight: 300; } }
         .at-work .at-work-page .promo-videos h2 a {
           display: inline-block;
+          margin: 0;
+          padding: 0;
           height: 20px;
           clear: both;
           color: #444444;
