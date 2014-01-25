@@ -4,41 +4,35 @@ angular.module('artifactApp')
     .controller('ApplicationCtrl', function ($scope, $anchorScroll, $location, $window) {
 
         $scope.$location = $location;
-
         $scope.currentId = 'home';
         $scope.currentPath = $location.url();
-
-        $scope.scrollLocked = function(){
-            return true;
-        };
 
         $scope.showAbout = false;
 
         $scope.views = {
+
             about:[
-                {url: '/panels/about-main.html', id: 'about-main'},
-                {url: '/panels/about-team-1.html', id: 'about-team-1'},
-                {url:'/panels/about-team-2.html', id: 'about-team-2'},
-                {url:'/panels/about-team-3.html', id: 'about-team-3'},
-                {url:'/panels/about-team-4.html', id: 'about-team-4'},
-                {url:'/panels/about-team-5.html', id: 'about-team-5'}
+                {url: '/panels/about-main.html', id: 'about-main', background: '../images/bg/AT_about-us-bg.png'},
+                {url: '/panels/about-team-1.html', id: 'about-team-1', background: '../images/bg/AT_team-bg.png'},
+                {url:'/panels/about-team-2.html', id: 'about-team-2', background: '../images/bg/AT_team-bg.png'},
+                {url:'/panels/about-team-3.html', id: 'about-team-3', background: '../images/bg/AT_team-bg.png'},
+                {url:'/panels/about-team-4.html', id: 'about-team-4', background: '../images/bg/AT_team-bg.png'},
+                {url:'/panels/about-team-5.html', id: 'about-team-5', background: '../images/bg/AT_team-bg.png'}
             ],
             platform:[
-                {url: '/panels/platform-main.html', id:'platform-main'},
-                {url: '/panels/platform-curation.html', id:'platform-curation'},
-                {url: '/panels/platform-creation.html', id:'platform-creation'},
-                {url: '/panels/platform-commerce.html', id:'platform-commerce'},
-                {url: '/panels/platform-analysis.html', id:'platform-analysis'}
+                {url: '/panels/platform-main.html', id:'platform-main', background: '../images/bg/AT_platform-bg.png'},
+                {url: '/panels/platform-curation.html', id:'platform-curation', background: '../images/bg/AT_platform-bg-2.png'},
+                {url: '/panels/platform-creation.html', id:'platform-creation', background: '../images/bg/AT_platform-bg-3.png'},
+                {url: '/panels/platform-commerce.html', id:'platform-commerce', background: '../images/bg/AT_platform-bg-4.png'},
+                {url: '/panels/platform-analysis.html', id:'platform-analysis', background: '../images/bg/AT_platform-bg-5.png'}
 
             ],
             work:[
-                {url: '/panels/work-main.html', id:'work-main'},
-                {url: '/panels/work-fonograf.html', id:'work-fonograf'},
-                {url: '/panels/work-lens.html', id:'work-lens'}
+                {url: '/panels/work-main.html', id:'work-main', background: '../images/bg/AT_our-work-bg.png'},
+                {url: '/panels/work-fonograf.html', id:'work-fonograf', background: '../images/bg/AT_our-work-bg-2.png'},
+                {url: '/panels/work-lens.html', id:'work-lens', background: '../images/bg/AT_our-work-bg-3.png'}
             ]
         };
-
-
 
         $scope.currentViews = {};
 
@@ -51,16 +45,19 @@ angular.module('artifactApp')
 
         $scope.currentViewById = function(key, id){
             window.console.log(key);
+            $scope.currentId = id;
             $scope.currentViews[key] = _.find($scope.views[key], {id: id});
         };
 
         $scope.nextView = function(key){
             window.console.log(key);
             $scope.currentViews[key] = $scope.views[key][$scope.views[key].indexOf($scope.currentViews[key])+ 1];
+            $scope.currentId = $scope.currentViews[key].id;
         };
 
         $scope.previousView = function(key){
             $scope.currentViews[key] = $scope.views[key][$scope.views[key].indexOf($scope.currentViews[key]) - 1];
+            $scope.currentId = $scope.currentViews[key].id;
         };
 
         $scope.resetViews();
@@ -85,18 +82,6 @@ angular.module('artifactApp')
             $scope.isLoaded = true;
         };
 
-        $scope.scroll = function(){
-            var el = $(document.getElementById($scope.currentId));
-            if($scope.horizontal){
-                var scrollObj = {scrollLeft: el.offset().left};
-            }else{
-                scrollObj = {scrollTop: el.offset().top};
-            }
-            $("body").animate(scrollObj, 100, 'swing', function(){
-                window.console.log('scroll call back');
-            });
-        };
-
         $scope.isInView = function(id){
             window.console.log('this is totally in view ' + id );
             $scope.currentId = id;
@@ -107,6 +92,7 @@ angular.module('artifactApp')
             if(!$scope.currentViews){
                 return null;
             }
+
             return ($scope.currentViews[path].id === id);
         };
         
@@ -117,10 +103,6 @@ angular.module('artifactApp')
         $scope.navChanged = function(top){
             window.console.log(top);
         };
-
-
-        $scope.masterPanelFit = 2;
-        $scope.subPanelFit = .5;
 
 
     });

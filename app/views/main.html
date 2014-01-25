@@ -1,17 +1,25 @@
-<section id='home' class="fullpage" image="../images/bg/AT_home-bg.png" size="cover" panel="1" in-view="isInView('home')" at-top>
+<section id='home' class="fullpage" image="../images/bg/AT_home-bg.png" size="cover" panel="1">
     <div class="container">
         <span class="at-main-message"><h1>You are here</h1></span>
-        <a class="at-arrow-down animated bounce" prevent-default="" scroll-to="about" to-path="/" to-id="about">
+        <a class="at-arrow-down animated bounce" scroll-to="about">
             <img src="images/arrow-down.png">
         </a>
     </div>
 </section>
 
-<div ng-include="currentViews.about.url"></div>
-<div ng-include="currentViews.platform.url" background-img="../images/bg/AT_platform-bg.png" size="cover"></div>
-<div ng-include="currentViews.work.url" background-img="../images/bg/AT_platform-bg.png" size="cover"></div>
+<div background-img="{{currentViews.about.background}}" size="cover">
+    <div id="about" ng-include="currentViews.about.url"></div>
+</div>
 
-<section id="contact" class="fullpage" panel="1" image="../images/bg/AT_contact-us.png" size="cover" in-view="isInView(id)">
+<div background-img="{{currentViews.platform.background}}" size="cover">
+    <div id="platform" ng-include="currentViews.platform.url" ></div>
+</div>
+
+<div background-img="{{currentViews.work.background}}" size="cover">
+    <div id="work" ng-include="currentViews.work.url"></div>
+</div>
+
+<section id="contact" class="fullpage" panel="1" image="../images/bg/AT_contact-us.png" size="cover">
     <div class="container">
         <div class="at-contact">
             <h1>Contact Us</h1>

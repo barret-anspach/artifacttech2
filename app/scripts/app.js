@@ -28,4 +28,7 @@ angular.module('artifactApp', [
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+    .run(function($templateCache){
+        
+    });
