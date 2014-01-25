@@ -161,9 +161,6 @@ module.exports = function (grunt) {
             }
         },
 
-
-
-
         // Compiles Sass to CSS and generates necessary files if requested
         compass: {
             options: {
@@ -297,6 +294,7 @@ module.exports = function (grunt) {
                         '.htaccess',
                         '*.html',
                         'views/{,*/}*.html',
+                        'panels/{,*/}*.html',
                         'images/{,*/}*.{png,jpg,webp}',
                         'fonts/*'
                     ]

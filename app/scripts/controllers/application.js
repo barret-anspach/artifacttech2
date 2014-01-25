@@ -14,7 +14,7 @@ angular.module('artifactApp')
             var isMobile = false;
             var mobile = ['iphone','ipad','android','blackberry','nokia','opera mini','windows mobile','windows phone','iemobile'];
             for (var i in mobile) if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0) isMobile = true;
-            return true
+            return isMobile
         };
 
         $scope.showAbout = false;
