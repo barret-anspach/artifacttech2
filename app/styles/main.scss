@@ -15,7 +15,7 @@ $screen-width: 1200px;
 $bp-sm: 568px;
 $bp-md: 768px;
 $bp-lg: 1024px;
-$bp-xl: 4000px;
+$bp-xl: 1200px;
 
 $dkGrey: #4D4D4D;
 $medGrey: #444444;
@@ -53,6 +53,10 @@ body {
 	height: 100%;
 	@media screen and (max-width: $bp-lg) {
 		padding: 0 15px;
+	}
+	@media screen and (min-width: $bp-lg) {
+		width: $bp-lg;
+		margin: 0 auto;
 	}
 }
 
@@ -95,6 +99,9 @@ a:hover {
 	left: 0;
 	z-index: 999;
 	.at-navbar-wrapper {
+		width: 100%;
+		position: relative;
+		background-color: rgba(0,0,0,1);
 		@media screen and (max-width: $bp-md) {
 			@media screen and (orientation: landscape) {
 				height: 45px;
@@ -103,9 +110,6 @@ a:hover {
 				height: 50px;
 			}
 		}
-		width: 100%;
-		position: relative;
-		background-color: rgba(0,0,0,1);
 		&.home {
 			//          -webkit-transition:0.5s linear all;
 			//          transition:0.5s linear all;
@@ -160,6 +164,10 @@ a:hover {
 		position: relative;
 		width: 100%;
 		height: 40px;
+		@media screen and (min-width: $bp-lg) {
+			width: $bp-lg;
+			margin: 0 auto;
+		}
 		.at-navbar-header {
 			padding-top: 5px;
 			clear: both;
@@ -331,6 +339,10 @@ a:hover {
 			padding: 0 15px;
 			background-color: rgba(0,0,0,.7);
 			.at-navbar-subnav {
+				@media screen and (min-width: $bp-lg) {
+					width: $bp-lg;
+					margin: 0 auto;
+				}
 				a {
 					font-family: 'Helvetica Neue', sans-serif;
 					font-size: 11px;
@@ -391,8 +403,14 @@ a:hover {
 			top: 5.9em;
 		}
 	}
+	@media screen and (min-width: $bp-md) {
+		width: 25em;
+		float: right;
+		top: 7.9em;
+	}
 	@include nav-button(right, .5em);
 	h4.at-about-team-link {
+		font-family: 'Trump Gothic East', sans-serif;
 		position: absolute;
 		display: inline-block;
 		top: 0;
@@ -407,12 +425,21 @@ a:hover {
 		&:hover {
 			color: $artifact-blue;
 		}
+		@media screen and (min-width: $bp-md) {
+			top: -6px;
+			padding-right: 30px;
+			font-size: 2.4em;
+		}
 	}
 	.at-about-chevron-img {
 		display: inline-block;
 		width: 19px;
 		height: 14px;
 		top: 0;
+		@media screen and (min-width: $bp-md) {
+			width: 38px;
+			height: 28px;
+		}
 	}
 }
 
@@ -431,13 +458,18 @@ a:hover {
 			top: 5.9em;
 		}
 	}
+	@media screen and (min-width: $bp-md) {
+		width: 25em;
+		float: right;
+		top: 9em;
+	}
 	@include nav-button(right, .5em);
 	h4.at-platform-link {
+		font-family: 'Trump Gothic East', sans-serif;
 		position: absolute;
 		display: inline-block;
 		top: 0;
 		right: 42px;
-		width: 160px;
 		margin: 0;
 		margin-top: 2px;
 		padding-right: 5px;
@@ -448,12 +480,75 @@ a:hover {
 		&:hover {
 			color: $artifact-blue;
 		}
+		@media screen and (min-width: $bp-md) {
+			top: -6px;
+			padding-right: 30px;
+			font-size: 2.4em;
+		}
 	}
 	.at-platform-chevron-img {
 		display: inline-block;
 		width: 19px;
 		height: 14px;
 		top: 0;
+		@media screen and (min-width: $bp-md) {
+			width: 38px;
+			height: 28px;
+		}
+	}
+}
+
+.at-work-chevron {
+	width: 12em;
+	height: 1em;
+	text-align: right;
+	@media screen and (max-width: $bp-md) and (orientation: landscape) {
+		float: right;
+		top: 6.3em;
+	}
+	@media screen and (max-width: $bp-md) and (orientation: portrait) {
+		float: right;
+		top: 6.9em;
+		@media screen and (max-width: 566px) {
+			top: 5.9em;
+		}
+	}
+	@media screen and (min-width: $bp-md) {
+		width: 25em;
+		float: right;
+	}
+	@include nav-button(right, .5em);
+	h4.at-work-link {
+		font-family: 'Trump Gothic East', sans-serif;
+		position: absolute;
+		display: inline-block;
+		top: 0;
+		right: 42px;
+		margin: 0;
+		margin-top: 2px;
+		padding-right: 5px;
+		font-size: .9em;
+		font-weight: 400;
+		text-decoration: none;
+		color: #333333;
+		&:hover {
+			color: $artifact-blue;
+		}
+		@media screen and (min-width: $bp-md) {
+			top: -6px;
+			padding-right: 30px;
+			font-size: 2.4em;
+		}
+	}
+	.at-work-chevron-img {
+		display: inline-block;
+		width: 19px;
+		height: 14px;
+		top: 0;
+		@media screen and (min-width: $bp-md) {
+			width: 38px;
+			height: 28px;
+		}
 	}
 }
 
@@ -527,33 +622,9 @@ a:hover {
 	}
 }
 
-/*-------- PAGE --------*/
-
-.at-page {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	//	visibility: hidden;
-	//	backface-visibility: hidden;
-	//	transform: translate3d(0, 0, 0);
-}
-.at-page-current,
-.no-js .at-page {
-	visibility: visible;
-}
-.no-js body {
-	overflow: auto;
-}
-.at-page-ontop {
-	z-index: 999;
-}
-
-.at-content {
-	position: relative;
-	width: 100%;
-	height: 100%;
+#about,
+#platform,
+#work {
 }
 
 /*-------- HOME --------*/
@@ -1015,16 +1086,33 @@ a:hover {
 		}
 	}
 	&.at-platform-top {
-		padding: 4em 2em 0;
+		padding: 3em 2em 0;
+		@media screen and (orientation: portrait) {
+			padding: 4em 0 0 0;
+		}
+		@media screen and (min-width: $bp-sm) {
+			padding: 4em 2em 0;
+		}
 		@media screen and (min-width: $bp-md) {
+			padding: 5em 5em 0;
+		}
+		@media screen and (min-width: $bp-lg) {
 			padding: 6em 5em 0;
 		}
 	}
 	.at-platform-page {
 		&.on-left {
 			width: 15em;
-			margin-left: 2em;
+			margin-top: 2em;
+			@media screen and (min-width: $bp-sm) {
+				width: 15em;
+				margin-left: 2em;
+			}
 			@media screen and (min-width: $bp-md) {
+				width: 20em;
+				margin-left: 5em;
+			}
+			@media screen and (min-width: $bp-lg) {
 				width: 30em;
 				margin-left: 5em;
 			}
@@ -1034,34 +1122,61 @@ a:hover {
 			font-size: 2.4em;
 			margin: 0;
 			padding-left: 0;
-			margin-bottom: .4em;
+			@media screen and (min-width: $bp-sm) {
+				font-size: 2.4em;
+				margin: 0;
+				padding-left: 0;
+			}
 			@media screen and (min-width: $bp-md) {
 				font-size: 52px;
 				font-weight: 700;
 			}
+			@media screen and (min-width: $bp-lg) {
+				margin-bottom: .4em;
+			}
 			&.uncramp {
+				width: auto;
+				float: left;
+				margin-right: .4em;
 				@media screen and (min-width: $bp-lg) {
 					margin: 0;
+					float: none;
 					&.move-up {
 						margin-top: -.5em;
 					}
 				}
+				@media screen and (min-width: $bp-xl) {
+					float: none;
+					&.move-up {
+						margin-top: 0em;
+					}
+				}
+			}
+			&.curation-title {
+				margin-bottom: .4em;
 			}
 		}
-		.uncramp-text {
-			font-size: 12px;
-			line-height: 1em;
-		}
-		span {
+		p {
 			font-family: 'Helvetica Neue', sans-serif;
-			font-size: .9em;
+			font-size: 10px;
 			text-transform: none;
-			line-height: 1.2em;
+			line-height: 12px;
 			margin-bottom: .1em;
 			@media screen and (min-width: $bp-md) {
+				font-size: 18px;
+				font-weight: 300;
+				line-height: 1.2em;
+				margin-bottom: 1em;
+			}
+			@media screen and (min-width: $bp-lg) {
 				font-size: 23px;
 				font-weight: 300;
+				line-height: 1.2em;
 				margin-bottom: 1em;
+			}
+			&.curation-text {
+				font-size: 14px;
+				line-height: 17px;
 			}
 		}
 	}
@@ -1080,6 +1195,9 @@ a:hover {
 	padding-top: 5.4em;
 	width: 100%;
 	margin: 0 auto;
+	@media screen and (orientation: portrait) and (max-width: $bp-sm) {
+		padding-top: 0;
+	}
 	@media screen and (orientation: landscape) and (max-width: $bp-md) {
 		padding-top: 0;
 	}
@@ -1089,14 +1207,33 @@ a:hover {
 	.at-work-page {
 		position: relative;
 		&.at-work-app {
+			width: auto;
+			padding-top: 15.9em;
+			padding-left: 6em;
 			@media screen and (orientation: landscape) {
-				float: right;
-				width: 23.8em;
 				padding-top: 12.4em;
+				padding-left: 16em;
+			}
+			@media screen and (min-width: $bp-md) {
+				width: 40em;
+				margin-right: 1em;
+				padding-top: 18em;
+				padding-left: 0;
+				float: right;
+			}
+			// iPad
+			@media screen and (orientation: portrait) and (min-width: $bp-md) {
+				width: 32em;
+				margin-right: 1em;
+				padding-top: 22.5em;
+				padding-left: 0;
+				float: right;
 			}
 		}
+		// 'our work' main page
 		.text-wrapper {
-			@media screen and (orientation: landscape) and (max-width: $bp-md) {
+			padding-top: 5.4em;
+			@media screen and (orientation: landscape) and (min-width: $bp-md) {
 				padding-top: 5.4em;
 				width: 230px;
 				float: left;
@@ -1107,8 +1244,10 @@ a:hover {
 				font-size: 2.4em;
 				margin: 0 auto;
 				margin-bottom: .4em;
+				padding: 0;
 				text-align: center;
-				@media screen and (orientation: landscape) and (max-width: $bp-md) {
+				@media screen and (orientation: landscape) and (min-width: $bp-md) {
+					font-size: 2.4em;
 					margin: 0 0 .4em 0;
 					padding-right: .5em;
 					text-align: left;
@@ -1128,13 +1267,13 @@ a:hover {
 				@media screen and (orientation: portrait) {
 					padding: 0 1em;
 				}
-				@media screen and (orientation: landscape) and (max-width: $bp-md) {
-					padding-right: .5em;
-				}
 				@media screen and (min-width: $bp-md) {
 					font-size: 20px;
 					font-weight: 300;
 					text-align: center;
+					@media screen and (orientation: landscape) {
+						padding-right: .5em;
+					}
 				}
 			}
 		}
@@ -1143,23 +1282,33 @@ a:hover {
 			text-align: left;
 			font-size: 2.1em;
 			margin: 0;
+			@media screen and (orientation: landscape) and (min-width: $bp-sm) {
+				font-size: 1.4em;
+			}
+			@media screen and (min-width: $bp-md) {
+				font-size: 4.1em;
+				margin-bottom: .2em;
+			}
 		}
 		.at-app-title {
 			width: 100%;
 			margin-top: 0;
 			margin-left: 0;
-			padding: 0;
 			.small-caps {
 				font-size: .8em;
 			}
 		}
 		p {
 			font-family: 'Helvetica Neue', sans-serif;
-			font-size: .9em;
+			font-size: 14px;
 			line-height: 1.2em;
 			margin-bottom: .1em;
 			text-transform: none;
-			@media screen and (orientation: landscape) and (max-width: $bp-md) {
+			@media screen and (orientation: landscape) and (min-width: $bp-sm) {
+				font-size: .8em;
+			}
+			@media screen and (orientation: landscape) and (min-width: $bp-md) {
+				font-size: .9em;
 				float: left;
 				width: 230px;
 				padding-right: .5em;
@@ -1171,6 +1320,14 @@ a:hover {
 				padding-bottom: 0;
 				font-size: .75em;
 				line-height: 1.2em;
+				@media screen and (min-width: $bp-md) {
+					font-size: 1.5em;
+					line-height: 1.2em;
+				}
+				@media screen and (orientation: portrait) and (min-width: $bp-md) {
+					font-size: 1.4em;
+					padding-right: 1.2em;
+				}
 			}
 		}
 		.at-phones {
@@ -1178,7 +1335,7 @@ a:hover {
 			min-height: 282px;
 			margin: 0 auto;
 			margin-bottom: 1em;
-			@media screen and (orientation: landscape) and (max-width: $bp-md) {
+			@media screen and (orientation: landscape) and (min-width: $bp-md) {
 				float: right;
 				margin: 0;
 				padding-top: 2.3em;
@@ -1207,17 +1364,28 @@ a:hover {
 			}
 		}
 		.promo-videos {
-			position: absolute;
 			display: inline-block;
-			float: left;
-			width: 12em;
-			height: 4em;
-			left: -14.5em;
+			width: 100%;
 			margin-bottom: .5em;
 			margin-left: 0;
+			@media screen and (min-width: $bp-md) {
+				width: 100%;
+				margin-top: .5em;
+				margin-bottom: .5em;
+				left: 0;
+			}
 			h2 {
+				width: auto;
 				margin: 0;
+				padding-right: 1em;
+				float: left;
 				font-size: .7em;
+				@media screen and (min-width: $bp-md) {
+					float: left;
+					padding-right: 1em;
+					font-size: 1.7em;
+					font-weight: 300;
+				}
 				a {
 					display: inline-block;
 					height: 20px;
@@ -1230,18 +1398,26 @@ a:hover {
 				}
 			}
 		}
-		a.apple-store {
-			position: absolute;
-			display: inline-block;
-			float: left;
-			width: 70px;
-			height: 24px;
-			left: -13em;
-			bottom: .3em;
-			&.whidbey {
-				bottom: -3em;
-			}
-		}
+	}
+}
+a.apple-store {
+	position: absolute;
+	display: inline-block;
+	width: 70px;
+	height: 24px;
+	left: 0em;
+	bottom: .3em;
+	@media screen and (orientation: portrait) and (min-width: $bp-md) {
+		width: 105px;
+		height: 36px;
+		left: 0.7em;
+		bottom: 0.7em;
+	}
+	@media screen and (min-width: $bp-md) {
+		width: 105px;
+		height: 36px;
+		left: 0.7em;
+		bottom: 0.7em;
 	}
 }
 

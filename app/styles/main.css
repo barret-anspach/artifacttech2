@@ -5026,6 +5026,10 @@ body {
   @media screen and (max-width: 1024px) {
     .container {
       padding: 0 15px; } }
+  @media screen and (min-width: 1024px) {
+    .container {
+      width: 1024px;
+      margin: 0 auto; } }
 
 .active {
   color: white; }
@@ -5103,6 +5107,10 @@ a:hover {
     position: relative;
     width: 100%;
     height: 40px; }
+    @media screen and (min-width: 1024px) {
+      .at-navbar .at-navbar-banner {
+        width: 1024px;
+        margin: 0 auto; } }
     .at-navbar .at-navbar-banner .at-navbar-header {
       padding-top: 5px;
       clear: both;
@@ -5253,6 +5261,10 @@ a:hover {
       margin: 0 auto;
       padding: 0 15px;
       background-color: rgba(0, 0, 0, 0.7); }
+      @media screen and (min-width: 1024px) {
+        .at-navbar .at-subnav-wrapper .at-subnav .at-navbar-subnav {
+          width: 1024px;
+          margin: 0 auto; } }
       .at-navbar .at-subnav-wrapper .at-subnav .at-navbar-subnav a {
         font-family: 'Helvetica Neue', sans-serif;
         font-size: 11px;
@@ -5315,7 +5327,13 @@ a:hover {
     @media screen and (max-width: 768px) and (orientation: portrait) and (max-width: 566px) {
       .at-about-chevron {
         top: 5.9em; } }
+  @media screen and (min-width: 768px) {
+    .at-about-chevron {
+      width: 25em;
+      float: right;
+      top: 7.9em; } }
   .at-about-chevron h4.at-about-team-link {
+    font-family: 'Trump Gothic East', sans-serif;
     position: absolute;
     display: inline-block;
     top: 0;
@@ -5329,11 +5347,20 @@ a:hover {
     color: #333333; }
     .at-about-chevron h4.at-about-team-link:hover {
       color: #2470b3; }
+    @media screen and (min-width: 768px) {
+      .at-about-chevron h4.at-about-team-link {
+        top: -6px;
+        padding-right: 30px;
+        font-size: 2.4em; } }
   .at-about-chevron .at-about-chevron-img {
     display: inline-block;
     width: 19px;
     height: 14px;
     top: 0; }
+    @media screen and (min-width: 768px) {
+      .at-about-chevron .at-about-chevron-img {
+        width: 38px;
+        height: 28px; } }
 
 .at-platform-chevron {
   width: 12em;
@@ -5355,12 +5382,17 @@ a:hover {
     @media screen and (max-width: 768px) and (orientation: portrait) and (max-width: 566px) {
       .at-platform-chevron {
         top: 5.9em; } }
+  @media screen and (min-width: 768px) {
+    .at-platform-chevron {
+      width: 25em;
+      float: right;
+      top: 9em; } }
   .at-platform-chevron h4.at-platform-link {
+    font-family: 'Trump Gothic East', sans-serif;
     position: absolute;
     display: inline-block;
     top: 0;
     right: 42px;
-    width: 160px;
     margin: 0;
     margin-top: 2px;
     padding-right: 5px;
@@ -5370,11 +5402,74 @@ a:hover {
     color: #333333; }
     .at-platform-chevron h4.at-platform-link:hover {
       color: #2470b3; }
+    @media screen and (min-width: 768px) {
+      .at-platform-chevron h4.at-platform-link {
+        top: -6px;
+        padding-right: 30px;
+        font-size: 2.4em; } }
   .at-platform-chevron .at-platform-chevron-img {
     display: inline-block;
     width: 19px;
     height: 14px;
     top: 0; }
+    @media screen and (min-width: 768px) {
+      .at-platform-chevron .at-platform-chevron-img {
+        width: 38px;
+        height: 28px; } }
+
+.at-work-chevron {
+  width: 12em;
+  height: 1em;
+  text-align: right;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  padding-right: 20px;
+  margin-top: -0.25em; }
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    .at-work-chevron {
+      float: right;
+      top: 6.3em; } }
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    .at-work-chevron {
+      float: right;
+      top: 6.9em; } }
+    @media screen and (max-width: 768px) and (orientation: portrait) and (max-width: 566px) {
+      .at-work-chevron {
+        top: 5.9em; } }
+  @media screen and (min-width: 768px) {
+    .at-work-chevron {
+      width: 25em;
+      float: right; } }
+  .at-work-chevron h4.at-work-link {
+    font-family: 'Trump Gothic East', sans-serif;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 42px;
+    margin: 0;
+    margin-top: 2px;
+    padding-right: 5px;
+    font-size: .9em;
+    font-weight: 400;
+    text-decoration: none;
+    color: #333333; }
+    .at-work-chevron h4.at-work-link:hover {
+      color: #2470b3; }
+    @media screen and (min-width: 768px) {
+      .at-work-chevron h4.at-work-link {
+        top: -6px;
+        padding-right: 30px;
+        font-size: 2.4em; } }
+  .at-work-chevron .at-work-chevron-img {
+    display: inline-block;
+    width: 19px;
+    height: 14px;
+    top: 0; }
+    @media screen and (min-width: 768px) {
+      .at-work-chevron .at-work-chevron-img {
+        width: 38px;
+        height: 28px; } }
 
 .animated {
   -webkit-animation-duration: 1s;
@@ -5434,29 +5529,6 @@ a:hover {
       .at-arrow-down img {
         width: 62px;
         height: 27px; } }
-
-/*-------- PAGE --------*/
-.at-page {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0; }
-
-.at-page-current,
-.no-js .at-page {
-  visibility: visible; }
-
-.no-js body {
-  overflow: auto; }
-
-.at-page-ontop {
-  z-index: 999; }
-
-.at-content {
-  position: relative;
-  width: 100%;
-  height: 100%; }
 
 /*-------- HOME --------*/
 .at-main-message {
@@ -5859,14 +5931,31 @@ a:hover {
               padding-top: 15px;
               font-size: 15px; } }
   .at-platform.at-platform-top {
-    padding: 4em 2em 0; }
+    padding: 3em 2em 0; }
+    @media screen and (orientation: portrait) {
+      .at-platform.at-platform-top {
+        padding: 4em 0 0 0; } }
+    @media screen and (min-width: 568px) {
+      .at-platform.at-platform-top {
+        padding: 4em 2em 0; } }
     @media screen and (min-width: 768px) {
+      .at-platform.at-platform-top {
+        padding: 5em 5em 0; } }
+    @media screen and (min-width: 1024px) {
       .at-platform.at-platform-top {
         padding: 6em 5em 0; } }
   .at-platform .at-platform-page.on-left {
     width: 15em;
-    margin-left: 2em; }
+    margin-top: 2em; }
+    @media screen and (min-width: 568px) {
+      .at-platform .at-platform-page.on-left {
+        width: 15em;
+        margin-left: 2em; } }
     @media screen and (min-width: 768px) {
+      .at-platform .at-platform-page.on-left {
+        width: 20em;
+        margin-left: 5em; } }
+    @media screen and (min-width: 1024px) {
       .at-platform .at-platform-page.on-left {
         width: 30em;
         margin-left: 5em; } }
@@ -5874,31 +5963,57 @@ a:hover {
     font-family: "trump gothic east", sans-serif;
     font-size: 2.4em;
     margin: 0;
-    padding-left: 0;
-    margin-bottom: .4em; }
+    padding-left: 0; }
+    @media screen and (min-width: 568px) {
+      .at-platform .at-platform-page h1 {
+        font-size: 2.4em;
+        margin: 0;
+        padding-left: 0; } }
     @media screen and (min-width: 768px) {
       .at-platform .at-platform-page h1 {
         font-size: 52px;
         font-weight: 700; } }
     @media screen and (min-width: 1024px) {
-      .at-platform .at-platform-page h1.uncramp {
-        margin: 0; }
-        .at-platform .at-platform-page h1.uncramp.move-up {
-          margin-top: -.5em; } }
-  .at-platform .at-platform-page .uncramp-text {
-    font-size: 12px;
-    line-height: 1em; }
-  .at-platform .at-platform-page span {
+      .at-platform .at-platform-page h1 {
+        margin-bottom: .4em; } }
+    .at-platform .at-platform-page h1.uncramp {
+      width: auto;
+      float: left;
+      margin-right: .4em; }
+      @media screen and (min-width: 1024px) {
+        .at-platform .at-platform-page h1.uncramp {
+          margin: 0;
+          float: none; }
+          .at-platform .at-platform-page h1.uncramp.move-up {
+            margin-top: -.5em; } }
+      @media screen and (min-width: 1200px) {
+        .at-platform .at-platform-page h1.uncramp {
+          float: none; }
+          .at-platform .at-platform-page h1.uncramp.move-up {
+            margin-top: 0em; } }
+    .at-platform .at-platform-page h1.curation-title {
+      margin-bottom: .4em; }
+  .at-platform .at-platform-page p {
     font-family: 'Helvetica Neue', sans-serif;
-    font-size: .9em;
+    font-size: 10px;
     text-transform: none;
-    line-height: 1.2em;
+    line-height: 12px;
     margin-bottom: .1em; }
     @media screen and (min-width: 768px) {
-      .at-platform .at-platform-page span {
+      .at-platform .at-platform-page p {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.2em;
+        margin-bottom: 1em; } }
+    @media screen and (min-width: 1024px) {
+      .at-platform .at-platform-page p {
         font-size: 23px;
         font-weight: 300;
+        line-height: 1.2em;
         margin-bottom: 1em; } }
+    .at-platform .at-platform-page p.curation-text {
+      font-size: 14px;
+      line-height: 17px; }
 
 /*-------- WORK.MAIN, etc. --------*/
 .at-work {
@@ -5906,6 +6021,9 @@ a:hover {
   padding-top: 5.4em;
   width: 100%;
   margin: 0 auto; }
+  @media screen and (orientation: portrait) and (max-width: 568px) {
+    .at-work {
+      padding-top: 0; } }
   @media screen and (orientation: landscape) and (max-width: 768px) {
     .at-work {
       padding-top: 0; } }
@@ -5914,70 +6032,101 @@ a:hover {
       padding-top: 8em; } }
   .at-work .at-work-page {
     position: relative; }
-    @media screen and (orientation: landscape) {
-      .at-work .at-work-page.at-work-app {
-        float: right;
-        width: 23.8em;
-        padding-top: 12.4em; } }
-    @media screen and (orientation: landscape) and (max-width: 768px) {
-      .at-work .at-work-page .text-wrapper {
-        padding-top: 5.4em;
-        width: 230px;
-        float: left; } }
-    .at-work .at-work-page .text-wrapper h1 {
-      font-family: "trump gothic east", sans-serif;
-      width: 100%;
-      font-size: 2.4em;
-      margin: 0 auto;
-      margin-bottom: .4em;
-      text-align: center; }
-      @media screen and (orientation: landscape) and (max-width: 768px) {
-        .at-work .at-work-page .text-wrapper h1 {
-          margin: 0 0 .4em 0;
-          padding-right: .5em;
-          text-align: left; } }
+    .at-work .at-work-page.at-work-app {
+      width: auto;
+      padding-top: 15.9em;
+      padding-left: 6em; }
+      @media screen and (orientation: landscape) {
+        .at-work .at-work-page.at-work-app {
+          padding-top: 12.4em;
+          padding-left: 16em; } }
       @media screen and (min-width: 768px) {
-        .at-work .at-work-page .text-wrapper h1 {
-          font-size: 52px;
-          font-weight: 700;
-          margin-bottom: .5em; } }
-    .at-work .at-work-page .text-wrapper p {
-      font-family: 'Helvetica Neue', sans-serif;
-      font-size: .9em;
-      line-height: 1.2em;
-      margin-bottom: .1em;
-      text-transform: none; }
-      @media screen and (orientation: portrait) {
-        .at-work .at-work-page .text-wrapper p {
-          padding: 0 1em; } }
-      @media screen and (orientation: landscape) and (max-width: 768px) {
-        .at-work .at-work-page .text-wrapper p {
-          padding-right: .5em; } }
-      @media screen and (min-width: 768px) {
-        .at-work .at-work-page .text-wrapper p {
-          font-size: 20px;
-          font-weight: 300;
-          text-align: center; } }
+        .at-work .at-work-page.at-work-app {
+          width: 40em;
+          margin-right: 1em;
+          padding-top: 18em;
+          padding-left: 0;
+          float: right; } }
+      @media screen and (orientation: portrait) and (min-width: 768px) {
+        .at-work .at-work-page.at-work-app {
+          width: 32em;
+          margin-right: 1em;
+          padding-top: 22.5em;
+          padding-left: 0;
+          float: right; } }
+    .at-work .at-work-page .text-wrapper {
+      padding-top: 5.4em; }
+      @media screen and (orientation: landscape) and (min-width: 768px) {
+        .at-work .at-work-page .text-wrapper {
+          padding-top: 5.4em;
+          width: 230px;
+          float: left; } }
+      .at-work .at-work-page .text-wrapper h1 {
+        font-family: "trump gothic east", sans-serif;
+        width: 100%;
+        font-size: 2.4em;
+        margin: 0 auto;
+        margin-bottom: .4em;
+        padding: 0;
+        text-align: center; }
+        @media screen and (orientation: landscape) and (min-width: 768px) {
+          .at-work .at-work-page .text-wrapper h1 {
+            font-size: 2.4em;
+            margin: 0 0 .4em 0;
+            padding-right: .5em;
+            text-align: left; } }
+        @media screen and (min-width: 768px) {
+          .at-work .at-work-page .text-wrapper h1 {
+            font-size: 52px;
+            font-weight: 700;
+            margin-bottom: .5em; } }
+      .at-work .at-work-page .text-wrapper p {
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: .9em;
+        line-height: 1.2em;
+        margin-bottom: .1em;
+        text-transform: none; }
+        @media screen and (orientation: portrait) {
+          .at-work .at-work-page .text-wrapper p {
+            padding: 0 1em; } }
+        @media screen and (min-width: 768px) {
+          .at-work .at-work-page .text-wrapper p {
+            font-size: 20px;
+            font-weight: 300;
+            text-align: center; } }
+          @media screen and (min-width: 768px) and (orientation: landscape) {
+            .at-work .at-work-page .text-wrapper p {
+              padding-right: .5em; } }
     .at-work .at-work-page h1 {
       font-family: "trump gothic east", sans-serif;
       text-align: left;
       font-size: 2.1em;
       margin: 0; }
+      @media screen and (orientation: landscape) and (min-width: 568px) {
+        .at-work .at-work-page h1 {
+          font-size: 1.4em; } }
+      @media screen and (min-width: 768px) {
+        .at-work .at-work-page h1 {
+          font-size: 4.1em;
+          margin-bottom: .2em; } }
     .at-work .at-work-page .at-app-title {
       width: 100%;
       margin-top: 0;
-      margin-left: 0;
-      padding: 0; }
+      margin-left: 0; }
       .at-work .at-work-page .at-app-title .small-caps {
         font-size: .8em; }
     .at-work .at-work-page p {
       font-family: 'Helvetica Neue', sans-serif;
-      font-size: .9em;
+      font-size: 14px;
       line-height: 1.2em;
       margin-bottom: .1em;
       text-transform: none; }
-      @media screen and (orientation: landscape) and (max-width: 768px) {
+      @media screen and (orientation: landscape) and (min-width: 568px) {
         .at-work .at-work-page p {
+          font-size: .8em; } }
+      @media screen and (orientation: landscape) and (min-width: 768px) {
+        .at-work .at-work-page p {
+          font-size: .9em;
           float: left;
           width: 230px;
           padding-right: .5em; } }
@@ -5988,12 +6137,20 @@ a:hover {
         padding-bottom: 0;
         font-size: .75em;
         line-height: 1.2em; }
+        @media screen and (min-width: 768px) {
+          .at-work .at-work-page p.at-app-desc {
+            font-size: 1.5em;
+            line-height: 1.2em; } }
+        @media screen and (orientation: portrait) and (min-width: 768px) {
+          .at-work .at-work-page p.at-app-desc {
+            font-size: 1.4em;
+            padding-right: 1.2em; } }
     .at-work .at-work-page .at-phones {
       width: 292px;
       min-height: 282px;
       margin: 0 auto;
       margin-bottom: 1em; }
-      @media screen and (orientation: landscape) and (max-width: 768px) {
+      @media screen and (orientation: landscape) and (min-width: 768px) {
         .at-work .at-work-page .at-phones {
           float: right;
           margin: 0;
@@ -6017,17 +6174,28 @@ a:hover {
         .at-work .at-work-page .at-phones .at-phone.at-right {
           margin-left: 1em; }
     .at-work .at-work-page .promo-videos {
-      position: absolute;
       display: inline-block;
-      float: left;
-      width: 12em;
-      height: 4em;
-      left: -14.5em;
+      width: 100%;
       margin-bottom: .5em;
       margin-left: 0; }
+      @media screen and (min-width: 768px) {
+        .at-work .at-work-page .promo-videos {
+          width: 100%;
+          margin-top: .5em;
+          margin-bottom: .5em;
+          left: 0; } }
       .at-work .at-work-page .promo-videos h2 {
+        width: auto;
         margin: 0;
+        padding-right: 1em;
+        float: left;
         font-size: .7em; }
+        @media screen and (min-width: 768px) {
+          .at-work .at-work-page .promo-videos h2 {
+            float: left;
+            padding-right: 1em;
+            font-size: 1.7em;
+            font-weight: 300; } }
         .at-work .at-work-page .promo-videos h2 a {
           display: inline-block;
           height: 20px;
@@ -6036,16 +6204,26 @@ a:hover {
           cursor: pointer; }
           .at-work .at-work-page .promo-videos h2 a:hover {
             color: #2470b3; }
-    .at-work .at-work-page a.apple-store {
-      position: absolute;
-      display: inline-block;
-      float: left;
-      width: 70px;
-      height: 24px;
-      left: -13em;
-      bottom: .3em; }
-      .at-work .at-work-page a.apple-store.whidbey {
-        bottom: -3em; }
+
+a.apple-store {
+  position: absolute;
+  display: inline-block;
+  width: 70px;
+  height: 24px;
+  left: 0em;
+  bottom: .3em; }
+  @media screen and (orientation: portrait) and (min-width: 768px) {
+    a.apple-store {
+      width: 105px;
+      height: 36px;
+      left: 0.7em;
+      bottom: 0.7em; } }
+  @media screen and (min-width: 768px) {
+    a.apple-store {
+      width: 105px;
+      height: 36px;
+      left: 0.7em;
+      bottom: 0.7em; } }
 
 /*-------- CONTACT --------*/
 .at-contact {
