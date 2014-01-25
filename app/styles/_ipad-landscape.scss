@@ -1,0 +1,382 @@
+/*--------- NAV --------*/
+
+.at-navbar {
+	.at-navbar-wrapper {
+		&.home {
+			height: 104px;
+		}
+	}
+	.home {
+		.at-navbar-banner {
+			.at-navbar-header {
+				a {
+					font-size: 32px;
+					letter-spacing: 0;
+					.logo {
+						width: 22.5px;
+						height: 27px;
+					}
+					.thin {
+					}
+				}
+			}
+		}
+	}
+	.at-navbar-banner {
+		width: $bp-ipad-landscape;
+		margin: 0 auto;
+		.at-navbar-header {
+			width: 27em;
+			margin: 0 50px 0 0;
+			a {
+				width: 18em;
+				font-size: 16px;
+				.logo {
+					width: 12.5px;
+					height: 15px;
+				}
+				.thin {
+				}
+				.active {
+				}
+				&:hover {
+				}
+			}
+		}
+		.at-navbar-main {
+			width: 40em;
+			a {
+				font-size: 15px;
+				padding-right: 50px;
+				&.active {
+				}
+				&:last-child {
+				}
+				&:hover {
+				}
+			}
+			&.home {
+				padding-top: 68px;
+				&.home {
+					a {
+						font-size: 16px;
+						padding-right: 3em;
+						&:hover {
+						}
+						&:active {
+						}
+						&:last-child {
+						}
+					}
+				}
+			}
+		}
+	}
+	.at-subnav-wrapper {
+		&.home {
+		}
+		.at-subnav {
+			.at-navbar-subnav {
+				width: $bp-ipad-landscape;
+				margin: 0 auto;
+				a {
+					font-size: 15px;
+					margin-left: 2em;
+					padding-right: 3em;
+					&.active {
+					}
+					&:last-child {
+					}
+					&:hover {
+					}
+				}
+			}
+		}
+	}
+}
+
+/* NAV BUTTONS */
+
+.at-about-chevron {
+	width: 25em;
+	top: 7.9em;
+	h4.at-about-team-link {
+		top: -6px;
+		padding-right: 30px;
+		font-size: 2.4em;
+	}
+	.at-about-chevron-img {
+		width: 38px;
+		height: 28px;
+	}
+}
+
+.at-platform-chevron {
+	width: 25em;
+	top: 9em;
+	h4.at-platform-link {
+		top: -6px;
+		padding-right: 30px;
+		font-size: 2.4em;
+	}
+	.at-platform-chevron-img {
+		width: 38px;
+		height: 28px;
+	}
+}
+
+.at-work-chevron {
+	top: 6.9em;
+	width: 25em;
+	h4.at-work-link {
+		top: -6px;
+		padding-right: 30px;
+		font-size: 2.4em;
+	}
+	.at-work-chevron-img {
+		width: 38px;
+		height: 28px;
+	}
+}
+.at-arrow-down {
+	margin-left: -31px;
+	img {
+		width: 62px;
+		height: 27px;
+	}
+}
+.at-arrow-left {
+	@include nav-button(left, 62px);
+}
+.at-arrow-right {
+	@include nav-button(right, 62px);
+}
+
+/*-------- HOME --------*/
+
+.at-main-message {
+	width: 32em;
+	margin-left: -16em;
+	h1 {
+		font-size: 4em;
+	}
+}
+
+/*-------- ABOUT.MAIN --------*/
+
+.at-about-main-text {
+	top: 6em;
+	float: none;
+	width: $bp-ipad-landscape;
+	margin: 0 auto;
+	padding-right: 52em;
+	h1 {
+		font-size: 52px;
+		font-weight: 700;
+	}
+	p {
+		font-size: 23px;
+		font-weight: 300;
+		margin-bottom: 1em;
+	}
+	.pointer {
+		border-width: 24px 0 0 14px;
+	}
+	.at-about-artifact-bubble {
+		width: 470px;
+		p {
+			margin-top: 15px;
+			font-weight: 400;
+			line-height: 1.2em;
+		}
+	}
+}
+
+/*-------- ABOUT.TEAM --------*/
+
+.at-about-team {
+	width: 480px;
+	.team-member {
+		.team-photo {
+			display: inline-block;
+			width: 480px;
+			height: 200px;
+		}
+		.team-member-banner {
+			h1 {
+				font-size: 24px;
+			}
+			h2 {
+				font-size: 18px;
+			}
+		}
+		.team-member-text {
+			font-size: 1.1em;
+		}
+		.team-member-hobbies {
+			p {
+				font-size: 0.9em;
+			}
+		}
+	}
+}
+
+/*-------- PLATFORM.MAIN --------*/
+
+.at-platform {
+	width: $bp-ipad-landscape;
+	padding-top: 8em;
+	h1 {
+		padding-left: .75em;
+		font-size: 52px;
+		font-weight: 700;
+	}
+	.at-platform-list {
+		ol li, li {
+			font-size: 23px;
+			font-weight: 300;
+			margin-bottom: 1em;
+		}
+	}
+	.at-platform-menu {
+		width: 62em;
+		padding-top: 2em;
+		.at-platform-box {
+			width: 13.5em;
+			height: 6em;
+			margin-right: 2.5em;
+			padding: 1em;
+			.box-icon {
+				width: 4em;
+				height: 4em;
+			}
+			.menu-title {
+				width: 6.1em;
+				padding-top: 15px;
+				font-size: 17px;
+			}
+		}
+	}
+	&.at-platform-top {
+		padding: 6em 5em 0;
+	}
+	.at-platform-page {
+		&.on-left {
+			width: 30em;
+			margin-left: 5em;
+		}
+		h1 {
+			font-size: 52px;
+			font-weight: 700;
+			margin-bottom: .4em;
+			&.uncramp {
+				margin: 0;
+				float: none;
+				&.move-up {
+					margin-top: -.5em;
+				}
+			}
+		}
+		p {
+			font-size: 23px;
+			line-height: 1.2em;
+			margin-bottom: 1em;
+			&.curation-text {
+				font-size: 23px;
+				line-height: 1.2em;
+				margin-bottom: 1em;
+			}
+		}
+	}
+}
+
+/*-------- WORK.MAIN, etc. --------*/
+
+.at-work {
+	width: $bp-ipad-landscape;
+	padding-top: 6em;
+	&.at-work-app {
+		width: 40em;
+		margin-right: 1em;
+		padding-top: 24.8em;
+		padding-left: 0;
+		float: right;
+	}
+	.text-wrapper {
+		padding-top: 0;
+		h1 {
+			width: 6em;             // Adjust!
+			font-size: 2.4em;
+			margin: 0 auto;
+			margin-bottom: .4em;
+			padding: 0;
+			text-align: center;
+		}
+		p {
+			width: 768px;
+			font-size: 20px;
+			font-weight: 300;
+			margin: 0 auto;
+			text-align: center;
+			float: none;
+		}
+	}
+	h1 {
+		font-size: 4.1em;
+		margin-bottom: .2em;
+	}
+	p {
+		font-size: .9em;
+		float: left;
+		width: 230px;
+		padding-right: .5em;
+		&.at-app-desc {
+			font-size: 1.5em;
+			line-height: 1.2em;
+		}
+	}
+	.at-phones {
+		width: 456px;
+		.at-phone {
+			width: 221px;
+			height: 448px;
+		}
+	}
+	.promo-videos {
+		width: 100%;
+		margin-top: .5em;
+		margin-bottom: .5em;
+		left: 0;
+		h2 {
+			float: left;
+			padding-right: 1em;
+			font-size: 1.7em;
+			font-weight: 300;
+		}
+	}
+}
+a.apple-store {
+	width: 105px;
+	height: 36px;
+	left: 0.7em;
+	bottom: 0.7em;
+}
+
+/*-------- CONTACT --------*/
+
+.at-contact {
+	padding-top: 14em;
+	h1 {
+		font-family: "trump gothic east", sans-serif;
+		font-size: 52px;
+		font-weight: 700;
+	}
+	.contact-info {
+		font-size: 23px;
+		font-weight: 300;
+		line-height: 1.2em;
+		.twitter {
+			margin-top: 1em;
+		}
+	}
+}

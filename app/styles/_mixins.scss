@@ -1,6 +1,6 @@
 @mixin nav-button($position, $height) {
 	position: absolute;
-	top: 50%;
+//	top: 50%;
 	#{$position}: 0px;
 	padding-#{$position}: 20px;
 	margin-top: -($height / 2);
