@@ -49,6 +49,10 @@ angular.module('artifactApp')
                 attrs.$observe('image', function(newVal){
                     window.console.log(newVal);
                 });
+                
+                if(attrs.color){
+                   element.css({'background-color': attrs.color});
+                }
 
                 var horizontal = scope.$eval(attrs.horizontal) || false;
                 var elem = $(element);
@@ -122,6 +126,9 @@ angular.module('artifactApp')
                 };
 
                 var setImage = function(){
+                    if(!scope.image){
+                        return null;
+                    }
                     element.css({
                         'background-image': 'url(' + scope.image + ')',
                         'background-size': scope.size,
@@ -156,7 +163,6 @@ angular.module('artifactApp')
                 $( window ).bind('resize', function() {
                     getPosition();
                     fillScreen();
-                    setImage();
                 });
 
                 function scroll(scrollObj){
@@ -183,13 +189,44 @@ angular.module('artifactApp')
         }
     })
 
+//    .animate('slide', function(){
+//
+//        return {
+//            enter : function(element, done) {
+//                window.console.log('entering');
+//
+//            },
+//
+//            leave : function(element, done) {
+//                window.console.log('exiting');
+//            }
+//        };
+//
+//    })
+
     .directive("hideIfPhone", ["$window", function($window) {
         return {
             restrict: "A",
             link: function(scope, element, attr) {
+                window.console.log(window.innerWidth);
                 if(window.innerWidth <= 568) {
                     $(element).hide();
                 }
+            }
+        }
+    }])
+
+    .directive("showIfPhone", ["$window", function($window) {
+        return {
+            restrict: "A",
+            link: function(scope, element, attr) {
+                if(window.innerWidth <= 568) {
+                    $(element).show();
+                }
+                else{
+                    $(element).hide();
+                }
+
             }
         }
     }])
