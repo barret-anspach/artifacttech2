@@ -5001,6 +5001,24 @@ td.visible-print {
   font-family: 'Trump Gothic East';
   src: url(../fonts/ufonts.com_trump_gothic_east.ttf); }
 
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */ }
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */ }
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */ }
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */ }
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */ }
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* Styles */ }
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -5009,7 +5027,7 @@ td.visible-print {
 
 .fullpage {
   position: relative; }
-  .fullpage.horiz {
+  .fullpage.horizontal {
     float: left; }
 
 * {
@@ -5042,6 +5060,30 @@ h1, h2, h3, h4, h5, h6 {
 a:hover {
   text-decoration: none; }
 
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  .at-navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999; }
+    .at-navbar .at-navbar-wrapper {
+      position: relative;
+      width: 100%;
+      background-color: black;
+      height: 45px; }
+    .at-navbar.home {
+      background-color: rgba(0, 0, 0, 0.7);
+      height: 60px;
+      border-bottom: 1px solid #e7f2e4; } }
+    @media only screen and (min-width: 321px) and (min-width: 768px) {
+      .at-navbar.home {
+        height: 104px; } }
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Styles */ }
 /*--------- NAV --------*/
 .at-inline {
   position: relative;

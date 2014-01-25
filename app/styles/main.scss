@@ -1,5 +1,4 @@
 @import '../bower_components/sass-bootstrap/lib/bootstrap.scss';
-@import 'mixins';
 
 @font-face
 {
@@ -22,6 +21,10 @@ $ltGrey: #BAB2AA;
 $unselectGrey: rgb(95, 95, 95);
 $artifact-pink: #FFE4D3;
 $artifact-blue: #2470B3;
+
+@import 'mixins';
+@import 'ipad';
+@import 'desktop';
 
 .browsehappy {
 	margin: 0.2em 0;
@@ -77,15 +80,42 @@ a:hover {
 	text-decoration: none;
 }
 
-//h4 {
-//	font-size: 24px;
-//	line-height: 24px;
-//	margin: 0;
-//	padding: 0;
-//}
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+	.at-navbar {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 999;
+		.at-navbar-wrapper {
+			position: relative;
+			width: 100%;
+			background-color: rgba(0,0,0,1);
+			height: 45px;
+		}
+		&.home {
+			background-color: rgba(0,0,0,.7);
+			height: 60px;
+			border-bottom: 1px solid rgb(231, 242, 228);
+			@media screen and (min-width: $bp-md) {
+				height: 104px;
+			}
+		}
+	}
+	.home {
+
+	}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+	/* Styles */
+}
 
 /*--------- NAV --------*/
-
 .at-inline {
 	position: relative;
 	display: inline-block;
@@ -1871,7 +1901,7 @@ a.apple-store {
 //	.container {
 //		max-width: 730px;
 //	}
-//
+
 //	/* Remove the padding we set earlier */
 //	.header,
 //	.marketing,

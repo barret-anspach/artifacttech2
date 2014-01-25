@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/app/bower_components/angular-inview/test/angular-inview.spec.js" />
+        <item url="file://$PROJECT_DIR$/parse/public/bower_components/angular-inview/test/angular-inview.spec.js" />
+        <item url="file://$PROJECT_DIR$/app/bower_components/angular-inview/angular-inview.js" />
+        <item url="file://$PROJECT_DIR$/parse/public/bower_components/angular-inview/angular-inview.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/scripts/directives/scroll-spy.js" />
+      <root url="file://$PROJECT_DIR$/app/bower_components/angular-inview/test/angular-inview.spec.js" />
+      <root url="file://$PROJECT_DIR$/parse/public/bower_components/angular-inview/test/angular-inview.spec.js" />
+      <root url="file://$PROJECT_DIR$/app/bower_components/angular-inview/angular-inview.js" />
+      <root url="file://$PROJECT_DIR$/parse/public/bower_components/angular-inview/angular-inview.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
