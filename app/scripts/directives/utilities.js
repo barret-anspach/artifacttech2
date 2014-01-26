@@ -45,6 +45,34 @@ angular.module('artifactApp')
             })
         }
     })
+    .directive('bounceRightOn', function(){
+        return function(scope, element, attrs){
+            var events = scope.$eval(attrs.bounceRightOn);
+            window.console.log(events);
+
+            angular.forEach(events, function (value, key) {
+                element.on(value, function(){
+                    $(element).effect('animated bounce-right');
+                });
+            });
+
+            $(document).ready(function(){
+                $(element).effect('animated bounce-right');
+            })
+        }
+    })
+    .directive('peepShowOn', function(){
+        return function(scope, element, attrs){
+            var options = scope.$eval(attrs.peepShowOn);
+            window.console.log(options);
+
+            $(document).ready(function(){
+                $(element).bind(options.event, function(){
+                    $(element).toggleClass(options.class);
+                })
+            })
+        }
+    })
 
 
     .directive('panel', function ($window, $timeout) {
