@@ -2,6 +2,7 @@
 
 .at-navbar {
 	.at-navbar-wrapper {
+		height: 50px;
 		&.home {
 			height: 104px;
 		}
@@ -9,6 +10,7 @@
 	.home {
 		.at-navbar-banner {
 			.at-navbar-header {
+				height: 40px;
 				a {
 					font-size: 32px;
 					letter-spacing: 0;
@@ -23,10 +25,14 @@
 		}
 	}
 	.at-navbar-banner {
-		width: $bp-ipad-landscape;
+		max-width: $bp-ipad-landscape;
 		margin: 0 auto;
 		.at-navbar-header {
+			width: 27em;
+			float: left;
 			margin: 0 50px 0 0;
+			padding-top: 15px;
+			clear: none;
 			a {
 				width: 18em;
 				font-size: 16px;
@@ -43,7 +49,10 @@
 			}
 		}
 		.at-navbar-main {
+			float: left;
 			width: 40em;
+			padding-top: 15px;
+			clear: none;
 			a {
 				font-size: 15px;
 				padding-right: 50px;
@@ -55,7 +64,8 @@
 				}
 			}
 			&.home {
-				padding-top: 68px;
+				padding-top: 33px;
+				height:20px;
 				&.home {
 					a {
 						font-size: 16px;
@@ -76,7 +86,7 @@
 		}
 		.at-subnav {
 			.at-navbar-subnav {
-				width: $bp-ipad-landscape;
+				max-width: $bp-ipad-landscape;
 				margin: 0 auto;
 				a {
 					font-size: 15px;
@@ -193,6 +203,7 @@
 
 .at-about-team {
 	width: 480px;
+	padding-top: 6em;
 	.team-member {
 		.team-photo {
 			display: inline-block;
@@ -269,7 +280,7 @@
 			&.uncramp {
 				width: 100%;
 				float: none;
-				margin-right: 0;
+				margin: 0;
 				&.move-up {
 					margin-top: 0em;
 				}
@@ -298,64 +309,66 @@
 .at-work {
 	width: $bp-ipad-landscape;
 	padding-top: 6em;
-	&.at-work-app {
-		width: 40em;
-		margin-right: 1em;
-		padding-top: 22em;
-		padding-left: 0;
-		float: right;
-	}
-	.text-wrapper {
-		padding-top: 0;
+	.at-work-page {
+		&.at-work-app {
+			width: 40em;
+			margin-right: 1em;
+			padding-top: 21em;
+			padding-left: 0;
+			float: right;
+		}
+		.text-wrapper {
+			padding-top: 1em;
+			h1 {
+				width: 6em;             // Adjust!
+				font-size: 52px;
+				font-weight: 700;
+				margin: 0 auto;
+				text-align: center;
+			}
+			p {
+				width: 768px;
+				font-size: 20px;
+				font-weight: 300;
+				margin: 0 auto;
+				padding-top: 1em;
+				text-align: center;
+				float: none;
+			}
+		}
 		h1 {
-			width: 6em;             // Adjust!
-			font-size: 52px;
-			font-weight: 700;
-			margin: 0 auto;
-			margin-bottom: .5em;
-			text-align: center;
+			font-size: 4.1em;
+			margin-bottom: .2em;
 		}
 		p {
-			width: 768px;
-			font-size: 20px;
-			font-weight: 300;
-			margin: 0 auto;
-			text-align: center;
-			float: none;
-		}
-	}
-	h1 {
-		font-size: 4.1em;
-		margin-bottom: .2em;
-	}
-	p {
-		font-size: .9em;
-		float: left;
-		width: 230px;
-		padding-right: .5em;
-		&.at-app-desc {
-			font-size: 1.5em;
-			line-height: 1.2em;
-		}
-	}
-	.at-phones {
-		padding-top: 2.3em;
-		width: 456px;
-		.at-phone {
-			width: 221px;
-			height: 448px;
-		}
-	}
-	.promo-videos {
-		width: 100%;
-		margin-top: .5em;
-		margin-bottom: .5em;
-		left: 0;
-		h2 {
+			font-size: .9em;
 			float: left;
-			padding-right: 1em;
-			font-size: 1.7em;
-			font-weight: 300;
+			width: 230px;
+			padding-right: .5em;
+			&.at-app-desc {
+				font-size: 1.5em;
+				line-height: 1.2em;
+			}
+		}
+		.at-phones {
+			padding-top: 0;
+			width: 456px;
+			.at-phone {
+				width: 221px;
+				height: 448px;
+			}
+		}
+		.promo-videos {
+			width: 100%;
+			margin-top: .5em;
+			margin-bottom: .5em;
+			left: 0;
+			h2 {
+				float: left;
+				padding-right: 1em;
+				font-size: 1.7em;
+				font-weight: 300;
+			}
 		}
 	}
 }

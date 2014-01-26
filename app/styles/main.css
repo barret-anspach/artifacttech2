@@ -5047,1061 +5047,6 @@ a:hover {
   text-decoration: none; }
 
 /*-------- iPHONE STYLES --------*/
-/*--------- RESPONSIVE STYLE LOADING --------*/
-/*--------- FOR EVERYTHING OTHER THAN iPHONE --------*/
-/* iPad Portrait */
-@media only screen and (min-width: 569px) and (max-width: 768px) and (orientation: portrait) {
-  /*--------- NAV --------*/
-  .at-navbar .at-navbar-wrapper {
-    height: 50px; }
-    .at-navbar .at-navbar-wrapper.home {
-      height: 104px; }
-  .at-navbar .home .at-navbar-banner .at-navbar-header a {
-    font-size: 32px;
-    letter-spacing: 0; }
-    .at-navbar .home .at-navbar-banner .at-navbar-header a .logo {
-      width: 22.5px;
-      height: 27px; }
-  .at-navbar .at-navbar-banner .at-navbar-header {
-    width: 23em;
-    margin: 0 30px 0 0; }
-    .at-navbar .at-navbar-banner .at-navbar-header a {
-      width: 18em;
-      font-size: 16px; }
-      .at-navbar .at-navbar-banner .at-navbar-header a .logo {
-        width: 12.5px;
-        height: 15px; }
-  .at-navbar .at-navbar-banner .at-navbar-main {
-    width: 29em; }
-    .at-navbar .at-navbar-banner .at-navbar-main a {
-      font-size: 15px;
-      padding-right: 2%; }
-    .at-navbar .at-navbar-banner .at-navbar-main.home {
-      padding-top: 32px; }
-      .at-navbar .at-navbar-banner .at-navbar-main.home.home a {
-        font-size: 16px;
-        padding-right: 3em; }
-  .at-navbar .at-subnav-wrapper .at-subnav .at-navbar-subnav a {
-    font-size: 15px;
-    margin-left: 2em;
-    padding-right: 3em; }
-
-  /* NAV BUTTONS */
-  .at-about-chevron {
-    width: 25em;
-    top: 6.9em; }
-    .at-about-chevron h4.at-about-team-link {
-      top: -6px;
-      padding-right: 30px;
-      font-size: 2.4em; }
-    .at-about-chevron .at-about-chevron-img {
-      width: 38px;
-      height: 28px; }
-
-  .at-platform-chevron {
-    width: 25em;
-    top: 6.9em; }
-    .at-platform-chevron h4.at-platform-link {
-      top: -6px;
-      padding-right: 30px;
-      font-size: 2.4em; }
-    .at-platform-chevron .at-platform-chevron-img {
-      width: 38px;
-      height: 28px; }
-
-  .at-work-chevron {
-    top: 6.9em;
-    width: 25em; }
-    .at-work-chevron h4.at-work-link {
-      top: -6px;
-      padding-right: 30px;
-      font-size: 2.4em; }
-    .at-work-chevron .at-work-chevron-img {
-      width: 38px;
-      height: 28px; }
-
-  .at-arrow-down {
-    margin-left: -31px; }
-    .at-arrow-down img {
-      width: 62px;
-      height: 27px; }
-
-  .at-arrow-left {
-    position: absolute;
-    left: 0px;
-    padding-left: 20px;
-    margin-top: -31px; }
-
-  .at-arrow-right {
-    position: absolute;
-    right: 0px;
-    padding-right: 20px;
-    margin-top: -31px; }
-
-  /*-------- HOME --------*/
-  .at-main-message {
-    width: 32em;
-    margin-left: -16em; }
-    .at-main-message h1 {
-      font-size: 4em; }
-
-  /*-------- ABOUT.MAIN --------*/
-  .at-about-main-text {
-    top: 8em;
-    width: 15em;
-    background-position: bottom left; }
-    .at-about-main-text h1 {
-      font-size: 52px;
-      font-weight: 700; }
-    .at-about-main-text p {
-      font-size: 23px;
-      font-weight: 300;
-      margin-bottom: 1em; }
-    .at-about-main-text .at-about-artifact {
-      position: absolute;
-      top: 1.5em;
-      left: 19.4em;
-      width: 30em; }
-    .at-about-main-text .pointer#showA {
-      margin-left: 23px; }
-    .at-about-main-text .pointer#showR {
-      margin-left: 45px; }
-    .at-about-main-text .pointer#showT {
-      margin-left: 66px; }
-    .at-about-main-text .pointer#showI {
-      margin-left: 88px; }
-    .at-about-main-text .pointer#showF {
-      margin-left: 102px; }
-    .at-about-main-text .pointer#showA2 {
-      margin-left: 120px; }
-    .at-about-main-text .pointer#showC {
-      margin-left: 146px; }
-    .at-about-main-text .pointer#showT2 {
-      margin-left: 169px; }
-    .at-about-main-text .at-about-artifact-bubble {
-      width: 30em; }
-      .at-about-main-text .at-about-artifact-bubble p {
-        margin-top: 15px;
-        font-weight: 400;
-        line-height: 1.2em; }
-
-  /*-------- ABOUT.TEAM --------*/
-  .at-about-team {
-    width: 320px; }
-    .at-about-team .team-member .team-photo {
-      display: inline-block;
-      width: 320px;
-      height: 140px; }
-    .at-about-team .team-member .team-member-banner h1 {
-      font-size: 24px; }
-    .at-about-team .team-member .team-member-banner h2 {
-      font-size: 18px; }
-    .at-about-team .team-member .team-member-text {
-      font-size: 1.1em; }
-    .at-about-team .team-member .team-member-hobbies p {
-      font-size: 0.9em; }
-
-  /*-------- PLATFORM.MAIN --------*/
-  .at-platform {
-    padding-top: 8em; }
-    .at-platform h1 {
-      padding-left: .75em;
-      font-size: 52px;
-      font-weight: 700; }
-    .at-platform .at-platform-list ol li, .at-platform .at-platform-list li {
-      font-size: 23px;
-      font-weight: 300;
-      margin-bottom: 1em; }
-    .at-platform .at-platform-menu {
-      width: 50em;
-      padding-top: 2em; }
-      .at-platform .at-platform-menu .at-platform-box {
-        width: 11em;
-        height: 4.7em;
-        margin-right: 1.5em;
-        padding: .5em; }
-        .at-platform .at-platform-menu .at-platform-box .box-icon {
-          width: 3.7em;
-          height: 3.7em; }
-        .at-platform .at-platform-menu .at-platform-box .menu-title {
-          width: 5.8em;
-          padding-top: 15px;
-          font-size: 15px; }
-    .at-platform.at-platform-top {
-      padding: 5em 5em 0; }
-    .at-platform .at-platform-page.on-left {
-      width: 20em;
-      margin-left: 5em; }
-    .at-platform .at-platform-page h1 {
-      font-size: 52px;
-      font-weight: 700; }
-    .at-platform .at-platform-page p {
-      font-size: 18px;
-      line-height: 1.2em;
-      margin-bottom: 1em; }
-      .at-platform .at-platform-page p.curation-text {
-        font-size: 18px;
-        line-height: 1.2em;
-        margin-bottom: 1em; }
-
-  /*-------- WORK.MAIN, etc. --------*/
-  .at-work {
-    padding-top: 6em; }
-    .at-work .at-work-page.at-work-app {
-      width: 32em;
-      margin-right: 1em;
-      padding-top: 22.5em;
-      padding-left: 0;
-      float: right; }
-    .at-work .at-work-page .text-wrapper h1 {
-      width: 6em;
-      font-size: 52px;
-      font-weight: 700;
-      margin: 0 auto;
-      margin-bottom: .5em;
-      text-align: center; }
-    .at-work .at-work-page .text-wrapper p {
-      font-size: 20px;
-      font-weight: 300;
-      text-align: center; }
-    .at-work .at-work-page h1 {
-      font-size: 4.1em;
-      margin-bottom: .2em; }
-    .at-work .at-work-page p {
-      font-size: .9em;
-      float: left;
-      width: 230px;
-      padding-right: .5em; }
-      .at-work .at-work-page p.at-app-desc {
-        font-size: 1.4em;
-        padding-right: 1.2em; }
-    .at-work .at-work-page .at-phones {
-      width: 456px; }
-      .at-work .at-work-page .at-phones .at-phone {
-        width: 221px;
-        height: 448px; }
-    .at-work .at-work-page .promo-videos {
-      width: 100%;
-      margin-top: .5em;
-      margin-bottom: .5em;
-      left: 0; }
-      .at-work .at-work-page .promo-videos h2 {
-        float: left;
-        padding-right: 1em;
-        font-size: 1.7em;
-        font-weight: 300; }
-
-  a.apple-store {
-    width: 105px;
-    height: 36px;
-    left: 0.7em;
-    bottom: 0.7em; }
-
-  /*-------- CONTACT --------*/
-  .at-contact {
-    padding-top: 14em; }
-    .at-contact h1 {
-      font-family: "trump gothic east", sans-serif;
-      font-size: 52px;
-      font-weight: 700; }
-    .at-contact .contact-info {
-      font-size: 23px;
-      font-weight: 300;
-      line-height: 1.2em; }
-      .at-contact .contact-info .twitter {
-        margin-top: 1em; } }
-/* iPad Landscape */
-@media only screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
-  /*--------- NAV --------*/
-  .at-navbar .at-navbar-wrapper.home {
-    height: 104px; }
-  .at-navbar .home .at-navbar-banner .at-navbar-header a {
-    font-size: 32px;
-    letter-spacing: 0; }
-    .at-navbar .home .at-navbar-banner .at-navbar-header a .logo {
-      width: 22.5px;
-      height: 27px; }
-  .at-navbar .at-navbar-banner {
-    width: 1024px;
-    margin: 0 auto; }
-    .at-navbar .at-navbar-banner .at-navbar-header {
-      width: 27em;
-      margin: 0 50px 0 0; }
-      .at-navbar .at-navbar-banner .at-navbar-header a {
-        width: 18em;
-        font-size: 16px; }
-        .at-navbar .at-navbar-banner .at-navbar-header a .logo {
-          width: 12.5px;
-          height: 15px; }
-    .at-navbar .at-navbar-banner .at-navbar-main {
-      width: 40em; }
-      .at-navbar .at-navbar-banner .at-navbar-main a {
-        font-size: 15px;
-        padding-right: 50px; }
-      .at-navbar .at-navbar-banner .at-navbar-main.home {
-        padding-top: 68px; }
-        .at-navbar .at-navbar-banner .at-navbar-main.home.home a {
-          font-size: 16px;
-          padding-right: 3em; }
-  .at-navbar .at-subnav-wrapper .at-subnav .at-navbar-subnav {
-    width: 1024px;
-    margin: 0 auto; }
-    .at-navbar .at-subnav-wrapper .at-subnav .at-navbar-subnav a {
-      font-size: 15px;
-      margin-left: 2em;
-      padding-right: 3em; }
-
-  /* NAV BUTTONS */
-  .at-about-chevron {
-    width: 25em;
-    top: 7.9em; }
-    .at-about-chevron h4.at-about-team-link {
-      top: -6px;
-      padding-right: 30px;
-      font-size: 2.4em; }
-    .at-about-chevron .at-about-chevron-img {
-      width: 38px;
-      height: 28px; }
-
-  .at-platform-chevron {
-    width: 25em;
-    top: 9em; }
-    .at-platform-chevron h4.at-platform-link {
-      top: -6px;
-      padding-right: 30px;
-      font-size: 2.4em; }
-    .at-platform-chevron .at-platform-chevron-img {
-      width: 38px;
-      height: 28px; }
-
-  .at-work-chevron {
-    top: 6.9em;
-    width: 25em; }
-    .at-work-chevron h4.at-work-link {
-      top: -6px;
-      padding-right: 30px;
-      font-size: 2.4em; }
-    .at-work-chevron .at-work-chevron-img {
-      width: 38px;
-      height: 28px; }
-
-  .at-arrow-down {
-    margin-left: -31px; }
-    .at-arrow-down img {
-      width: 62px;
-      height: 27px; }
-
-  .at-arrow-left {
-    position: absolute;
-    left: 0px;
-    padding-left: 20px;
-    margin-top: -31px; }
-
-  .at-arrow-right {
-    position: absolute;
-    right: 0px;
-    padding-right: 20px;
-    margin-top: -31px; }
-
-  /*-------- HOME --------*/
-  .at-main-message {
-    width: 32em;
-    margin-left: -16em; }
-    .at-main-message h1 {
-      font-size: 4em; }
-
-  /*-------- ABOUT.MAIN --------*/
-  .at-about-main-text {
-    top: 6em;
-    float: none;
-    width: 1024px;
-    margin: 0 auto;
-    padding-right: 52em; }
-    .at-about-main-text h1 {
-      font-size: 52px;
-      font-weight: 700; }
-    .at-about-main-text p {
-      font-size: 23px;
-      font-weight: 300;
-      margin-bottom: 1em; }
-    .at-about-main-text .pointer {
-      border-width: 24px 0 0 14px; }
-    .at-about-main-text .at-about-artifact-bubble {
-      width: 470px; }
-      .at-about-main-text .at-about-artifact-bubble p {
-        margin-top: 15px;
-        font-weight: 400;
-        line-height: 1.2em; }
-
-  /*-------- ABOUT.TEAM --------*/
-  .at-about-team {
-    width: 480px; }
-    .at-about-team .team-member .team-photo {
-      display: inline-block;
-      width: 480px;
-      height: 200px; }
-    .at-about-team .team-member .team-member-banner h1 {
-      font-size: 24px; }
-    .at-about-team .team-member .team-member-banner h2 {
-      font-size: 18px; }
-    .at-about-team .team-member .team-member-text {
-      font-size: 1.1em; }
-    .at-about-team .team-member .team-member-hobbies p {
-      font-size: 0.9em; }
-
-  /*-------- PLATFORM.MAIN --------*/
-  .at-platform {
-    width: 1024px;
-    padding-top: 8em; }
-    .at-platform h1 {
-      padding-left: .75em;
-      font-size: 52px;
-      font-weight: 700; }
-    .at-platform .at-platform-list ol li, .at-platform .at-platform-list li {
-      font-size: 23px;
-      font-weight: 300;
-      margin-bottom: 1em; }
-    .at-platform .at-platform-menu {
-      width: 62em;
-      padding-top: 2em; }
-      .at-platform .at-platform-menu .at-platform-box {
-        width: 13.5em;
-        height: 6em;
-        margin-right: 2.5em;
-        padding: 1em; }
-        .at-platform .at-platform-menu .at-platform-box .box-icon {
-          width: 4em;
-          height: 4em; }
-        .at-platform .at-platform-menu .at-platform-box .menu-title {
-          width: 6.1em;
-          padding-top: 15px;
-          font-size: 17px; }
-    .at-platform.at-platform-top {
-      padding: 6em 5em 0; }
-    .at-platform .at-platform-page.on-left {
-      width: 30em;
-      margin-left: 5em; }
-    .at-platform .at-platform-page h1 {
-      font-size: 52px;
-      font-weight: 700;
-      margin-bottom: .4em; }
-      .at-platform .at-platform-page h1.uncramp {
-        margin: 0;
-        float: none; }
-        .at-platform .at-platform-page h1.uncramp.move-up {
-          margin-top: -.5em; }
-    .at-platform .at-platform-page p {
-      font-size: 23px;
-      line-height: 1.2em;
-      margin-bottom: 1em; }
-      .at-platform .at-platform-page p.curation-text {
-        font-size: 23px;
-        line-height: 1.2em;
-        margin-bottom: 1em; }
-
-  /*-------- WORK.MAIN, etc. --------*/
-  .at-work {
-    width: 1024px;
-    padding-top: 6em; }
-    .at-work.at-work-app {
-      width: 40em;
-      margin-right: 1em;
-      padding-top: 24.8em;
-      padding-left: 0;
-      float: right; }
-    .at-work .text-wrapper {
-      padding-top: 0; }
-      .at-work .text-wrapper h1 {
-        width: 6em;
-        font-size: 2.4em;
-        margin: 0 auto;
-        margin-bottom: .4em;
-        padding: 0;
-        text-align: center; }
-      .at-work .text-wrapper p {
-        width: 768px;
-        font-size: 20px;
-        font-weight: 300;
-        margin: 0 auto;
-        text-align: center;
-        float: none; }
-    .at-work h1 {
-      font-size: 4.1em;
-      margin-bottom: .2em; }
-    .at-work p {
-      font-size: .9em;
-      float: left;
-      width: 230px;
-      padding-right: .5em; }
-      .at-work p.at-app-desc {
-        font-size: 1.5em;
-        line-height: 1.2em; }
-    .at-work .at-phones {
-      width: 456px; }
-      .at-work .at-phones .at-phone {
-        width: 221px;
-        height: 448px; }
-    .at-work .promo-videos {
-      width: 100%;
-      margin-top: .5em;
-      margin-bottom: .5em;
-      left: 0; }
-      .at-work .promo-videos h2 {
-        float: left;
-        padding-right: 1em;
-        font-size: 1.7em;
-        font-weight: 300; }
-
-  a.apple-store {
-    width: 105px;
-    height: 36px;
-    left: 0.7em;
-    bottom: 0.7em; }
-
-  /*-------- CONTACT --------*/
-  .at-contact {
-    padding-top: 14em; }
-    .at-contact h1 {
-      font-family: "trump gothic east", sans-serif;
-      font-size: 52px;
-      font-weight: 700; }
-    .at-contact .contact-info {
-      font-size: 23px;
-      font-weight: 300;
-      line-height: 1.2em; }
-      .at-contact .contact-info .twitter {
-        margin-top: 1em; } }
-/* Small Desktop */
-@media only screen and (max-height: 716px) and (min-width: 569px) and (max-width: 1200px) {
-  /*--------- NAV --------*/
-  .at-navbar .at-navbar-wrapper.home {
-    height: 104px; }
-  .at-navbar .home .at-navbar-banner .at-navbar-header a {
-    font-size: 32px;
-    letter-spacing: 0; }
-    .at-navbar .home .at-navbar-banner .at-navbar-header a .logo {
-      width: 22.5px;
-      height: 27px; }
-  .at-navbar .at-navbar-banner {
-    width: 1024px;
-    margin: 0 auto; }
-    .at-navbar .at-navbar-banner .at-navbar-header {
-      width: 23em;
-      margin: 0 30px 0 0; }
-      .at-navbar .at-navbar-banner .at-navbar-header a {
-        width: 18em;
-        font-size: 16px; }
-        .at-navbar .at-navbar-banner .at-navbar-header a .logo {
-          width: 12.5px;
-          height: 15px; }
-    .at-navbar .at-navbar-banner .at-navbar-main {
-      width: 40em; }
-      .at-navbar .at-navbar-banner .at-navbar-main a {
-        font-size: 15px;
-        padding-right: 50px; }
-      .at-navbar .at-navbar-banner .at-navbar-main.home {
-        padding-top: 68px; }
-        .at-navbar .at-navbar-banner .at-navbar-main.home.home a {
-          font-size: 16px;
-          padding-right: 3em; }
-  .at-navbar .at-subnav-wrapper .at-subnav .at-navbar-subnav {
-    width: 1024px;
-    margin: 0 auto; }
-    .at-navbar .at-subnav-wrapper .at-subnav .at-navbar-subnav a {
-      font-size: 15px;
-      margin-left: 2em;
-      padding-right: 3em; }
-
-  /* NAV BUTTONS */
-  .at-about-chevron {
-    width: 25em;
-    top: 7.9em; }
-    .at-about-chevron h4.at-about-team-link {
-      top: -6px;
-      padding-right: 30px;
-      font-size: 2.4em; }
-    .at-about-chevron .at-about-chevron-img {
-      width: 38px;
-      height: 28px; }
-
-  .at-platform-chevron {
-    width: 25em;
-    top: 9em; }
-    .at-platform-chevron h4.at-platform-link {
-      top: -6px;
-      padding-right: 30px;
-      font-size: 2.4em; }
-    .at-platform-chevron .at-platform-chevron-img {
-      width: 38px;
-      height: 28px; }
-
-  .at-work-chevron {
-    top: 6.9em;
-    width: 25em; }
-    .at-work-chevron h4.at-work-link {
-      top: -6px;
-      padding-right: 30px;
-      font-size: 2.4em; }
-    .at-work-chevron .at-work-chevron-img {
-      width: 38px;
-      height: 28px; }
-
-  .at-arrow-down {
-    margin-left: -31px; }
-    .at-arrow-down img {
-      width: 62px;
-      height: 27px; }
-
-  .at-arrow-left {
-    position: absolute;
-    left: 0px;
-    padding-left: 20px;
-    margin-top: -31px; }
-
-  .at-arrow-right {
-    position: absolute;
-    right: 0px;
-    padding-right: 20px;
-    margin-top: -31px; }
-
-  /*-------- HOME --------*/
-  .at-main-message {
-    width: 32em;
-    margin-left: -16em; }
-    .at-main-message h1 {
-      font-size: 4em; }
-
-  /*-------- ABOUT.MAIN --------*/
-  .at-about-main-text {
-    top: 6em;
-    width: 22em;
-    background-position: bottom left; }
-    .at-about-main-text h1 {
-      font-size: 52px;
-      font-weight: 700; }
-    .at-about-main-text p {
-      font-size: 23px;
-      font-weight: 300;
-      margin-bottom: 1em; }
-    .at-about-main-text .at-about-artifact {
-      position: absolute;
-      top: 1.5em;
-      left: 19.4em;
-      width: 30em; }
-    .at-about-main-text .pointer {
-      border-width: 24px 0 0 14px; }
-    .at-about-main-text .at-about-artifact-bubble {
-      width: 600px; }
-      .at-about-main-text .at-about-artifact-bubble p {
-        margin-top: 15px;
-        font-weight: 400;
-        line-height: 1.2em; }
-
-  /*-------- ABOUT.TEAM --------*/
-  .at-about-team {
-    width: 480px; }
-    .at-about-team .team-member .team-photo {
-      display: inline-block;
-      width: 480px;
-      height: 200px; }
-    .at-about-team .team-member .team-member-banner h1 {
-      font-size: 24px; }
-    .at-about-team .team-member .team-member-banner h2 {
-      font-size: 18px; }
-    .at-about-team .team-member .team-member-text {
-      font-size: 1.1em; }
-    .at-about-team .team-member .team-member-hobbies p {
-      font-size: 0.9em; }
-
-  /*-------- PLATFORM.MAIN --------*/
-  .at-platform {
-    width: 1024px;
-    padding-top: 8em; }
-    .at-platform h1 {
-      padding-left: .75em;
-      font-size: 52px;
-      font-weight: 700; }
-    .at-platform .at-platform-list ol li, .at-platform .at-platform-list li {
-      font-size: 23px;
-      font-weight: 300;
-      margin-bottom: 1em; }
-    .at-platform .at-platform-menu {
-      width: 62em;
-      padding-top: 2em; }
-      .at-platform .at-platform-menu .at-platform-box {
-        width: 11.3em;
-        height: 4.7em;
-        margin-right: 1.5em;
-        padding: .5em; }
-        .at-platform .at-platform-menu .at-platform-box .box-icon {
-          width: 3.7em;
-          height: 3.7em; }
-        .at-platform .at-platform-menu .at-platform-box .menu-title {
-          width: 6.1em;
-          padding-top: 15px;
-          font-size: 15px; }
-    .at-platform.at-platform-top {
-      padding: 6em 5em 0; }
-    .at-platform .at-platform-page.on-left {
-      width: 30em;
-      margin-left: 5em; }
-    .at-platform .at-platform-page h1 {
-      font-size: 52px;
-      font-weight: 700;
-      margin-bottom: .4em; }
-      .at-platform .at-platform-page h1.uncramp {
-        float: none; }
-        .at-platform .at-platform-page h1.uncramp.move-up {
-          margin-top: 0em; }
-    .at-platform .at-platform-page p {
-      font-size: 23px;
-      line-height: 1.2em;
-      margin-bottom: 1em; }
-      .at-platform .at-platform-page p.curation-text {
-        font-size: 23px;
-        line-height: 1.2em;
-        margin-bottom: 1em; }
-
-  /*-------- WORK.MAIN, etc. --------*/
-  .at-work {
-    width: 1024px;
-    padding-top: 6em; }
-    .at-work.at-work-app {
-      width: 40em;
-      margin-right: 1em;
-      padding-top: 22em;
-      padding-left: 0;
-      float: right; }
-    .at-work .text-wrapper {
-      padding-top: 0; }
-      .at-work .text-wrapper h1 {
-        width: 2.5em;
-        font-size: 2.4em;
-        margin: 0 auto;
-        margin-bottom: .4em;
-        padding: 0;
-        text-align: center; }
-      .at-work .text-wrapper p {
-        width: 768px;
-        font-size: 20px;
-        font-weight: 300;
-        margin: 0 auto;
-        text-align: center;
-        float: none; }
-    .at-work h1 {
-      font-size: 4.1em;
-      margin-bottom: .2em; }
-    .at-work p {
-      font-size: .9em;
-      float: left;
-      width: 230px;
-      padding-right: .5em; }
-      .at-work p.at-app-desc {
-        font-size: 1.4em;
-        padding-right: 1.2em; }
-    .at-work .at-phones {
-      width: 456px; }
-      .at-work .at-phones .at-phone {
-        width: 221px;
-        height: 448px; }
-    .at-work .promo-videos {
-      width: 100%;
-      margin-top: .5em;
-      margin-bottom: .5em;
-      left: 0; }
-      .at-work .promo-videos h2 {
-        float: left;
-        padding-right: 1em;
-        font-size: 1.7em;
-        font-weight: 300; }
-
-  a.apple-store {
-    width: 105px;
-    height: 36px;
-    left: 0.7em;
-    bottom: 0.7em; }
-
-  /*-------- CONTACT --------*/
-  .at-contact {
-    padding-top: 14em; }
-    .at-contact h1 {
-      font-family: "trump gothic east", sans-serif;
-      font-size: 52px;
-      font-weight: 700; }
-    .at-contact .contact-info {
-      font-size: 23px;
-      font-weight: 300;
-      line-height: 1.2em; }
-      .at-contact .contact-info .twitter {
-        margin-top: 1em; } }
-  @media only screen and (max-height: 716px) and (min-width: 569px) and (max-width: 1200px) and (max-width: 768px) {
-    .at-about-chevron {
-      top: 20.8em; } }
-  @media only screen and (max-height: 716px) and (min-width: 569px) and (max-width: 1200px) and (max-width: 768px) {
-    .at-platform-chevron {
-      top: 6.3em; } }
-  @media only screen and (max-height: 716px) and (min-width: 569px) and (max-width: 1200px) and (max-width: 768px) {
-    .at-work-chevron {
-      top: 6.3em; } }
-/* Large Desktop */
-@media only screen and (min-width: 1201px) and (orientation: landscape) {
-  /*--------- NAV --------*/
-  .at-navbar .at-navbar-wrapper.home {
-    height: 104px; }
-  .at-navbar .home .at-navbar-banner .at-navbar-header a {
-    font-size: 32px;
-    letter-spacing: 0; }
-    .at-navbar .home .at-navbar-banner .at-navbar-header a .logo {
-      width: 22.5px;
-      height: 27px; }
-  .at-navbar .at-navbar-banner {
-    width: 1024px;
-    margin: 0 auto; }
-    .at-navbar .at-navbar-banner .at-navbar-header {
-      margin: 0 50px 0 0; }
-      .at-navbar .at-navbar-banner .at-navbar-header a {
-        width: 18em;
-        font-size: 16px; }
-        .at-navbar .at-navbar-banner .at-navbar-header a .logo {
-          width: 12.5px;
-          height: 15px; }
-    .at-navbar .at-navbar-banner .at-navbar-main {
-      width: 40em; }
-      .at-navbar .at-navbar-banner .at-navbar-main a {
-        font-size: 15px;
-        padding-right: 50px; }
-      .at-navbar .at-navbar-banner .at-navbar-main.home {
-        padding-top: 68px; }
-        .at-navbar .at-navbar-banner .at-navbar-main.home.home a {
-          font-size: 16px;
-          padding-right: 3em; }
-  .at-navbar .at-subnav-wrapper .at-subnav .at-navbar-subnav {
-    width: 1024px;
-    margin: 0 auto; }
-    .at-navbar .at-subnav-wrapper .at-subnav .at-navbar-subnav a {
-      font-size: 15px;
-      margin-left: 2em;
-      padding-right: 3em; }
-
-  /* NAV BUTTONS */
-  .at-about-chevron {
-    top: 7.9em;
-    width: 25em; }
-    .at-about-chevron h4.at-about-team-link {
-      top: -6px;
-      padding-right: 30px;
-      font-size: 2.4em; }
-    .at-about-chevron .at-about-chevron-img {
-      width: 38px;
-      height: 28px; }
-
-  .at-platform-chevron {
-    top: 9em;
-    width: 25em; }
-    .at-platform-chevron h4.at-platform-link {
-      top: -6px;
-      padding-right: 30px;
-      font-size: 2.4em; }
-    .at-platform-chevron .at-platform-chevron-img {
-      width: 38px;
-      height: 28px; }
-
-  .at-work-chevron {
-    top: 6.9em;
-    width: 25em; }
-    .at-work-chevron h4.at-work-link {
-      top: -6px;
-      padding-right: 30px;
-      font-size: 2.4em; }
-    .at-work-chevron .at-work-chevron-img {
-      width: 38px;
-      height: 28px; }
-
-  .at-arrow-down {
-    margin-left: -31px; }
-    .at-arrow-down img {
-      width: 62px;
-      height: 27px; }
-
-  .at-arrow-left {
-    position: absolute;
-    left: 0px;
-    padding-left: 20px;
-    margin-top: -31px; }
-
-  .at-arrow-right {
-    position: absolute;
-    right: 0px;
-    padding-right: 20px;
-    margin-top: -31px; }
-
-  /*-------- HOME --------*/
-  .at-main-message {
-    width: 32em;
-    margin-left: -16em; }
-    .at-main-message h1 {
-      font-size: 4em; }
-
-  /*-------- ABOUT.MAIN --------*/
-  .at-about-main-text {
-    top: 6em;
-    float: none;
-    width: 1024px;
-    margin: 0 auto;
-    padding-right: 52em; }
-    .at-about-main-text h1 {
-      font-size: 52px;
-      font-weight: 700; }
-    .at-about-main-text p {
-      font-size: 23px;
-      font-weight: 300;
-      margin-bottom: 1em; }
-    .at-about-main-text .pointer {
-      border-width: 24px 0 0 14px; }
-    .at-about-main-text .at-about-artifact-bubble {
-      width: 470px; }
-      .at-about-main-text .at-about-artifact-bubble p {
-        margin-top: 15px;
-        font-weight: 400;
-        line-height: 1.2em; }
-
-  /*-------- ABOUT.TEAM --------*/
-  .at-about-team {
-    width: 480px; }
-    .at-about-team .team-member .team-photo {
-      display: inline-block;
-      width: 480px;
-      height: 200px; }
-    .at-about-team .team-member .team-member-banner h1 {
-      font-size: 24px; }
-    .at-about-team .team-member .team-member-banner h2 {
-      font-size: 18px; }
-    .at-about-team .team-member .team-member-text {
-      font-size: 1.1em; }
-    .at-about-team .team-member .team-member-hobbies p {
-      font-size: 0.9em; }
-
-  /*-------- PLATFORM.MAIN --------*/
-  .at-platform {
-    width: 1024px;
-    padding-top: 8em; }
-    .at-platform h1 {
-      padding-left: .75em;
-      font-size: 52px;
-      font-weight: 700; }
-    .at-platform .at-platform-list ol li, .at-platform .at-platform-list li {
-      font-size: 23px;
-      font-weight: 300;
-      margin-bottom: 1em; }
-    .at-platform .at-platform-menu {
-      width: 62em;
-      padding-top: 2em; }
-      .at-platform .at-platform-menu .at-platform-box {
-        width: 13.5em;
-        height: 6em;
-        margin-right: 2.5em;
-        padding: 1em; }
-        .at-platform .at-platform-menu .at-platform-box .box-icon {
-          width: 4em;
-          height: 4em; }
-        .at-platform .at-platform-menu .at-platform-box .menu-title {
-          width: 6.1em;
-          padding-top: 15px;
-          font-size: 17px; }
-    .at-platform.at-platform-top {
-      padding: 6em 5em 0; }
-    .at-platform .at-platform-page.on-left {
-      width: 30em;
-      margin-left: 5em; }
-    .at-platform .at-platform-page h1 {
-      font-size: 52px;
-      font-weight: 700;
-      margin-bottom: .4em; }
-      .at-platform .at-platform-page h1.uncramp {
-        float: none; }
-        .at-platform .at-platform-page h1.uncramp.move-up {
-          margin-top: 0em; }
-    .at-platform .at-platform-page p {
-      font-size: 23px;
-      line-height: 1.2em;
-      margin-bottom: 1em; }
-      .at-platform .at-platform-page p.curation-text {
-        font-size: 23px;
-        line-height: 1.2em;
-        margin-bottom: 1em; }
-
-  /*-------- WORK.MAIN, etc. --------*/
-  .at-work {
-    width: 1024px;
-    padding-top: 6em; }
-    .at-work.at-work-app {
-      width: 40em;
-      margin-right: 1em;
-      padding-top: 22em;
-      padding-left: 0;
-      float: right; }
-    .at-work .text-wrapper {
-      padding-top: 0; }
-      .at-work .text-wrapper h1 {
-        width: 6em;
-        font-size: 52px;
-        font-weight: 700;
-        margin: 0 auto;
-        margin-bottom: .5em;
-        text-align: center; }
-      .at-work .text-wrapper p {
-        width: 768px;
-        font-size: 20px;
-        font-weight: 300;
-        margin: 0 auto;
-        text-align: center;
-        float: none; }
-    .at-work h1 {
-      font-size: 4.1em;
-      margin-bottom: .2em; }
-    .at-work p {
-      font-size: .9em;
-      float: left;
-      width: 230px;
-      padding-right: .5em; }
-      .at-work p.at-app-desc {
-        font-size: 1.5em;
-        line-height: 1.2em; }
-    .at-work .at-phones {
-      width: 456px; }
-      .at-work .at-phones .at-phone {
-        width: 221px;
-        height: 448px; }
-    .at-work .promo-videos {
-      width: 100%;
-      margin-top: .5em;
-      margin-bottom: .5em;
-      left: 0; }
-      .at-work .promo-videos h2 {
-        float: left;
-        padding-right: 1em;
-        font-size: 1.7em;
-        font-weight: 300; }
-
-  a.apple-store {
-    width: 105px;
-    height: 36px;
-    left: 0.7em;
-    bottom: 0.7em; }
-
-  /*-------- CONTACT --------*/
-  .at-contact {
-    padding-top: 14em; }
-    .at-contact h1 {
-      font-family: "trump gothic east", sans-serif;
-      font-size: 52px;
-      font-weight: 700; }
-    .at-contact .contact-info {
-      font-size: 23px;
-      font-weight: 300;
-      line-height: 1.2em; }
-      .at-contact .contact-info .twitter {
-        margin-top: 1em; } }
 /*--------- NAV --------*/
 .at-inline {
   position: relative;
@@ -6375,8 +5320,12 @@ a:hover {
   .at-arrow-left img {
     width: 18px;
     height: 41px; }
+  .at-arrow-left.centered {
+    top: 50%; }
   .at-arrow-left.lower {
     top: 60%; }
+  .at-arrow-left .bottom {
+    bottom: 25%; }
 
 .at-arrow-right {
   position: absolute;
@@ -6387,8 +5336,12 @@ a:hover {
   .at-arrow-right img {
     width: 18px;
     height: 41px; }
+  .at-arrow-right.centered {
+    top: 50%; }
   .at-arrow-right.lower {
     top: 60%; }
+  .at-arrow-right .at-bottom {
+    bottom: 25%; }
 
 /*-------- HOME --------*/
 .at-main-message {
@@ -6504,7 +5457,7 @@ a:hover {
   width: 280px;
   height: inherit;
   margin: 0 auto;
-  padding-top: 4em;
+  padding-top: 5em;
   background: transparent; }
   @media only screen and (min-width: 321px) and (max-width: 568px) and (orientation: landscape) {
     .at-about-team {
@@ -6573,9 +5526,8 @@ a:hover {
       padding-top: 10px; }
       @media only screen and (min-width: 321px) and (max-width: 568px) and (orientation: landscape) {
         .at-about-team .team-member .team-member-text {
-          width: 19em;
-          float: left;
-          padding: 0 1.5em 0 0; } }
+          width: 100%;
+          padding: 0 2.5em; } }
     .at-about-team .team-member .team-member-hobbies {
       font-family: 'Helvetica Neue', sans-serif;
       font-size: 12px;
@@ -6669,10 +5621,10 @@ a:hover {
         text-align: center;
         text-transform: uppercase; }
   .at-platform.at-platform-top {
-    padding: 3.4em 15px 0; }
+    padding: 5em 15px 0; }
     @media only screen and (min-width: 321px) and (max-width: 568px) and (orientation: landscape) {
       .at-platform.at-platform-top {
-        padding: 4em 2em 0; } }
+        padding: 5em 2em 0; } }
   .at-platform .at-platform-page {
     height: 100%; }
     .at-platform .at-platform-page.on-left {
@@ -6682,7 +5634,7 @@ a:hover {
       @media only screen and (min-width: 321px) and (max-width: 568px) and (orientation: landscape) {
         .at-platform .at-platform-page.on-left {
           width: 15em;
-          margin-left: 2em; } }
+          margin-left: 5em; } }
     .at-platform .at-platform-page h1 {
       font-family: "trump gothic east", sans-serif;
       font-size: 2.4em;
@@ -6701,14 +5653,17 @@ a:hover {
         margin-bottom: .4em; }
     .at-platform .at-platform-page p {
       font-family: 'Helvetica Neue', sans-serif;
-      font-size: 12px;
+      font-size: 10px;
       text-transform: none;
-      line-height: 14px;
+      line-height: 12px;
       margin-bottom: .1em;
       font-weight: 300; }
       .at-platform .at-platform-page p.platform-text {
-        font-size: 14px;
-        line-height: 17px; }
+        font-size: 12px;
+        line-height: 14px;
+        padding-left: 7.2em; }
+        .at-platform .at-platform-page p.platform-text.curation-text {
+          padding-left: 0; }
 
 /*-------- WORK.MAIN, etc. --------*/
 .at-work {
@@ -6725,15 +5680,15 @@ a:hover {
     .at-work .at-work-page.at-work-app {
       width: auto;
       padding-top: 15.9em;
-      padding-left: 6em;
+      padding-left: 7.5em;
       overflow-y: hidden; }
       @media only screen and (min-width: 321px) and (max-width: 568px) and (orientation: landscape) {
         .at-work .at-work-page.at-work-app {
-          padding-top: 12.4em;
-          padding-left: 16em; } }
+          padding-top: 5em;
+          padding-left: 17em; } }
     .at-work .at-work-page .text-wrapper {
       width: 100%;
-      padding-top: 5.4em; }
+      padding-top: 0; }
       @media only screen and (min-width: 321px) and (max-width: 568px) and (orientation: landscape) {
         .at-work .at-work-page .text-wrapper {
           width: 230px;
@@ -6742,8 +5697,7 @@ a:hover {
         font-family: "trump gothic east", sans-serif;
         width: 2.5em;
         font-size: 2.4em;
-        margin: 0 auto;
-        margin-bottom: .4em; }
+        margin: 0 auto; }
         @media only screen and (min-width: 321px) and (max-width: 568px) and (orientation: landscape) {
           .at-work .at-work-page .text-wrapper h1 {
             margin: 0 0 .4em 0;
@@ -6797,8 +5751,7 @@ a:hover {
       @media only screen and (min-width: 321px) and (max-width: 568px) and (orientation: landscape) {
         .at-work .at-work-page .at-phones {
           float: right;
-          margin: 0;
-          padding-top: 2.3em; } }
+          margin: -3em 0 0 0; } }
       .at-work .at-work-page .at-phones .at-phone {
         position: relative;
         display: inline-block;
@@ -6813,6 +5766,7 @@ a:hover {
     .at-work .at-work-page .promo-videos {
       display: inline-block;
       width: 100%;
+      margin-top: .5em;
       margin-bottom: .5em;
       margin-left: 0; }
       .at-work .at-work-page .promo-videos h2 {
@@ -6847,7 +5801,7 @@ a.apple-store {
   padding-top: 6.4em; }
   @media only screen and (min-width: 321px) and (max-width: 568px) and (orientation: landscape) {
     .at-contact {
-      padding-top: 5.4em; } }
+      padding-top: 4em; } }
   .at-contact h1 {
     font-family: "trump gothic east", sans-serif;
     width: 100%;
@@ -7107,3 +6061,1121 @@ a.apple-store {
 @keyframes moveFromBottom {
   from {
     transform: translateY(100%); } }
+
+/*--------- RESPONSIVE STYLE LOADING --------*/
+/*--------- FOR EVERYTHING OTHER THAN iPHONE --------*/
+/* iPad Portrait */
+@media only screen and (min-width: 569px) and (max-width: 768px) and (orientation: portrait) {
+  /*--------- NAV --------*/
+  .at-navbar .at-navbar-wrapper {
+    height: 50px; }
+    .at-navbar .at-navbar-wrapper.home {
+      height: 104px; }
+  .at-navbar .home .at-navbar-banner .at-navbar-header a {
+    font-size: 32px;
+    letter-spacing: 0; }
+    .at-navbar .home .at-navbar-banner .at-navbar-header a .logo {
+      width: 22.5px;
+      height: 27px; }
+  .at-navbar .at-navbar-banner .at-navbar-header {
+    width: 23em;
+    margin: 0 10px 0 15px;
+    padding-top: 15px;
+    float: left;
+    clear: none; }
+    .at-navbar .at-navbar-banner .at-navbar-header a {
+      width: 18em;
+      font-size: 16px; }
+      .at-navbar .at-navbar-banner .at-navbar-header a .logo {
+        width: 12.5px;
+        height: 15px; }
+  .at-navbar .at-navbar-banner .at-navbar-main {
+    width: 29em;
+    padding-top: 15px;
+    float: left;
+    clear: none; }
+    .at-navbar .at-navbar-banner .at-navbar-main a {
+      font-size: 15px;
+      padding-right: 2%; }
+    .at-navbar .at-navbar-banner .at-navbar-main.home {
+      padding-top: 32px; }
+      .at-navbar .at-navbar-banner .at-navbar-main.home.home a {
+        font-size: 16px;
+        padding-right: 3em; }
+  .at-navbar .at-subnav-wrapper .at-subnav .at-navbar-subnav a {
+    font-size: 15px;
+    margin-left: 2em;
+    padding-right: 3em; }
+
+  /* NAV BUTTONS */
+  .at-about-chevron {
+    width: 25em;
+    top: 6.9em; }
+    .at-about-chevron h4.at-about-team-link {
+      top: -6px;
+      padding-right: 30px;
+      font-size: 2.4em; }
+    .at-about-chevron .at-about-chevron-img {
+      width: 38px;
+      height: 28px; }
+
+  .at-platform-chevron {
+    width: 25em;
+    top: 6.9em; }
+    .at-platform-chevron h4.at-platform-link {
+      top: -6px;
+      padding-right: 30px;
+      font-size: 2.4em; }
+    .at-platform-chevron .at-platform-chevron-img {
+      width: 38px;
+      height: 28px; }
+
+  .at-work-chevron {
+    top: 6.9em;
+    width: 25em; }
+    .at-work-chevron h4.at-work-link {
+      top: -6px;
+      padding-right: 30px;
+      font-size: 2.4em; }
+    .at-work-chevron .at-work-chevron-img {
+      width: 38px;
+      height: 28px; }
+
+  .at-arrow-down {
+    margin-left: -31px; }
+    .at-arrow-down img {
+      width: 62px;
+      height: 27px; }
+
+  .at-arrow-left {
+    position: absolute;
+    left: 0px;
+    padding-left: 20px;
+    margin-top: -31px; }
+
+  .at-arrow-right {
+    position: absolute;
+    right: 0px;
+    padding-right: 20px;
+    margin-top: -31px; }
+
+  /*-------- HOME --------*/
+  .at-main-message {
+    width: 32em;
+    margin-left: -16em; }
+    .at-main-message h1 {
+      font-size: 4em; }
+
+  /*-------- ABOUT.MAIN --------*/
+  .at-about-main-text {
+    top: 8em;
+    width: 15em;
+    background-position: bottom left; }
+    .at-about-main-text h1 {
+      font-size: 52px;
+      font-weight: 700; }
+    .at-about-main-text p {
+      font-size: 23px;
+      font-weight: 300;
+      margin-bottom: 1em; }
+    .at-about-main-text .at-about-artifact {
+      position: absolute;
+      top: 1.5em;
+      left: 19.4em;
+      width: 30em; }
+    .at-about-main-text .pointer#showA {
+      margin-left: 23px; }
+    .at-about-main-text .pointer#showR {
+      margin-left: 45px; }
+    .at-about-main-text .pointer#showT {
+      margin-left: 66px; }
+    .at-about-main-text .pointer#showI {
+      margin-left: 88px; }
+    .at-about-main-text .pointer#showF {
+      margin-left: 102px; }
+    .at-about-main-text .pointer#showA2 {
+      margin-left: 120px; }
+    .at-about-main-text .pointer#showC {
+      margin-left: 146px; }
+    .at-about-main-text .pointer#showT2 {
+      margin-left: 169px; }
+    .at-about-main-text .at-about-artifact-bubble {
+      width: 30em; }
+      .at-about-main-text .at-about-artifact-bubble p {
+        margin-top: 15px;
+        font-weight: 400;
+        line-height: 1.2em; }
+
+  /*-------- ABOUT.TEAM --------*/
+  .at-about-team {
+    width: 320px; }
+    .at-about-team .team-member .team-photo {
+      display: inline-block;
+      width: 320px;
+      height: 140px; }
+    .at-about-team .team-member .team-member-banner h1 {
+      font-size: 24px; }
+    .at-about-team .team-member .team-member-banner h2 {
+      font-size: 18px; }
+    .at-about-team .team-member .team-member-text {
+      font-size: 1.1em; }
+    .at-about-team .team-member .team-member-hobbies p {
+      font-size: 0.9em; }
+
+  /*-------- PLATFORM.MAIN --------*/
+  .at-platform {
+    padding-top: 8em; }
+    .at-platform h1 {
+      padding-left: .75em;
+      font-size: 52px;
+      font-weight: 700; }
+    .at-platform .at-platform-list ol li, .at-platform .at-platform-list li {
+      font-size: 23px;
+      font-weight: 300;
+      margin-bottom: 1em; }
+    .at-platform .at-platform-menu {
+      width: 50em;
+      padding-top: 2em; }
+      .at-platform .at-platform-menu .at-platform-box {
+        width: 11em;
+        height: 4.7em;
+        margin-right: 1.5em;
+        padding: .5em; }
+        .at-platform .at-platform-menu .at-platform-box .box-icon {
+          width: 3.7em;
+          height: 3.7em; }
+        .at-platform .at-platform-menu .at-platform-box .menu-title {
+          width: 5.8em;
+          padding-top: 15px;
+          font-size: 15px; }
+    .at-platform.at-platform-top {
+      padding: 6.4em 5em 0; }
+    .at-platform .at-platform-page.on-left {
+      width: 20em;
+      margin-left: 5em; }
+    .at-platform .at-platform-page h1 {
+      font-size: 52px;
+      font-weight: 700; }
+      .at-platform .at-platform-page h1.uncramp {
+        width: 100%;
+        float: none;
+        margin-right: 0; }
+    .at-platform .at-platform-page p {
+      font-size: 18px;
+      line-height: 1.2em;
+      margin-bottom: 1em; }
+      .at-platform .at-platform-page p.platform-text {
+        font-size: 18px;
+        line-height: 1.2em;
+        padding-left: 0; }
+        .at-platform .at-platform-page p.platform-text.curation-text {
+          font-size: 18px;
+          line-height: 1.2em;
+          margin-bottom: 1em; }
+
+  /*-------- WORK.MAIN, etc. --------*/
+  .at-work {
+    padding-top: 6em; }
+    .at-work .at-work-page.at-work-app {
+      width: 33em;
+      margin-right: 1em;
+      padding-top: 24.5em;
+      padding-left: 0;
+      float: right; }
+    .at-work .at-work-page .text-wrapper h1 {
+      width: 6em;
+      font-size: 52px;
+      font-weight: 700;
+      margin: 0 auto;
+      margin-bottom: .5em;
+      text-align: center; }
+    .at-work .at-work-page .text-wrapper p {
+      font-size: 20px;
+      font-weight: 300;
+      text-align: center; }
+    .at-work .at-work-page h1 {
+      font-size: 4.1em;
+      margin-bottom: .2em; }
+    .at-work .at-work-page p {
+      font-size: .9em;
+      float: left;
+      width: 230px;
+      padding-right: .5em; }
+      .at-work .at-work-page p.at-app-desc {
+        font-size: 1.4em;
+        padding-right: 1.2em; }
+    .at-work .at-work-page .at-phones {
+      padding-top: 2.3em;
+      width: 456px; }
+      .at-work .at-work-page .at-phones .at-phone {
+        width: 221px;
+        height: 448px; }
+    .at-work .at-work-page .promo-videos {
+      width: 100%;
+      margin-top: .5em;
+      margin-bottom: .5em;
+      left: 0; }
+      .at-work .at-work-page .promo-videos h2 {
+        float: left;
+        padding-right: 1em;
+        font-size: 1.7em;
+        font-weight: 300; }
+
+  a.apple-store {
+    width: 105px;
+    height: 36px;
+    left: 0.7em;
+    bottom: 0.7em; }
+
+  /*-------- CONTACT --------*/
+  .at-contact {
+    padding-top: 14em; }
+    .at-contact h1 {
+      font-family: "trump gothic east", sans-serif;
+      font-size: 52px;
+      font-weight: 700; }
+    .at-contact .contact-info {
+      font-size: 23px;
+      font-weight: 300;
+      line-height: 1.2em; }
+      .at-contact .contact-info .twitter {
+        margin-top: 1em; } }
+/* iPad Landscape */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /*--------- NAV --------*/
+  .at-navbar .at-navbar-wrapper {
+    height: 50px; }
+    .at-navbar .at-navbar-wrapper.home {
+      height: 104px; }
+  .at-navbar .home .at-navbar-banner .at-navbar-header {
+    height: 40px; }
+    .at-navbar .home .at-navbar-banner .at-navbar-header a {
+      font-size: 32px;
+      letter-spacing: 0; }
+      .at-navbar .home .at-navbar-banner .at-navbar-header a .logo {
+        width: 22.5px;
+        height: 27px; }
+  .at-navbar .at-navbar-banner {
+    width: 1024px;
+    margin: 0 auto; }
+    .at-navbar .at-navbar-banner .at-navbar-header {
+      width: 27em;
+      float: left;
+      margin: 0 50px 0 0;
+      padding-top: 15px;
+      clear: none; }
+      .at-navbar .at-navbar-banner .at-navbar-header a {
+        width: 18em;
+        font-size: 16px; }
+        .at-navbar .at-navbar-banner .at-navbar-header a .logo {
+          width: 12.5px;
+          height: 15px; }
+    .at-navbar .at-navbar-banner .at-navbar-main {
+      float: left;
+      width: 40em;
+      padding-top: 15px;
+      clear: none; }
+      .at-navbar .at-navbar-banner .at-navbar-main a {
+        font-size: 15px;
+        padding-right: 50px; }
+      .at-navbar .at-navbar-banner .at-navbar-main.home {
+        padding-top: 33px;
+        height: 20px; }
+        .at-navbar .at-navbar-banner .at-navbar-main.home.home a {
+          font-size: 16px;
+          padding-right: 3em; }
+  .at-navbar .at-subnav-wrapper .at-subnav .at-navbar-subnav {
+    width: 1024px;
+    margin: 0 auto; }
+    .at-navbar .at-subnav-wrapper .at-subnav .at-navbar-subnav a {
+      font-size: 15px;
+      margin-left: 2em;
+      padding-right: 3em; }
+
+  /* NAV BUTTONS */
+  .at-about-chevron {
+    width: 25em;
+    top: 7.9em; }
+    .at-about-chevron h4.at-about-team-link {
+      top: -6px;
+      padding-right: 30px;
+      font-size: 2.4em; }
+    .at-about-chevron .at-about-chevron-img {
+      width: 38px;
+      height: 28px; }
+
+  .at-platform-chevron {
+    width: 25em;
+    top: 9em; }
+    .at-platform-chevron h4.at-platform-link {
+      top: -6px;
+      padding-right: 30px;
+      font-size: 2.4em; }
+    .at-platform-chevron .at-platform-chevron-img {
+      width: 38px;
+      height: 28px; }
+
+  .at-work-chevron {
+    top: 6.9em;
+    width: 25em; }
+    .at-work-chevron h4.at-work-link {
+      top: -6px;
+      padding-right: 30px;
+      font-size: 2.4em; }
+    .at-work-chevron .at-work-chevron-img {
+      width: 38px;
+      height: 28px; }
+
+  .at-arrow-down {
+    margin-left: -31px; }
+    .at-arrow-down img {
+      width: 62px;
+      height: 27px; }
+
+  .at-arrow-left {
+    position: absolute;
+    left: 0px;
+    padding-left: 20px;
+    margin-top: -31px; }
+
+  .at-arrow-right {
+    position: absolute;
+    right: 0px;
+    padding-right: 20px;
+    margin-top: -31px; }
+
+  /*-------- HOME --------*/
+  .at-main-message {
+    width: 32em;
+    margin-left: -16em; }
+    .at-main-message h1 {
+      font-size: 4em; }
+
+  /*-------- ABOUT.MAIN --------*/
+  .at-about-main-text {
+    top: 6em;
+    float: none;
+    width: 1009px;
+    margin: 0 auto;
+    padding-right: 52em; }
+    .at-about-main-text h1 {
+      font-size: 52px;
+      font-weight: 700; }
+    .at-about-main-text p {
+      font-size: 23px;
+      font-weight: 300;
+      margin-bottom: 1em; }
+    .at-about-main-text .pointer {
+      border-width: 24px 0 0 14px; }
+    .at-about-main-text .at-about-artifact-bubble {
+      width: 470px; }
+      .at-about-main-text .at-about-artifact-bubble p {
+        margin-top: 15px;
+        font-weight: 400;
+        line-height: 1.2em; }
+
+  /*-------- ABOUT.TEAM --------*/
+  .at-about-team {
+    width: 480px; }
+    .at-about-team .team-member .team-photo {
+      display: inline-block;
+      width: 480px;
+      height: 200px; }
+    .at-about-team .team-member .team-member-banner h1 {
+      font-size: 24px; }
+    .at-about-team .team-member .team-member-banner h2 {
+      font-size: 18px; }
+    .at-about-team .team-member .team-member-text {
+      font-size: 1.1em; }
+    .at-about-team .team-member .team-member-hobbies p {
+      font-size: 0.9em; }
+
+  /*-------- PLATFORM.MAIN --------*/
+  .at-platform {
+    width: 1009px;
+    padding-top: 8em; }
+    .at-platform h1 {
+      padding-left: .75em;
+      font-size: 52px;
+      font-weight: 700; }
+    .at-platform .at-platform-list ol li, .at-platform .at-platform-list li {
+      font-size: 23px;
+      font-weight: 300;
+      margin-bottom: 1em; }
+    .at-platform .at-platform-menu {
+      width: 62em;
+      padding-top: 2em; }
+      .at-platform .at-platform-menu .at-platform-box {
+        width: 13.5em;
+        height: 6em;
+        margin-right: 2.5em;
+        padding: 1em; }
+        .at-platform .at-platform-menu .at-platform-box .box-icon {
+          width: 4em;
+          height: 4em; }
+        .at-platform .at-platform-menu .at-platform-box .menu-title {
+          width: 6.1em;
+          padding-top: 15px;
+          font-size: 17px; }
+    .at-platform.at-platform-top {
+      padding: 6em 5em 0; }
+    .at-platform .at-platform-page.on-left {
+      width: 30em;
+      margin-left: 5em; }
+    .at-platform .at-platform-page h1 {
+      font-size: 52px;
+      font-weight: 700;
+      margin-bottom: .4em; }
+      .at-platform .at-platform-page h1.uncramp {
+        margin: 0;
+        float: none; }
+    .at-platform .at-platform-page p {
+      font-size: 23px;
+      line-height: 1.2em;
+      margin-bottom: 1em; }
+      .at-platform .at-platform-page p.platform-text {
+        font-size: 23px;
+        line-height: 1.2em;
+        padding-left: 0; }
+        .at-platform .at-platform-page p.platform-text.curation-text {
+          font-size: 23px;
+          line-height: 1.2em;
+          margin-bottom: 1em; }
+
+  /*-------- WORK.MAIN, etc. --------*/
+  .at-work {
+    width: 1009px;
+    padding-top: 6em; }
+    .at-work .at-work-page.at-work-app {
+      width: 40em;
+      margin-right: 1em;
+      padding-top: 17.4em;
+      padding-left: 0;
+      float: right; }
+    .at-work .at-work-page .text-wrapper {
+      padding-top: 0; }
+      .at-work .at-work-page .text-wrapper h1 {
+        width: 6em;
+        font-size: 52px;
+        font-weight: 700;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center; }
+      .at-work .at-work-page .text-wrapper p {
+        width: 768px;
+        font-size: 20px;
+        font-weight: 300;
+        margin: 0 auto;
+        text-align: center;
+        float: none; }
+    .at-work .at-work-page h1 {
+      font-size: 4.1em;
+      margin-bottom: .2em; }
+    .at-work .at-work-page p {
+      font-size: .9em;
+      float: left;
+      width: 230px;
+      padding-right: 0; }
+      .at-work .at-work-page p.at-app-desc {
+        font-size: 1.5em;
+        line-height: 1.2em; }
+    .at-work .at-work-page .at-phones {
+      padding-top: 2.3em;
+      width: 456px;
+      margin-top: -3.5em; }
+      .at-work .at-work-page .at-phones .at-phone {
+        width: 221px;
+        height: 448px; }
+    .at-work .at-work-page .promo-videos {
+      width: 100%;
+      margin-top: .5em;
+      margin-bottom: .5em;
+      left: 0; }
+      .at-work .at-work-page .promo-videos h2 {
+        float: left;
+        padding-right: 1em;
+        font-size: 1.7em;
+        font-weight: 300; }
+
+  a.apple-store {
+    width: 105px;
+    height: 36px;
+    left: 0.7em;
+    bottom: 0.7em; }
+
+  /*-------- CONTACT --------*/
+  .at-contact {
+    padding-top: 14em; }
+    .at-contact h1 {
+      font-family: "trump gothic east", sans-serif;
+      font-size: 52px;
+      font-weight: 700; }
+    .at-contact .contact-info {
+      font-size: 23px;
+      font-weight: 300;
+      line-height: 1.2em; }
+      .at-contact .contact-info .twitter {
+        margin-top: 1em; } }
+/* Small Desktop */
+@media only screen and (max-height: 716px) and (min-width: 1025px) and (max-width: 1200px) {
+  /*--------- NAV --------*/
+  .at-navbar .at-navbar-wrapper {
+    height: 50px; }
+    .at-navbar .at-navbar-wrapper.home {
+      height: 104px; }
+  .at-navbar .home .at-navbar-banner .at-navbar-header {
+    height: 40px; }
+    .at-navbar .home .at-navbar-banner .at-navbar-header a {
+      font-size: 32px;
+      letter-spacing: 0; }
+      .at-navbar .home .at-navbar-banner .at-navbar-header a .logo {
+        width: 22.5px;
+        height: 27px; }
+  .at-navbar .at-navbar-banner {
+    max-width: 1024px;
+    margin: 0 auto; }
+    .at-navbar .at-navbar-banner .at-navbar-header {
+      width: 27em;
+      float: left;
+      margin: 0 50px 0 0;
+      padding-top: 15px;
+      clear: none; }
+      .at-navbar .at-navbar-banner .at-navbar-header a {
+        width: 18em;
+        font-size: 16px; }
+        .at-navbar .at-navbar-banner .at-navbar-header a .logo {
+          width: 12.5px;
+          height: 15px; }
+    .at-navbar .at-navbar-banner .at-navbar-main {
+      float: left;
+      width: 40em;
+      padding-top: 15px;
+      clear: none; }
+      .at-navbar .at-navbar-banner .at-navbar-main a {
+        font-size: 15px;
+        padding-right: 50px; }
+      .at-navbar .at-navbar-banner .at-navbar-main.home {
+        padding-top: 33px;
+        height: 20px; }
+        .at-navbar .at-navbar-banner .at-navbar-main.home.home a {
+          font-size: 16px;
+          padding-right: 3em; }
+  .at-navbar .at-subnav-wrapper .at-subnav .at-navbar-subnav {
+    max-width: 1024px;
+    margin: 0 auto; }
+    .at-navbar .at-subnav-wrapper .at-subnav .at-navbar-subnav a {
+      font-size: 15px;
+      margin-left: 2em;
+      padding-right: 3em; }
+
+  /* NAV BUTTONS */
+  .at-about-chevron {
+    width: 25em;
+    top: 7.9em; }
+    .at-about-chevron h4.at-about-team-link {
+      top: -6px;
+      padding-right: 30px;
+      font-size: 2.4em; }
+    .at-about-chevron .at-about-chevron-img {
+      width: 38px;
+      height: 28px; }
+
+  .at-platform-chevron {
+    width: 25em;
+    top: 9em; }
+    .at-platform-chevron h4.at-platform-link {
+      top: -6px;
+      padding-right: 30px;
+      font-size: 2.4em; }
+    .at-platform-chevron .at-platform-chevron-img {
+      width: 38px;
+      height: 28px; }
+
+  .at-work-chevron {
+    top: 6.9em;
+    width: 25em; }
+    .at-work-chevron h4.at-work-link {
+      top: -6px;
+      padding-right: 30px;
+      font-size: 2.4em; }
+    .at-work-chevron .at-work-chevron-img {
+      width: 38px;
+      height: 28px; }
+
+  .at-arrow-down {
+    margin-left: -31px; }
+    .at-arrow-down img {
+      width: 62px;
+      height: 27px; }
+
+  .at-arrow-left {
+    position: absolute;
+    left: 0px;
+    padding-left: 20px;
+    margin-top: -31px; }
+
+  .at-arrow-right {
+    position: absolute;
+    right: 0px;
+    padding-right: 20px;
+    margin-top: -31px; }
+
+  /*-------- HOME --------*/
+  .at-main-message {
+    width: 32em;
+    margin-left: -16em; }
+    .at-main-message h1 {
+      font-size: 4em; }
+
+  /*-------- ABOUT.MAIN --------*/
+  .at-about-main-text {
+    top: 6em;
+    width: 22em;
+    background-position: bottom left; }
+    .at-about-main-text h1 {
+      font-size: 52px;
+      font-weight: 700; }
+    .at-about-main-text p {
+      font-size: 23px;
+      font-weight: 300;
+      margin-bottom: 1em; }
+    .at-about-main-text .at-about-artifact {
+      position: absolute;
+      top: -.25em;
+      left: 19.4em;
+      width: 30em; }
+    .at-about-main-text .pointer {
+      border-width: 24px 0 0 14px; }
+    .at-about-main-text .at-about-artifact-bubble {
+      width: 600px; }
+      .at-about-main-text .at-about-artifact-bubble p {
+        margin-top: 15px;
+        font-weight: 400;
+        line-height: 1.2em; }
+
+  /*-------- ABOUT.TEAM --------*/
+  .at-about-team {
+    width: 320px; }
+    .at-about-team .team-member .team-photo {
+      display: inline-block;
+      width: 320px;
+      height: 140px; }
+    .at-about-team .team-member .team-member-banner h1 {
+      font-size: 24px; }
+    .at-about-team .team-member .team-member-banner h2 {
+      font-size: 18px; }
+    .at-about-team .team-member .team-member-text {
+      font-size: 1.1em; }
+    .at-about-team .team-member .team-member-hobbies p {
+      font-size: 0.9em; }
+
+  /*-------- PLATFORM.MAIN --------*/
+  .at-platform {
+    max-width: 1009px;
+    margin: 0 auto;
+    padding-top: 8em; }
+    .at-platform h1 {
+      padding-left: .75em;
+      font-size: 52px;
+      font-weight: 700; }
+    .at-platform .at-platform-list ol li, .at-platform .at-platform-list li {
+      font-size: 23px;
+      font-weight: 300;
+      margin-bottom: 1em; }
+    .at-platform .at-platform-menu {
+      width: 62em;
+      padding-top: 2em; }
+      .at-platform .at-platform-menu .at-platform-box {
+        width: 13.5em;
+        height: 6em;
+        margin-right: 2.5em;
+        padding: 1em; }
+        .at-platform .at-platform-menu .at-platform-box .box-icon {
+          width: 4em;
+          height: 4em; }
+        .at-platform .at-platform-menu .at-platform-box .menu-title {
+          width: 6.1em;
+          padding-top: 15px;
+          font-size: 17px; }
+    .at-platform.at-platform-top {
+      padding: 6em 5em 0; }
+    .at-platform .at-platform-page.on-left {
+      width: 30em;
+      margin-left: 5em; }
+    .at-platform .at-platform-page h1 {
+      font-size: 52px;
+      font-weight: 700;
+      margin-bottom: .4em; }
+      .at-platform .at-platform-page h1.uncramp {
+        width: 100%;
+        margin: 0;
+        float: none; }
+        .at-platform .at-platform-page h1.uncramp.move-up {
+          margin-top: 0em; }
+    .at-platform .at-platform-page p {
+      font-size: 23px;
+      line-height: 1.2em;
+      margin-bottom: 1em; }
+      .at-platform .at-platform-page p.platform-text {
+        font-size: 23px;
+        line-height: 1.2em;
+        padding-left: 0; }
+        .at-platform .at-platform-page p.platform-text.curation-text {
+          font-size: 23px;
+          line-height: 1.2em;
+          margin-bottom: 1em; }
+
+  /*-------- WORK.MAIN, etc. --------*/
+  .at-work {
+    max-width: 1009px;
+    margin: 0 auto;
+    padding-top: 6em; }
+    .at-work .at-work-page.at-work-app {
+      width: 40em;
+      margin-right: 1em;
+      padding-top: 17em;
+      padding-left: 0;
+      float: right; }
+    .at-work .at-work-page .text-wrapper {
+      padding-top: 0; }
+      .at-work .at-work-page .text-wrapper h1 {
+        font-size: 52px;
+        font-weight: 700;
+        width: 3.5em;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center; }
+      .at-work .at-work-page .text-wrapper p {
+        width: 958px;
+        font-size: 16px;
+        font-weight: 300;
+        margin: 0 auto;
+        text-align: center;
+        float: none; }
+    .at-work .at-work-page h1 {
+      font-size: 4.1em;
+      margin-bottom: .2em; }
+    .at-work .at-work-page p {
+      font-size: .9em;
+      float: left;
+      width: 230px;
+      padding-right: .5em; }
+      .at-work .at-work-page p.at-app-desc {
+        font-size: 1.4em;
+        padding-right: 1.2em; }
+    .at-work .at-work-page .at-phones {
+      width: 456px;
+      margin-top: -3em;
+      padding-top: 2.3em; }
+      .at-work .at-work-page .at-phones .at-phone {
+        width: 221px;
+        height: 448px; }
+    .at-work .at-work-page .promo-videos {
+      width: 100%;
+      margin-top: .5em;
+      margin-bottom: .5em;
+      left: 0; }
+      .at-work .at-work-page .promo-videos h2 {
+        float: left;
+        padding-right: 1em;
+        font-size: 1.7em;
+        font-weight: 300; }
+
+  a.apple-store {
+    width: 105px;
+    height: 36px;
+    left: 0.7em;
+    bottom: 0.7em; }
+
+  /*-------- CONTACT --------*/
+  .at-contact {
+    padding-top: 14em; }
+    .at-contact h1 {
+      font-family: "trump gothic east", sans-serif;
+      font-size: 52px;
+      font-weight: 700; }
+    .at-contact .contact-info {
+      font-size: 23px;
+      font-weight: 300;
+      line-height: 1.2em; }
+      .at-contact .contact-info .twitter {
+        margin-top: 1em; } }
+/* Large Desktop */
+@media only screen and (min-width: 1025px) and (orientation: landscape) {
+  /*--------- NAV --------*/
+  .at-navbar .at-navbar-wrapper {
+    height: 50px; }
+    .at-navbar .at-navbar-wrapper.home {
+      height: 104px; }
+  .at-navbar .home .at-navbar-banner .at-navbar-header {
+    height: 40px; }
+    .at-navbar .home .at-navbar-banner .at-navbar-header a {
+      font-size: 32px;
+      letter-spacing: 0; }
+      .at-navbar .home .at-navbar-banner .at-navbar-header a .logo {
+        width: 22.5px;
+        height: 27px; }
+  .at-navbar .at-navbar-banner {
+    max-width: 1024px;
+    margin: 0 auto; }
+    .at-navbar .at-navbar-banner .at-navbar-header {
+      width: 27em;
+      float: left;
+      margin: 0 50px 0 0;
+      padding-top: 15px;
+      clear: none; }
+      .at-navbar .at-navbar-banner .at-navbar-header a {
+        width: 18em;
+        font-size: 16px; }
+        .at-navbar .at-navbar-banner .at-navbar-header a .logo {
+          width: 12.5px;
+          height: 15px; }
+    .at-navbar .at-navbar-banner .at-navbar-main {
+      float: left;
+      width: 40em;
+      padding-top: 15px;
+      clear: none; }
+      .at-navbar .at-navbar-banner .at-navbar-main a {
+        font-size: 15px;
+        padding-right: 50px; }
+      .at-navbar .at-navbar-banner .at-navbar-main.home {
+        padding-top: 33px;
+        height: 20px; }
+        .at-navbar .at-navbar-banner .at-navbar-main.home.home a {
+          font-size: 16px;
+          padding-right: 3em; }
+  .at-navbar .at-subnav-wrapper .at-subnav .at-navbar-subnav {
+    max-width: 1024px;
+    margin: 0 auto; }
+    .at-navbar .at-subnav-wrapper .at-subnav .at-navbar-subnav a {
+      font-size: 15px;
+      margin-left: 2em;
+      padding-right: 3em; }
+
+  /* NAV BUTTONS */
+  .at-about-chevron {
+    top: 7.9em;
+    width: 25em; }
+    .at-about-chevron h4.at-about-team-link {
+      top: -6px;
+      padding-right: 30px;
+      font-size: 2.4em; }
+    .at-about-chevron .at-about-chevron-img {
+      width: 38px;
+      height: 28px; }
+
+  .at-platform-chevron {
+    top: 9em;
+    width: 25em; }
+    .at-platform-chevron h4.at-platform-link {
+      top: -6px;
+      padding-right: 30px;
+      font-size: 2.4em; }
+    .at-platform-chevron .at-platform-chevron-img {
+      width: 38px;
+      height: 28px; }
+
+  .at-work-chevron {
+    top: 6.9em;
+    width: 25em; }
+    .at-work-chevron h4.at-work-link {
+      top: -6px;
+      padding-right: 30px;
+      font-size: 2.4em; }
+    .at-work-chevron .at-work-chevron-img {
+      width: 38px;
+      height: 28px; }
+
+  .at-arrow-down {
+    margin-left: -31px; }
+    .at-arrow-down img {
+      width: 62px;
+      height: 27px; }
+
+  .at-arrow-left {
+    position: absolute;
+    left: 0px;
+    padding-left: 20px;
+    margin-top: -31px; }
+
+  .at-arrow-right {
+    position: absolute;
+    right: 0px;
+    padding-right: 20px;
+    margin-top: -31px; }
+
+  /*-------- HOME --------*/
+  .at-main-message {
+    width: 32em;
+    margin-left: -16em; }
+    .at-main-message h1 {
+      font-size: 4em; }
+
+  /*-------- ABOUT.MAIN --------*/
+  .at-about-main-text {
+    top: 6em;
+    float: none;
+    width: 1024px;
+    margin: 0 auto;
+    padding-right: 52em; }
+    .at-about-main-text h1 {
+      font-size: 52px;
+      font-weight: 700; }
+    .at-about-main-text p {
+      font-size: 23px;
+      font-weight: 300;
+      margin-bottom: 1em; }
+    .at-about-main-text .pointer {
+      border-width: 24px 0 0 14px; }
+    .at-about-main-text .at-about-artifact-bubble {
+      width: 470px; }
+      .at-about-main-text .at-about-artifact-bubble p {
+        margin-top: 15px;
+        font-weight: 400;
+        line-height: 1.2em; }
+
+  /*-------- ABOUT.TEAM --------*/
+  .at-about-team {
+    width: 480px;
+    padding-top: 6em; }
+    .at-about-team .team-member .team-photo {
+      display: inline-block;
+      width: 480px;
+      height: 200px; }
+    .at-about-team .team-member .team-member-banner h1 {
+      font-size: 24px; }
+    .at-about-team .team-member .team-member-banner h2 {
+      font-size: 18px; }
+    .at-about-team .team-member .team-member-text {
+      font-size: 1.1em; }
+    .at-about-team .team-member .team-member-hobbies p {
+      font-size: 0.9em; }
+
+  /*-------- PLATFORM.MAIN --------*/
+  .at-platform {
+    width: 1024px;
+    padding-top: 8em; }
+    .at-platform h1 {
+      padding-left: .75em;
+      font-size: 52px;
+      font-weight: 700; }
+    .at-platform .at-platform-list ol li, .at-platform .at-platform-list li {
+      font-size: 23px;
+      font-weight: 300;
+      margin-bottom: 1em; }
+    .at-platform .at-platform-menu {
+      width: 62em;
+      padding-top: 2em; }
+      .at-platform .at-platform-menu .at-platform-box {
+        width: 13.5em;
+        height: 6em;
+        margin-right: 2.5em;
+        padding: 1em; }
+        .at-platform .at-platform-menu .at-platform-box .box-icon {
+          width: 4em;
+          height: 4em; }
+        .at-platform .at-platform-menu .at-platform-box .menu-title {
+          width: 6.1em;
+          padding-top: 15px;
+          font-size: 17px; }
+    .at-platform.at-platform-top {
+      padding: 6em 5em 0; }
+    .at-platform .at-platform-page.on-left {
+      width: 30em;
+      margin-left: 5em; }
+    .at-platform .at-platform-page h1 {
+      font-size: 52px;
+      font-weight: 700;
+      margin-bottom: .4em; }
+      .at-platform .at-platform-page h1.uncramp {
+        width: 100%;
+        float: none;
+        margin: 0; }
+        .at-platform .at-platform-page h1.uncramp.move-up {
+          margin-top: 0em; }
+    .at-platform .at-platform-page p {
+      font-size: 23px;
+      line-height: 1.2em;
+      margin-bottom: 1em; }
+      .at-platform .at-platform-page p.platform-text {
+        font-size: 23px;
+        line-height: 1.2em;
+        padding-left: 0; }
+        .at-platform .at-platform-page p.platform-text.curation-text {
+          font-size: 23px;
+          line-height: 1.2em;
+          margin-bottom: 1em; }
+
+  /*-------- WORK.MAIN, etc. --------*/
+  .at-work {
+    width: 1024px;
+    padding-top: 6em; }
+    .at-work .at-work-page.at-work-app {
+      width: 40em;
+      margin-right: 1em;
+      padding-top: 21em;
+      padding-left: 0;
+      float: right; }
+    .at-work .at-work-page .text-wrapper {
+      padding-top: 1em; }
+      .at-work .at-work-page .text-wrapper h1 {
+        width: 6em;
+        font-size: 52px;
+        font-weight: 700;
+        margin: 0 auto;
+        text-align: center; }
+      .at-work .at-work-page .text-wrapper p {
+        width: 768px;
+        font-size: 20px;
+        font-weight: 300;
+        margin: 0 auto;
+        padding-top: 1em;
+        text-align: center;
+        float: none; }
+    .at-work .at-work-page h1 {
+      font-size: 4.1em;
+      margin-bottom: .2em; }
+    .at-work .at-work-page p {
+      font-size: .9em;
+      float: left;
+      width: 230px;
+      padding-right: .5em; }
+      .at-work .at-work-page p.at-app-desc {
+        font-size: 1.5em;
+        line-height: 1.2em; }
+    .at-work .at-work-page .at-phones {
+      padding-top: 0;
+      width: 456px; }
+      .at-work .at-work-page .at-phones .at-phone {
+        width: 221px;
+        height: 448px; }
+    .at-work .at-work-page .promo-videos {
+      width: 100%;
+      margin-top: .5em;
+      margin-bottom: .5em;
+      left: 0; }
+      .at-work .at-work-page .promo-videos h2 {
+        float: left;
+        padding-right: 1em;
+        font-size: 1.7em;
+        font-weight: 300; }
+
+  a.apple-store {
+    width: 105px;
+    height: 36px;
+    left: 0.7em;
+    bottom: 0.7em; }
+
+  /*-------- CONTACT --------*/
+  .at-contact {
+    padding-top: 14em; }
+    .at-contact h1 {
+      font-family: "trump gothic east", sans-serif;
+      font-size: 52px;
+      font-weight: 700; }
+    .at-contact .contact-info {
+      font-size: 23px;
+      font-weight: 300;
+      line-height: 1.2em; }
+      .at-contact .contact-info .twitter {
+        margin-top: 1em; } }

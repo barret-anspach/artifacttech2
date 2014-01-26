@@ -1279,16 +1279,16 @@ a.apple-store {
 }
 
 /* iPad Landscape */
-@media only screen and (min-width: $bp-ipad-portrait + 1) and (max-width: $bp-ipad-landscape) and (orientation: landscape) {
+@media only screen and (min-width: $bp-ipad-portrait) and (max-width: $bp-ipad-landscape) and (orientation: landscape) {
 	@import 'ipad-landscape';
 }
 
 /* Small Desktop */
-@media only screen and (max-height: $bp-desktop-small-height) and (min-width: $bp-iphone-landscape + 1) and (max-width: $bp-desktop) {
+@media only screen and (max-height: $bp-desktop-small-height) and (min-width: $bp-ipad-landscape + 1) and (max-width: $bp-desktop) {
 	@import 'desktop-small';
 }
 
 /* Large Desktop */
-@media only screen and (min-width: $bp-desktop + 1) and (orientation: landscape) {
+@media only screen and (min-width: $bp-ipad-landscape + 1) and (orientation: landscape) {
 	@import 'desktop-large';
 }
