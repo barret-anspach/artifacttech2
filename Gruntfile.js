@@ -153,7 +153,7 @@ module.exports = function (grunt) {
                 auth: {
                     host: 'artifacttechnologies.com',
                     port: 21,
-                    authKey: 'key1'
+                    authKey: 'test'
                 },
                 src: 'parse/public',
                 dest: '/',

@@ -137,8 +137,8 @@ angular.module('artifactApp')
             window.console.log('i done swiped to '+ id);
         };
         
-        $scope.navChanged = function(top){
-            window.console.log(top);
+        $scope.swipeUp = function(id){
+            window.console.log('swiped up');
         };
 
 

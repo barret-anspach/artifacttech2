@@ -6,7 +6,11 @@ angular.module('artifactApp', [
   'ngSanitize',
   'ngRoute',
   'ngAnimate',
-  "angular-carousel"
+  "angular-carousel",
+  "ngTouch",
+  "angular-gestures",
+  "angular-inview"
+
 ])
   .config(function ($routeProvider) {
     $routeProvider
