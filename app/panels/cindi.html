@@ -19,7 +19,7 @@
                         combines her early education in Film and Television with her degree in Computers & Business
                         to design and deliver products using her technical project management, UI/UX skills.</p>
                 </div>
-                <div class="team-member-hobbies">
+                <div class="team-member-hobbies"  ng-hide="isMobile()">
                     <p>Two Favorite Hobbies:</p>
 
                     <p>Gardening and costuming - especially Halloween get-ups.</p>
@@ -35,10 +35,10 @@
                 </div>
             </div>
         </div>
-        <a class="at-arrow-left" ng-click="previousView('about')">
+        <a class="at-arrow-left centered" ng-click="previousView('about')">
             <img src="../images/arrow-left.png">
         </a>
-        <a class="at-arrow-right" ng-click="nextView('about')">
+        <a class="at-arrow-right centered" ng-click="nextView('about')">
             <img src="../images/arrow-right.png">
         </a>
     </div>

@@ -14,7 +14,7 @@
                     <div class="team-member-text">
                         <p>Sam has 15 years of experience in the media & entertainment industry creating executing innovative solutions for mobile, enter&shy;tainment, retail, and advertising companies. His management ex&shy;pertise spans creative direction, new media initiatives, mobile product and business development.</p>
                     </div>
-                    <div class="team-member-hobbies">
+                    <div class="team-member-hobbies"  ng-hide="isMobile()">
                         <p>Two Favorite Hobbies:</p>
                         <p>Laughing, Cooking</p>
                         <p class="quiz">More on Sam:</p>
@@ -24,10 +24,10 @@
                 </div>
             </div>
         </div>
-        <a class="at-arrow-left" ng-click="previousView('about')">
+        <a class="at-arrow-left centered" ng-click="previousView('about')">
             <img src="../images/arrow-left.png">
         </a>
-        <a class="at-arrow-right" ng-click="nextView('about')">
+        <a class="at-arrow-right centered" ng-click="nextView('about')">
             <img src="../images/arrow-right.png">
         </a>
     </div>

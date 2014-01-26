@@ -98,29 +98,6 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 //	// STYLES
 //}
 
-/*--------- RESPONSIVE STYLE LOADING --------*/
-/*--------- FOR EVERYTHING OTHER THAN iPHONE --------*/
-
-/* iPad Portrait */
-@media only screen and (min-width: $bp-iphone-landscape + 1) and (max-width: $bp-ipad-portrait) and (orientation: portrait) {
-	@import 'ipad-portrait';
-}
-
-/* iPad Landscape */
-@media only screen and (min-width: $bp-ipad-portrait + 1) and (max-width: $bp-ipad-landscape) and (orientation: landscape) {
-	@import 'ipad-landscape';
-}
-
-/* Small Desktop */
-@media only screen and (max-height: $bp-desktop-small-height) and (min-width: $bp-iphone-landscape + 1) and (max-width: $bp-desktop) {
-	@import 'desktop-small';
-}
-
-/* Large Desktop */
-@media only screen and (min-width: $bp-desktop + 1) and (orientation: landscape) {
-	@import 'desktop-large';
-}
-
 /*--------- NAV --------*/
 .at-inline {
 	position: relative;
@@ -438,8 +415,14 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 		width: 18px;
 		height: 41px;
 	}
+	&.centered {
+		top: 50%;
+	}
 	&.lower {
 		top: 60%;
+	}
+	.bottom {
+		bottom: 25%;
 	}
 }
 .at-arrow-right {
@@ -449,8 +432,14 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 		width: 18px;
 		height: 41px;
 	}
+	&.centered {
+		top: 50%;
+	}
 	&.lower {
 		top: 60%;
+	}
+	.at-bottom {
+		bottom: 25%;
 	}
 }
 
@@ -595,7 +584,7 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 	width: 280px;
 	height: inherit;
 	margin: 0 auto;
-	padding-top: 4em;
+	padding-top: 5em;
 	background: transparent;
 	@media only screen and (min-width: $bp-iphone-portrait + 1) and (max-width: $bp-iphone-landscape) and (orientation: landscape) {
 		width: 100%;
@@ -675,9 +664,8 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 			font-size: 14px;
 			padding-top: 10px;
 			@media only screen and (min-width: $bp-iphone-portrait + 1) and (max-width: $bp-iphone-landscape) and (orientation: landscape) {
-				width: 19em;
-				float: left;
-				padding: 0 1.5em 0 0;
+				width: 100%;
+				padding: 0 2.5em;
 			}
 		}
 		.team-member-hobbies {
@@ -791,9 +779,9 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 		}
 	}
 	&.at-platform-top {
-		padding: 3.4em 15px 0;
+		padding: 5em 15px 0;
 		@media only screen and (min-width: $bp-iphone-portrait + 1) and (max-width: $bp-iphone-landscape) and (orientation: landscape) {
-			padding: 4em 2em 0;
+			padding: 5em 2em 0;
 		}
 	}
 	.at-platform-page {
@@ -804,7 +792,7 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 			margin-left: 15px;
 			@media only screen and (min-width: $bp-iphone-portrait + 1) and (max-width: $bp-iphone-landscape) and (orientation: landscape) {
 				width: 15em;
-				margin-left: 2em;
+				margin-left: 5em;
 			}
 		}
 		h1 {
@@ -828,14 +816,18 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 		}
 		p {
 			font-family: 'Helvetica Neue', sans-serif;
-			font-size: 12px;
+			font-size: 10px;
 			text-transform: none;
-			line-height: 14px;
+			line-height: 12px;
 			margin-bottom: .1em;
 			font-weight: 300;
 			&.platform-text {
-				font-size: 14px;
-				line-height: 17px;
+				font-size: 12px;
+				line-height: 14px;
+				padding-left: 7.2em;
+				&.curation-text {
+					padding-left: 0;
+				}
 			}
 		}
 	}
@@ -857,17 +849,17 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 		&.at-work-app {
 			width: auto;
 			padding-top: 15.9em;
-			padding-left: 6em;
+			padding-left: 7.5em;
 			overflow-y: hidden;
 			@media only screen and (min-width: $bp-iphone-portrait + 1) and (max-width: $bp-iphone-landscape) and (orientation: landscape) {
-				padding-top: 12.4em;
-				padding-left: 16em;
+				padding-top: 5em;
+				padding-left: 17em;
 			}
 		}
 		// 'our work' main page
 		.text-wrapper {
 			width: 100%;
-			padding-top: 5.4em;
+			padding-top: 0;
 			@media only screen and (min-width: $bp-iphone-portrait + 1) and (max-width: $bp-iphone-landscape) and (orientation: landscape) {
 				width: 230px;
 				float: left;
@@ -877,7 +869,6 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 				width: 2.5em;
 				font-size: 2.4em;
 				margin: 0 auto;
-				margin-bottom: .4em;
 				@media only screen and (min-width: $bp-iphone-portrait + 1) and (max-width: $bp-iphone-landscape) and (orientation: landscape) {
 					margin: 0 0 .4em 0;
 					text-align: left;
@@ -938,8 +929,7 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 			margin-bottom: 1em;
 			@media only screen and (min-width: $bp-iphone-portrait + 1) and (max-width: $bp-iphone-landscape) and (orientation: landscape) {
 				float: right;
-				margin: 0;
-				padding-top: 2.3em;
+				margin: -3em 0 0 0;
 			}
 			.at-phone {
 				position: relative;
@@ -960,6 +950,7 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 		.promo-videos {
 			display: inline-block;
 			width: 100%;
+			margin-top: .5em;
 			margin-bottom: .5em;
 			margin-left: 0;
 			h2 {
@@ -1000,7 +991,7 @@ a.apple-store {
 	margin: 0 auto;
 	padding-top: 6.4em;
 	@media only screen and (min-width: $bp-iphone-portrait + 1) and (max-width: $bp-iphone-landscape) and (orientation: landscape) {
-		padding-top: 5.4em;
+		padding-top: 4em;
 	}
 	h1 {
 		font-family: "trump gothic east", sans-serif;
@@ -1276,4 +1267,28 @@ a.apple-store {
 }
 @keyframes moveFromBottom {
 	from { transform: translateY(100%); }
+}
+
+
+/*--------- RESPONSIVE STYLE LOADING --------*/
+/*--------- FOR EVERYTHING OTHER THAN iPHONE --------*/
+
+/* iPad Portrait */
+@media only screen and (min-width: $bp-iphone-landscape + 1) and (max-width: $bp-ipad-portrait) and (orientation: portrait) {
+	@import 'ipad-portrait';
+}
+
+/* iPad Landscape */
+@media only screen and (min-width: $bp-ipad-portrait + 1) and (max-width: $bp-ipad-landscape) and (orientation: landscape) {
+	@import 'ipad-landscape';
+}
+
+/* Small Desktop */
+@media only screen and (max-height: $bp-desktop-small-height) and (min-width: $bp-iphone-landscape + 1) and (max-width: $bp-desktop) {
+	@import 'desktop-small';
+}
+
+/* Large Desktop */
+@media only screen and (min-width: $bp-desktop + 1) and (orientation: landscape) {
+	@import 'desktop-large';
 }

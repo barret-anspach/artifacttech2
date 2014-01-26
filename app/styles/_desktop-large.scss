@@ -267,7 +267,9 @@
 			font-weight: 700;
 			margin-bottom: .4em;
 			&.uncramp {
+				width: 100%;
 				float: none;
+				margin-right: 0;
 				&.move-up {
 					margin-top: 0em;
 				}
@@ -277,10 +279,15 @@
 			font-size: 23px;
 			line-height: 1.2em;
 			margin-bottom: 1em;
-			&.curation-text {
+			&.platform-text {
 				font-size: 23px;
 				line-height: 1.2em;
-				margin-bottom: 1em;
+				padding-left: 0;
+				&.curation-text {
+					font-size: 23px;
+					line-height: 1.2em;
+					margin-bottom: 1em;
+				}
 			}
 		}
 	}
@@ -332,6 +339,7 @@
 		}
 	}
 	.at-phones {
+		padding-top: 2.3em;
 		width: 456px;
 		.at-phone {
 			width: 221px;
