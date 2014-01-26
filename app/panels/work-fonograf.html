@@ -4,19 +4,37 @@
             <h1 class="at-app-title">Fonograf</h1>
             <p class="at-app-desc">We are fans of music. We built Fonograf to use ourselves because we wanted a better way to discover new music around us. Music tastes and music events are an excellent incentive to test users willingness to curate their own filter in an open network. Band performances and their relationship with venues is an excellent loop to test willingness for collaboration on stories. This led us to LENS<span class="trade">&trade;</span> and the need to give trusted sources, key contributors, and creators a direct publishing platform to their most interested audiences.</p>
             <div class="promo-videos">
-                <h2><a ng-href="" target="_blank">Promo Video #1</a></h2>
-                <h2><a ng-href="" target="_blank">Promo Video #2</a></h2>
+                <h2><a data-toggle="modal" data-target="#promoVideo1">Promo Video #1</a></h2>
+                <div class="modal fade" id="promoVideo1" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <iframe src="http://player.vimeo.com/video/65173823" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2><a data-toggle="modal" data-target="#promoVideo2">Promo Video #2</a></h2>
+                <div class="modal fade" id="promoVideo2" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <iframe src="http://player.vimeo.com/video/84422518" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
         <a class="apple-store" background-img="../images/AT-itunes.png" size="cover"></a>
     </div>
 
-    <a class="at-arrow-left" ng-click="previousView('work')" ng-hide="isMobile()">
+    <a class="at-arrow-left lower" ng-click="previousView('work')">
         <img src="images/arrow-left.png">
     </a>
 
-    <a class="at-arrow-right" ng-click="nextView('work')" ng-hide="isMobile()">
+    <a class="at-arrow-right lower" ng-click="nextView('work')">
         <img src="images/arrow-right.png">
     </a>
 </div>

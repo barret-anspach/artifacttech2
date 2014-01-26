@@ -3,25 +3,25 @@
     <section id='home' class="fullpage" image="../images/bg/AT_home-bg.png" size="cover" panel="1" hm-swipe-up="swipeUp()" >
         <div class="container">
             <span class="at-main-message"><h1>You are here</h1></span>
-            <a class="at-arrow-down animated bounce" scroll-to="about" bounce-on="['hover']">
+            <a class="at-arrow-down animated bounce" scroll-to="about" bounce-on="['mouseenter']">
                 <img src="images/arrow-down.png">
             </a>
         </div>
     </section>
 
-    <section id="about" rn-carousel rn-carousel-index='index.about' rn-carousel-buffered hm-swipe-up="swipeUp()">
+    <section id="about" rn-carousel rn-carousel-index='index.about' rn-carousel-buffered hm-swipe-up="swipeUp()" peep-show-on="{event: 'click', class: 'animated peep-show'}">
         <div ng-repeat="view in views.about" image="{{view.background}}" panel="1">
             <div ng-include="view.url"></div>
         </div>
     </section>
 
-    <section id="platform" rn-carousel rn-carousel-index='index.platform' rn-carousel-buffered hm-swipe-up="swipeUp()">
+    <section id="platform" rn-carousel rn-carousel-index='index.platform' rn-carousel-buffered hm-swipe-up="swipeUp()" bounce-right-on="['click']">
         <div ng-repeat="image in views.platform" image="{{image.background}}" panel="1">
             <div ng-include="image.url"></div>
         </div>
     </section>
 
-    <section id="work" rn-carousel rn-carousel-index='index.work' rn-carousel-buffered hm-swipe-up="swipeUp()">
+    <section id="work" rn-carousel rn-carousel-index='index.work' rn-carousel-buffered hm-swipe-up="swipeUp()" bounce-right-on="['hover']">
         <div ng-repeat="image in views.work" image="{{image.background}}" panel="1">
             <div ng-include="image.url"></div>
         </div>
