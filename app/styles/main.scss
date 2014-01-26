@@ -1139,6 +1139,47 @@ a.apple-store {
 	-moz-animation-name: bounce;
 	animation-name: bounce;
 }
+@-webkit-keyframes bounce-right {
+	0%, 20%, 50%, 80%, 100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+
+	40% {
+		-webkit-transform: translateX(-30px);
+		transform: translateX(-30px);
+	}
+
+	60% {
+		-webkit-transform: translateX(-15px);
+		transform: translateX(-15px);
+	}
+}
+
+@keyframes bounce-right {
+	0%, 20%, 50%, 80%, 100% {
+		-webkit-transform: translateX(0);
+		-ms-transform: translateX(0);
+		transform: translateX(0);
+	}
+
+	40% {
+		-webkit-transform: translateX(-30px);
+		-ms-transform: translateX(-30px);
+		transform: translateX(-30px);
+	}
+
+	60% {
+		-webkit-transform: translateX(-15px);
+		-ms-transform: translateX(-15px);
+		transform: translateX(-15px);
+	}
+}
+.bounce-right {
+	-webkit-animation-name: bounce-right;
+	-moz-animation-name: bounce-right;
+	animation-name: bounce-right;
+}
 
 .at-page-moveToLeft {
 	-webkit-animation: moveToLeft .6s ease both;
