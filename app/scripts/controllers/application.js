@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('artifactApp')
-    .controller('ApplicationCtrl', function ($scope, $anchorScroll, $location, $window) {
+    .controller('ApplicationCtrl', function ($scope, $anchorScroll, $location, $window, $timeout) {
 
         $scope.$location = $location;
         $scope.currentId = 'home';
@@ -10,6 +10,8 @@ angular.module('artifactApp')
         $scope.currentAboutIndex = 0;
         $scope.currentPlatformIndex = 0;
         $scope.currentWorkIndex = 0;
+
+        $scope.index = {about: 0 , platform: 0, work: 0};
 
         $scope.userAgent = navigator.userAgent.toLowerCase();
         window.console.log($scope.userAgent);
@@ -67,40 +69,39 @@ angular.module('artifactApp')
             $scope.views.about = $scope.mobileAbout;
         }
         
-        window.console.log($scope.views);
 
         $scope.resetViews = function(){
-            $scope.currentAboutIndex = 0;
-            $scope.currentPlatformIndex = 0;
-            $scope.currentWorkIndex = 0;
+
             window.console.log($scope.currentAboutIndex);
             angular.forEach($scope.views, function (value, key) {
                 $scope.currentViews[key] = value[0];
+                $scope.index[key] = 0;
             });
-            window.console.log($scope.currentViews);
         };
 
         $scope.currentViewById = function(key, id){
-            window.console.log(key);
-            window.console.log('current view is: ' + id);
             $scope.currentView = key;
             $scope.currentId = id;
             $scope.currentViews[key] = _.find($scope.views[key], {id: id});
+            $scope.index[key] = $scope.views[key].indexOf($scope.currentViews[key]);
         };
 
         $scope.nextView = function(key){
-            window.console.log(key);
-            $scope.currentViews[key] = $scope.views[key][$scope.views[key].indexOf($scope.currentViews[key])+ 1];
-            $scope.currentId = $scope.currentViews[key].id;
+            $scope.views[key].currentIndex += 1;
+            $scope.currentViews[key] = $scope.views[key][$scope.views[key].currentIndex];
+            window.console.log($scope.currentViews[key]);
+            $scope.index[key] +=1;
+
         };
 
         $scope.previousView = function(key){
-            $scope.currentViews[key] = $scope.views[key][$scope.views[key].indexOf($scope.currentViews[key]) - 1];
-            $scope.currentId = $scope.currentViews[key].id;
+            $scope.views[key].currentIndex -= 1;
+            $scope.currentViews[key] = $scope.views[key][$scope.views[key].currentIndex];
+            window.console.log($scope.currentViews[key]);
+            $scope.index[key] -= 1;
         };
 
         $scope.resetViews();
-
 
         $scope.isLoaded = false;
         $scope.isHome = true;
@@ -124,7 +125,9 @@ angular.module('artifactApp')
         $scope.isInView = function(id){
             $scope.currentView = id;
             window.console.log('current view is: ' + id);
-            $scope.resetViews();
+            $timeout(function(){
+                $scope.resetViews();
+            }, 1000)
         };
 
         $scope.isActiveLink = function(path, id){

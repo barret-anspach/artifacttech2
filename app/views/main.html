@@ -7,23 +7,23 @@
     </div>
 </section>
 
-<ul id="about" rn-carousel rn-carousel-control rn-carousel-index='currentAboutIndex' rn-carousel-buffered>
-    <li ng-repeat="image in views.about" image="{{image.background}}" panel="1">
-        <div ng-include="image.url"></div>
-    </li>
-</ul>
+<section id="about" rn-carousel rn-carousel-index='index.about' rn-carousel-buffered>
+    <div ng-repeat="view in views.about" image="{{view.background}}" panel="1">
+        <div ng-include="view.url"></div>
+    </div>
+</section>
 
-<ul id="platform" rn-carousel rn-carousel-control rn-carousel-index='currentPlatformIndex' rn-carousel-buffered>
-    <li ng-repeat="image in views.platform" image="{{image.background}}" panel="1">
+<section id="platform" rn-carousel rn-carousel-index='index.platform' rn-carousel-buffered>
+    <div ng-repeat="image in views.platform" image="{{image.background}}" panel="1">
         <div ng-include="image.url"></div>
-    </li>
-</ul>
+    </div>
+</section>
 
-<ul id="work" rn-carousel rn-carousel-control rn-carousel-index='currentWorkIndex' rn-carousel-buffered>
-    <li ng-repeat="image in views.work" image="{{image.background}}" panel="1">
+<section id="work" rn-carousel rn-carousel-index='index.work' rn-carousel-buffered>
+    <div ng-repeat="image in views.work" image="{{image.background}}" panel="1">
         <div ng-include="image.url"></div>
-    </li>
-</ul>
+    </div>
+</section>
 
 <!--<input type="number" ng-model="currentWorkIndex">-->
 
@@ -35,7 +35,7 @@
     <!--<div id="work" ng-include="currentViews.work.url"></div>-->
 <!--</div>-->
 
-<section id="contact" panel="1" image="../images/bg/AT_contact-us.png" size="cover">
+<section id="contact" class='fullpage' panel="1" image="../images/bg/AT_contact-us.png" size="cover">
     <div class="container">
         <div class="at-contact">
             <h1>Contact Us</h1>
@@ -51,11 +51,14 @@
                 <a class="twitter" ng-href="https://twitter.com/fonografmusic" target="_blank"></a>
             </div>
         </div>
+
     </div>
     <div class="at-footer">
         <p>Copyright &copy; Artifact Technologies 2012. All rights reserved</p>
     </div>
 </section>
+
+
 
 
 
