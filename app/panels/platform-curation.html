@@ -5,11 +5,11 @@
             <p class="platform-text curation-text">LENS<span class="trade">&trade;</span> allows businesses to offer the most relevant and interactive content inside their network, customized to users desires.</p>
         </div>
     </div>
-    <a class="at-arrow-left lower" ng-click="previousView('platform')">
+    <a class="at-arrow-left lower" ng-click="previousView('platform')" ng-hide="isMobile()">
     <img src="images/arrow-left.png">
     </a>
 
-    <a class="at-arrow-right lower" ng-click="nextView('platform')">
+    <a class="at-arrow-right lower" ng-click="nextView('platform')" ng-hide="isMobile()">
     <img src="images/arrow-right.png">
     </a>
 </div>

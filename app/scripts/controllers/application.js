@@ -87,18 +87,14 @@ angular.module('artifactApp')
         };
 
         $scope.nextView = function(key){
-            $scope.views[key].currentIndex += 1;
-            $scope.currentViews[key] = $scope.views[key][$scope.views[key].currentIndex];
-            window.console.log($scope.currentViews[key]);
             $scope.index[key] +=1;
-
+            $scope.currentViews[key] = $scope.views[key][$scope.index[key]];
+            window.console.log($scope.currentViews[key]);
         };
 
         $scope.previousView = function(key){
-            $scope.views[key].currentIndex -= 1;
-            $scope.currentViews[key] = $scope.views[key][$scope.views[key].currentIndex];
-            window.console.log($scope.currentViews[key]);
             $scope.index[key] -= 1;
+            $scope.currentViews[key] = $scope.views[key][$scope.index[key]];
         };
 
         $scope.resetViews();
@@ -109,8 +105,6 @@ angular.module('artifactApp')
 
         $(window).on('scroll', function(){
             var thisScroll = $window.scrollY;
-//            window.console.log(thisScroll > lastScroll);
-//            window.console.log(lastScroll);
             lastScroll = thisScroll;
             $scope.$apply(function(){
                 $scope.isHome = ($window.scrollY < 300);
@@ -118,13 +112,11 @@ angular.module('artifactApp')
         });
         
         $scope.contentLoaded = function(){
-//            window.console.log('include loaded');
             $scope.isLoaded = true;
         };
 
         $scope.isInView = function(id){
             $scope.currentView = id;
-            window.console.log('current view is: ' + id);
             $timeout(function(){
                 $scope.resetViews();
             }, 1000)

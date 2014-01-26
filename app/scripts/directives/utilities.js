@@ -27,6 +27,26 @@ angular.module('artifactApp')
         }
     })
 
+    .directive('bounceOn', function(){
+        return function(scope, element, attrs){
+            var events = scope.$eval(attrs.bounceOn);
+            window.console.log(events);
+
+            angular.forEach(events, function (value, key) {
+                window.console.log(value);
+                element.on(value, function(){
+                    $(element).toggleClass('animated bounce');
+                    window.console.log('i should be shaking');
+                });
+            });
+
+            $(document).ready(function(){
+                $(element).effect('animated bounce');
+            })
+        }
+    })
+
+
     .directive('panel', function ($window, $timeout) {
         return {
             restrict: 'EA',
@@ -44,10 +64,10 @@ angular.module('artifactApp')
                 scope.size = scope.size ? scope.size : 'cover';
                 scope.attachment = scope.attachment ? scope.attachment : 'scroll';
                 scope.panel = scope.$eval(attrs.panel);
-                window.console.log(scope.image);
+//                window.console.log(scope.image);
 
                 attrs.$observe('image', function(newVal){
-                    window.console.log(newVal);
+//                    window.console.log(newVal);
                 });
                 
                 if(attrs.color){
@@ -167,7 +187,7 @@ angular.module('artifactApp')
 
                 function scroll(scrollObj){
                     $("body").animate(scrollObj, 400, 'swing', function(){
-                        window.console.log('scroll call back');
+//                        window.console.log('scroll call back');
                     });
                 }
 
@@ -208,7 +228,7 @@ angular.module('artifactApp')
         return {
             restrict: "A",
             link: function(scope, element, attr) {
-                window.console.log(window.innerWidth);
+//                window.console.log(window.innerWidth);
                 if(window.innerWidth <= 568) {
                     $(element).hide();
                 }
@@ -242,7 +262,7 @@ angular.module('artifactApp')
             link: function(scope, element, attr){
 
                 var elementId = attr.scrollTo;
-                window.console.log(elementId);
+//                window.console.log(elementId);
                 scope.currentPath = scope.toPath;
                 scope.currentId = scope.toId;
 

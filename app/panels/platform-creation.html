@@ -5,11 +5,11 @@
             <p class="platform-text">Our integrated control panel allows an administrator to strategically deploy sponsored mosaics, and monitor their business profile.</p>
         </div>
     </div>
-    <a class="at-arrow-left lower" ng-click="previousView('platform')">
+    <a class="at-arrow-left lower" ng-click="previousView('platform')" ng-hide="isMobile()">
         <img src="images/arrow-left.png">
     </a>
 
-    <a class="at-arrow-right lower" ng-click="nextView('platform')">
+    <a class="at-arrow-right lower" ng-click="nextView('platform')" ng-hide="isMobile()">
         <img src="images/arrow-right.png">
     </a>
 </div>
