@@ -473,6 +473,10 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 	top: 5.4em;
 	padding: 0;
 	@media only screen and (min-width: $bp-iphone-portrait) and (orientation: portrait) {
+		width: 14em;
+		padding: 15px;
+		border-radius: 4px;
+		background: rgba(255,255,255,.7);
 		background-position: bottom left;
 	}
 	@media only screen and (min-width: $bp-iphone-portrait + 1) and (max-width: $bp-iphone-landscape) and (orientation: landscape) {
