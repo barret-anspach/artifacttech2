@@ -1,0 +1,64 @@
+.my-slide-container {
+  position:relative;
+}
+
+.my-slide-animation.ng-enter, .my-slide-animation.ng-leave {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:100%;
+}
+
+.my-slide-animation.ng-enter {
+  -webkit-animation: 0.5s slide-animation-enter;
+  animation: 0.5s slide-animation-enter;
+}
+
+.my-slide-animation.ng-leave {
+  -webkit-animation: 0.5s slide-animation-leave;
+  animation: 0.5s slide-animation-leave;
+}
+
+
+
+@keyframes slide-animation-enter {
+  from {
+    z-index:100;
+    left:600px;
+    top: 0;
+  }
+  to {
+    left:0;
+  }
+}
+
+@keyframes slide-animation-leave {
+  from {
+    top: 0;
+    left:0;
+  }
+  to {
+    left:-600px;
+  }
+}
+
+@-webkit-keyframes slide-animation-enter {
+  from {
+    z-index:100;
+    left:600px;
+  }
+  to {
+    left:0;
+  }
+}
+
+@-webkit-keyframes slide-animation-leave {
+  from {
+    z-index:101;
+    left:0;
+  }
+  to {
+    left:-600px;
+  }
+}

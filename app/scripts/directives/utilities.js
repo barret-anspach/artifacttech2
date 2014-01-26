@@ -27,6 +27,26 @@ angular.module('artifactApp')
         }
     })
 
+    .directive('bounceOn', function(){
+        return function(scope, element, attrs){
+            var events = scope.$eval(attrs.bounceOn);
+            window.console.log(events);
+
+            angular.forEach(events, function (value, key) {
+                window.console.log(value);
+                element.on(value, function(){
+                    $(element).toggleClass('animated bounce');
+                    window.console.log('i should be shaking');
+                });
+            });
+
+            $(document).ready(function(){
+                $(element).effect('animated bounce');
+            })
+        }
+    })
+
+
     .directive('panel', function ($window, $timeout) {
         return {
             restrict: 'EA',
@@ -44,10 +64,10 @@ angular.module('artifactApp')
                 scope.size = scope.size ? scope.size : 'cover';
                 scope.attachment = scope.attachment ? scope.attachment : 'scroll';
                 scope.panel = scope.$eval(attrs.panel);
-                window.console.log(scope.image);
+//                window.console.log(scope.image);
 
                 attrs.$observe('image', function(newVal){
-                    window.console.log(newVal);
+//                    window.console.log(newVal);
                 });
                 
                 if(attrs.color){
@@ -167,7 +187,7 @@ angular.module('artifactApp')
 
                 function scroll(scrollObj){
                     $("body").animate(scrollObj, 400, 'swing', function(){
-                        window.console.log('scroll call back');
+//                        window.console.log('scroll call back');
                     });
                 }
 
@@ -178,11 +198,62 @@ angular.module('artifactApp')
 //                NOTE:
 //                this sets up a listener for the window scroll event in order to check if a panel is in isScrolledIntoView
 
+
+//                var scrollEvent = 'scroll';
+//                var el = $(window);
+//                var interval;
+//                var handler;
+//                var INTERVAL_DELAY = 500;
+//                var scrollPosition = {
+//                    x: 0,
+//                    y: 0
+//                };
+//                var scrollStopped = true;
 //
-//                $(window).bind('scroll',function () {
-//                    clearTimeout(timer);
-//                    timer = setTimeout( refresh , 800 );
-//                });
+//                var bindScroll = function() {
+//
+//                    handler = function(event) {
+////                        window.console.log('im scrolling');
+//                        scrollPosition.x = el.scrollLeft();
+//                        scrollPosition.y = el.scrollTop();
+////                        window.console.log(scrollPosition);
+//
+//                        startInterval(event);
+//                        unbindScroll();
+//                        scrollTrigger(event, false);
+//                    };
+//
+//                    $(window).bind('scroll', handler);
+//                };
+//
+//                var startInterval = function(event) {
+//                    interval = $window.setInterval(function() {
+//                        if(scrollPosition.x == el.scrollLeft() && scrollPosition.y == el.scrollTop()) {
+//                            $window.clearInterval(interval);
+//                            scrollStopped = true;
+//                            $timeout(function(){
+//                                bindScroll();
+//                                scrollTrigger(event, true);
+//                                window.console.log('scroll stopped');
+//                            }, 200);
+//                        } else {
+//                            scrollStopped = false;
+//                            scrollPosition.x = el.scrollLeft();
+//                            scrollPosition.y = el.scrollTop();
+//                        }
+//                    }, INTERVAL_DELAY);
+//                };
+//
+//                var unbindScroll = function() {
+//                    // be nice to others, don't unbind their scroll handlers
+//                    $(window).unbind('scroll', handler);
+//                };
+//
+//                var scrollTrigger = function(event, isEndEvent) {
+//                    window.console.log('calling scroll trigger');
+//                };
+//
+//                bindScroll();
 
 
             }
@@ -208,7 +279,7 @@ angular.module('artifactApp')
         return {
             restrict: "A",
             link: function(scope, element, attr) {
-                window.console.log(window.innerWidth);
+//                window.console.log(window.innerWidth);
                 if(window.innerWidth <= 568) {
                     $(element).hide();
                 }
@@ -231,6 +302,63 @@ angular.module('artifactApp')
         }
     }])
 
+    .directive('scrollStop', function($window){
+        return function(scope, elem, attrs){
+            window.console.log('hello scroll stop');
+            var interval,
+                handler,
+                el = elem[0];
+            
+            var scrollEvent = 'scroll';
+            var INTERVAL_DELAY = 500;
+            var scrollPosition = {
+                    x: 0,
+                    y: 0
+                };
+
+            var bindScroll = function() {
+
+                handler = function(event) {
+                    scrollPosition.x = el.scrollLeft;
+                    scrollPosition.y = el.scrollTop;
+
+                    startInterval(event);
+                    unbindScroll();
+                    scrollTrigger(event, false);
+                };
+
+                elem.bind(scrollEvent, handler);
+            };
+
+            var startInterval = function(event) {
+                interval = $window.setInterval(function() {
+                    if(scrollPosition.x == el.scrollLeft && scrollPosition.y == el.scrollTop) {
+                        $window.clearInterval(interval);
+                        bindScroll();
+                        scrollTrigger(event, true);
+                        window.console.log('scroll stopped');
+                    } else {
+                        scrollPosition.x = el.scrollLeft;
+                        scrollPosition.y = el.scrollTop;
+                    }
+                }, INTERVAL_DELAY);
+            };
+
+            var unbindScroll = function() {
+                // be nice to others, don't unbind their scroll handlers
+                element.unbind(scrollEvent, handler);
+            };
+
+            var scrollTrigger = function(event, isEndEvent) {
+                scope.$apply(function() {
+                    fn(scope, {$event: event, isEndEvent: isEndEvent});
+                });
+            };
+
+            bindScroll();
+        }
+    })
+
     .directive("scrollTo", ["$window","$location", function($window, $location){
         return {
             restrict : "AC",
@@ -242,7 +370,7 @@ angular.module('artifactApp')
             link: function(scope, element, attr){
 
                 var elementId = attr.scrollTo;
-                window.console.log(elementId);
+//                window.console.log(elementId);
                 scope.currentPath = scope.toPath;
                 scope.currentId = scope.toId;
 

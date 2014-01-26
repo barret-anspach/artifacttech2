@@ -39,7 +39,7 @@
                 </div>
             </div>
         </div>
-        <a class="at-arrow-left centered" ng-click="previousView('about')">
+        <a class="at-arrow-left centered" ng-click="previousView('about')" ng-hide="isMobile()">
             <img src="../images/arrow-left.png">
         </a>
     </div>
@@ -81,7 +81,7 @@
                 </div>
             </div>
         </div>
-        <a class="at-arrow-right centered" ng-click="nextView('about')">
+        <a class="at-arrow-right centered" ng-click="nextView('about')" ng-hide="isMobile()">
             <img src="../images/arrow-right.png">
         </a>
     </div>

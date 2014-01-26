@@ -1,12 +1,18 @@
 'use strict';
 
 angular.module('artifactApp')
-    .controller('ApplicationCtrl', function ($scope, $anchorScroll, $location, $window) {
+    .controller('ApplicationCtrl', function ($scope, $anchorScroll, $location, $window, $timeout) {
 
         $scope.$location = $location;
         $scope.currentId = 'home';
         $scope.currentPath = $location.url();
-        
+
+        $scope.currentAboutIndex = 0;
+        $scope.currentPlatformIndex = 0;
+        $scope.currentWorkIndex = 0;
+
+        $scope.index = {about: 0 , platform: 0, work: 0};
+
         $scope.userAgent = navigator.userAgent.toLowerCase();
         window.console.log($scope.userAgent);
 
@@ -16,6 +22,7 @@ angular.module('artifactApp')
             for (var i in mobile) if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0) isMobile = true;
             return isMobile
         };
+
 
         $scope.showAbout = false;
 
@@ -62,36 +69,35 @@ angular.module('artifactApp')
             $scope.views.about = $scope.mobileAbout;
         }
         
-        window.console.log($scope.views);
 
         $scope.resetViews = function(){
+
+            window.console.log($scope.currentAboutIndex);
             angular.forEach($scope.views, function (value, key) {
                 $scope.currentViews[key] = value[0];
+                $scope.index[key] = 0;
             });
-            window.console.log($scope.currentViews);
         };
 
         $scope.currentViewById = function(key, id){
-            window.console.log(key);
-            window.console.log('current view is: ' + id);
             $scope.currentView = key;
             $scope.currentId = id;
             $scope.currentViews[key] = _.find($scope.views[key], {id: id});
+            $scope.index[key] = $scope.views[key].indexOf($scope.currentViews[key]);
         };
 
         $scope.nextView = function(key){
-            window.console.log(key);
-            $scope.currentViews[key] = $scope.views[key][$scope.views[key].indexOf($scope.currentViews[key])+ 1];
-            $scope.currentId = $scope.currentViews[key].id;
+            $scope.index[key] +=1;
+            $scope.currentViews[key] = $scope.views[key][$scope.index[key]];
+            window.console.log($scope.currentViews[key]);
         };
 
         $scope.previousView = function(key){
-            $scope.currentViews[key] = $scope.views[key][$scope.views[key].indexOf($scope.currentViews[key]) - 1];
-            $scope.currentId = $scope.currentViews[key].id;
+            $scope.index[key] -= 1;
+            $scope.currentViews[key] = $scope.views[key][$scope.index[key]];
         };
 
         $scope.resetViews();
-
 
         $scope.isLoaded = false;
         $scope.isHome = true;
@@ -99,8 +105,6 @@ angular.module('artifactApp')
 
         $(window).on('scroll', function(){
             var thisScroll = $window.scrollY;
-//            window.console.log(thisScroll > lastScroll);
-//            window.console.log(lastScroll);
             lastScroll = thisScroll;
             $scope.$apply(function(){
                 $scope.isHome = ($window.scrollY < 300);
@@ -108,14 +112,14 @@ angular.module('artifactApp')
         });
         
         $scope.contentLoaded = function(){
-//            window.console.log('include loaded');
             $scope.isLoaded = true;
         };
 
         $scope.isInView = function(id){
             $scope.currentView = id;
-            window.console.log('current view is: ' + id);
-            $scope.resetViews();
+            $timeout(function(){
+                $scope.resetViews();
+            }, 1000)
         };
 
         $scope.isActiveLink = function(path, id){
@@ -133,8 +137,8 @@ angular.module('artifactApp')
             window.console.log('i done swiped to '+ id);
         };
         
-        $scope.navChanged = function(top){
-            window.console.log(top);
+        $scope.swipeUp = function(id){
+            window.console.log('swiped up');
         };
 
 
