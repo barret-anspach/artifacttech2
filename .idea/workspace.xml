@@ -2,24 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5304c7fd-a761-4ed0-acbb-ad0559b807ba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/_ipad-portrait.scss" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/styles/ipad.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/styles/ipad.scss" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/styles/animation.css" afterPath="$PROJECT_DIR$/app/styles/_desktop-large.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/styles/animation.scss" afterPath="$PROJECT_DIR$/app/styles/_animation.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/styles/desktop.css" afterPath="$PROJECT_DIR$/app/styles/_desktop-small.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/styles/desktop.scss" afterPath="$PROJECT_DIR$/app/styles/_ipad-landscape.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/styles/mixins.scss" afterPath="$PROJECT_DIR$/app/styles/_mixins.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/panels/about-team-1.html" afterPath="$PROJECT_DIR$/app/panels/about-team-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/panels/about-team-2.html" afterPath="$PROJECT_DIR$/app/panels/about-team-2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/panels/about-team-3.html" afterPath="$PROJECT_DIR$/app/panels/about-team-3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/panels/about-team-4.html" afterPath="$PROJECT_DIR$/app/panels/about-team-4.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/ArtifactSite.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/_desktop-large.scss" afterPath="$PROJECT_DIR$/app/styles/_desktop-large.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/_desktop-small.scss" afterPath="$PROJECT_DIR$/app/styles/_desktop-small.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/_ipad-landscape.scss" afterPath="$PROJECT_DIR$/app/styles/_ipad-landscape.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/panels/about-team-5.html" afterPath="$PROJECT_DIR$/app/panels/about-team-5.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.css" afterPath="$PROJECT_DIR$/app/styles/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/main.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.scss" afterPath="$PROJECT_DIR$/app/styles/main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/panels/platform-analysis.html" afterPath="$PROJECT_DIR$/app/panels/platform-analysis.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/panels/platform-commerce.html" afterPath="$PROJECT_DIR$/app/panels/platform-commerce.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/panels/platform-creation.html" afterPath="$PROJECT_DIR$/app/panels/platform-creation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/panels/platform-curation.html" afterPath="$PROJECT_DIR$/app/panels/platform-curation.html" />
     </list>
     <ignored path="ArtifactSite.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,22 +34,13 @@
     <favorites_list name="ArtifactSite" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.50600183">
+    <splitter split-orientation="horizontal" split-proportion="0.44690675">
       <split-first>
         <leaf>
-          <file leaf-file-name="main.scss" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="main.scss" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="837" column="0" selection-start="17076" selection-end="17076" vertical-scroll-proportion="0.70030123" vertical-offset="12090" max-vertical-offset="19275">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="_mixins.scss" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/styles/_mixins.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="2" column="13" selection-start="61" selection-end="74" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="180">
+                <state line="1291" column="53" selection-start="26747" selection-end="26747" vertical-scroll-proportion="0.80406386" vertical-offset="18811" max-vertical-offset="19500">
                   <folding />
                 </state>
               </provider>
@@ -66,37 +50,19 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="main.scss" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="1279" column="0" selection-start="26665" selection-end="26665" vertical-scroll-proportion="-11.5" vertical-offset="18909" max-vertical-offset="19275">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="_desktop-small.scss" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/styles/_desktop-small.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="212" column="0" selection-start="2994" selection-end="2994" vertical-scroll-proportion="-12.041667" vertical-offset="2891" max-vertical-offset="5955">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="_desktop-large.scss" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="_desktop-large.scss" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/styles/_desktop-large.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="198" column="0" selection-start="2706" selection-end="2706" vertical-scroll-proportion="-6.4166665" vertical-offset="2816" max-vertical-offset="5745">
+                <state line="206" column="0" selection-start="2850" selection-end="2850" vertical-scroll-proportion="0.35346097" vertical-offset="2850" max-vertical-offset="6060">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="_ipad-portrait.scss" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="_ipad-portrait.scss" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/styles/_ipad-portrait.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="195" column="0" selection-start="2736" selection-end="2762" vertical-scroll-proportion="0.42507645" vertical-offset="2647" max-vertical-offset="5535">
+                <state line="303" column="21" selection-start="4326" selection-end="4326" vertical-scroll-proportion="-5.2040815" vertical-offset="4290" max-vertical-offset="5790">
                   <folding />
                 </state>
               </provider>
@@ -105,7 +71,16 @@
           <file leaf-file-name="_ipad-landscape.scss" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/styles/_ipad-landscape.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="201" column="0" selection-start="2724" selection-end="2724" vertical-scroll-proportion="-5.7916665" vertical-offset="2876" max-vertical-offset="5805">
+                <state line="314" column="0" selection-start="4451" selection-end="4451" vertical-scroll-proportion="-3.75" vertical-offset="4620" max-vertical-offset="6075">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_desktop-small.scss" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/styles/_desktop-small.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="105" column="0" selection-start="28" selection-end="1436" vertical-scroll-proportion="-15.625" vertical-offset="1200" max-vertical-offset="6150">
                   <folding />
                 </state>
               </provider>
@@ -132,22 +107,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/styles/_iphone-l.scss" />
-        <option value="$PROJECT_DIR$/app/styles/_mixins.scss" />
+        <option value="$PROJECT_DIR$/app/panels/sam.html" />
+        <option value="$PROJECT_DIR$/app/panels/robb.html" />
+        <option value="$PROJECT_DIR$/app/panels/matt.html" />
+        <option value="$PROJECT_DIR$/app/panels/cindi.html" />
+        <option value="$PROJECT_DIR$/app/panels/brent.html" />
+        <option value="$PROJECT_DIR$/app/panels/ben.html" />
+        <option value="$PROJECT_DIR$/app/panels/adrienne.html" />
+        <option value="$PROJECT_DIR$/app/panels/greg.html" />
+        <option value="$PROJECT_DIR$/app/panels/john.html" />
         <option value="$PROJECT_DIR$/app/styles/_ipad-portrait.scss" />
+        <option value="$PROJECT_DIR$/app/panels/work-fonograf.html" />
         <option value="$PROJECT_DIR$/app/styles/_ipad-landscape.scss" />
         <option value="$PROJECT_DIR$/app/styles/_desktop-small.scss" />
-        <option value="$PROJECT_DIR$/app/styles/_desktop-large.scss" />
-        <option value="$PROJECT_DIR$/app/panels/about-team-1.html" />
-        <option value="$PROJECT_DIR$/app/panels/about-team-2.html" />
-        <option value="$PROJECT_DIR$/app/panels/about-team-3.html" />
-        <option value="$PROJECT_DIR$/app/panels/about-team-4.html" />
-        <option value="$PROJECT_DIR$/app/panels/about-team-5.html" />
-        <option value="$PROJECT_DIR$/app/panels/platform-commerce.html" />
-        <option value="$PROJECT_DIR$/app/panels/platform-curation.html" />
-        <option value="$PROJECT_DIR$/app/panels/platform-creation.html" />
-        <option value="$PROJECT_DIR$/app/panels/platform-analysis.html" />
         <option value="$PROJECT_DIR$/app/styles/main.scss" />
+        <option value="$PROJECT_DIR$/app/styles/_desktop-large.scss" />
+        <option value="$PROJECT_DIR$/app/panels/about-team-5.html" />
       </list>
     </option>
   </component>
@@ -232,23 +207,9 @@
               <option name="myItemId" value="styles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ArtifactSite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ArtifactSite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="main.scss" />
+              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -265,7 +226,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="panels" />
+              <option name="myItemId" value="styles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -295,7 +256,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="options.lastSelected" value="preferences.externalResources" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ArtifactBrunch" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/panels" />
     <property name="FullScreen" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -415,29 +376,33 @@
       <created>1390342732031</created>
       <updated>1390342732031</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="adding files that were left out of committing">
+      <created>1390697853987</created>
+      <updated>1390697853987</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.223099" sideWeight="0.6710875" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.223099" sideWeight="0.6710875" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32892805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -478,7 +443,8 @@
     </option>
     <MESSAGE value="fixed lots of scrolling issues -- still need to decide how to handle moving between '/' view and horizontal scrolling views -- all the tools are in place, but they aren't quite hooked up.&#10;" />
     <MESSAGE value="changed the gruntfile to build and ftp-deploy -- a pull of this is going to require a fresh npm install" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed the gruntfile to build and ftp-deploy -- a pull of this is going to require a fresh npm install" />
+    <MESSAGE value="adding files that were left out of committing" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding files that were left out of committing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -486,112 +452,114 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/panels/about-team-1.html">
+    <entry file="file://$PROJECT_DIR$/app/panels/robb.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="73" selection-start="3522" selection-end="3522" vertical-scroll-proportion="0.4954955" vertical-offset="360" max-vertical-offset="1890">
+        <state line="39" column="41" selection-start="2165" selection-end="2165" vertical-scroll-proportion="0.7747748" vertical-offset="69" max-vertical-offset="735">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/panels/about-team-2.html">
+    <entry file="file://$PROJECT_DIR$/app/panels/matt.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="69" selection-start="3399" selection-end="3399" vertical-scroll-proportion="0.8133748" vertical-offset="167" max-vertical-offset="1065">
+        <state line="26" column="41" selection-start="1781" selection-end="1781" vertical-scroll-proportion="0.5855856" vertical-offset="0" max-vertical-offset="666">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/panels/about-team-3.html">
+    <entry file="file://$PROJECT_DIR$/app/panels/cindi.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="69" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.41129032" vertical-offset="0" max-vertical-offset="1035">
+        <state line="40" column="41" selection-start="2332" selection-end="2332" vertical-scroll-proportion="0.7822932" vertical-offset="61" max-vertical-offset="750">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/panels/about-team-4.html">
+    <entry file="file://$PROJECT_DIR$/app/panels/brent.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="73" selection-start="3934" selection-end="3934" vertical-scroll-proportion="0.6531532" vertical-offset="555" max-vertical-offset="1440">
+        <state line="30" column="41" selection-start="2077" selection-end="2077" vertical-scroll-proportion="0.65312046" vertical-offset="0" max-vertical-offset="689">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/panels/about-team-5.html">
+    <entry file="file://$PROJECT_DIR$/app/panels/ben.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="73" selection-start="2818" selection-end="2818" vertical-scroll-proportion="0.6756757" vertical-offset="240" max-vertical-offset="1065">
+        <state line="27" column="41" selection-start="2138" selection-end="2138" vertical-scroll-proportion="0.58780843" vertical-offset="0" max-vertical-offset="689">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
+    <entry file="file://$PROJECT_DIR$/app/panels/john.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="0" selection-start="3154" selection-end="3154" vertical-scroll-proportion="0.6291291" vertical-offset="676" max-vertical-offset="1380">
+        <state line="27" column="41" selection-start="1828" selection-end="1828" vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="555">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/nav.html">
+    <entry file="file://$PROJECT_DIR$/app/panels/greg.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="94" selection-start="526" selection-end="526" vertical-scroll-proportion="0.13513513" vertical-offset="0" max-vertical-offset="690">
+        <state line="15" column="23" selection-start="778" selection-end="778" vertical-scroll-proportion="0.23802613" vertical-offset="61" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main.html">
+    <entry file="file://$PROJECT_DIR$/app/panels/work-fonograf.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="6" selection-start="480" selection-end="480" vertical-scroll-proportion="0.2394775" vertical-offset="0" max-vertical-offset="780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/images/bg/AT_our-work-bg-3.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/_mixins.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="61" selection-end="74" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="180">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/_ipad-portrait.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="195" column="0" selection-start="2736" selection-end="2762" vertical-scroll-proportion="0.42507645" vertical-offset="2647" max-vertical-offset="5535">
+        <state line="6" column="73" selection-start="948" selection-end="948" vertical-scroll-proportion="0.13513513" vertical-offset="0" max-vertical-offset="666">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/panels/platform-commerce.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="14" selection-start="603" selection-end="603" vertical-scroll-proportion="0.10885341" vertical-offset="0" max-vertical-offset="689">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/panels/platform-curation.html">
+    <entry file="file://$PROJECT_DIR$/app/styles/_ipad-portrait.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="15" selection-start="278" selection-end="299" vertical-scroll-proportion="0.08708273" vertical-offset="0" max-vertical-offset="689">
+        <state line="303" column="21" selection-start="4326" selection-end="4326" vertical-scroll-proportion="-5.2040815" vertical-offset="4290" max-vertical-offset="5790">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/panels/platform-analysis.html">
+    <entry file="file://$PROJECT_DIR$/app/styles/_ipad-landscape.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="36" selection-start="282" selection-end="282" vertical-scroll-proportion="0.11261261" vertical-offset="0" max-vertical-offset="666">
+        <state line="314" column="0" selection-start="4451" selection-end="4451" vertical-scroll-proportion="-3.75" vertical-offset="4620" max-vertical-offset="6075">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/panels/platform-creation.html">
+    <entry file="file://$PROJECT_DIR$/app/styles/_desktop-small.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="36" selection-start="323" selection-end="323" vertical-scroll-proportion="0.08708273" vertical-offset="0" max-vertical-offset="689">
+        <state line="105" column="0" selection-start="28" selection-end="1436" vertical-scroll-proportion="-15.625" vertical-offset="1200" max-vertical-offset="6150">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="837" column="0" selection-start="17076" selection-end="17076" vertical-scroll-proportion="0.70030123" vertical-offset="12090" max-vertical-offset="19275">
+        <state line="1291" column="53" selection-start="26747" selection-end="26747" vertical-scroll-proportion="0.80406386" vertical-offset="18811" max-vertical-offset="19500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/panels/about-team-5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="452" selection-start="3137" selection-end="3137" vertical-scroll-proportion="0.8333333" vertical-offset="105" max-vertical-offset="1065">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/panels/adrienne.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="40" selection-start="2034" selection-end="2034" vertical-scroll-proportion="0.5405405" vertical-offset="0" max-vertical-offset="666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/_desktop-large.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="206" column="0" selection-start="2850" selection-end="2850" vertical-scroll-proportion="0.35346097" vertical-offset="2850" max-vertical-offset="6060">
           <folding />
         </state>
       </provider>

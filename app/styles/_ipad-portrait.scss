@@ -23,10 +23,13 @@
 	}
 	.at-navbar-banner {
 		.at-navbar-header {
-			width: 23em;            // CHECK to see if works!
-			margin: 0 30px 0 0;
+			width: 23em;
+			margin: 0 10px 0 15px;
+			padding-top: 15px;
+			float: left;
+			clear: none;
 			a {
-				width: 18em;        // CHECK to see if works!
+				width: 18em;
 				font-size: 16px;
 				.logo {
 					width: 12.5px;
@@ -36,6 +39,9 @@
 		}
 		.at-navbar-main {
 			width: 29em;
+			padding-top: 15px;
+			float: left;
+			clear: none;
 			a {
 				font-size: 15px;
 				padding-right: 2%;
@@ -251,7 +257,7 @@
 		}
 	}
 	&.at-platform-top {
-		padding: 5em 5em 0;
+		padding: 6.4em 5em 0;
 	}
 	.at-platform-page {
 		&.on-left {
@@ -261,15 +267,25 @@
 		h1 {
 			font-size: 52px;
 			font-weight: 700;
+			&.uncramp {
+				width: 100%;
+				float: none;
+				margin-right: 0;
+			}
 		}
 		p {
 			font-size: 18px;
 			line-height: 1.2em;
 			margin-bottom: 1em;
-			&.curation-text {
+			&.platform-text {
 				font-size: 18px;
 				line-height: 1.2em;
-				margin-bottom: 1em;
+				padding-left: 0;
+				&.curation-text {
+					font-size: 18px;
+					line-height: 1.2em;
+					margin-bottom: 1em;
+				}
 			}
 		}
 	}
@@ -281,9 +297,9 @@
 	padding-top: 6em;
 	.at-work-page {
 		&.at-work-app {
-			width: 32em;
+			width: 33em;
 			margin-right: 1em;
-			padding-top: 22.5em;
+			padding-top: 24.5em;
 			padding-left: 0;
 			float: right;
 		}
@@ -317,6 +333,7 @@
 			}
 		}
 		.at-phones {
+			padding-top: 2.3em;
 			width: 456px;
 			.at-phone {
 				width: 221px;

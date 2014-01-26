@@ -15,7 +15,7 @@
                         <div class="team-member-text">
                             <p>As a Creator, Writer and Producer, Brent has more than 25 years of experience in entertainment across all platforms. In traditional media, Brent has worked with nearly all the major Hollywood studios.</p>
                         </div>
-                        <div class="team-member-hobbies">
+                        <div class="team-member-hobbies"  ng-hide="isMobile()">
                             <p>Two Favorite Hobbies:</p>
                             <p>Listening to great music and convincing myself I might one day be as good a musician as those I admire.</p>
                             <p class="quiz">More on Brent:</p>
@@ -25,10 +25,10 @@
                     </div>
                 </div>
             </div>
-        <a class="at-arrow-left" ng-click="previousView('about')">
+        <a class="at-arrow-left centered" ng-click="previousView('about')">
             <img src="../images/arrow-left.png">
         </a>
-        <a class="at-arrow-right" ng-click="nextView('about')">
+        <a class="at-arrow-right centered" ng-click="nextView('about')">
             <img src="../images/arrow-right.png">
         </a>
     </div>

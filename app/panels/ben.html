@@ -13,7 +13,7 @@
                 <div class="team-member-text">
                     <p>Ben McAllister has more than 14 years experience bridging tech&shy;nology, science, and art developing several emerging technologies at key milestones in the music business including streaming audio, DRM, and emerging cross platform systems. As an interactive de&shy;signer and installation artist, Ben's been featured in gallery work bringing his unique motion tracking and audio analysis software to visitors.</p>
                 </div>
-                <div class="team-member-hobbies">
+                <div class="team-member-hobbies"  ng-hide="isMobile()">
                     <p>Two Favorite Hobbies:</p>
                     <p>Writing music and running</p>
                     <p class="quiz">More on Ben:</p>
@@ -22,10 +22,10 @@
                 </div>
             </div>
         </div>
-        <a class="at-arrow-left" ng-click="previousView('about')">
+        <a class="at-arrow-left centered" ng-click="previousView('about')">
             <img src="../images/arrow-left.png">
         </a>
-        <a class="at-arrow-right" ng-click="nextView('about')">
+        <a class="at-arrow-right centered" ng-click="nextView('about')">
             <img src="../images/arrow-right.png">
         </a>
     </div>

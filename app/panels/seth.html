@@ -12,7 +12,7 @@
                 <div class="team-member-text">
                     <p>Our lead on data aggregation, Seth brings a background in re&shy;search, data management and technology from his years studying Music Technology and Cognition at NYU.</p>
                 </div>
-                <div class="team-member-hobbies">
+                <div class="team-member-hobbies"  ng-hide="isMobile()">
                     <p>Two Favorite Hobbies:</p>
                     <p>MUSIC! Furniture shopping.</p>
                     <p class="quiz">More on Seth:</p>
@@ -21,10 +21,10 @@
                 </div>
             </div>
         </div>
-        <a class="at-arrow-left" ng-click="previousView('about')">
+        <a class="at-arrow-left centered" ng-click="previousView('about')">
             <img src="../images/arrow-left.png">
         </a>
-        <a class="at-arrow-right" ng-click="nextView('about')">
+        <a class="at-arrow-right centered" ng-click="nextView('about')">
             <img src="../images/arrow-right.png">
         </a>
     </div>
