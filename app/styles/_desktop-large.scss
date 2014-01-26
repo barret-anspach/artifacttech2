@@ -209,6 +209,9 @@
 			display: inline-block;
 			width: 480px;
 			height: 200px;
+			@media only screen and (max-height: $bp-desktop-small-height) {
+				height: 160px;
+			}
 		}
 		.team-member-banner {
 			h1 {
@@ -220,6 +223,9 @@
 		}
 		.team-member-text {
 			font-size: 1.1em;
+			@media only screen and (max-height: $bp-desktop-small-height) {
+				font-size: 0.9em;
+			}
 		}
 		.team-member-hobbies {
 			p {
@@ -281,6 +287,9 @@
 				width: 100%;
 				float: none;
 				margin: 0;
+				@media only screen and (max-height: $bp-desktop-small-height) {
+					font-size: 45px;
+				}
 				&.move-up {
 					margin-top: 0em;
 				}
@@ -290,14 +299,23 @@
 			font-size: 23px;
 			line-height: 1.2em;
 			margin-bottom: 1em;
+			@media only screen and (max-height: $bp-desktop-small-height) {
+				font-size: 18px;
+			}
 			&.platform-text {
 				font-size: 23px;
 				line-height: 1.2em;
 				padding-left: 0;
+				@media only screen and (max-height: $bp-desktop-small-height) {
+					font-size: 18px;
+				}
 				&.curation-text {
 					font-size: 23px;
 					line-height: 1.2em;
 					margin-bottom: 1em;
+					@media only screen and (max-height: $bp-desktop-small-height) {
+						font-size: 18px;
+					}
 				}
 			}
 		}
@@ -316,6 +334,11 @@
 			padding-top: 21em;
 			padding-left: 0;
 			float: right;
+			@media only screen and (max-height: $bp-desktop-small-height) {
+				width: 41em;
+				margin-right: 1em;
+				padding-top: 15em;
+			}
 		}
 		.text-wrapper {
 			padding-top: 1em;
@@ -348,14 +371,24 @@
 			&.at-app-desc {
 				font-size: 1.5em;
 				line-height: 1.2em;
+				@media only screen and (max-height: $bp-desktop-small-height) {
+					font-size: 16px;
+				}
 			}
 		}
 		.at-phones {
 			padding-top: 0;
 			width: 456px;
+			@media only screen and (max-height: $bp-desktop-small-height) {
+				width: 292px;
+			}
 			.at-phone {
 				width: 221px;
 				height: 448px;
+				@media only screen and (max-height: $bp-desktop-small-height) {
+					width: 139px;
+					height: 282px;
+				}
 			}
 		}
 		.promo-videos {
