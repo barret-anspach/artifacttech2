@@ -6,7 +6,11 @@ angular.module('artifactApp')
         $scope.$location = $location;
         $scope.currentId = 'home';
         $scope.currentPath = $location.url();
-        
+
+        $scope.currentAboutIndex = 0;
+        $scope.currentPlatformIndex = 0;
+        $scope.currentWorkIndex = 0;
+
         $scope.userAgent = navigator.userAgent.toLowerCase();
         window.console.log($scope.userAgent);
 
@@ -16,6 +20,7 @@ angular.module('artifactApp')
             for (var i in mobile) if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0) isMobile = true;
             return isMobile
         };
+
 
         $scope.showAbout = false;
 
@@ -65,6 +70,10 @@ angular.module('artifactApp')
         window.console.log($scope.views);
 
         $scope.resetViews = function(){
+            $scope.currentAboutIndex = 0;
+            $scope.currentPlatformIndex = 0;
+            $scope.currentWorkIndex = 0;
+            window.console.log($scope.currentAboutIndex);
             angular.forEach($scope.views, function (value, key) {
                 $scope.currentViews[key] = value[0];
             });

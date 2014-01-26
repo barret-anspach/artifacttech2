@@ -7,19 +7,35 @@
     </div>
 </section>
 
-<div background-img="{{currentViews.about.background}}" size="cover" class="my-slide-container">
-    <div id="about" ng-include="currentViews.about.url" class="my-slide-animation"></div>
-</div>
+<ul id="about" rn-carousel rn-carousel-control rn-carousel-index='currentAboutIndex' rn-carousel-buffered>
+    <li ng-repeat="image in views.about" image="{{image.background}}" panel="1">
+        <div ng-include="image.url"></div>
+    </li>
+</ul>
 
-<div background-img="{{currentViews.platform.background}}" size="cover">
-    <div id="platform" ng-include="currentViews.platform.url" ></div>
-</div>
+<ul id="platform" rn-carousel rn-carousel-control rn-carousel-index='currentPlatformIndex' rn-carousel-buffered>
+    <li ng-repeat="image in views.platform" image="{{image.background}}" panel="1">
+        <div ng-include="image.url"></div>
+    </li>
+</ul>
 
-<div background-img="{{currentViews.work.background}}" size="cover">
-    <div id="work" ng-include="currentViews.work.url"></div>
-</div>
+<ul id="work" rn-carousel rn-carousel-control rn-carousel-index='currentWorkIndex' rn-carousel-buffered>
+    <li ng-repeat="image in views.work" image="{{image.background}}" panel="1">
+        <div ng-include="image.url"></div>
+    </li>
+</ul>
 
-<section id="contact" class="fullpage" panel="1" image="../images/bg/AT_contact-us.png" size="cover">
+<!--<input type="number" ng-model="currentWorkIndex">-->
+
+<!--<div background-img="{{currentViews.platform.background}}" size="cover">-->
+    <!--<div id="platform" ng-include="currentViews.platform.url" ></div>-->
+<!--</div>-->
+
+<!--<div background-img="{{currentViews.work.background}}" size="cover">-->
+    <!--<div id="work" ng-include="currentViews.work.url"></div>-->
+<!--</div>-->
+
+<section id="contact" panel="1" image="../images/bg/AT_contact-us.png" size="cover">
     <div class="container">
         <div class="at-contact">
             <h1>Contact Us</h1>

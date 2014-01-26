@@ -5,7 +5,8 @@ angular.module('artifactApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ngAnimate'
+  'ngAnimate',
+  "angular-carousel"
 ])
   .config(function ($routeProvider) {
     $routeProvider
