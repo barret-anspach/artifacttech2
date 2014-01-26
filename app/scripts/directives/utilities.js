@@ -27,6 +27,99 @@ angular.module('artifactApp')
         }
     })
 
+    .directive('screen', function($window, $timeout, currentId){
+        return {
+            restrict: 'A',
+            link: function(scope, elem, attr){
+
+                scope.dims = {
+                    windowHeight: 0,
+                    windowWidth: 0,
+                    documentHeight: 0,
+                    documentWidth: 0,
+                    scrollTop: 0,
+                    scrollLeft: 0
+                };
+
+
+                var threshold = $(window).height() / 2;
+
+                var getDims = function(){
+                    scope.dims.windowHeight = $(window).height();   // returns height of browser viewport
+                    scope.dims.documentHeight = $(document).height(); // returns height of HTML document
+                    scope.dims.windowWidth = $(window).width();   // returns width of browser viewport
+                    scope.dims.documentWidth = $(document).width();
+                    scope.dims.scrollTop = $($window).scrollTop();
+                    scope.dims.scrollLeft = $($window).scrollLeft();
+                    threshold = $(window).height() / 2;
+                };
+
+                var breakPoints = [];
+                var sections = elem.find('section');
+
+                var getBreakPoints = function(){
+                    breakPoints = [];
+                    angular.forEach(sections, function (value, index) {
+                        var thisSec = $(value);
+                        if(index === 0){
+                            breakPoints.push({top:0, id:thisSec.attr('id')});
+                        }
+                        else{
+                            var top = breakPoints[index-1].top + scope.dims.windowHeight;
+                            breakPoints.push({top: top, id: thisSec.attr('id')});
+                        }
+                    });
+                };
+
+
+                var currentSection = sections[0];
+                var lastScroll = 0;
+
+                var alreadyThere = false;
+
+                function scroll(scrollObj){
+                    if(!alreadyThere){
+                        window.console.log('scrolling to ' + scrollObj.scrollTop);
+                        $("body").animate(scrollObj, 400, 'swing', function(){
+                            alreadyThere = true;
+
+                        });
+                    }
+                }
+
+                var checkScrollTop = function(){
+                    angular.forEach(breakPoints, function (value, key) {
+                        if(Math.abs(value.top - scope.dims.scrollTop) < (scope.dims.windowHeight / 2)){
+                            if((Math.abs(value.top - scope.dims.scrollTop) !== 0)){
+                                currentId.setId(value.id);
+                                scroll({scrollTop: value.top});
+                            }
+                        }
+                    });
+                };
+
+
+                $(document).ready(function(){
+                    var delay = 800;
+                    var timeout = null;
+                    $(window).bind('scroll',function(){
+                        alreadyThere = false;
+                        clearTimeout(timeout);
+                        timeout = setTimeout(function(){
+                            getDims();
+                            getBreakPoints();
+                            checkScrollTop();
+                        },delay);
+                    });
+                });
+
+                getDims();
+
+            }
+        }
+    })
+
+
     .directive('bounceOn', function(){
         return function(scope, element, attrs){
             var events = scope.$eval(attrs.bounceOn);
@@ -53,7 +146,6 @@ angular.module('artifactApp')
             scope:{
                 image: "@",
                 size: "@",
-                inView: '&',
                 attachment:"@",
                 position:"@",
                 master: '@'
@@ -64,7 +156,6 @@ angular.module('artifactApp')
                 scope.size = scope.size ? scope.size : 'cover';
                 scope.attachment = scope.attachment ? scope.attachment : 'scroll';
                 scope.panel = scope.$eval(attrs.panel);
-//                window.console.log(scope.image);
 
                 attrs.$observe('image', function(newVal){
 //                    window.console.log(newVal);
@@ -74,76 +165,6 @@ angular.module('artifactApp')
                    element.css({'background-color': attrs.color});
                 }
 
-                var horizontal = scope.$eval(attrs.horizontal) || false;
-                var elem = $(element);
-                var elementId = elem.attr('id');
-                var lastScroll;
-                var threshold;
-                var screenStartEdge;
-                var screenEndEdge;
-                var elemStartEdge;
-                var elemEndEdge;
-                var startEdgeDiff;
-                var endEdgeDiff;
-                var scrollDirection;
-                var scrollObj;
-                var screenCenter;
-                var timer;
-
-
-                var getPosition = function(){
-                    if(horizontal){
-//                        window.console.log('im a horizontal element!!!');
-                        lastScroll = $($window).scrollLeft();
-                        threshold = scope.$eval(attrs.threshold) ? attrs.threshold : ($($window).width() / 2);
-                        screenStartEdge = $($window).scrollLeft();  //horizontal position of the scroll bar
-                        screenEndEdge = screenStartEdge + $($window).width();
-                        screenCenter = $(window).width() / 2;
-                        elemStartEdge = elem.offset().left; //current coordinates of the first element left, top, bottom, right
-                        elemEndEdge = elemStartEdge + elem.width(); //computed height of the element
-                        scrollObj = {
-                            scrollLeft: elemStartEdge
-                        }
-                    }
-                    else{
-//                        window.console.log('im a vertical scroll guy');
-                        lastScroll = $($window).scrollTop();
-                        threshold = scope.$eval(attrs.threshold) ? attrs.threshold : ($($window).height() / 2);
-                        screenStartEdge = $($window).scrollTop();  //vertical position of the scroll bar
-                        screenEndEdge = screenStartEdge + $($window).height(); //computed height for the first element in the set of matched elements
-                        elemStartEdge = elem.offset().top; //current coordinates of the first element left, top, bottom, right
-                        elemEndEdge = elemStartEdge + elem.height(); //computed height of the element
-                        scrollObj = {
-                            scrollTop: elemStartEdge
-                        }
-                    }
-                };
-
-                function isScrolledIntoView(elem){
-                    getPosition();
-                    startEdgeDiff = elemStartEdge - screenStartEdge;
-                    endEdgeDiff = elemStartEdge - screenStartEdge;
-                    scrollDirection = (screenStartEdge < lastScroll);
-                    lastScroll = screenStartEdge;
-                    if(scope.panel < 1){
-                        scrollObj = {scrollLeft: elem.offset().left};
-                        return((Math.abs(elemStartEdge - screenStartEdge)) < (threshold / 2));
-                    }
-                    else{
-                        return ((Math.abs(elemStartEdge - screenStartEdge)) < threshold);
-                    }
-                }
-
-                var refresh = function () {
-                    var inView = isScrolledIntoView(element);
-                    if(inView){
-                        $("body").animate(scrollObj, 500, 'swing', function(){
-                            clearTimeout(timer);
-                            inView = false;
-                            return false;
-                        });
-                    }
-                };
 
                 var setImage = function(){
                     if(!scope.image){
@@ -181,7 +202,6 @@ angular.module('artifactApp')
                 });
 
                 $( window ).bind('resize', function() {
-                    getPosition();
                     fillScreen();
                 });
 
@@ -191,89 +211,13 @@ angular.module('artifactApp')
                     });
                 }
 
-                getPosition();
                 fillScreen();
                 setImage();
-
-//                NOTE:
-//                this sets up a listener for the window scroll event in order to check if a panel is in isScrolledIntoView
-
-
-//                var scrollEvent = 'scroll';
-//                var el = $(window);
-//                var interval;
-//                var handler;
-//                var INTERVAL_DELAY = 500;
-//                var scrollPosition = {
-//                    x: 0,
-//                    y: 0
-//                };
-//                var scrollStopped = true;
-//
-//                var bindScroll = function() {
-//
-//                    handler = function(event) {
-////                        window.console.log('im scrolling');
-//                        scrollPosition.x = el.scrollLeft();
-//                        scrollPosition.y = el.scrollTop();
-////                        window.console.log(scrollPosition);
-//
-//                        startInterval(event);
-//                        unbindScroll();
-//                        scrollTrigger(event, false);
-//                    };
-//
-//                    $(window).bind('scroll', handler);
-//                };
-//
-//                var startInterval = function(event) {
-//                    interval = $window.setInterval(function() {
-//                        if(scrollPosition.x == el.scrollLeft() && scrollPosition.y == el.scrollTop()) {
-//                            $window.clearInterval(interval);
-//                            scrollStopped = true;
-//                            $timeout(function(){
-//                                bindScroll();
-//                                scrollTrigger(event, true);
-//                                window.console.log('scroll stopped');
-//                            }, 200);
-//                        } else {
-//                            scrollStopped = false;
-//                            scrollPosition.x = el.scrollLeft();
-//                            scrollPosition.y = el.scrollTop();
-//                        }
-//                    }, INTERVAL_DELAY);
-//                };
-//
-//                var unbindScroll = function() {
-//                    // be nice to others, don't unbind their scroll handlers
-//                    $(window).unbind('scroll', handler);
-//                };
-//
-//                var scrollTrigger = function(event, isEndEvent) {
-//                    window.console.log('calling scroll trigger');
-//                };
-//
-//                bindScroll();
-
 
             }
         }
     })
 
-//    .animate('slide', function(){
-//
-//        return {
-//            enter : function(element, done) {
-//                window.console.log('entering');
-//
-//            },
-//
-//            leave : function(element, done) {
-//                window.console.log('exiting');
-//            }
-//        };
-//
-//    })
 
     .directive("hideIfPhone", ["$window", function($window) {
         return {
@@ -302,77 +246,16 @@ angular.module('artifactApp')
         }
     }])
 
-    .directive('scrollStop', function($window){
-        return function(scope, elem, attrs){
-            window.console.log('hello scroll stop');
-            var interval,
-                handler,
-                el = elem[0];
-            
-            var scrollEvent = 'scroll';
-            var INTERVAL_DELAY = 500;
-            var scrollPosition = {
-                    x: 0,
-                    y: 0
-                };
-
-            var bindScroll = function() {
-
-                handler = function(event) {
-                    scrollPosition.x = el.scrollLeft;
-                    scrollPosition.y = el.scrollTop;
-
-                    startInterval(event);
-                    unbindScroll();
-                    scrollTrigger(event, false);
-                };
-
-                elem.bind(scrollEvent, handler);
-            };
-
-            var startInterval = function(event) {
-                interval = $window.setInterval(function() {
-                    if(scrollPosition.x == el.scrollLeft && scrollPosition.y == el.scrollTop) {
-                        $window.clearInterval(interval);
-                        bindScroll();
-                        scrollTrigger(event, true);
-                        window.console.log('scroll stopped');
-                    } else {
-                        scrollPosition.x = el.scrollLeft;
-                        scrollPosition.y = el.scrollTop;
-                    }
-                }, INTERVAL_DELAY);
-            };
-
-            var unbindScroll = function() {
-                // be nice to others, don't unbind their scroll handlers
-                element.unbind(scrollEvent, handler);
-            };
-
-            var scrollTrigger = function(event, isEndEvent) {
-                scope.$apply(function() {
-                    fn(scope, {$event: event, isEndEvent: isEndEvent});
-                });
-            };
-
-            bindScroll();
-        }
-    })
-
-    .directive("scrollTo", ["$window","$location", function($window, $location){
+    .directive("scrollTo", ["$window","$location","currentId", function($window, $location, currentId){
         return {
             restrict : "AC",
             scope:{
-                inView: '&',
-                toId: '@',
                 toPath: '@'
             },
             link: function(scope, element, attr){
 
                 var elementId = attr.scrollTo;
-//                window.console.log(elementId);
                 scope.currentPath = scope.toPath;
-                scope.currentId = scope.toId;
 
                 function scroll(scrollObj){
                     $("body").animate(scrollObj, 800, 'swing', function(){
@@ -396,9 +279,7 @@ angular.module('artifactApp')
 
                 element.bind("click", function(event){
                     scrollInto(attr.scrollTo);
-                    scope.$apply(function(){
-                        scope.inView({id: elementId});
-                    })
+                    currentId.setId(attr.scrollTo);
                 });
             }
         };

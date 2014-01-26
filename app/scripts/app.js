@@ -8,8 +8,7 @@ angular.module('artifactApp', [
   'ngAnimate',
   "angular-carousel",
   "ngTouch",
-  "angular-gestures",
-  "angular-inview"
+  "angular-gestures"
 
 ])
   .config(function ($routeProvider) {

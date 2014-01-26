@@ -7,12 +7,12 @@
                     Artifact <span class="thin">Technologies</span><span class="trade">&trade;</span>
                 </a>
             </header>
-                    <span ng-class="{ home: isHome && $location.path() == '/' }" in-view="isInView(id)">
-                        <nav class="at-navbar-main at-inline" ng-class="{ home: isHome }" in-view="isInView(id)">
-                            <a scroll-to="about" ng-class="{active: currentView == 'about'}" in-view="isInView(id)">About Us</a>
-                            <a scroll-to="platform" ng-class="{active: currentView == 'platform'}" in-view="isInView(id)">Our Platform</a>
-                            <a scroll-to="work" ng-class="{active: currentView == 'work'}" in-view="isInView(id)">Our Work</a>
-                            <a scroll-to="contact" ng-class="{active: currentView == 'contact'}" in-view="isInView(id)">Contact Us</a>
+                    <span ng-class="{ home: isHome && $location.path() == '/' }">
+                        <nav class="at-navbar-main at-inline" ng-class="{ home: isHome }" >
+                            <a scroll-to="about" ng-class="{active: currentId.currentId == 'about'}">About Us</a>
+                            <a scroll-to="platform" ng-class="{active: currentId.currentId == 'platform'}">Our Platform</a>
+                            <a scroll-to="work" ng-class="{active: currentId.currentId == 'work'}">Our Work</a>
+                            <a scroll-to="contact" ng-class="{active: currentId.currentId == 'contact'}">Contact Us</a>
                         </nav>
                     </span>
 
@@ -20,18 +20,18 @@
     </div>
     <div class="at-subnav-wrapper" ng-show="!isHome">
         <div class="at-subnav">
-            <nav class="at-navbar-subnav" ng-show="currentView == 'about'">
+            <nav class="at-navbar-subnav" ng-show="currentId.currentId == 'about'">
                 <a ng-class="{ active: isActiveLink('about')}">The Team</a>
                 <!--<a scroll-to="" horizontal ng-class="{ active: $state.is('about.investors') }">The Investors</a>-->
                 <!--<a scroll-to="" horizontal ng-class="{ active: $state.is('about.advisory') }">The Advisory Board</a>-->
             </nav>
-            <nav class="at-navbar-subnav" ng-show="currentView === 'platform'">
+            <nav class="at-navbar-subnav" ng-show="currentId.currentId === 'platform'">
                 <a ng-click="currentViewById('platform', 'platform-curation')" ng-class="{ active: isActiveLink('platform', 'platform-curation') }">Curation</a>
                 <a ng-click="currentViewById('platform', 'platform-creation')" ng-class="{ active: isActiveLink('platform', 'platform-creation') }">Creation</a>
                 <a ng-click="currentViewById('platform', 'platform-commerce')" ng-class="{ active: isActiveLink('platform', 'platform-commerce') }">Commerce</a>
                 <a ng-click="currentViewById('platform', 'platform-analysis')" ng-class="{ active: isActiveLink('platform', 'platform-analysis') }">Analysis</a>
             </nav>
-            <nav class="at-navbar-subnav" ng-show="currentView === 'work'">
+            <nav class="at-navbar-subnav" ng-show="currentId.currentId === 'work'">
                 <a ng-click="currentViewById('work', 'work-fonograf')" ng-class="{ active: isActiveLink('work', 'work-fonograf') }">Fonograf</a>
                 <a ng-click="currentViewById('work', 'work-lens')" ng-class="{ active: isActiveLink('work', 'work-lens') }">Whidbey LENS</a>
             </nav>

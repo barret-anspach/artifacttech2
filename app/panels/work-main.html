@@ -1,4 +1,4 @@
-<section id="work" class="fullpage"  panel="1" size="cover" in-view="isInView(id)">
+<section id="work" class="fullpage"  panel="1" size="cover">
     <div class="container">
         <div class="at-work">
             <div class="at-work-page">
@@ -15,7 +15,8 @@
             </div>
         </div>
     </div>
-    <a class="at-arrow-right" ng-click="nextView('work')" ng-hide="isMobile()">
-        <img src="images/arrow-right.png">
+    <a class="at-work-chevron" ng-click="nextView('work')">
+        <h4 class="at-work-link">View Details</h4>
+        <span class="at-work-chevron-img" background-img="../images/chevrons-right.png" size="cover"></span>
     </a>
 </section>

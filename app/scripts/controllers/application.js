@@ -1,20 +1,24 @@
 'use strict';
 
 angular.module('artifactApp')
-    .controller('ApplicationCtrl', function ($scope, $anchorScroll, $location, $window, $timeout) {
+    .controller('ApplicationCtrl', function ($scope, $anchorScroll, $location, $window, $timeout, currentId) {
 
         $scope.$location = $location;
-        $scope.currentId = 'home';
+        $scope.currentId = currentId;
         $scope.currentPath = $location.url();
-
+        
         $scope.currentAboutIndex = 0;
         $scope.currentPlatformIndex = 0;
         $scope.currentWorkIndex = 0;
 
+        this.snapTo = function(id){
+            window.console.log(id);
+        };
+
         $scope.index = {about: 0 , platform: 0, work: 0};
 
         $scope.userAgent = navigator.userAgent.toLowerCase();
-        window.console.log($scope.userAgent);
+//        window.console.log($scope.userAgent);
 
         $scope.isMobile = function(){
             var isMobile = false;
@@ -81,9 +85,10 @@ angular.module('artifactApp')
 
         $scope.currentViewById = function(key, id){
             $scope.currentView = key;
-            $scope.currentId = id;
+            currentId.setId(id);
             $scope.currentViews[key] = _.find($scope.views[key], {id: id});
             $scope.index[key] = $scope.views[key].indexOf($scope.currentViews[key]);
+            window.console.log(currentId.currentId);
         };
 
         $scope.nextView = function(key){
@@ -111,16 +116,20 @@ angular.module('artifactApp')
             });
         });
         
+        $scope.$watch('currentId.currentId', function(newVal){
+            if(newVal){
+                $timeout(function(){
+                    $scope.resetViews();
+                }, 1000);
+            }
+        });
+        
+        
+        
         $scope.contentLoaded = function(){
             $scope.isLoaded = true;
         };
 
-        $scope.isInView = function(id){
-            $scope.currentView = id;
-            $timeout(function(){
-                $scope.resetViews();
-            }, 1000)
-        };
 
         $scope.isActiveLink = function(path, id){
             if(!$scope.currentViews){
