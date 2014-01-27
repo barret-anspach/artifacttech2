@@ -9,35 +9,26 @@
         </div>
     </section>
 
-    <section id="about" rn-carousel rn-carousel-index='index.about' rn-carousel-buffered hm-swipe-up="swipeUp()" peep-show-on="{event: 'click', class: 'animated peep-show'}">
-        <div ng-repeat="view in views.about" image="{{view.background}}" panel="1">
+    <section id="about" rn-carousel rn-carousel-index='index.about' peep-show-on>
+        <div ng-repeat="view in views.about" image="{{view.background}}" panel="1" >
             <div ng-include="view.url"></div>
         </div>
     </section>
 
-    <section id="platform" rn-carousel rn-carousel-index='index.platform' rn-carousel-buffered hm-swipe-up="swipeUp()" bounce-right-on="['click']">
+    <section id="platform" rn-carousel rn-carousel-index='index.platform'  peep-show-on>
         <div ng-repeat="image in views.platform" image="{{image.background}}" panel="1">
+            <div ng-include="image.url"></div>d
+        </div>
+    </section>
+
+    <section id="work" rn-carousel rn-carousel-index='index.work' peep-show-on>
+        <div ng-repeat="image in views.work" image="{{image.background}}" panel="1" position="50% 25%" cover="contain">
             <div ng-include="image.url"></div>
         </div>
     </section>
 
-    <section id="work" rn-carousel rn-carousel-index='index.work' rn-carousel-buffered hm-swipe-up="swipeUp()" bounce-right-on="['hover']">
-        <div ng-repeat="image in views.work" image="{{image.background}}" panel="1">
-            <div ng-include="image.url"></div>
-        </div>
-    </section>
 
-    <!--<input type="number" ng-model="currentWorkIndex">-->
-
-    <!--<div background-img="{{currentViews.platform.background}}" size="cover">-->
-    <!--<div id="platform" ng-include="currentViews.platform.url" ></div>-->
-    <!--</div>-->
-
-    <!--<div background-img="{{currentViews.work.background}}" size="cover">-->
-    <!--<div id="work" ng-include="currentViews.work.url"></div>-->
-    <!--</div>-->
-
-    <section id="contact" class='fullpage' panel="1" image="../images/bg/AT_contact-us.png" size="cover" hm-swipe-up="swipeUp()">
+    <section id="contact" class='fullpage' panel="1" image="../images/bg/AT_contact-us.png" size="cover">
         <div class="container">
             <div class="at-contact">
                 <h1>Contact Us</h1>

@@ -154,16 +154,24 @@ angular.module('artifactApp')
             })
         }
     })
-    .directive('peepShowOn', function(){
+    .directive('peepShowOn', function(currentId, $timeout){
         return function(scope, element, attrs){
-            var options = scope.$eval(attrs.peepShowOn);
-            window.console.log(options);
+            
+            var mobile = false;
+            scope.$watch('currentId.currentId', function(newVal){
+                if(newVal === attrs.id && currentId.isMobile){
+                    var timer = $timeout(function(){
+                        $(element).addClass('animated peep-show')
+                        $timeout(function(){
+                            $(element).removeClass('animated peep-show');
+                        }, 2000)
+                    },500);
+                }
+                else{
+                    $(element).removeClass('animated peep-show');
+                }
+            });
 
-            $(document).ready(function(){
-                $(element).bind(options.event, function(){
-                    $(element).toggleClass(options.class);
-                })
-            })
         }
     })
 

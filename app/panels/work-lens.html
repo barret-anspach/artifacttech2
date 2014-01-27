@@ -1,16 +1,22 @@
-<div id="work-lens" class="fullpage" panel="1" size="cover" position="top center" in-view="isInView(id)">
+<div id="work-lens" class="fullpage" panel="1">
     <div class="at-work">
         <div class="at-work-page at-work-app">
-            <h1 class="at-app-title">W<span class="small-caps">hidbey</span>LENS<span class="trade">&trade;</span></h1>
-            <p class="at-app-desc">Whidbey LENS&trade; is essentially our platform custom designed and geared toward South Whidbey Island and provided by Whidbey TeleCom. Residents and tourists can use the app to discover new businesses, get deals, discover new social media content and more. Designed as the ultimate community app.</p>
+            <h1 class="at-app-title">LENS<span class="trade">&trade;</span></h1>
+            <p class="at-app-desc">LENS&trade; is essentially our platform custom designed and geared toward South Whidbey Island and provided by Whidbey TeleCom. Residents and tourists can use the app to discover new businesses, get deals, discover new social media content and more. Designed as the ultimate community app.</p>
         </div>
         <a class="apple-store whidbey" background-img="../images/AT-itunes.png" size="cover"></a>
 
     </div>
 
-    <a class="at-arrow-left lower" ng-click="previousView('work')">
+
+    <a class="at-arrow-left lower" ng-click="previousView('work')" ng-hide="currentId.isMobile">
         <img src="images/arrow-left.png">
     </a>
+
+    <a class="at-arrow-right lower" ng-click="nextView('work')" ng-hide="currentId.isMobile">
+        <img src="images/arrow-right.png">
+    </a>
+
 
 
 </div>

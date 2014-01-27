@@ -261,6 +261,50 @@ module.exports = function (grunt) {
             }
         },
 
+//        s3:{
+//            options: {
+//                key: '<%= aws.key %>',
+//                secret: '<%= aws.secret %>',
+//                bucket: '<%= aws.bucket %>',
+//                headers: {
+//                    // Two Year cache policy (1000 * 60 * 60 * 24 * 730)
+//                    "Cache-Control": "max-age=630720000, public",
+//                    "Expires": new Date(Date.now() + 63072000000).toUTCString()
+//                }
+//            },
+//            dev: {
+//                // These options override the defaults
+//                options: {
+//                    encodePaths: true,
+//                    maxOperations: 20
+//                },
+//                // Files to be uploaded.
+//                upload: [
+//                    {
+//                        src: 'important_document.txt',
+//                        dest: 'documents/important.txt',
+//                        options: { gzip: true }
+//                    },
+//                    {
+//                        src: 'passwords.txt',
+//                        dest: 'documents/ignore.txt',
+//
+//                        // These values will override the above settings.
+//                        bucket: 'some-specific-bucket',
+//                        access: 'authenticated-read'
+//                    },
+//                    {
+//                        // Wildcards are valid *for uploads only* until I figure out a good implementation
+//                        // for downloads.
+//                        src: 'documents/*.txt',
+//
+//                        // But if you use wildcards, make sure your destination is a directory.
+//                        dest: 'documents/'
+//                    }
+//                ]
+//
+//            }
+//        },
         // Allow the use of non-minsafe AngularJS files. Automatically makes it
         // minsafe compatible so Uglify does not destroy the ng references
         ngmin: {

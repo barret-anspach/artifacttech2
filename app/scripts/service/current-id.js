@@ -4,6 +4,7 @@ angular.module('artifactApp').service('currentId', function(){
         setId: function(id){
             this.currentId = id;
             window.console.log(this.currentId);
-        }
+        },
+        isMobile: false
     }
 });

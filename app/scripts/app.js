@@ -8,10 +8,12 @@ angular.module('artifactApp', [
   'ngAnimate',
   "angular-carousel",
   "ngTouch",
-  "angular-gestures"
+  "angular-gestures", "ui.bootstrap"
 
 ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $sceProvider) {
+
+        $sceProvider.enabled(false);
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
