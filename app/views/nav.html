@@ -7,15 +7,14 @@
                     Artifact <span class="thin">Technologies</span><span class="trade">&trade;</span>
                 </a>
             </header>
-                    <span ng-class="{ home: isHome && $location.path() == '/' }">
-                        <nav class="at-navbar-main at-inline" ng-class="{ home: isHome }" >
-                            <a scroll-to="about" ng-class="{active: currentId.currentId == 'about'}">About Us</a>
-                            <a scroll-to="platform" ng-class="{active: currentId.currentId == 'platform'}">Our Platform</a>
-                            <a scroll-to="work" ng-class="{active: currentId.currentId == 'work'}">Our Work</a>
-                            <a scroll-to="contact" ng-class="{active: currentId.currentId == 'contact'}">Contact Us</a>
-                        </nav>
-                    </span>
-
+            <span ng-class="{ home: isHome && $location.path() == '/' }">
+                <nav class="at-navbar-main at-inline" ng-class="{ home: isHome }" >
+                    <a scroll-to="platform" ng-class="{active: currentId.currentId == 'platform'}">Our Platform</a>
+                    <a scroll-to="work" ng-class="{active: currentId.currentId == 'work'}">Our Work</a>
+                    <a scroll-to="about" ng-class="{active: currentId.currentId == 'about'}">About Us</a>
+                    <a scroll-to="contact" ng-class="{active: currentId.currentId == 'contact'}">Contact Us</a>
+                </nav>
+            </span>
         </div>
     </div>
     <div class="at-subnav-wrapper" ng-show="!isHome">
@@ -33,7 +32,7 @@
             </nav>
             <nav class="at-navbar-subnav" ng-show="currentId.currentId === 'work'">
                 <a ng-click="currentViewById('work', 'work-fonograf')" ng-class="{ active: isActiveLink('work', 'work-fonograf') }">Fonograf</a>
-                <a ng-click="currentViewById('work', 'work-lens')" ng-class="{ active: isActiveLink('work', 'work-lens') }">Whidbey LENS</a>
+                <a ng-click="currentViewById('work', 'work-lens')" ng-class="{ active: isActiveLink('work', 'work-lens') }">LENS</a>
             </nav>
         </div>
     </div>

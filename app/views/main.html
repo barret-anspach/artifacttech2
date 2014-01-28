@@ -2,16 +2,10 @@
 <div screen>
     <section id='home' class="fullpage" image="../images/bg/AT_home-bg.png" size="cover" panel="1" hm-swipe-up="swipeUp()" >
         <div class="container">
-            <span class="at-main-message"><h1>You are here</h1></span>
+            <!--<span class="at-main-message"><h1>You are here</h1></span>-->
             <a class="at-arrow-down animated bounce" scroll-to="about" bounce-on="['mouseenter']">
                 <img src="images/arrow-down.png">
             </a>
-        </div>
-    </section>
-
-    <section id="about" rn-carousel rn-carousel-index='index.about' peep-show-on>
-        <div ng-repeat="view in views.about" image="{{view.background}}" panel="1" >
-            <div ng-include="view.url"></div>
         </div>
     </section>
 
@@ -27,6 +21,11 @@
         </div>
     </section>
 
+    <section id="about" rn-carousel rn-carousel-index='index.about' peep-show-on>
+        <div ng-repeat="view in views.about" image="{{view.background}}" panel="1" >
+            <div ng-include="view.url"></div>
+        </div>
+    </section>
 
     <section id="contact" class='fullpage' panel="1" image="../images/bg/AT_contact-us.png" size="cover">
         <div class="container">
