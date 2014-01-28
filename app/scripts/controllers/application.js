@@ -1,27 +1,62 @@
 'use strict';
 
 angular.module('artifactApp')
-    .controller('ApplicationCtrl', function ($scope, $anchorScroll, $location, $window, $timeout) {
+    .controller('ApplicationCtrl', function ($scope, $anchorScroll, $location, $window, $timeout, currentId, $modal) {
 
         $scope.$location = $location;
-        $scope.currentId = 'home';
+        $scope.currentId = currentId;
         $scope.currentPath = $location.url();
-
+        
         $scope.currentAboutIndex = 0;
         $scope.currentPlatformIndex = 0;
         $scope.currentWorkIndex = 0;
 
+        this.snapTo = function(id){
+            window.console.log(id);
+        };
+
         $scope.index = {about: 0 , platform: 0, work: 0};
 
         $scope.userAgent = navigator.userAgent.toLowerCase();
-        window.console.log($scope.userAgent);
+//        window.console.log($scope.userAgent);
 
         $scope.isMobile = function(){
             var isMobile = false;
             var mobile = ['iphone','ipad','android','blackberry','nokia','opera mini','windows mobile','windows phone','iemobile'];
             for (var i in mobile) if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0) isMobile = true;
+            currentId.isMobile = isMobile;
             return isMobile
         };
+
+        $scope.videos = {
+            fonograf1: "http://player.vimeo.com/video/65173823",
+            fonograf2: "http://player.vimeo.com/video/84422518"
+        };
+
+
+        $scope.openPlayer = function(videoName){
+
+            $scope.videoUrl = $scope.videos[videoName];
+
+            var modal = $modal.open({
+                templateUrl: "/views/video.html",
+                controller: 'VideoCtrl',
+                resolve: {
+                    video: function(){
+                        return $scope.videoUrl;
+                    }
+                }
+            });
+
+            modal.result.then(function(){
+                window.console.log('closed');
+            }, function(){
+                window.console.log('user cancelled');
+            })
+
+
+        };
+
 
 
         $scope.showAbout = false;
@@ -35,6 +70,7 @@ angular.module('artifactApp')
             {url:"/panels/matt.html", id: 'matt', background: '../images/bg/AT_team-bg.png'},
             {url:"/panels/john.html", id: 'john', background: '../images/bg/AT_team-bg.png'},
             {url:"/panels/cindi.html", id: 'cindi', background: '../images/bg/AT_team-bg.png'},
+            {url:"/panels/robb.html", id: 'robb', background: '../images/bg/AT_team-bg.png'},
             {url:"/panels/seth.html", id: 'seth', background: '../images/bg/AT_team-bg.png'},
             {url:"/panels/adrienne.html", id: 'adrienne', background: '../images/bg/AT_team-bg.png'}
         ];
@@ -58,8 +94,8 @@ angular.module('artifactApp')
             ],
             work:[
                 {url: '/panels/work-main.html', id:'work-main', background: '../images/bg/AT_our-work-bg.png'},
-                {url: '/panels/work-fonograf.html', id:'work-fonograf', background: '../images/bg/AT_our-work-bg-2.png'},
-                {url: '/panels/work-lens.html', id:'work-lens', background: '../images/bg/AT_our-work-bg-3.png'}
+                {url: '/panels/work-lens.html', id:'work-lens', background: '../images/bg/AT_our-work-bg-3.png'},
+                {url: '/panels/work-fonograf.html', id:'work-fonograf', background: '../images/bg/AT_our-work-bg-2.png'}
             ]
         };
 
@@ -81,15 +117,20 @@ angular.module('artifactApp')
 
         $scope.currentViewById = function(key, id){
             $scope.currentView = key;
-            $scope.currentId = id;
+            currentId.setId(key);
             $scope.currentViews[key] = _.find($scope.views[key], {id: id});
             $scope.index[key] = $scope.views[key].indexOf($scope.currentViews[key]);
+            window.console.log(currentId.currentId);
         };
 
         $scope.nextView = function(key){
             $scope.index[key] +=1;
             $scope.currentViews[key] = $scope.views[key][$scope.index[key]];
             window.console.log($scope.currentViews[key]);
+        };
+
+        $scope.isAbout = function(){
+          return(currentId.currentId === 'about')
         };
 
         $scope.previousView = function(key){
@@ -111,16 +152,20 @@ angular.module('artifactApp')
             });
         });
         
+        $scope.$watch('currentId.currentId', function(newVal){
+            if(newVal){
+                $timeout(function(){
+                    $scope.resetViews();
+                }, 1000);
+            }
+        });
+        
+        
+        
         $scope.contentLoaded = function(){
             $scope.isLoaded = true;
         };
 
-        $scope.isInView = function(id){
-            $scope.currentView = id;
-            $timeout(function(){
-                $scope.resetViews();
-            }, 1000)
-        };
 
         $scope.isActiveLink = function(path, id){
             if(!$scope.currentViews){
@@ -130,16 +175,31 @@ angular.module('artifactApp')
                 return $scope.currentView === path;
             }
 
-            return ($scope.currentViews[path].id === id);
+            return($scope.views[path][$scope.index[path]].id === id);
+
+//            return ($scope.currentViews[path].id === id);
         };
         
         $scope.swipeLeft = function(id){
-            window.console.log('i done swiped to '+ id);
+            window.console.log('i motherfucking swiped left');
         };
         
         $scope.swipeUp = function(id){
-            window.console.log('swiped up');
+            window.console.log('i motherfucking swiped left');
         };
 
 
     });
+
+angular.module('artifactApp')
+    .controller('VideoCtrl', function ($scope, $modalInstance, video) {
+       $scope.videoUrl = video;
+
+       $scope.cancel = function () {
+            $modalInstance.dismiss();
+          };
+
+        $scope.close = function () {
+          $modalInstance.close();
+        }
+});

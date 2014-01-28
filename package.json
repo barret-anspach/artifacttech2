@@ -45,8 +45,6 @@
     "karma-ng-html2js-preprocessor": "~0.1.0",
     "pngquant-bin": "~0.1.5",
     "grunt-ftp-deploy": "~0.1.1",
-    "connect-livereload": "~0.3.2",
-    "grunt-angular-templates": "~0.5.1",
     "grunt-s3": "~0.2.0-alpha.3"
   },
   "engines": {

@@ -1,0 +1,38 @@
+<!--<div class="modal fade" id="promoVideo2" tabindex="-1" role="dialog" aria-hidden="true">-->
+    <!--<div class="modal-dialog">-->
+        <!--<div class="modal-content">-->
+            <!--<div class="modal-body">-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+<div class="modal-body">
+    <button type="button" class="close" aria-hidden="true" ng-click="close()">&times;</button>
+
+    <iframe ng-src="{{videoUrl}}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+</div>
+
+
+        <style>
+
+            .modal-body{
+                background-color: black;
+            }
+            iframe{
+                display: block;
+                margin: 0 auto;
+                width: 500px;
+                height: 400px;
+            }
+            button{
+                background: black;
+                border-radius: 7px;
+                color: white;
+                border: 1px solid white;
+                padding: 7px;
+                margin-left: 200px;
+            }
+        </style>

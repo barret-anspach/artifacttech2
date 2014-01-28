@@ -4,20 +4,17 @@
             <h1 class="at-app-title">Fonograf</h1>
             <p class="at-app-desc">We are fans of music. We built Fonograf to use ourselves because we wanted a better way to discover new music around us. Music tastes and music events are an excellent incentive to test users willingness to curate their own filter in an open network. Band performances and their relationship with venues is an excellent loop to test willingness for collaboration on stories. This led us to LENS<span class="trade">&trade;</span> and the need to give trusted sources, key contributors, and creators a direct publishing platform to their most interested audiences.</p>
             <div class="promo-videos">
-                <h2><a ng-click="openModal('video-modal-1')">Promo Video #1</a></h2>
-                <script type="text/ng-template" id="video-modal-1.html"></script>
-                <h2><a ng-click="openModal('video-modal-2')">Promo Video #2</a></h2>
-                <script type="text/ng-template" id="video-modal-2.html"></script>
+                <h2><a ng-click="openPlayer('fonograf1')" ng-hide="currentId.isMobile">Promo Video #1</a></h2>
+
+                <h2><a ng-click="openPlayer('fonograf2')" ng-hide="currentId.isMobile">Promo Video #2</a></h2>
             </div>
         </div>
         <a class="apple-store" background-img="../images/AT-itunes.png" size="cover"></a>
     </div>
 
-    <a class="at-arrow-left lower" ng-click="previousView('work')">
+    <a class="at-arrow-left lower" ng-click="previousView('work')" ng-hide="currentId.isMobile">
         <img src="images/arrow-left.png">
     </a>
 
-    <a class="at-arrow-right lower" ng-click="nextView('work')">
-        <img src="images/arrow-right.png">
-    </a>
+
 </div>

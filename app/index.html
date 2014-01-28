@@ -29,14 +29,14 @@
 
 
 </head>
-<body ng-app="artifactApp" ng-controller="ApplicationCtrl" screen>
+<body ng-app="artifactApp" ng-controller="ApplicationCtrl">
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
 <!-- Add your site or application content here -->
 <div>
-    <div ng-include src="'/views/nav.html'" onload="contentLoaded()"></div>
+    <div ng-include src="'/views/nav.html'"></div>
     <div ng-view></div>
 </div>
 
@@ -63,6 +63,7 @@
 <script src="bower_components/jquery/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+<!--<script src="bower_components/jquery-scrollspy/jquery-scrollspy.js"></script>-->
 <!--<script src="bower_components/jcarousel/dist/jquery.jcarousel.js"></script>-->
 <script src="bower_components/sass-bootstrap/dist/js/bootstrap.js"></script>
 <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -72,7 +73,7 @@
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/angular-gestures/gestures.js"></script>
-<script src="bower_components/angular-inview/angular-inview.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 <script src="bower_components/lodash/dist/lodash.compat.js"></script>
 <script src="bower_components/angular-rn-carousel/dist/angular-carousel.js"></script>
 <!-- endbuild -->
@@ -82,7 +83,8 @@
 <script src="scripts/controllers/main.js"></script>
 <script src="scripts/controllers/application.js"></script>
 <script src="scripts/directives/utilities.js"></script>
-<script src="scripts/directives/scrollspy.js"></script>
+<script src="scripts/service/current-id.js"></script>
+<!--<script src="scripts/directives/scrollspy.js"></script>-->
 <!-- endbuild -->
 </body>
 
