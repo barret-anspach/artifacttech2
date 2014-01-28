@@ -20,7 +20,7 @@
     <div class="at-subnav-wrapper" ng-show="!isHome">
         <div class="at-subnav">
             <nav class="at-navbar-subnav" ng-show="currentId.currentId == 'about'">
-                <a ng-class="{ active: isActiveLink('about')}">The Team</a>
+                <!--<a ng-class="{ active: isActiveLink('about')}">The Team</a>-->
                 <!--<a scroll-to="" horizontal ng-class="{ active: $state.is('about.investors') }">The Investors</a>-->
                 <!--<a scroll-to="" horizontal ng-class="{ active: $state.is('about.advisory') }">The Advisory Board</a>-->
             </nav>
@@ -31,8 +31,8 @@
                 <a ng-click="currentViewById('platform', 'platform-analysis')" ng-class="{ active: isActiveLink('platform', 'platform-analysis') }">Analysis</a>
             </nav>
             <nav class="at-navbar-subnav" ng-show="currentId.currentId === 'work'">
-                <a ng-click="currentViewById('work', 'work-fonograf')" ng-class="{ active: isActiveLink('work', 'work-fonograf') }">Fonograf</a>
                 <a ng-click="currentViewById('work', 'work-lens')" ng-class="{ active: isActiveLink('work', 'work-lens') }">LENS</a>
+                <a ng-click="currentViewById('work', 'work-fonograf')" ng-class="{ active: isActiveLink('work', 'work-fonograf') }">Fonograf</a>
             </nav>
         </div>
     </div>
