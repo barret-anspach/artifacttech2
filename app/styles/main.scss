@@ -150,7 +150,7 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 						padding-right: 12px;
 					}
 					.thin {
-						font-weight: 200;
+						font-weight: 300;
 					}
 				}
 			}
@@ -198,7 +198,7 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 					margin-right: 5px;
 				}
 				.thin {
-					font-weight: 200;
+					font-weight: 300;
 				}
 				.active {
 					color: white;
@@ -462,7 +462,7 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 		color: white;
 		font-size: 2em;
 		text-transform: lowercase;
-		font-weight: 100;
+		font-weight: 300;
 		letter-spacing: .2em;
 		margin: 0;
 	}
@@ -849,7 +849,7 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 
 .at-work{
 	position: relative;
-	padding-top: 0;
+	padding-top: 5em;
 	width: 100%;
 	height: 100%;
 	margin: 0 auto;
@@ -860,7 +860,7 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 		position: relative;
 		&.at-work-app {
 			width: auto;
-			padding-top: 15.9em;
+			padding-top: 12em;
 			padding-left: 7.5em;
 			overflow-y: hidden;
 			@media only screen and (min-width: $bp-iphone-portrait + 1) and (max-width: $bp-iphone-landscape) and (orientation: landscape) {
@@ -1104,8 +1104,8 @@ a.apple-store {
 /* move from / to  */
 
 .animated {
-	-webkit-animation-duration: 1s;
-	animation-duration: 1s;
+	-webkit-animation-duration: .5s;
+	animation-duration: .5s;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
 }

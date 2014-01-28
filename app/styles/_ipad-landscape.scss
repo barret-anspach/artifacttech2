@@ -181,7 +181,7 @@
 	padding-right: 52em;
 	h1 {
 		font-size: 52px;
-		font-weight: 700;
+		font-weight: 500;
 	}
 	p {
 		font-size: 23px;
@@ -238,7 +238,7 @@
 	h1 {
 		padding-left: .75em;
 		font-size: 52px;
-		font-weight: 700;
+		font-weight: 500;
 	}
 	.at-platform-list {
 		ol li, li {
@@ -272,11 +272,11 @@
 	.at-platform-page {
 		&.on-left {
 			width: 30em;
-			margin-left: 5em;
+			margin-left: 0em;
 		}
 		h1 {
 			font-size: 52px;
-			font-weight: 700;
+			font-weight: 500;
 			margin-bottom: .4em;
 			&.uncramp {
 				margin: 0;
@@ -322,7 +322,7 @@
 			h1 {
 				width: 6em;
 				font-size: 52px;
-				font-weight: 700;
+				font-weight: 500;
 				margin: 0 auto;
 				padding: 0;
 				text-align: center;
@@ -387,7 +387,7 @@ a.apple-store {
 	h1 {
 		font-family: "trump gothic east", sans-serif;
 		font-size: 52px;
-		font-weight: 700;
+		font-weight: 500;
 	}
 	.contact-info {
 		font-size: 23px;
