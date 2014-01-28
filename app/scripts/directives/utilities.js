@@ -164,8 +164,8 @@ angular.module('artifactApp')
                         $(element).addClass('animated peep-show')
                         $timeout(function(){
                             $(element).removeClass('animated peep-show');
-                        }, 2000)
-                    },500);
+                        }, 1000)
+                    },800);
                 }
                 else{
                     $(element).removeClass('animated peep-show');
