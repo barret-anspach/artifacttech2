@@ -249,7 +249,9 @@
 	}
 	.at-platform-menu {
 		width: 62em;
-		padding-top: 2em;
+		height: 8em;
+		padding-top: 1em;
+		padding-bottom: 1em;
 		.at-platform-box {
 			width: 13.5em;
 			height: 6em;
@@ -390,8 +392,8 @@ a.apple-store {
 		font-weight: 500;
 	}
 	.contact-info {
-		font-size: 23px;
-		font-weight: 300;
+		font-size: 27px;
+		font-weight: 400;
 		line-height: 1.2em;
 		.twitter {
 			margin-top: 1em;

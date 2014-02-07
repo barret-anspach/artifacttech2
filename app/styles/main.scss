@@ -340,7 +340,7 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 }
 .at-platform-chevron {
 	float: right;
-	top: 5.9em;
+	top: 4.9em;
 	width: 12em;
 	height: 1em;
 	text-align: right;
@@ -451,6 +451,23 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 /*-------- HOME --------*/
 
 .at-main-message {
+	position: absolute;
+	width: 20em;
+	height: 40px;
+	top: 67%;
+	left: 50%;
+	margin-left: -10em;
+	text-align: center;
+	h1 {
+		color: white;
+		font-size: 2em;
+		text-transform: lowercase;
+		font-weight: 300;
+		letter-spacing: .2em;
+		margin: 0;
+	}
+}
+.at-iphonefour-message {
 	position: absolute;
 	width: 20em;
 	height: 40px;
@@ -717,7 +734,7 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 
 .at-platform{
 	position: relative;
-	padding-top: 5.4em;
+	padding-top: 4.4em;
 	width: 100%;
 	margin: 0 auto;
 	h1 {
@@ -725,15 +742,20 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 		width: 100%;
 		text-align: left;
 		font-size: 2.4em;
-		margin: 0 0 .4em 0;
-		padding-left: 1.2em;
+//		margin: 0 0 .4em 0;
+		margin: 0;
+		padding-left: 15px;
 	}
 	.at-platform-list {
 		width: 100%;
 		margin: 0 auto;
-		margin-top: 1em;
-		padding: 0 40px .5em 0;
+		margin-top: .5em;
+		padding: 0 0 .5em 0;
+		ol {
+			padding-left: 15px;
+		}
 		ol li, li {
+			clear: both;
 			&:last-child {
 				margin-bottom: 0;
 			}
@@ -747,10 +769,14 @@ $iphone-l: 'only screen and (min-width: $bp-iphone-portrait + 1) and (max-width:
 	.at-platform-menu {
 		position: relative;
 		width: 18em;
+		height: 6.5em;
 		margin: 0 auto;
+		margin-bottom: 1em;
 		@media only screen and (min-width: $bp-iphone-portrait + 1) and (max-width: $bp-iphone-landscape) and (orientation: landscape) {
 			width: 36em;
+			height: 5em;
 			padding-top: 4px;
+			margin-bottom: 0;
 		}
 		.at-platform-box {
 			display: inline-block;
@@ -1017,11 +1043,12 @@ a.apple-store {
 		text-align: center;
 	}
 	.contact-info {
-		font-family: 'Helvetica Neue', sans-serif;
 		width: 100%;
 		margin: 0 auto;
 		margin-bottom: 1em;
+		font-family: 'Helvetica Neue', sans-serif;
 		font-size: 16px;
+		font-weight: 400;
 		text-align: center;
 		line-height: 20px;
 		a {
@@ -1239,6 +1266,11 @@ a.apple-store {
 
 /*--------- RESPONSIVE STYLE LOADING --------*/
 /*--------- FOR EVERYTHING OTHER THAN iPHONE --------*/
+
+/* HIDE iPHONE 4 for now */
+@media only screen and (max-device-width: 320px) and (max-device-height: 480px) {
+	@import 'iphonefour';
+}
 
 /* iPad Portrait */
 @media only screen and (min-width: $bp-iphone-landscape + 1) and (max-width: $bp-ipad-portrait) and (orientation: portrait) {

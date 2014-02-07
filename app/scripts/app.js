@@ -12,12 +12,11 @@ angular.module('artifactApp', [
 
 ])
   .config(function ($routeProvider, $sceProvider) {
-
-        $sceProvider.enabled(false);
+    $sceProvider.enabled(false);
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+            templateUrl: 'views/main.html',
+            controller: 'MainCtrl'
       })
       .when('/platform', {
         templateUrl: 'views/platform.html',
@@ -37,8 +36,5 @@ angular.module('artifactApp', [
       })
       .otherwise({
         redirectTo: '/'
-      });
-  })
-    .run(function($templateCache){
-        
-    });
+      })
+  });
